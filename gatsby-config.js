@@ -1,11 +1,15 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `FeaturePeek`,
+    author: `Jason Barry`,
+    description: `Front-end collaboration for the whole team.`,
+    siteUrl: `https://featurepeek.com`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `featurepeek`,
     },
   },
   plugins: [
@@ -23,6 +27,7 @@ module.exports = {
         name: `assets`,
       },
     },
+    'gatsby-plugin-resolve-src',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -53,7 +58,7 @@ module.exports = {
       options: {
         name: `Gatsby Starter Blog`,
         short_name: `GatsbyJS`,
-        start_url: `/`,
+        start_url: `/blog`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
@@ -68,5 +73,14 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: `gatsby-source-stripe`,
+      options: {
+        objects: ['Plan', 'Product', 'Sku'],
+        secretKey: process.env.STRIPE_SECRET_KEY,
+        downloadFiles: false,
+        auth: false,
+      }
+    }
   ],
 }

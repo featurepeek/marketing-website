@@ -1,8 +1,9 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 
-// import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Column from "components/column"
+import Flex from "components/flex"
+import SEO from 'components/seo'
 
 class IndexPage extends React.Component {
   render() {
@@ -12,7 +13,13 @@ class IndexPage extends React.Component {
     return (
       <section>
         <SEO title="Home" />
-        <h1>FeaturePeek Marketing Home</h1>
+        <h1>{siteTitle}</h1>
+        <Flex>
+          <Column>hi</Column>
+          <Column>sup</Column>
+          <Column>sup</Column>
+          <Column>sup</Column>
+        </Flex>
       </section>
     )
   }
