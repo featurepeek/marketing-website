@@ -1,0 +1,32 @@
+// @flow
+import React from 'react'
+import Box from 'ui-box'
+
+import Flex from 'components/flex'
+
+export default function Button({ children, ...props }) {
+  return (
+    <Flex alignItems="center" height={72} justifyContent="center">
+      <Box
+        is={props.href ? 'a' : 'button'}
+        background="linear-gradient(#05c5cc, #13b7d1)"
+        backgroundColor="#05c5cc"
+        border="0"
+        borderRadius={36}
+        boxShadow="0 2px 4px rgba(0, 0, 0, 0.15)"
+        className="button"
+        color="#fff"
+        cursor="pointer"
+        fontSize={18}
+        fontWeight={500}
+        paddingX={16}
+        paddingY={10}
+        textShadow="0 0 2px rgba(0, 0, 0, 0.2)"
+        transition="all 0.1s cubic-bezier(0, 0, 1, 2)"
+        {...props}
+      >
+        {children}
+      </Box>
+    </Flex>
+  )
+}

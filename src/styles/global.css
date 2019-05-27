@@ -1,0 +1,38 @@
+/* Button */
+.button:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  padding: 14px 24px;
+}
+.button:active {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(2px);
+}
+
+/* Link */
+.link {
+  display: inline-block;
+}
+.link::after {
+  background: #eee;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 3px;
+  position: relative;
+  top: -2px;
+  transform: scale(0);
+  transition: all 0.15s ease;
+  width: 100%;
+}
+.link:hover {
+  text-decoration: none;
+}
+.link:hover::after {
+  transform: scale(1);
+}
+.link:hover span {
+  color: #13b7d1;
+}
+.link:active span {
+  transform: translateY(1px);
+}

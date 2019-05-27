@@ -3,8 +3,14 @@ import Theme from 'typography-theme-github'
 
 // Theme.overrideThemeStyles = () => {
 //   return {
-//     'a.gatsby-resp-image-link': {
-//       boxShadow: `none`,
+//     'a': {
+//       color: '#05c5cc',
+//       display: 'inline-block',
+//       transition: 'all 0.3s ease',
+//     },
+//     'a:hover': {
+//       textDecoration: 'none',
+//       transform: 'translateY(-2px)',
 //     },
 //   }
 // }
