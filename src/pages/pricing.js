@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Column from "components/column"
-import Flex from "components/flex"
+// import Column from "components/column"
+// import Flex from "components/flex"
 import SEO from 'components/seo'
 
 export default function Pricing(props) {

@@ -1,7 +1,8 @@
 /* Button */
 .button:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  padding: 14px 24px;
+  padding: 12px 24px;
+  text-decoration: none;
 }
 .button:active {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -9,11 +10,11 @@
 }
 
 /* Link */
-.link {
+a.underline {
   display: inline-block;
 }
-.link::after {
-  background: #eee;
+a.underline::after {
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   content: '';
   display: block;
@@ -24,15 +25,16 @@
   transition: all 0.15s ease;
   width: 100%;
 }
-.link:hover {
+a.underline:hover {
   text-decoration: none;
 }
-.link:hover::after {
+a.underline:hover::after {
   transform: scale(1);
 }
-.link:hover span {
+a.underline:hover span {
   color: #13b7d1;
+  opacity: 1;
 }
-.link:active span {
+a.underline:active span {
   transform: translateY(1px);
 }
