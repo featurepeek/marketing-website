@@ -2,7 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 // import Column from "components/column"
-// import Flex from "components/flex"
+import Footer from "components/footer"
+import Nav from "components/nav"
 import SEO from 'components/seo'
 
 export default function Pricing(props) {
@@ -19,6 +20,7 @@ export default function Pricing(props) {
   return (
     <section>
       <SEO title="Pricing" />
+      <Nav />
       {products.map(product => (
         <div>
           <h1 key={product.id}>{product.name}</h1>
@@ -27,6 +29,7 @@ export default function Pricing(props) {
           ))}
         </div>
       ))}
+      <Footer />
     </section>
   )
 }

@@ -2,7 +2,7 @@
 import React from 'react'
 import Box from 'ui-box'
 
-import Flex from 'primitives/flex'
+// import Flex from 'primitives/flex'
 
 export default function Button({ children, href, ...styles }) {
   return (
