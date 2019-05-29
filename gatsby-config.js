@@ -61,6 +61,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-segment-js`,
+      options: {
+        prodKey: process.env.SEGMENT_ID,
+        trackPage: true,
+      }
+    },
+    {
       resolve: `gatsby-source-stripe`,
       options: {
         objects: ['Plan', 'Product'],
