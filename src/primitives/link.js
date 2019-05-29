@@ -20,7 +20,13 @@ export default function Link({ children, href = '', target, underline = true, ..
   }
 
   return (
-    <GatsbyLink activeClassName="active-link" className={className} to={href} target={target}>
+    <GatsbyLink
+      activeClassName="active-link"
+      className={className}
+      to={href}
+      target={target}
+      style={underline ? undefined : { lineHeight: 0 }}
+    >
       {span}
     </GatsbyLink>
   )

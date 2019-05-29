@@ -1,11 +1,32 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "featurepeek-marketing",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "The public website of https://featurepeek.com",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jason Barry <jason@featurepeek.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/featurepeek/marketing/issues"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop --port 3000",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "lint": "eslint 'src/**/*.{js,jsx}' --cache --ignore-path .gitignore",
+    "serve": "gatsby serve --port 3000",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "husky": {
+    "hooks": {
+      "post-merge": "yarn",
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn lint"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "yarn format",
+      "git add"
+    ]
   },
   "dependencies": {
     "gatsby": "^2.7.1",
@@ -37,9 +58,19 @@
     "ui-box": "^2.0.0"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-react-app": "^4.0.1",
+    "eslint-plugin-flowtype": "^3.9.1",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
     "prettier": "^1.17.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/featurepeek/marketing#readme",
   "keywords": [
     "gatsby"
   ],
@@ -47,13 +78,6 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
-  "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop --port 3000",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "serve": "gatsby serve --port 3000",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "url": "git+https://github.com/featurepeek/marketing.git"
   }
 }

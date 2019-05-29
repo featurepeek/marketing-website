@@ -1,12 +1,15 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
-import Bio from 'components/bio'
-import Layout from 'components/layout'
-import SEO from 'components/seo'
+import Bio from 'components/Bio'
+import Layout from 'components/Layout'
+import SEO from 'components/Seo'
+
+import { Heading, ListItem, Link, Paragraph, UnorderedList } from 'primitives'
+
 import { rhythm, scale } from 'utils/typography'
 
-export default function BlogPostTemplate(props) {
+export default function BlogPost(props) {
   const post = props.data.markdownRemark
   const siteTitle = props.data.site.siteMetadata.title
   const { previous, next } = props.pageContext
@@ -14,49 +17,31 @@ export default function BlogPostTemplate(props) {
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
-      <h1>{post.frontmatter.title}</h1>
-      <p
-        style={{
-          ...scale(-1 / 5),
-          display: `block`,
-          marginBottom: rhythm(1),
-          marginTop: rhythm(-1),
-        }}
-      >
+      <Heading marginTop={0} size={400}>
+        {post.frontmatter.title}
+      </Heading>
+      <Paragraph {...scale(-1 / 5)} marginBottom={rhythm(1)} marginTop={rhythm(-1)}>
         {post.frontmatter.date}
-      </p>
+      </Paragraph>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <hr
-        style={{
-          marginBottom: rhythm(1),
-        }}
-      />
+      <hr style={{ marginBottom: rhythm(1) }} />
       <Bio />
-
-      <ul
-        style={{
-          display: `flex`,
-          flexWrap: `wrap`,
-          justifyContent: `space-between`,
-          listStyle: `none`,
-          padding: 0,
-        }}
-      >
-        <li>
+      <UnorderedList display="flex" flexWrap="wrap" justifyContent="space-between">
+        <ListItem>
           {previous && (
-            <Link to={`/blog${previous.fields.slug}`} rel="prev">
+            <Link href={`/blog${previous.fields.slug}`} rel="prev">
               ← {previous.frontmatter.title}
             </Link>
           )}
-        </li>
-        <li>
+        </ListItem>
+        <ListItem>
           {next && (
-            <Link to={`/blog${next.fields.slug}`} rel="next">
+            <Link href={`/blog${next.fields.slug}`} rel="next">
               {next.frontmatter.title} →
             </Link>
           )}
-        </li>
-      </ul>
+        </ListItem>
+      </UnorderedList>
     </Layout>
   )
 }

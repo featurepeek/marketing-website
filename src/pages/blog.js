@@ -1,9 +1,12 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
-import Bio from 'components/bio'
-import Layout from 'components/layout'
-import SEO from 'components/seo'
+import Bio from 'components/Bio'
+import Layout from 'components/Layout'
+import SEO from 'components/Seo'
+
+import Link from 'primitives/Link'
+
 import { rhythm } from 'utils/typography'
 
 export default function Blog(props) {
@@ -24,9 +27,7 @@ export default function Blog(props) {
                 marginBottom: rhythm(1 / 4),
               }}
             >
-              <Link style={{ boxShadow: `none` }} to={`/blog${node.fields.slug}`}>
-                {title}
-              </Link>
+              <Link href={`/blog${node.fields.slug}`}>{title}</Link>
             </h3>
             <small>{node.frontmatter.date}</small>
             <p

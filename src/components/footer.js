@@ -3,13 +3,7 @@ import React, { useState } from 'react'
 import Box from 'ui-box'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 
-import Column from 'primitives/column'
-import Flex from 'primitives/flex'
-import Icon from 'primitives/icon'
-import Li from 'primitives/li'
-import Link from 'primitives/link'
-import TextInput from 'primitives/textinput'
-import Ul from 'primitives/ul'
+import { Column, Flex, Icon, ListItem, Link, Paragraph, Strong, TextInput, UnorderedList } from 'primitives'
 
 const socials = [
   {
@@ -124,7 +118,7 @@ export default function Footer(styles) {
         <Column flexGrow={1}>
           <Flex alignItems="center" marginBottom={32}>
             <Link href="/" underline={false}>
-              <img src="/img/square-white.svg" height="32" style={{ marginBottom: 0 }} />
+              <img alt="FeaturePeek Logo" src="/img/square-white.svg" height="32" style={{ marginBottom: 0 }} />
             </Link>
             {socials.map(social => (
               <Link key={social.icon} href={social.href} underline={false}>
@@ -132,9 +126,9 @@ export default function Footer(styles) {
               </Link>
             ))}
           </Flex>
-          <p style={{ color: '#fff', fontSize: 14, marginBottom: 24 }}>
+          <Paragraph color="white" fontSize={14} marginBottom={24}>
             FeaturePeek enables startups to shorten feedback loops. Blah blah blah mission statement goes here.
-          </p>
+          </Paragraph>
           <form onSubmit={handleSubmit}>
             <Flex>
               <TextInput
@@ -165,19 +159,21 @@ export default function Footer(styles) {
             </Flex>
           </form>
           {subscribedEmail && (
-            <p style={{ color: '#fff', fontSize: 13 }}>{subscribedEmail} has been added to the list.</p>
+            <Paragraph color="white" fontSize={13}>
+              {subscribedEmail} has been added to the list.
+            </Paragraph>
           )}
         </Column>
         <Column flexGrow={2} marginLeft={96}>
           <Flex>
             {columns.map(column => (
               <Column key={column.section}>
-                <p>
-                  <strong style={{ color: '#fff' }}>{column.section}</strong>
-                </p>
-                <Ul>
+                <Paragraph>
+                  <Strong color="white">{column.section}</Strong>
+                </Paragraph>
+                <UnorderedList>
                   {column.links.map(link => (
-                    <Li key={link.text}>
+                    <ListItem key={link.text}>
                       {link.icon && (
                         <Icon
                           icon={link.icon}
@@ -190,9 +186,9 @@ export default function Footer(styles) {
                       <Link href={link.href} color="white" opacity={0.5}>
                         {link.text}
                       </Link>
-                    </Li>
+                    </ListItem>
                   ))}
-                </Ul>
+                </UnorderedList>
               </Column>
             ))}
           </Flex>
