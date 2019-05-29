@@ -38,3 +38,13 @@ a.underline:hover::after {
 a.underline:active span {
   transform: translateY(1px);
 }
+
+/* Switch */
+.rc-switch {
+  margin: 0 16px;
+  transform: scale(1.25);
+}
+.rc-switch, .rc-switch-checked {
+  background-color: #05c5cc;
+  border-color: #05c5cc;
+}

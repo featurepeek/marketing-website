@@ -48,7 +48,7 @@ const columns = [
         text: 'Pricing',
         href: '/pricing',
       },
-    ]
+    ],
   },
   {
     section: 'More resources',
@@ -73,7 +73,7 @@ const columns = [
         text: 'Status',
         href: 'https://updown.io/ratp',
       },
-    ]
+    ],
   },
   {
     section: 'Company',
@@ -99,20 +99,14 @@ const columns = [
         iconColor: '#ff6601',
         text: 'Y Combinator S19',
         href: 'mailto:founders@featurepeek.com',
-      }
-    ]
-  }
+      },
+    ],
+  },
 ]
 
 export default function Footer(styles) {
   return (
-    <Box
-      is="footer"
-      background="#0a3e53"
-      paddingLeft={40}
-      paddingY={40}
-      {...styles}
-    >
+    <Box is="footer" background="#0a3e53" paddingLeft={40} paddingY={40} {...styles}>
       <Flex>
         <Column flexGrow={1}>
           <Link href="/" underline={false}>
@@ -121,17 +115,11 @@ export default function Footer(styles) {
           {/* <p style={{ color: '#fff' }}> */}
           {/*   FeaturePeek enables startups to shorten feedback loops. */}
           {/* </p> */}
-          <p></p>
+          <p />
           <Flex marginTop={128}>
             {socials.map(social => (
               <Link key={social.icon} href={social.href} underline={false}>
-                <Icon 
-                  icon={social.icon}
-                  color="white"
-                  fontSize={24}
-                  marginRight={32}
-                  opacity={0.5}
-                />
+                <Icon icon={social.icon} color="white" fontSize={24} marginRight={32} opacity={0.5} />
               </Link>
             ))}
           </Flex>
@@ -140,19 +128,21 @@ export default function Footer(styles) {
           <Flex>
             {columns.map(column => (
               <Column key={column.section}>
-                <p><strong style={{ color: '#fff' }}>{column.section}</strong></p>
+                <p>
+                  <strong style={{ color: '#fff' }}>{column.section}</strong>
+                </p>
                 <Ul>
                   {column.links.map(link => (
                     <Li key={link.text}>
                       {link.icon && (
-                        <Icon 
-                          icon={link.icon} 
-                          color={link.iconColor} 
-                          fontSize={24} 
-                          transform="translateY(3px)" 
-                          marginRight={8} 
+                        <Icon
+                          icon={link.icon}
+                          color={link.iconColor}
+                          fontSize={24}
+                          transform="translateY(3px)"
+                          marginRight={8}
                         />
-                      )}  
+                      )}
                       <Link href={link.href} color="white" opacity={0.5}>
                         {link.text}
                       </Link>

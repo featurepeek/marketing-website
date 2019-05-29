@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Footer from "components/footer"
-import Nav from "components/nav"
+import Footer from 'components/footer'
+import Nav from 'components/nav'
 import SEO from 'components/seo'
 
 // import Button from "primitives/button"

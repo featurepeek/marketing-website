@@ -26,21 +26,23 @@ export default function Nav() {
               <img src="/img/logo-full.svg" height="60" style={{ marginBottom: 0 }} />
             </Link>
             <Box marginLeft={40}>
-              <Link color="#103c52" href="/for-frontend-developers" fontSize={17}>Product</Link>
+              <Link color="#103c52" href="/for-frontend-developers" fontSize={17}>
+                Product
+              </Link>
             </Box>
             <Box marginLeft={40}>
-              <Link color="#103c52" href="/how-it-works" fontSize={17}>How it works</Link>
+              <Link color="#103c52" href="/how-it-works" fontSize={17}>
+                How it works
+              </Link>
             </Box>
             <Box marginLeft={40}>
-              <Link color="#103c52" href="/pricing" fontSize={17}>Pricing</Link>
+              <Link color="#103c52" href="/pricing" fontSize={17}>
+                Pricing
+              </Link>
             </Box>
           </Flex>
         </nav>
-        <Flex
-          alignItems="center"
-          justifyContent="center"
-          width={220}
-        >
+        <Flex alignItems="center" justifyContent="center" width={220}>
           <Button href="https://dashboard.featurepeek.com">Start your free trial</Button>
         </Flex>
       </Flex>

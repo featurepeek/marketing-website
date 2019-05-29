@@ -6,13 +6,7 @@ import { Link as GatsbyLink } from 'gatsby'
 export default function Link({ children, href = '', target, underline = true, ...styles }) {
   const className = underline ? 'underline' : 'normal'
   const span = (
-    <Box
-      is="span"
-      color="#05c5cc"
-      display="inline-block"
-      transition="all 0.1s ease"
-      {...styles}
-    >
+    <Box is="span" color="#05c5cc" display="inline-block" transition="all 0.1s ease" {...styles}>
       {children}
     </Box>
   )
