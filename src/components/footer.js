@@ -1,12 +1,14 @@
 // @flow
-import React from 'react'
+import React, { useState } from 'react'
 import Box from 'ui-box'
+import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 import Column from 'primitives/column'
 import Flex from 'primitives/flex'
 import Icon from 'primitives/icon'
 import Li from 'primitives/li'
 import Link from 'primitives/link'
+import TextInput from 'primitives/textinput'
 import Ul from 'primitives/ul'
 
 const socials = [
@@ -105,26 +107,68 @@ const columns = [
 ]
 
 export default function Footer(styles) {
+  const [email, setEmail] = useState('')
+  const [subscribedEmail, setSubscribedEmail] = useState('')
+
+  const handleSubmit = event => {
+    event.preventDefault()
+    addToMailchimp(email).then(() => {
+      setEmail('')
+      setSubscribedEmail(email)
+    })
+  }
+
   return (
     <Box is="footer" background="#0a3e53" paddingLeft={40} paddingY={40} {...styles}>
       <Flex>
         <Column flexGrow={1}>
-          <Link href="/" underline={false}>
-            <img src="/img/square-white.svg" height="32" style={{ marginBottom: 0 }} />
-          </Link>
-          {/* <p style={{ color: '#fff' }}> */}
-          {/*   FeaturePeek enables startups to shorten feedback loops. */}
-          {/* </p> */}
-          <p />
-          <Flex marginTop={128}>
+          <Flex alignItems="center" marginBottom={32}>
+            <Link href="/" underline={false}>
+              <img src="/img/square-white.svg" height="32" style={{ marginBottom: 0 }} />
+            </Link>
             {socials.map(social => (
               <Link key={social.icon} href={social.href} underline={false}>
-                <Icon icon={social.icon} color="white" fontSize={24} marginRight={32} opacity={0.5} />
+                <Icon icon={social.icon} color="white" fontSize={24} marginLeft={32} opacity={0.5} />
               </Link>
             ))}
           </Flex>
+          <p style={{ color: '#fff', fontSize: 14, marginBottom: 24 }}>
+            FeaturePeek enables startups to shorten feedback loops. Blah blah blah mission statement goes here.
+          </p>
+          <form onSubmit={handleSubmit}>
+            <Flex>
+              <TextInput
+                background="#0d5166"
+                color="white"
+                marginRight={8}
+                name="email"
+                onChange={e => setEmail(e.target.value)}
+                placeholder={`Enter your email address ${email.length === 0 ? 'to join our mailing list' : ''}`}
+                type="email"
+                value={email}
+              />
+              {email.length > 0 && (
+                <input
+                  // disabled
+                  type="submit"
+                  value="Join mailing list"
+                  style={{
+                    background: '#0d5166',
+                    color: 'white',
+                    border: 0,
+                    borderRadius: 8,
+                    padding: '8px 12px',
+                    whiteSpace: 'nowrap',
+                  }}
+                />
+              )}
+            </Flex>
+          </form>
+          {subscribedEmail && (
+            <p style={{ color: '#fff', fontSize: 13 }}>{subscribedEmail} has been added to the list.</p>
+          )}
         </Column>
-        <Column flexGrow={1.5}>
+        <Column flexGrow={2} marginLeft={96}>
           <Flex>
             {columns.map(column => (
               <Column key={column.section}>
