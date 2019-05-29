@@ -26,7 +26,7 @@ export default function Link({ children, href = '', target, underline = true, ..
   }
 
   return (
-    <GatsbyLink className={className} to={href} target={target}>
+    <GatsbyLink activeClassName="active-link" className={className} to={href} target={target}>
       {span}
     </GatsbyLink>
   )

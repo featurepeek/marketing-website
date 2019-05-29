@@ -23,6 +23,7 @@ export default function Button({ children, href, ...styles }) {
       paddingY={8}
       textShadow="0 0 2px rgba(0, 0, 0, 0.2)"
       transition="all 0.1s cubic-bezier(0, 0, 1, 2)"
+      whiteSpace="nowrap"
       {...styles}
     >
       {children}

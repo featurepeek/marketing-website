@@ -17,6 +17,7 @@ export default function Nav() {
       position="fixed"
       top={0}
       width="100%"
+      zIndex={999}
     >
       <Flex justifyContent="space-between">
         <nav>
@@ -25,7 +26,7 @@ export default function Nav() {
               <img src="/img/logo-full.svg" height="60" style={{ marginBottom: 0 }} />
             </Link>
             <Box marginLeft={40}>
-              <Link color="#103c52" href="/for-frontend-developers" fontSize={17}>Features</Link>
+              <Link color="#103c52" href="/for-frontend-developers" fontSize={17}>Product</Link>
             </Box>
             <Box marginLeft={40}>
               <Link color="#103c52" href="/how-it-works" fontSize={17}>How it works</Link>
