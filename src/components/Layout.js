@@ -7,15 +7,16 @@ import Footer from 'components/Footer'
 import { rhythm } from 'utils/typography'
 
 export default function Layout(props) {
-  const { location, children } = props
+  const { location, background, children } = props
   // const rootBlogPath = `${__PATH_PREFIX__}/blog`
 
   return (
     <div>
       <Nav />
       <Box
-        marginBottom={124}
-        marginTop={100}
+        background={background}
+        // marginBottom={124}
+        marginTop={16}
         marginX="auto"
         maxWidth={location.pathname.startsWith('/blog') ? rhythm(24) : rhythm(52)}
         padding={rhythm(1.5)}

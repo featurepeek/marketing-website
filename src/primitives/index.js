@@ -1,4 +1,5 @@
 import Button from './Button'
+import Code from './Code'
 import Column from './Column'
 import Emphasis from './Emphasis'
 import Flex from './Flex'
@@ -11,4 +12,18 @@ import Strong from './Strong'
 import TextInput from './TextInput'
 import UnorderedList from './UnorderedList'
 
-export { Button, Column, Emphasis, Flex, Heading, Icon, Link, ListItem, Paragraph, Strong, TextInput, UnorderedList }
+export {
+  Button,
+  Code,
+  Column,
+  Emphasis,
+  Flex,
+  Heading,
+  Icon,
+  Link,
+  ListItem,
+  Paragraph,
+  Strong,
+  TextInput,
+  UnorderedList,
+}

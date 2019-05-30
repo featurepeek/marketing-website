@@ -17,7 +17,7 @@ export default function ForProductManagers(props) {
   const theme = gradientMap.blue[0]
   // const siteTitle = props.data.site.siteMetadata.title
   return (
-    <Layout location={props.location}>
+    <Layout background="#e8f4f8" location={props.location}>
       <SEO title="FeaturePeek for Product Managers" />
       <Heading color="#103c52" h={6} marginTop={0} {...scale(1 / 2)}>
         FeaturePeek for
