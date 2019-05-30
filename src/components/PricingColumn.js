@@ -31,7 +31,8 @@ export default function PricingColumn({ product, hasMounted }) {
       border={metadata.recommended ? '3px solid #fefdb3' : '3px solid #e6f4f1'}
       borderRadius={16}
       // boxShadow="0 0 1px 0 rgba(67, 90, 111, 0.3), 0 2px 4px -2px rgba(67, 90, 111, 0.47)"
-      margin={12}
+      marginX={metadata.recommended ? 24 : 0}
+      marginY={12}
       position="relative"
       transition="transform 1.5s ease"
       transform={hasMounted ? `translateY(0px)` : `translateY(${metadata.recommended ? 240 : 200}px)`}
