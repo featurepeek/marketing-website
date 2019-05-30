@@ -10,6 +10,7 @@ export default function Button({ background = 'teal', children, href, iconBefore
   const [from, to] = gradientMap[background]
   return (
     <Box
+      // TODO: if href is passed, should use GatsbyLink
       is={href ? 'a' : 'button'}
       alignItems="center"
       background={`linear-gradient(${from}, ${to})`}
