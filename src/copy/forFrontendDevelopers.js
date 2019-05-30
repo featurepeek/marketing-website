@@ -2,7 +2,7 @@ export default [
   {
     heading: 'Get implementation feedback from your designers sooner',
     paragraphs: [
-      'Collect feedback from your designers faster by sending them a link before code review occurs.',
+      'Collect feedback from your designers faster by sending them a link to review visually before code review.',
       "Don't wait for code review to finish before getting implementation feedback from Design — if there's a change requested, you'll have to go through code review again.",
       "Instead, get feedback from designers while you're waiting on code review, asynchronously.",
     ],
@@ -27,6 +27,12 @@ export default [
     paragraphs: [
       'No more following-up with bug originators about the browser they were using or the URL where the bug occured.',
       "Commenting on a screenshot or annotation automatically sends along the user's relevant environment metadata like browser version and viewport dimensions.",
+    ],
+  },
+  {
+    heading: 'Confirm that reviewers are actually running your code',
+    paragraphs: [
+      "Each environment shows the amount of times its been accessed, and by which browsers, so you'll have a sense of how much manual test coverage went into each feature environment.",
     ],
   },
   {

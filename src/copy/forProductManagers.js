@@ -1,36 +1,34 @@
 export default [
   {
-    heading: 'Get implementation feedback from your designers sooner',
+    heading: 'Shorten feedback loops between Design and Engineering teams',
+    paragraphs: ['Tighten the iterative process of software development by giving your team the tools they need.'],
+  },
+  {
+    heading: "See a birds-eye view of your team's works in progress",
     paragraphs: [
-      'Collect feedback from your designers faster by sending them a link before code review occurs.',
-      "Don't wait for code review to finish before getting implementation feedback from Design — if there's a change requested, you'll have to go through code review again.",
-      "Instead, get feedback from designers while you're waiting on code review, asynchronously.",
+      "Keep tabs on your team's progress without bothering them or asking for status updates.",
+      'All open pull requests across all your projects (with screenshot thumbnails) are visible at once in the FeaturePeek dashboard.',
     ],
   },
   {
     heading: 'Run other branches without checking out locally',
     paragraphs: [
-      "Stop dev server, checkout branch, install dependencies, restart dev server... Sound familiar? Reviewing your peers' work shouldn't be so interruptive.",
+      "Stop dev server, checkout branch, install dependencies, restart dev server... Sound familiar? Reviewing your team's work shouldn't be so interruptive.",
       'With FeaturePeek, every branch is waiting for you in a dedicated environment. Running a branch is as easy as visiting a link.',
     ],
   },
   {
-    heading: 'See your build on another machine before committing to the main branch',
+    heading: 'Save time during your release cycle',
     paragraphs: [
-      'There are a slew of reasons why something could work on your laptop, but be busted when it hits the server: local fonts missing, global dependencies not installed, etc.',
-      'By using FeaturePeek, you get a preview of how it will look on the server before merging anything to the default branch.',
-      'Kiss the "well it works on my machine" excuse goodbye.',
+      'Catch mistakes earlier in the release cycle, before code lands on the master branch.',
+      'Since each implementation on FeaturePeek runs in isolation, your team will run into fewer integration bugs when deploying to production.',
     ],
   },
   {
-    heading: "Get your reviewers' browser metadata automatically",
+    heading: 'Recognize and reward team engagement',
     paragraphs: [
-      'No more following-up with bug originators about the browser they were using or the URL where the bug occured.',
-      "Commenting on a screenshot or annotation automatically sends along the user's relevant environment metadata like browser version and viewport dimensions.",
+      'Sometimes reviewing a release takes all hand on deck.',
+      "FeaturePeek's leaderboards show who in your team is the most engaged in leaving constructive implementation feedback, so you can give credit where credit is due.",
     ],
-  },
-  {
-    heading: 'Remind your reviewers that they have pull requests to review',
-    paragraphs: ["Set automated nudges in Slack to anyone on your team to review the WIP you've been working on."],
   },
 ]

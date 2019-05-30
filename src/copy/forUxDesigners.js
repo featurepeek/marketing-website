@@ -1,36 +1,27 @@
 export default [
   {
-    heading: 'Get implementation feedback from your designers sooner',
+    heading: 'Leave feedback earlier in the software development cycle',
     paragraphs: [
-      'Collect feedback from your designers faster by sending them a link before code review occurs.',
-      "Don't wait for code review to finish before getting implementation feedback from Design — if there's a change requested, you'll have to go through code review again.",
-      "Instead, get feedback from designers while you're waiting on code review, asynchronously.",
+      'With feature environments in their arsenal, your front-end developers will ask for your feedback sooner in the sprint.',
+      'No more late requests for implementation feedback right before a release.',
     ],
   },
   {
-    heading: 'Run other branches without checking out locally',
+    heading: 'Annotate directly on the implementation itself',
     paragraphs: [
-      "Stop dev server, checkout branch, install dependencies, restart dev server... Sound familiar? Reviewing your peers' work shouldn't be so interruptive.",
-      'With FeaturePeek, every branch is waiting for you in a dedicated environment. Running a branch is as easy as visiting a link.',
+      'Just like how tools like Figma and InVision let you collaborate on design, FeaturePeek lets you collaborate on implementation.',
+      "Take screenshots of an element on the page, and it'll be saved as a comment on the pull request, even if as a designer you don't have a GitHub account.",
+      // 'Video recording support coming soon!',
     ],
   },
   {
-    heading: 'See your build on another machine before committing to the main branch',
-    paragraphs: [
-      'There are a slew of reasons why something could work on your laptop, but be busted when it hits the server: local fonts missing, global dependencies not installed, etc.',
-      'By using FeaturePeek, you get a preview of how it will look on the server before merging anything to the default branch.',
-      'Kiss the "well it works on my machine" excuse goodbye.',
-    ],
+    heading: 'File bugs correctly, with critical information pre-filled',
+    paragraphs: ['Your front-end developers will love you for it!'],
   },
   {
-    heading: "Get your reviewers' browser metadata automatically",
+    heading: "Block features from being merged if they aren't up to par",
     paragraphs: [
-      'No more following-up with bug originators about the browser they were using or the URL where the bug occured.',
-      "Commenting on a screenshot or annotation automatically sends along the user's relevant environment metadata like browser version and viewport dimensions.",
+      "If granted Veto Power by a team admin, you'll have the ability to block a new feature from deploying until its quality meets your standards.",
     ],
-  },
-  {
-    heading: 'Remind your reviewers that they have pull requests to review',
-    paragraphs: ["Set automated nudges in Slack to anyone on your team to review the WIP you've been working on."],
   },
 ]
