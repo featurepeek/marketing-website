@@ -118,10 +118,10 @@ export default function Footer(styles) {
         <Column flexGrow={1}>
           <Flex alignItems="center" marginBottom={32}>
             <Link href="/" underline={false}>
-              <img alt="FeaturePeek Logo" src="/img/square-white.svg" height="32" style={{ marginBottom: 0 }} />
+              <img alt="Square logo" src="/img/square-white.svg" height="32" style={{ marginBottom: 0 }} />
             </Link>
             {socials.map(social => (
-              <Link key={social.icon} href={social.href} underline={false}>
+              <Link key={social.icon} href={social.href} underline={false} target="_blank">
                 <Icon icon={social.icon} color="white" fontSize={24} marginLeft={32} opacity={0.5} />
               </Link>
             ))}

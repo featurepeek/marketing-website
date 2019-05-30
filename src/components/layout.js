@@ -18,8 +18,7 @@ export default function Layout(props) {
         marginTop={100}
         marginX="auto"
         maxWidth={location.pathname.startsWith('/blog') ? rhythm(24) : rhythm(52)}
-        paddingX={rhythm(3 / 4)}
-        paddingY={rhythm(1.5)}
+        padding={rhythm(1.5)}
       >
         <main>{children}</main>
       </Box>
