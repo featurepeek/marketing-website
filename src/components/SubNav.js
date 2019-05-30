@@ -40,7 +40,7 @@ export default function SubNav(props) {
       opacity={isShowing ? 1 : 0}
       pointerEvents={isShowing ? 'auto' : 'none'}
       position="absolute"
-      transform={isShowing ? 'translateY(0)' : 'translateY(8px)'}
+      transform={isShowing ? 'translateY(0)' : 'translateY(-8px)'}
       transition="all 0.2s ease"
       width={280}
     >
@@ -50,7 +50,6 @@ export default function SubNav(props) {
           borderTopRightRadius={i === 0 ? 8 : 0}
           borderBottomLeftRadius={i === items.length - 1 ? 8 : 0}
           borderBottomRightRadius={i === items.length - 1 ? 8 : 0}
-          borderTop="1px solid #eee"
           className={`subnav${i + 1}`}
           marginTop={0}
           marginBottom={0}

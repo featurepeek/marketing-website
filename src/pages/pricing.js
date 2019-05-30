@@ -28,10 +28,10 @@ export default function Pricing(props) {
   return (
     <Layout location={props.location}>
       <SEO title="Pricing" />
-      <Heading marginTop={0} marginBottom={16} size={500} textAlign="center">
+      <Heading marginTop={0} size={500} textAlign="center">
         Flexible plans for companies of all sizes.
       </Heading>
-      <Heading marginTop={0} marginBottom={160} opacity={0.4} size={360} textAlign="center">
+      <Heading h={2} marginTop={0} marginBottom={160} opacity={0.4} size={360} textAlign="center">
         Our plans are simple and straightforward.
       </Heading>
       <Flex alignItems="center">

@@ -17,7 +17,7 @@ export default function ForFrontendDevelopers(props) {
   const theme = gradientMap.pink[0]
   // const siteTitle = props.data.site.siteMetadata.title
   return (
-    <Layout location={props.location}>
+    <Layout background="#f8eff6" location={props.location}>
       <SEO title="FeaturePeek for UX Designers" />
       <Heading color="#103c52" h={6} marginTop={0} {...scale(1 / 2)}>
         FeaturePeek for
