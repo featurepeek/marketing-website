@@ -44,4 +44,4 @@ jobs:
       # notify featurepeek
       - run:
           name: Pinging FeaturePeek
-          command: yarn featurepeek
+          command: yarn featurepeek dev
