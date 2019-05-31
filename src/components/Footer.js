@@ -16,7 +16,7 @@ const socials = [
   },
   {
     icon: 'fab fa-linkedin-in',
-    href: 'https://linkedin.com/in/featurepeek',
+    href: 'https://www.linkedin.com/company/14791957',
   },
 ]
 
