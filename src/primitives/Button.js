@@ -7,7 +7,7 @@ import Link from 'primitives/Link'
 
 import { gradientMap } from 'utils/color'
 
-export default function Button({ background = 'teal', children, href, iconBefore, iconAfter, ...styles }) {
+export default function Button({ background = 'teal', children, href, iconBefore, iconAfter, target, ...styles }) {
   const [from, to] = gradientMap[background]
   return (
     <Box
@@ -34,11 +34,12 @@ export default function Button({ background = 'teal', children, href, iconBefore
       <Link
         color="white"
         href={href}
-        underline={false}
+        paddingBottom={10}
         paddingLeft={20}
         paddingRight={20}
         paddingTop={10}
-        paddingBottom={10}
+        target={target}
+        underline={false}
       >
         {iconBefore && <Icon icon={iconBefore} marginRight={12} />}
         {children}

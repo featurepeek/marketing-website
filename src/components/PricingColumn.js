@@ -102,7 +102,9 @@ export default function PricingColumn({ product, hasMounted }) {
           ))}
         </UnorderedList>
         <Flex alignItems="center" height={100} justifyContent="center">
-          <Button>{metadata.cta}</Button>
+          <Button href="https://airtable.com/shrUZixSNBqSzmdTc" target="_blank">
+            {metadata.cta}
+          </Button>
         </Flex>
         {product.plans[0].trial_period_days && (
           <Paragraph opacity={0.5} textAlign="center">
