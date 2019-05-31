@@ -46,6 +46,7 @@ export default function SubNav(props) {
     >
       {items.map((item, i) => (
         <ListItem
+          key={item.label}
           borderTopLeftRadius={i === 0 ? 8 : 0}
           borderTopRightRadius={i === 0 ? 8 : 0}
           borderBottomLeftRadius={i === items.length - 1 ? 8 : 0}
