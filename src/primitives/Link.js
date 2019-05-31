@@ -6,12 +6,12 @@ import { Link as GatsbyLink } from 'gatsby'
 export default function Link({ children, href = '', onMouseEnter, onMouseLeave, target, underline = true, ...styles }) {
   const className = underline ? 'underline' : 'normal'
   const span = (
-    <Box is="span" color="#05c5cc" display="inline-block" transition="all 0.1s ease" {...styles}>
+    <Box is="span" color="#05c5cc" display="inline-block" transition="all 0.15s ease" {...styles}>
       {children}
     </Box>
   )
 
-  if (href.startsWith('http') || href.startsWith('mailto')) {
+  if (!href || href.startsWith('http') || href.startsWith('mailto')) {
     return (
       <a className={className} href={href} target={target}>
         {span}
@@ -21,13 +21,13 @@ export default function Link({ children, href = '', onMouseEnter, onMouseLeave, 
 
   return (
     <GatsbyLink
-      // activeClassName="active-link"
+      activeClassName={underline ? 'active-link' : undefined}
       className={className}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
+      partiallyActive
       to={href}
       target={target}
-      style={underline ? undefined : { lineHeight: 0 }}
     >
       {span}
     </GatsbyLink>

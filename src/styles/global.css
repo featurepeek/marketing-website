@@ -1,7 +1,7 @@
 /* Button */
 .button:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  padding: 12px 24px;
+  padding: 4px 8px;
   text-decoration: none;
 }
 .button:active {
@@ -10,11 +10,11 @@
 }
 
 /* Link */
-a.underline {
+.active-link, .underline {
   display: inline-block;
   position: relative;
 }
-.active-link::after, a.underline::after {
+.active-link::after, .underline::after {
   background: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   content: '';
@@ -26,17 +26,17 @@ a.underline {
   transition: all 0.15s ease;
   width: 100%;
 }
-a.underline:hover {
+.underline:hover {
   text-decoration: none;
 }
-a.underline:hover::after {
+.active-link::after, .underline:hover::after {
   transform: scale(1);
 }
-.active-link span, a.underline:hover span {
+.underline:hover span {
   color: #13b7d1;
   opacity: 1;
 }
-a.underline:active span {
+.underline:active span {
   transform: translateY(1px);
 }
 

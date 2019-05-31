@@ -17,7 +17,7 @@ export default function RowReversal(props) {
               {heading}
             </Heading>
             {paragraphs.map(paragraph => (
-              <Paragraph {...scale(1 / 4)} marginBottom={rhythm(0.75)}>
+              <Paragraph key={paragraph} {...scale(1 / 4)} marginBottom={rhythm(0.75)}>
                 {paragraph}
               </Paragraph>
             ))}

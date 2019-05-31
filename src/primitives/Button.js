@@ -3,6 +3,7 @@ import React from 'react'
 import Box from 'ui-box'
 
 import Icon from 'primitives/Icon'
+import Link from 'primitives/Link'
 
 import { gradientMap } from 'utils/color'
 
@@ -10,8 +11,6 @@ export default function Button({ background = 'teal', children, href, iconBefore
   const [from, to] = gradientMap[background]
   return (
     <Box
-      // TODO: if href is passed, should use GatsbyLink
-      is={href ? 'a' : 'button'}
       alignItems="center"
       background={`linear-gradient(${from}, ${to})`}
       backgroundColor={from}
@@ -19,23 +18,32 @@ export default function Button({ background = 'teal', children, href, iconBefore
       borderRadius={36}
       boxShadow="0 2px 4px rgba(0, 0, 0, 0.15)"
       className="button"
-      color="#fff"
-      cursor="pointer"
-      display="flex"
+      // color="#fff"
+      // cursor="pointer"
+      // display="block"
       fontSize={18}
       fontWeight={500}
-      href={href}
       justifyContent="center"
-      paddingX={16}
-      paddingY={8}
+      // paddingX={16}
+      // paddingY={8}
       textShadow="0 0 2px rgba(0, 0, 0, 0.2)"
       transition="all 0.1s cubic-bezier(0, 0, 1, 2)"
       whiteSpace="nowrap"
       {...styles}
     >
-      {iconBefore && <Icon icon={iconBefore} marginRight={12} />}
-      {children}
-      {iconAfter && <Icon icon={iconAfter} marginLeft={12} />}
+      <Link
+        color="white"
+        href={href}
+        underline={false}
+        paddingLeft={20}
+        paddingRight={20}
+        paddingTop={10}
+        paddingBottom={10}
+      >
+        {iconBefore && <Icon icon={iconBefore} marginRight={12} />}
+        {children}
+        {iconAfter && <Icon icon={iconAfter} marginLeft={12} />}
+      </Link>
     </Box>
   )
 }
