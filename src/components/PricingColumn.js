@@ -17,12 +17,12 @@ import UnorderedList from 'primitives/UnorderedList'
 import { dollarsFromCents } from 'utils/money'
 
 export default function PricingColumn({ product, hasMounted }) {
-  const [isMonthly, setMonthly] = useState(false)
+  const [isAnnual, setAnnual] = useState(false)
 
   const { metadata } = product
 
   const togglePlan = () => {
-    setMonthly(!isMonthly)
+    setAnnual(!isAnnual)
   }
 
   return (
@@ -57,7 +57,9 @@ export default function PricingColumn({ product, hasMounted }) {
           <Box>
             <Flex justifyContent="center" marginBottom={24}>
               <Heading h={2} margin={0} size={500}>
-                {isMonthly ? dollarsFromCents(product.plans[0].amount / 12) : dollarsFromCents(product.plans[1].amount)}
+                {isAnnual
+                  ? dollarsFromCents(product.plans.find(p => p.interval === 'year').amount / 12)
+                  : dollarsFromCents(product.plans.find(p => p.interval === 'month').amount)}
               </Heading>
               <Box marginLeft={8}>
                 <Paragraph marginBottom={0} position="relative" top={8}>
@@ -71,17 +73,17 @@ export default function PricingColumn({ product, hasMounted }) {
             <Flex alignItems="center" justifyContent="center">
               <Strong
                 cursor="pointer"
-                onClick={() => setMonthly(false)}
-                opacity={isMonthly ? 0.4 : 1}
+                onClick={() => setAnnual(false)}
+                opacity={isAnnual ? 0.4 : 1}
                 transition="opacity 0.3s ease"
               >
                 Monthly
               </Strong>
-              <Switch checked={isMonthly} onChange={togglePlan} />
+              <Switch checked={isAnnual} onChange={togglePlan} />
               <Strong
                 cursor="pointer"
-                onClick={() => setMonthly(true)}
-                opacity={isMonthly ? 1 : 0.4}
+                onClick={() => setAnnual(true)}
+                opacity={isAnnual ? 1 : 0.4}
                 transition="opacity 0.3s ease"
               >
                 Annually
