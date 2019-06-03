@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react'
+// import Box from 'ui-box'
 import { graphql } from 'gatsby'
 
 import { Heading, Flex } from 'primitives'
 
+import Faqs from 'components/Faqs'
 import PricingColumn from 'components/PricingColumn'
 import Layout from 'components/Layout'
 import SEO from 'components/Seo'
+
+import pricingFAQs from 'copy/pricingFAQs'
 
 export default function Pricing(props) {
   const [hasMounted, setMounted] = useState(false)
@@ -34,11 +38,12 @@ export default function Pricing(props) {
       <Heading h={2} marginTop={0} marginBottom={160} opacity={0.4} size={360} textAlign="center">
         Our plans are simple and straightforward.
       </Heading>
-      <Flex alignItems="center">
+      <Flex alignItems="center" marginBottom={160}>
         {sortedProducts.map(product => (
           <PricingColumn key={product.id} hasMounted={hasMounted} product={product} />
         ))}
       </Flex>
+      <Faqs heading="Pricing FAQs" faqs={pricingFAQs} />
     </Layout>
   )
 }

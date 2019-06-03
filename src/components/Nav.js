@@ -60,7 +60,7 @@ export default function Nav() {
             {/* </Box> */}
           </Flex>
         </nav>
-        <Flex alignItems="center" justifyContent="center" width={220}>
+        <Flex alignItems="center" justifyContent="center" width={240}>
           <Button href="https://airtable.com/shrUZixSNBqSzmdTc" target="_blank">
             Start your free trial
           </Button>
