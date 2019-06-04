@@ -3,8 +3,12 @@ import { graphql } from 'gatsby'
 
 import { Heading } from 'primitives'
 
+import FeatureGrid from 'components/FeatureGrid'
 import Layout from 'components/Layout'
+import RowReversal from 'components/RowReversal'
 import SEO from 'components/Seo'
+
+import { valueProps } from 'copy/homePage'
 
 export default function IndexPage(props) {
   // const siteTitle = props.data.site.siteMetadata.title
@@ -32,6 +36,8 @@ export default function IndexPage(props) {
         <br />
         No browser extension.
       </Heading>
+      <RowReversal copyWritings={valueProps} flip={1} />
+      <FeatureGrid />
     </Layout>
   )
 }

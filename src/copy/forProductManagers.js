@@ -9,6 +9,7 @@ export default [
       "Keep tabs on your team's progress without bothering them or asking for status updates.",
       'All open pull requests across all your projects (with screenshot thumbnails) are visible at once in the FeaturePeek dashboard.',
     ],
+    color: '#00b0de',
   },
   {
     heading: 'Run other branches without checking out locally',

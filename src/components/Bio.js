@@ -11,7 +11,7 @@ export default function Bio() {
     <StaticQuery
       query={bioQuery}
       render={data => {
-        const { author, social } = data.site.siteMetadata
+        const { author } = data.site.siteMetadata
         return (
           <Flex marginBottom={rhythm(2.5)}>
             <Image
@@ -29,8 +29,6 @@ export default function Bio() {
             />
             <Paragraph>
               Written by <Strong>{author}</Strong> who lives and works in San Francisco building useful things.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>You should follow him on Twitter</a>
             </Paragraph>
           </Flex>
         )
