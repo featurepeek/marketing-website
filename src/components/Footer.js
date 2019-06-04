@@ -49,10 +49,10 @@ const columns = [
   {
     section: 'More resources',
     links: [
-      {
-        text: 'Blog',
-        href: '/blog',
-      },
+      // {
+      //   text: 'Blog',
+      //   href: '/blog',
+      // },
       {
         text: 'Documentation',
         href: 'https://docs.featurepeek.com',
