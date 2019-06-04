@@ -11,28 +11,28 @@ export default function ViewportArriver(props) {
   const [isInViewport, setInViewport] = useState(false)
   const imageEl = useRef(null)
 
-  const scrollListener = event => {
-    if (!imageEl.current) {
-      return
-    }
-
-    if (!isInViewport && imageEl.current.getBoundingClientRect().bottom < window.innerHeight) {
-      handleArrival()
-      setInViewport(true)
-    }
-
-    if (isInViewport && imageEl.current.getBoundingClientRect().bottom > window.innerHeight) {
-      handleDeparture()
-      setInViewport(false)
-    }
-  }
-
   useEffect(() => {
+    const scrollListener = () => {
+      if (!imageEl.current) {
+        return
+      }
+
+      if (!isInViewport && imageEl.current.getBoundingClientRect().bottom < window.innerHeight) {
+        handleArrival()
+        setInViewport(true)
+      }
+
+      if (isInViewport && imageEl.current.getBoundingClientRect().bottom > window.innerHeight) {
+        handleDeparture()
+        setInViewport(false)
+      }
+    }
+
     document.addEventListener('scroll', scrollListener)
     return () => {
       document.removeEventListener('scroll', scrollListener)
     }
-  }, [])
+  }, [isInViewport, imageEl, handleArrival, handleDeparture])
 
   return (
     <Box>
