@@ -1,5 +1,5 @@
 // @flow
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Box from 'ui-box'
 
 import { Button, Flex, Link } from 'primitives'
@@ -8,14 +8,35 @@ import SubNav from 'components/SubNav'
 
 export default function Nav() {
   const [isShowingSubNav, setShowingSubNav] = useState(false)
+  const [hasScrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const scrollListener = () => {
+      if (!hasScrolled && window.scrollY > 32) {
+        setScrolled(true)
+      }
+
+      if (hasScrolled && window.scrollY <= 32) {
+        setScrolled(false)
+      }
+    }
+
+    document.addEventListener('scroll', scrollListener)
+    return () => {
+      document.removeEventListener('scroll', scrollListener)
+    }
+  }, [hasScrolled])
+
   return (
     <Box
       is="header"
       background="#fff"
+      boxShadow={hasScrolled ? '0 2px 4px rgba(0, 0, 0, 0.1)' : 'none'}
       paddingX={16}
       paddingY={8}
       marginTop={16}
       position="sticky"
+      transition="box-shadow 0.15s ease"
       top={0}
       width="100%"
       zIndex={999}

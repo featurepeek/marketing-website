@@ -28,6 +28,7 @@ export default function Link({ children, href = '', onMouseEnter, onMouseLeave, 
       partiallyActive
       to={href}
       target={target}
+      style={href === '/' ? { lineHeight: 0 } : undefined}
     >
       {span}
     </GatsbyLink>
