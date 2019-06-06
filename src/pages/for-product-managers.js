@@ -20,9 +20,9 @@ export default function ForProductManagers(props) {
     <Layout background="#e8f4f8" location={props.location}>
       <SEO title="FeaturePeek for Product Managers" />
       <Heading color="#103c52" h={6} marginTop={0} {...scale(1 / 2)}>
-        FeaturePeek for
+        Built for
       </Heading>
-      <Heading color={theme} marginTop={0} {...scale(2.25)}>
+      <Heading color={theme} marginTop={0} {...scale(2)}>
         Product Managers
       </Heading>
       <Paragraph {...scale(1 / 4)}>FeaturePeek is a game-changer for your development workflow.</Paragraph>

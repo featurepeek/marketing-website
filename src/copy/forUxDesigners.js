@@ -15,6 +15,10 @@ export default [
     ],
   },
   {
+    heading: 'See your designs filled with real data',
+    paragraphs: ["Be included in your team's release process"],
+  },
+  {
     heading: 'File bugs correctly, with critical information pre-filled',
     paragraphs: ['Your front-end developers will love you for it!'],
   },
@@ -23,5 +27,9 @@ export default [
     paragraphs: [
       "If granted Veto Power by a team admin, you'll have the ability to block a new feature from deploying until its quality meets your standards.",
     ],
+  },
+  {
+    heading: "Be more included in your team's release process",
+    paragraphs: ["Solve 'is this what you meant?'"],
   },
 ]

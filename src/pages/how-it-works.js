@@ -17,11 +17,11 @@ export default function HowItWorks(props) {
   // const siteTitle = props.data.site.siteMetadata.title
 
   const increment = step => {
-    setStepIndex(step + 1)
+    setStepIndex(Math.min(step + 1, steps.length))
   }
 
   const decrement = step => {
-    setStepIndex(step - 1)
+    setStepIndex(Math.max(step - 1, 0))
   }
 
   return (
@@ -63,7 +63,7 @@ export default function HowItWorks(props) {
               key={body}
               paragraph={body}
               handleArrival={() => increment(i - 1)}
-              handleDeparture={() => decrement(i - 1)}
+              handleDeparture={() => decrement(i)}
             />
           ))}
         </Column>

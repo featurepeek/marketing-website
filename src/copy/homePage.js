@@ -11,7 +11,7 @@ export const valueProps = [
     color: gradientMap.green[0],
     buttonProps: {
       background: 'green',
-      children: 'Features for Front-end Devs',
+      children: 'Built for Front-end Devs',
       href: '/for-frontend-developers',
       iconAfter: 'fas fa-arrow-right',
     },
@@ -26,7 +26,7 @@ export const valueProps = [
     color: gradientMap.pink[0],
     buttonProps: {
       background: 'pink',
-      children: 'Features for UX Designers',
+      children: 'Built for UX Designers',
       href: '/for-ux-designers',
       iconAfter: 'fas fa-arrow-right',
     },
@@ -40,7 +40,7 @@ export const valueProps = [
     color: gradientMap.blue[0],
     buttonProps: {
       background: 'blue',
-      children: 'Features for Product Managers',
+      children: 'Built for Product Managers',
       href: '/for-product-managers',
       iconAfter: 'fas fa-arrow-right',
     },
