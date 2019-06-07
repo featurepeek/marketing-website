@@ -16,9 +16,7 @@ executors:
 
 jobs:
   setup-checkout:
-    # executor: shell
-    docker:
-      - image: buildpack-deps:trusty
+    executor: default
     steps:
       - checkout
       - run: env > .env.production
