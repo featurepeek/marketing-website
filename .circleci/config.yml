@@ -36,12 +36,11 @@ workflows:
             - build_and_push_image
           filters:
             branches:
-              only: [master, dev, adding_docker_build]
+              only: [master, dev]
           image: ${CIRCLE_PROJECT_REPONAME}
           registry-url: gcr.io
           source-tag: ${CIRCLE_BRANCH}
           target-tag: ${CIRCLE_BRANCH}-${CIRCLE_BUILD_NUM}
-
       - featurepeek/ping_featurepeek:
           requires:
             - build_and_push_image
