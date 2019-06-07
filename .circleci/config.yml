@@ -15,27 +15,32 @@ executors:
     machine: true
 
 jobs:
-  setup-checkout:
+  build-image:
     executor: default
     steps:
       - checkout
       - run: env > .env.production
-  build-image: 
-    executor: default
-    steps:
       - gcp-gcr/gcr-auth
       - gcp-gcr/build-image:
           image: marketing-website
           tag: latest
+
+  # build-image: 
+  #   executor: default
+  #   steps:
+  #     - gcp-gcr/gcr-auth
+  #     - gcp-gcr/build-image:
+  #         image: marketing-website
+  #         tag: latest
       
 
 workflows:
   build_and_push_image:
     jobs:
-      - setup-checkout
+      # - setup-checkout
       - build-image: 
-          requires: 
-            - setup-checkout
+          # requires: 
+          #   - setup-checkout
 
            
       # - featurepeek/ping_featurepeek:
