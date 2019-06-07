@@ -26,10 +26,7 @@ jobs:
       - gcp-gcr/push-image:
           image: marketing-website
           tag: latest      
-  push-image:
-    executor: default
-    steps:
-     
+               
 workflows:
   build_and_push_image:
     jobs:
