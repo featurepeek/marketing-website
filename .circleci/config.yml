@@ -5,14 +5,14 @@
 # .circleci/config.yml
 version: 2.1
 
-executors:
-  my-executor: shell
+# executors:
+#   my-executor: shell
 
-jobs:
-  setup_env:
-    executor: my-executor
-    steps:
-      - run: 'env > .env.production'
+# jobs:
+#   setup_env:
+#     executor: my-executor
+#     steps:
+#       - run: 'env > .env.production'
 
 
 orbs:
