@@ -11,7 +11,6 @@ orbs:
 
 executors:
   default:
-    description: A debian-based machine executor
     machine: true
 
 jobs:
@@ -23,29 +22,28 @@ jobs:
       - gcp-gcr/gcr-auth
       - gcp-gcr/build-image:
           image: marketing-website
-          tag: latest
+          tag: latest      
 
-  # build-image: 
-  #   executor: default
-  #   steps:
-  #     - gcp-gcr/gcr-auth
-  #     - gcp-gcr/build-image:
-  #         image: marketing-website
-  #         tag: latest
-      
+  push-image:
+    executor: default
+    steps:
+      - gcp-gcr/push-image:
+          image: marketing-website
+          tag: latest      
+
 
 workflows:
   build_and_push_image:
     jobs:
       # - setup-checkout
       - build-image
-          # requires: 
-          #   - setup-checkout
-
-           
-      # - featurepeek/ping_featurepeek:
-      #     requires:
-      #       - gcp-gcr/build-and-push-image
-      #     image: marketing-website
-      #     tag: latest
-      #     env: dev
+      - push-image: 
+          requires: 
+            - build-image
+      - featurepeek/ping_featurepeek:
+          requires:
+            - build-image
+            - push-image
+          image: marketing-website
+          tag: latest
+          env: dev
