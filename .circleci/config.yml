@@ -14,7 +14,7 @@ executors:
     machine: true
 
 jobs:
-  build-image:
+  build_and_push_image:
     executor: default
     steps:
       - checkout
@@ -23,27 +23,20 @@ jobs:
       - gcp-gcr/build-image:
           image: marketing-website
           tag: latest      
-
-  push-image:
-    executor: default
-    steps:
       - gcp-gcr/push-image:
           image: marketing-website
           tag: latest      
-
-
+  push-image:
+    executor: default
+    steps:
+     
 workflows:
   build_and_push_image:
     jobs:
-      # - setup-checkout
-      - build-image
-      - push-image: 
-          requires: 
-            - build-image
+      - build_and_push_image
       - featurepeek/ping_featurepeek:
           requires:
-            - build-image
-            - push-image
+            - build_and_push_image
           image: marketing-website
           tag: latest
           env: dev
