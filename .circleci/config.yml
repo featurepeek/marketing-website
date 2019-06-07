@@ -4,15 +4,21 @@
 #
 # .circleci/config.yml
 version: 2.1
+
+executors:
+  my-executor: shell
+
+jobs:
+  setup_env:
+    executor: my-executor
+    steps:
+      - run: 'env > .env.production'
+
+
 orbs:
   gcp-gcr: circleci/gcp-gcr@0.3.0
   featurepeek: featurepeek/ping@0.0.2
-
   workflows:
-    setup_env:
-      jobs:
-        - dump_env:
-          - run: 'env > .env.production'
     build_and_push_image:
       jobs:
         - gcp-gcr/build-and-push-image:
