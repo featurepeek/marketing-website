@@ -104,7 +104,7 @@ export default function PricingColumn({ product, hasMounted }) {
           ))}
         </UnorderedList>
         <Flex alignItems="center" height={100} justifyContent="center">
-          <Button href="https://airtable.com/shrUZixSNBqSzmdTc" target="_blank">
+          <Button href={`https://airtable.com/shrUZixSNBqSzmdTc?prefill_Plan=${product.name}`} target="_blank">
             {metadata.cta}
           </Button>
         </Flex>

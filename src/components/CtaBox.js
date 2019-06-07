@@ -14,7 +14,7 @@ export default function CtaBox({ question, answer }) {
       </Heading>
       {/* <Paragraph color="white" fontSize={40} textAlign="center">Request your free trial now.</Paragraph> */}
       <Flex alignItems="center" justifyContent="center" height={100}>
-        <Button href="/pricing">Get started</Button>
+        <Button href="/pricing">Get started now</Button>
       </Flex>
     </Box>
   )

@@ -40,7 +40,7 @@ export default function HowItWorks(props) {
               Setup instructions
             </Heading>
             <Paragraph fontSize={24} marginBottom={32}>
-              From static builds to Docker pushes, FeaturePeek supports various types of front-end architectures.
+              From static builds to Docker containers, FeaturePeek supports various types of front-end architectures.
             </Paragraph>
             <UnorderedList marginLeft={32}>
               {steps.map((step, i) => (
@@ -58,10 +58,12 @@ export default function HowItWorks(props) {
           </Box>
         </Column>
         <Column marginLeft={32}>
-          {elaborations.map(({ body }, i) => (
+          {elaborations.map(({ strong, body, image }, i) => (
             <ViewportArriver
-              key={body}
+              key={strong}
+              strong={strong}
               paragraph={body}
+              image={image}
               handleArrival={() => increment(i - 1)}
               handleDeparture={() => decrement(i)}
             />
