@@ -21,10 +21,10 @@ jobs:
       - run: env > .env.production
       - gcp-gcr/gcr-auth
       - gcp-gcr/build-image:
-          image: ${REPONAME}
+          image: ${CIRCLE_PROJECT_REPONAME}
           tag: ${CIRCLE_BRANCH}
       - gcp-gcr/push-image:
-          image: ${REPONAME}
+          image: ${CIRCLE_PROJECT_REPONAME}
           tag: ${CIRCLE_BRANCH} 
 
 workflows:
@@ -36,8 +36,8 @@ workflows:
             - build_and_push_image
           filters:
             branches:
-              only: [master, dev]
-          image: ${REPONAME}
+              only: [master, dev, adding_docker_build]
+          image: ${CIRCLE_PROJECT_REPONAME}
           registry-url: gcr.io
           source-tag: ${CIRCLE_BRANCH}
           target-tag: ${CIRCLE_BRANCH}-${CIRCLE_BUILD_NUM}
@@ -45,7 +45,7 @@ workflows:
       - featurepeek/ping_featurepeek:
           requires:
             - build_and_push_image
-          image: ${REPONAME}
+          image: ${CIRCLE_PROJECT_REPONAME}
           tag: ${CIRCLE_BRANCH}
           env: dev
           filters:
