@@ -15,8 +15,9 @@ workflows:
       - gcp-gcr/build-and-push-image:
           image: marketing-website
           tag: latest
-          # pre-steps:
-          # - run: "env > .env.production"
+          pre-steps:
+          - run: "env > .env.production"
+          - run: "cat .env.production"
       - featurepeek/ping_featurepeek:
           requires:
             - gcp-gcr/build-and-push-image
