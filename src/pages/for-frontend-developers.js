@@ -20,7 +20,7 @@ export default function ForFrontendDevelopers(props) {
   return (
     <Layout background="#eef6ef" location={props.location}>
       <SEO title="FeaturePeek for Front-end Developers" />
-      <HeroFrontend style={{ height: 800 }}>
+      <HeroFrontend>
         <Heading color="#103c52" h={6} marginTop={0} {...scale(1 / 2)}>
           Built for
         </Heading>

@@ -2,11 +2,11 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
-export default function HeroFrontend(props) {
+export default function HeroDesigners(props) {
   const { hero } = useStaticQuery(
     graphql`
-      query HeroFrontend {
-        hero: file(absolutePath: { regex: "/front-end-devs.png/" }) {
+      query HeroDesigners {
+        hero: file(absolutePath: { regex: "/ux-designers.png/" }) {
           childImageSharp {
             fluid(maxWidth: 1280, quality: 100) {
               ...GatsbyImageSharpFluid_noBase64
@@ -22,7 +22,7 @@ export default function HeroFrontend(props) {
       critical
       loading="eager"
       fluid={hero.childImageSharp.fluid}
-      alt="Built for Front-end Developers"
+      alt="Built for UX Designers"
       style={{
         backgroundPosition: '0 0px',
         backgroundSize: 'contain',
