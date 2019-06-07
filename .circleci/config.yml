@@ -5,16 +5,6 @@
 # .circleci/config.yml
 version: 2.1
 
-# executors:
-#   my-executor: shell
-
-# jobs:
-#   setup_env:
-#     executor: my-executor
-#     steps:
-#       - run: 'env > .env.production'
-
-
 orbs:
   gcp-gcr: circleci/gcp-gcr@0.3.0
   featurepeek: featurepeek/ping@0.0.2
@@ -24,8 +14,9 @@ orbs:
         - gcp-gcr/build-and-push-image:
             image: marketing-website
             tag: latest
-            requires:
-              - setup_env
+            pre-steps:
+            - run:
+              command: env > .env.production
         - featurepeek/ping_featurepeek:
             requires:
               - gcp-gcr/build-and-push-image
