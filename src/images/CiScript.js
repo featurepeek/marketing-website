@@ -8,7 +8,7 @@ export default function CiScript() {
       query CiScript {
         img: file(absolutePath: { regex: "/ci-script.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 640, quality: 100) {
+            fluid(maxWidth: 605, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

@@ -27,7 +27,9 @@ export default function ForFrontendDevelopers(props) {
         <Heading color={theme} marginTop={0} {...scale(2)}>
           UX Designers
         </Heading>
-        <Paragraph {...scale(1 / 4)}>FeaturePeek is a game-changer for your development workflow.</Paragraph>
+        <Paragraph {...scale(1 / 4)} width="50%">
+          See your designs come to life earlier in the release cycle.
+        </Paragraph>
       </HeroDesigners>
       <RowReversal copyWritings={copyWritings} theme={theme} />
       <Flex justifyContent="space-evenly" marginTop={200} width="100%">

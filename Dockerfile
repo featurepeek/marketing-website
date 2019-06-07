@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:10.15
+FROM nginx:stable-alpine
 
 # force production when built from Docker
 ENV NODE_ENV production
@@ -16,6 +16,9 @@ COPY . /usr/src/app
 
 # build
 RUN yarn build
-EXPOSE 3000
 
-CMD [ "yarn", "serve" ]
+# copy built assets to nginx
+COPY public/* /usr/share/nginx/html
+
+# expose public port
+EXPOSE 3000

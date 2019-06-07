@@ -2,13 +2,13 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
 
-export default function PeekYaml() {
+export default function Terminal() {
   const { img } = useStaticQuery(
     graphql`
-      query PeekYaml {
-        img: file(absolutePath: { regex: "/peek-yaml.png/" }) {
+      query Terminal {
+        img: file(absolutePath: { regex: "/terminal.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 605, quality: 100) {
+            fluid(maxWidth: 600, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -17,5 +17,5 @@ export default function PeekYaml() {
     `
   )
 
-  return <Image fluid={img.childImageSharp.fluid} alt="Add a peek.yaml file to your repo root" />
+  return <Image fluid={img.childImageSharp.fluid} alt="No need to checkout branches locally" />
 }
