@@ -2,7 +2,7 @@
 import React from 'react'
 import Box from 'ui-box'
 
-import { Button, Flex, Heading, Icon, Paragraph, Strong } from 'primitives'
+import { Button, Flex, Heading } from 'primitives'
 
 // import { rhythm, scale } from 'utils/typography'
 

@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 
 import { Heading } from 'primitives'
 
-import CtaBox from 'components/CtaBox'
 import FeatureGrid from 'components/FeatureGrid'
 import Layout from 'components/Layout'
 import RowReversal from 'components/RowReversal'
