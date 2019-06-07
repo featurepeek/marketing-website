@@ -9,20 +9,19 @@ export default [
       "Keep tabs on your team's progress without bothering them or asking for status updates.",
       'All open pull requests across all your projects (with screenshot thumbnails) are visible at once in the FeaturePeek dashboard.',
     ],
-    color: '#00b0de',
-  },
-  {
-    heading: 'Run other branches without checking out locally',
-    paragraphs: [
-      "Stop dev server, checkout branch, install dependencies, restart dev server... Sound familiar? Reviewing your team's work shouldn't be so interruptive.",
-      'With FeaturePeek, every branch is waiting for you in a dedicated environment. Running a branch is as easy as visiting a link.',
-    ],
   },
   {
     heading: 'Save time during your release cycle',
     paragraphs: [
       'Catch mistakes earlier in the release cycle, before code lands on the master branch.',
       'Since each implementation on FeaturePeek runs in isolation, your team will run into fewer integration bugs when deploying to production.',
+    ],
+  },
+  {
+    heading: 'Run other branches without checking out locally',
+    paragraphs: [
+      "Stop dev server, checkout branch, install dependencies, restart dev server... Sound familiar? Reviewing your team's work shouldn't be so interruptive.",
+      'With FeaturePeek, every branch is waiting for you in a dedicated environment. Running a branch is as easy as visiting a link.',
     ],
   },
   {

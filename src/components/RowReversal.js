@@ -9,7 +9,7 @@ import { rhythm, scale } from 'utils/typography'
 export default function RowReversal(props) {
   const { copyWritings, theme, flip = 0 } = props
   return (
-    <Box marginTop={300}>
+    <Box marginTop={100}>
       {copyWritings.map(({ heading, paragraphs, color, buttonProps }, i) => (
         <Flex key={heading} flexDirection={i % 2 === flip ? 'row' : 'row-reverse'}>
           <Box width="45%">

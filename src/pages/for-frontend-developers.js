@@ -6,6 +6,7 @@ import copyWritings from 'copy/forFrontendDevelopers'
 
 import { Button, Flex, Heading, Paragraph } from 'primitives'
 
+import HeroFrontend from 'images/HeroFrontend'
 import Layout from 'components/Layout'
 import RowReversal from 'components/RowReversal'
 import SEO from 'components/Seo'
@@ -19,18 +20,20 @@ export default function ForFrontendDevelopers(props) {
   return (
     <Layout background="#eef6ef" location={props.location}>
       <SEO title="FeaturePeek for Front-end Developers" />
-      <Heading color="#103c52" h={6} marginTop={0} {...scale(1 / 2)}>
-        FeaturePeek for
-      </Heading>
-      <Heading color={theme} marginTop={0} {...scale(2.25)}>
-        Front-end Developers
-      </Heading>
-      <Paragraph {...scale(1 / 4)}>FeaturePeek is a game-changer for your development workflow.</Paragraph>
+      <HeroFrontend>
+        <Heading color="#103c52" h={6} marginTop={0} {...scale(1 / 2)}>
+          Built for
+        </Heading>
+        <Heading color={theme} marginTop={0} {...scale(2)}>
+          Front-end Developers
+        </Heading>
+        <Paragraph {...scale(1 / 4)}>FeaturePeek is a game-changer for your development workflow.</Paragraph>
+      </HeroFrontend>
       <RowReversal copyWritings={copyWritings} theme={theme} />
       <Flex justifyContent="space-evenly" marginTop={200} width="100%">
         <Flex alignItems="center" justifyContent="center" height={100} width={1}>
-          <Button href="/for-product-managers" background="blue" iconBefore="fas fa-arrow-left" width={300}>
-            Product Managers
+          <Button href="/for-project-managers" background="blue" iconBefore="fas fa-arrow-left" width={300}>
+            Project Managers
           </Button>
         </Flex>
         <Flex alignItems="center" justifyContent="center" height={100} width={1}>
