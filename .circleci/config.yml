@@ -15,7 +15,7 @@ workflows:
       - gcp-gcr/build-and-push-image:
           image: marketing-website
           tag: latest
-          pre-steps:
+          post-steps:
             - run:
                 command: |
                      env > .env.production
