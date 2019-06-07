@@ -22,7 +22,7 @@ COPY . /usr/src/app
 RUN yarn build
 
 # copy built assets to nginx
-COPY public/* /usr/share/nginx/html
+RUN cp -r ./public/* /usr/share/nginx/html
 
 # expose public port
 EXPOSE 80
