@@ -21,6 +21,7 @@ export default function HeroManagers(props) {
     <BackgroundImage
       critical
       loading="eager"
+      fadeIn={false}
       fluid={img.childImageSharp.fluid}
       alt="Built for Project Managers"
       style={{

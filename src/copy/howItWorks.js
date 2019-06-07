@@ -3,6 +3,7 @@ import React from 'react'
 import InstallGitHubApp from 'images/InstallGitHubApp'
 import PeekYaml from 'images/PeekYaml'
 import CiScript from 'images/CiScript'
+import OpenPullRequest from 'images/OpenPullRequest'
 
 export const steps = [
   'Install our GitHub App on your org',
@@ -33,5 +34,6 @@ export const elaborations = [
     strong: 'Open a new pull request.',
     body:
       "That's it! Every new pull request opened will have a corresponding FeaturePeek environment. Once you merge it in, every new branch will be able to use our suite of collaboration tools.",
+    image: <OpenPullRequest />,
   },
 ]

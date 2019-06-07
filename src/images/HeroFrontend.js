@@ -21,6 +21,7 @@ export default function HeroFrontend(props) {
     <BackgroundImage
       critical
       loading="eager"
+      fadeIn={false}
       fluid={img.childImageSharp.fluid}
       alt="Built for Front-end Developers"
       style={{

@@ -21,6 +21,7 @@ export default function HeroDesigners(props) {
     <BackgroundImage
       critical
       loading="eager"
+      fadeIn={false}
       fluid={img.childImageSharp.fluid}
       alt="Built for UX Designers"
       style={{
