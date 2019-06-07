@@ -17,8 +17,7 @@ workflows:
           tag: latest
           pre-steps:
             - run:
-                # command:  env > .env.production
-                command: echo "IN PRE STEP"
+                command:  env > .env.production
       - featurepeek/ping_featurepeek:
           requires:
             - gcp-gcr/build-and-push-image
