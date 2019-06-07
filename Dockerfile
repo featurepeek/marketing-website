@@ -3,6 +3,10 @@ FROM nginx:stable-alpine
 # force production when built from Docker
 ENV NODE_ENV production
 
+RUN apk update
+RUN apk add nodejs-current-npm
+RUN npm install -g yarn
+
 # Create directories all the way up to app
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
@@ -21,4 +25,4 @@ RUN yarn build
 COPY public/* /usr/share/nginx/html
 
 # expose public port
-EXPOSE 3000
+EXPOSE 80

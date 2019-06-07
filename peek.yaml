@@ -2,4 +2,4 @@
 services:
 - name: node frontend
   dockerfile: ./Dockerfile
-  port: 3000
+  port: 80
