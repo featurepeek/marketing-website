@@ -12,16 +12,20 @@ orbs:
 workflows:
   build_and_push_image:
     jobs:
-      - gcp-gcr/build-and-push-image:
+      - checkout-setup: 
+        steps: 
+            - checkout
+            - run: env > .env.production
+      - gcp-gcr/build-image:
           image: marketing-website
           tag: latest
-          post-steps:
-            - run:
-                command: |
-                     env > .env.production
-      - featurepeek/ping_featurepeek:
-          requires:
-            - gcp-gcr/build-and-push-image
-          image: marketing-website
-          tag: latest
-          env: dev
+          # requires: 
+            # - checkout-setup
+
+           
+      # - featurepeek/ping_featurepeek:
+      #     requires:
+      #       - gcp-gcr/build-and-push-image
+      #     image: marketing-website
+      #     tag: latest
+      #     env: dev
