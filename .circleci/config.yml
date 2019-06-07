@@ -8,18 +8,19 @@ version: 2.1
 orbs:
   gcp-gcr: circleci/gcp-gcr@0.3.0
   featurepeek: featurepeek/ping@0.0.2
-  workflows:
-    build_and_push_image:
-      jobs:
-        - gcp-gcr/build-and-push-image:
-            image: marketing-website
-            tag: latest
-            pre-steps:
-            - run:
-              command: env > .env.production
-        - featurepeek/ping_featurepeek:
-            requires:
-              - gcp-gcr/build-and-push-image
-            image: marketing-website
-            tag: latest
-            env: dev
+
+workflows:
+  build_and_push_image:
+    jobs:
+      - gcp-gcr/build-and-push-image:
+          image: marketing-website
+          tag: latest
+          pre-steps:
+          - run:
+            command: env > .env.production
+      - featurepeek/ping_featurepeek:
+          requires:
+            - gcp-gcr/build-and-push-image
+          image: marketing-website
+          tag: latest
+          env: dev
