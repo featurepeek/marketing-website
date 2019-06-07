@@ -38,7 +38,7 @@ workflows:
   build_and_push_image:
     jobs:
       # - setup-checkout
-      - build-image: 
+      - build-image
           # requires: 
           #   - setup-checkout
 
