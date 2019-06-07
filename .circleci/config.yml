@@ -16,8 +16,8 @@ workflows:
           image: marketing-website
           tag: latest
           pre-steps:
-          - run: "env > .env.production"
-          - run: "cat .env.production"
+            - run:
+                command:  env > .env.production
       - featurepeek/ping_featurepeek:
           requires:
             - gcp-gcr/build-and-push-image
