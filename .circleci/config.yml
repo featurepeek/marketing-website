@@ -26,18 +26,18 @@ jobs:
     executor: default
     steps:
       - gcp-gcr/gcr-auth
-      - gcp-gcr/build-image
+      - gcp-gcr/build-image:
+          image: marketing-website
+          tag: latest
+      
 
 workflows:
   build_and_push_image:
     jobs:
       - setup-checkout
-      - build-image
-      # - gcp-gcr/build-image:
-      #     image: marketing-website
-      #     tag: latest
-      #     requires: 
-      #       - setup-checkout
+      - build-image: 
+          requires: 
+            - setup-checkout
 
            
       # - featurepeek/ping_featurepeek:
