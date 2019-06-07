@@ -22,11 +22,20 @@ jobs:
       - gcp-gcr/gcr-auth
       - gcp-gcr/build-image:
           image: marketing-website
-          tag: latest      
+          tag: ${CIRCLE_BRANCH}
       - gcp-gcr/push-image:
           image: marketing-website
-          tag: latest      
-               
+          tag: ${CIRCLE_BRANCH} 
+      - gcp-gcr/tag-image:
+          image: marketing-website
+          registry-url: gcr.io
+          source-tag: ${CIRCLE_BRANCH}
+          target-tag: ${CIRCLE_BRANCH}-${CIRCLE_BUILD_NUM}
+          branches:
+            only:
+              - dev
+              - master
+     
 workflows:
   build_and_push_image:
     jobs:
@@ -37,3 +46,8 @@ workflows:
           image: marketing-website
           tag: latest
           env: dev
+          branches:
+            ignore:
+              - dev
+              - master
+
