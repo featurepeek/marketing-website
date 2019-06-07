@@ -127,7 +127,8 @@ export default function Footer(styles) {
             ))}
           </Flex>
           <Paragraph color="white" fontSize={14} marginBottom={24}>
-            FeaturePeek enables startups to shorten feedback loops. Blah blah blah mission statement goes here.
+            FeaturePeek shortens feedback loops for teams building web products. Enter your email below to receive our
+            newsletter about the software development lifecycle.
           </Paragraph>
           <form onSubmit={handleSubmit}>
             <Flex>

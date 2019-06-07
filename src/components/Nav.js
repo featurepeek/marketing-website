@@ -82,9 +82,7 @@ export default function Nav() {
           </Flex>
         </nav>
         <Flex alignItems="center" justifyContent="center" width={240}>
-          <Button href="https://airtable.com/shrUZixSNBqSzmdTc" target="_blank">
-            Start your free trial
-          </Button>
+          <Button href="/pricing">Start your free trial</Button>
         </Flex>
       </Flex>
     </Box>
