@@ -6,7 +6,7 @@
 version: 2.1
 
 orbs:
-  gcp-gcr: circleci/gcp-gcr@0.3.0
+  gcp-gcr: circleci/gcp-gcr@0.6.0
   featurepeek: featurepeek/ping@0.0.2
 
 executors:
@@ -21,33 +21,34 @@ jobs:
       - run: env > .env.production
       - gcp-gcr/gcr-auth
       - gcp-gcr/build-image:
-          image: marketing-website
+          image: ${REPONAME}
           tag: ${CIRCLE_BRANCH}
       - gcp-gcr/push-image:
-          image: marketing-website
+          image: ${REPONAME}
           tag: ${CIRCLE_BRANCH} 
-      - gcp-gcr/tag-image:
-          image: marketing-website
-          registry-url: gcr.io
-          source-tag: ${CIRCLE_BRANCH}
-          target-tag: ${CIRCLE_BRANCH}-${CIRCLE_BUILD_NUM}
-          branches:
-            only:
-              - dev
-              - master
-     
+
 workflows:
   build_and_push_image:
     jobs:
       - build_and_push_image
+      - gcp-gcr/add-image-tag:
+          requires:
+            - build_and_push_image
+          filters:
+            branches:
+              only: [master, dev]
+          image: ${REPONAME}
+          registry-url: gcr.io
+          source-tag: ${CIRCLE_BRANCH}
+          target-tag: ${CIRCLE_BRANCH}-${CIRCLE_BUILD_NUM}
+
       - featurepeek/ping_featurepeek:
           requires:
             - build_and_push_image
-          image: marketing-website
-          tag: latest
+          image: ${REPONAME}
+          tag: ${CIRCLE_BRANCH}
           env: dev
-          branches:
-            ignore:
-              - dev
-              - master
+          filters:
+            branches:
+              ignore: [master, dev]
 
