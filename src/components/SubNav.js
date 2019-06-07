@@ -22,8 +22,8 @@ const items = [
   {
     color: gradientMap.blue,
     icon: 'fas fa-tasks',
-    href: '/for-product-managers',
-    label: 'Product Managers',
+    href: '/for-project-managers',
+    label: 'Project Managers',
   },
 ]
 

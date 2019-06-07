@@ -40,8 +40,8 @@ export const valueProps = [
     color: gradientMap.blue[0],
     buttonProps: {
       background: 'blue',
-      children: 'Built for Product Managers',
-      href: '/for-product-managers',
+      children: 'Built for Project Managers',
+      href: '/for-project-managers',
       iconAfter: 'fas fa-arrow-right',
     },
   },

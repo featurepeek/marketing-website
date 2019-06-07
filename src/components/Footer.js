@@ -76,11 +76,11 @@ const columns = [
     links: [
       {
         text: 'Privacy policy',
-        href: '/privacy',
+        href: 'https://featurepeek.com/pdfs/privacy.pdf',
       },
       {
         text: 'Terms',
-        href: '/terms',
+        href: 'https://featurepeek.com/pdfs/terms.pdf',
       },
       {
         text: 'Contact',
@@ -94,7 +94,7 @@ const columns = [
         icon: 'fab fa-y-combinator',
         iconColor: '#ff6601',
         text: 'Y Combinator S19',
-        href: 'mailto:founders@featurepeek.com',
+        // href: 'mailto:founders@featurepeek.com',
       },
     ],
   },

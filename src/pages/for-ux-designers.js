@@ -37,8 +37,8 @@ export default function ForFrontendDevelopers(props) {
           </Button>
         </Flex>
         <Flex alignItems="center" justifyContent="center" height={100} width={1}>
-          <Button href="/for-product-managers" background="blue" iconAfter="fas fa-arrow-right" width={300}>
-            Product Managers
+          <Button href="/for-project-managers" background="blue" iconAfter="fas fa-arrow-right" width={300}>
+            Project Managers
           </Button>
         </Flex>
       </Flex>
