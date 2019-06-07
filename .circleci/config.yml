@@ -9,18 +9,24 @@ orbs:
   gcp-gcr: circleci/gcp-gcr@0.3.0
   featurepeek: featurepeek/ping@0.0.2
 
+jobs:
+  setup-checkout:
+    # executor: shell
+    docker:
+      - image: buildpack-deps:trusty
+    steps:
+      - checkout
+      - run: env > .env.production
+
 workflows:
   build_and_push_image:
     jobs:
-      - checkout-setup: 
-        steps: 
-            - checkout
-            - run: env > .env.production
-      - gcp-gcr/build-image:
-          image: marketing-website
-          tag: latest
-          # requires: 
-            # - checkout-setup
+      - setup-checkout
+      # - gcp-gcr/build-image:
+      #     image: marketing-website
+      #     tag: latest
+      #     requires: 
+      #       - setup-checkout
 
            
       # - featurepeek/ping_featurepeek:
