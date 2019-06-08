@@ -7,7 +7,8 @@ import Link from 'primitives/Link'
 
 import { gradientMap } from 'utils/color'
 
-export default function Button({ background = 'teal', children, href, iconBefore, iconAfter, target, ...styles }) {
+export default function Button(props) {
+  const { background = 'teal', children, href, iconBefore, iconAfter, onClick, target, ...styles } = props
   const [from, to] = gradientMap[background]
   return (
     <Box
@@ -18,14 +19,9 @@ export default function Button({ background = 'teal', children, href, iconBefore
       borderRadius={36}
       boxShadow="0 2px 4px rgba(0, 0, 0, 0.15)"
       className="button"
-      // color="#fff"
-      // cursor="pointer"
-      // display="block"
       fontSize={18}
       fontWeight={500}
       justifyContent="center"
-      // paddingX={16}
-      // paddingY={8}
       textShadow="0 0 2px rgba(0, 0, 0, 0.2)"
       transition="all 0.1s cubic-bezier(0, 0, 1, 2)"
       whiteSpace="nowrap"
@@ -34,6 +30,7 @@ export default function Button({ background = 'teal', children, href, iconBefore
       <Link
         color="white"
         href={href}
+        onClick={onClick}
         paddingBottom={10}
         paddingLeft={20}
         paddingRight={20}

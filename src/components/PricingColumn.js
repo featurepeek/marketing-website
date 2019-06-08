@@ -14,6 +14,7 @@ import Paragraph from 'primitives/Paragraph'
 import Strong from 'primitives/Strong'
 import UnorderedList from 'primitives/UnorderedList'
 
+import { track } from 'utils/analytics'
 import { dollarsFromCents } from 'utils/money'
 
 export default function PricingColumn({ product, hasMounted }) {
@@ -104,7 +105,11 @@ export default function PricingColumn({ product, hasMounted }) {
           ))}
         </UnorderedList>
         <Flex alignItems="center" height={100} justifyContent="center">
-          <Button href={`https://airtable.com/shrUZixSNBqSzmdTc?prefill_Plan=${product.name}`} target="_blank">
+          <Button
+            href={`https://airtable.com/shrUZixSNBqSzmdTc?prefill_Plan=${product.name}`}
+            onClick={() => track('Clicked Plan', product.name)}
+            target="_blank"
+          >
             {metadata.cta}
           </Button>
         </Flex>

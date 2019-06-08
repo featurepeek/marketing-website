@@ -4,6 +4,7 @@ import Box from 'ui-box'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 import { Column, Flex, Icon, ListItem, Link, Paragraph, Strong, TextInput, UnorderedList } from 'primitives'
+import { track } from 'utils/analytics'
 
 const socials = [
   {
@@ -110,6 +111,7 @@ export default function Footer(styles) {
   const handleSubmit = event => {
     event.preventDefault()
     addToMailchimp(email).then(() => {
+      track('Joined Waitlist', email)
       setEmail('')
       setSubscribedEmail(email)
     })
