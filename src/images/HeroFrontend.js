@@ -3,10 +3,10 @@ import { useStaticQuery, graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
 export default function HeroFrontend(props) {
-  const { hero } = useStaticQuery(
+  const { img } = useStaticQuery(
     graphql`
       query HeroFrontend {
-        hero: file(absolutePath: { regex: "/front-end-devs.png/" }) {
+        img: file(absolutePath: { regex: "/front-end-devs.png/" }) {
           childImageSharp {
             fluid(maxWidth: 1280, quality: 100) {
               ...GatsbyImageSharpFluid_noBase64
@@ -21,7 +21,8 @@ export default function HeroFrontend(props) {
     <BackgroundImage
       critical
       loading="eager"
-      fluid={hero.childImageSharp.fluid}
+      fadeIn={false}
+      fluid={img.childImageSharp.fluid}
       alt="Built for Front-end Developers"
       style={{
         backgroundPosition: '0 0px',

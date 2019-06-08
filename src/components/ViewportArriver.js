@@ -2,12 +2,12 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Box from 'ui-box'
 
-import { Paragraph } from 'primitives'
+import { Paragraph, Strong } from 'primitives'
 
 // import { rhythm, scale } from 'utils/typography'
 
 export default function ViewportArriver(props) {
-  const { paragraph, handleArrival, handleDeparture } = props
+  const { strong, paragraph, image, handleArrival, handleDeparture } = props
   const [isInViewport, setInViewport] = useState(false)
   const imageEl = useRef(null)
 
@@ -36,9 +36,10 @@ export default function ViewportArriver(props) {
 
   return (
     <Box>
-      <div ref={imageEl} style={{ background: '#a0b1b9', height: 300, marginTop: 60, width: '100%' }} />
+      {image}
+      <div ref={imageEl} style={{ height: 1, width: '100%' }} />
       <Paragraph marginTop={16} marginBottom={160}>
-        {paragraph}
+        <Strong>{strong}</Strong> {paragraph}
       </Paragraph>
     </Box>
   )
