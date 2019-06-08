@@ -14,6 +14,17 @@ executors:
   default:
     machine: true
 
+commands:
+  get_cluster:
+    parameters:
+      cluster:
+        type: string
+    steps:
+      - run: gcloud container clusters get-credentials << parameters.cluster >> --zone ${GOOGLE_COMPUTE_ZONE} --project ${GOOGLE_PROJECT_ID}
+  deploy:
+    steps:
+      - run: kubectl set image deployment/${CIRCLE_PROJECT_REPONAME} ${CIRCLE_PROJECT_REPONAME}=gcr.io/${GOOGLE_PROJECT_ID}:${CIRCLE_PROJECT_REPONAME}/${CIRCLE_BRANCH}-${CIRCLE_WORKFLOW_ID}
+
 jobs:
   build_and_push_image:
     executor: default
@@ -32,12 +43,10 @@ jobs:
       - image: google/cloud-sdk:latest
     steps:
       - gcp-gcr/gcr-auth
-      - run: gcloud container clusters get-credentials ${DEV_CLUSTER_NAME} --zone ${GOOGLE_COMPUTE_ZONE} --project ${GOOGLE_PROJECT_ID}
-      - run: kubectl set image deployment/${CIRCLE_PROJECT_REPONAME} ${CIRCLE_PROJECT_REPONAME}=gcr.io/${GOOGLE_PROJECT_ID}:${CIRCLE_BRANCH}-${CIRCLE_WORKFLOW_ID}
-      # - gcp-gke/rollout-image:
-      #     deployment: ${DEV_CLUSTER_NAME}
-      #     container: ${CIRCLE_PROJECT_REPONAME}
-      #     image: gcr.io/${GOOGLE_PROJECT_ID}:${CIRCLE_BRANCH}-${CIRCLE_SHA1}
+      - get_cluster:
+          cluster: ${DEV_CLUSTER_NAME} 
+      - deploy
+
 
 workflows:
   build_and_push_image:
