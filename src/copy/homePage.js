@@ -1,4 +1,9 @@
+import React from 'react'
 import { gradientMap } from 'utils/color'
+
+import LinkInPullRequest from 'images/LinkInPullRequest'
+import Commenting from 'images/Commenting'
+import BirdsEyeView from 'images/BirdsEyeView'
 
 export const valueProps = [
   {
@@ -15,6 +20,7 @@ export const valueProps = [
       href: '/for-frontend-developers',
       iconAfter: 'fas fa-arrow-right',
     },
+    image: <LinkInPullRequest />,
   },
   {
     heading: 'Annotate directly on the implementation itself',
@@ -30,6 +36,7 @@ export const valueProps = [
       href: '/for-ux-designers',
       iconAfter: 'fas fa-arrow-right',
     },
+    image: <Commenting />,
   },
   {
     heading: "See a birds-eye view of your team's works in progress",
@@ -44,6 +51,7 @@ export const valueProps = [
       href: '/for-project-managers',
       iconAfter: 'fas fa-arrow-right',
     },
+    image: <BirdsEyeView />,
   },
 ]
 
@@ -55,7 +63,7 @@ export const features = [
       "From static builds to Docker containers, we can support your configuration. Since we don't manage your production environments, we can attach to any existing pipeline no matter the provider.",
   },
   {
-    icon: 'fas fa-code-branch',
+    icon: 'fas fa-sync-alt',
     heading: 'Always up-to-date',
     body:
       "Environments restart whenever a pull request receives a new commit, so they're always up-to-date. Once a PR is merged, reviewers get pointed to where that feature lives on staging.",
@@ -66,36 +74,37 @@ export const features = [
     body:
       "Copy a path deep within your environment to share with someone else. They'll be taken to the exact page that you intended.",
   },
+  // {
+  //   icon: 'fas fa-comments',
+  //   heading: 'The smart way to leave feedback',
+  //   body:
+  //     'Post comments and take screenshots directly on the implementation itself. Your feedback gets posted inline as a comment on the open pull request. Browser metadata gets included automatically.',
+  // },
   {
-    icon: 'fas fa-comments',
-    heading: 'The smart way to leave feedback',
-    body:
-      'Post comments and take screenshots directly on the implementation itself. Your feedback gets posted inline as a comment on the open pull request. Browser metadata gets included automatically.',
-  },
-  {
-    icon: 'far fa-dot-circle',
+    icon: 'fab fa-slack',
     heading: 'Stay on the pulse',
     body: "See when new environments spin up in Slack by hooking up FeaturePeek to a channel on your team's workspace.",
   },
   {
     icon: 'fas fa-terminal',
-    heading: 'Control environment variables',
-    body: 'Restart an environment with any run-time environment variables you desire.',
+    heading: 'Set environment variables',
+    body:
+      'Restart an environment with any run-time environment variables you desire. Point to any existing back-end services that you may have.',
   },
   {
     icon: 'fas fa-unlock',
-    heading: 'Set private or public',
+    heading: 'Control visibility',
     body:
-      'Your running environments are only accessible by your team by default, unless you set your project to be public. Then anyone with a link can view.',
+      'Your running environments are private and only accessible by your team by default, unless you set your project to be public. Then anyone with a link can view.',
   },
-  {
-    icon: 'fas fa-stopwatch',
-    heading: 'Real-time',
-    body: 'Your dashboard updates live as soon as pull requests are opened and closed.',
-  },
-  {
-    icon: 'fas fa-eye',
-    heading: 'What you see is what you deploy',
-    body: 'The implementation you see on FeaturePeek is identical to the one you ship to production.',
-  },
+  // {
+  //   icon: 'fas fa-stopwatch',
+  //   heading: 'Real-time',
+  //   body: 'Your dashboard updates live as soon as pull requests are opened and closed.',
+  // },
+  // {
+  //   icon: 'fas fa-eye',
+  //   heading: 'What you see is what you deploy',
+  //   body: 'The implementation you see on FeaturePeek is identical to the one you ship to production.',
+  // },
 ]

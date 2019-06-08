@@ -9,9 +9,15 @@ import { rhythm, scale } from 'utils/typography'
 export default function RowReversal(props) {
   const { copyWritings, theme, flip = 0 } = props
   return (
-    <Box marginTop={100}>
-      {copyWritings.map(({ heading, paragraphs, color, buttonProps }, i) => (
-        <Flex key={heading} flexDirection={i % 2 === flip ? 'row' : 'row-reverse'}>
+    <Box>
+      {copyWritings.map(({ heading, paragraphs, image, color, buttonProps }, i) => (
+        <Flex
+          key={heading}
+          alignItems="center"
+          flexDirection={i % 2 === flip ? 'row' : 'row-reverse'}
+          justifyContent="space-between"
+          marginY={100}
+        >
           <Box width="45%">
             <Heading color={theme || color || 'inherit'} h={2} {...scale(1.2)} marginBottom={rhythm(1)}>
               {heading}
@@ -27,7 +33,7 @@ export default function RowReversal(props) {
               </Flex>
             )}
           </Box>
-          <Box width="45%" />
+          <Box width="45%">{image}</Box>
         </Flex>
       ))}
     </Box>

@@ -27,7 +27,9 @@ export default function ForProjectManagers(props) {
         <Heading color={theme} marginTop={0} {...scale(2)}>
           Project Managers
         </Heading>
-        <Paragraph {...scale(1 / 4)}>FeaturePeek is a game-changer for your development workflow.</Paragraph>
+        <Paragraph {...scale(1 / 4)} width="50%">
+          Get a visual overview of your team's work in progress.
+        </Paragraph>
       </HeroManagers>
       <RowReversal copyWritings={copyWritings} theme={theme} />
       <Flex justifyContent="space-evenly" marginTop={200} width="100%">

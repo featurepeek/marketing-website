@@ -1,32 +1,14 @@
 export default [
   [
     {
-      question: 'What counts as a seat?',
-      answer:
-        'Anyone on your team. Anyone on your team. Anyone on your team. Anyone on your team. Anyone on your team.',
-    },
-    {
-      question: 'What counts as a seat?',
-      answer: 'Anyone on your team.',
-    },
-    {
-      question: 'What counts as a seat?',
-      answer: 'Anyone on your team.',
+      question: 'What counts as a user?',
+      answer: 'Anyone able to collaborate on or view your projects or environments counts as a user.',
     },
   ],
   [
     {
-      question: 'What counts as a seat?',
-      answer:
-        'Anyone on your team. Anyone on your team. Anyone on your team. Anyone on your team. Anyone on your team.',
-    },
-    {
-      question: 'What counts as a seat?',
-      answer: 'Anyone on your team.',
-    },
-    {
-      question: 'What counts as a seat?',
-      answer: 'Anyone on your team.',
+      question: 'Do you offer refunds?',
+      answer: 'Please contact us if you are unhappy with your service, and we can work something out.',
     },
   ],
 ]
