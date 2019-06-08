@@ -1,1 +1,5 @@
-staticBuildPath: ./public
+---
+services:
+- name: node frontend
+  dockerfile: ./Dockerfile
+  port: 80
