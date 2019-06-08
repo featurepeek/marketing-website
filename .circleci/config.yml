@@ -7,6 +7,7 @@ version: 2.1
 
 orbs:
   gcp-gcr: circleci/gcp-gcr@0.6.0
+  gcp-gke: circleci/gcp-gke@0.1.0
   featurepeek: featurepeek/ping@0.0.2
 
 executors:
@@ -26,6 +27,14 @@ jobs:
       - gcp-gcr/push-image:
           image: ${CIRCLE_PROJECT_REPONAME}
           tag: ${CIRCLE_BRANCH} 
+  deploy_dev:
+    executor: default 
+    steps:
+      - gcp-gcr/gcr-auth
+      - gcp-gke/rollout-image:
+          deployment: ${DEV_CLUSTER_NAME}
+          container: ${CIRCLE_PROJECT_REPONAME}
+          image: gcr.io/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_BRANCH}-${CIRCLE_BUILD_NUM}
 
 workflows:
   build_and_push_image:
@@ -41,6 +50,13 @@ workflows:
           registry-url: gcr.io
           source-tag: ${CIRCLE_BRANCH}
           target-tag: ${CIRCLE_BRANCH}-${CIRCLE_BUILD_NUM}
+      - deploy_dev:
+          requires:
+            - build_and_push_image
+            - gcp-gcr/add-image-tag
+          # filters:
+          #   branches:
+          #     only: [dev]
       - featurepeek/ping_featurepeek:
           requires:
             - build_and_push_image
