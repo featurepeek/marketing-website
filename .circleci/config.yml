@@ -28,11 +28,12 @@ jobs:
           image: ${CIRCLE_PROJECT_REPONAME}
           tag: ${CIRCLE_BRANCH} 
   deploy_dev:
-    executor: default 
+    docker:
+      - image: google/cloud-sdk:latest
     steps:
       - gcp-gcr/gcr-auth
       - run: gcloud container clusters get-credentials ${DEV_CLUSTER_NAME} --zone ${GOOGLE_COMPUTE_ZONE} --project ${GOOGLE_PROJECT_ID}
-      - run: kubectl set image deployment/${CIRCLE_PROJECT_REPONAME} ${CIRCLE_PROJECT_REPONAME}=gcr.io/${GOOGLE_PROJECT_ID}:${CIRCLE_BRANCH}-${CIRCLE_SHA1}
+      - run: kubectl set image deployment/${CIRCLE_PROJECT_REPONAME} ${CIRCLE_PROJECT_REPONAME}=gcr.io/${GOOGLE_PROJECT_ID}:${CIRCLE_BRANCH}-${CIRCLE_WORKFLOW_ID}
       # - gcp-gke/rollout-image:
       #     deployment: ${DEV_CLUSTER_NAME}
       #     container: ${CIRCLE_PROJECT_REPONAME}
@@ -51,7 +52,7 @@ workflows:
           image: ${CIRCLE_PROJECT_REPONAME}
           registry-url: gcr.io
           source-tag: ${CIRCLE_BRANCH}
-          target-tag: ${CIRCLE_BRANCH}-${CIRCLE_SHA1}
+          target-tag: ${CIRCLE_BRANCH}-${CIRCLE_WORKFLOW_ID}
       - deploy_dev:
           requires:
             - build_and_push_image
