@@ -10,7 +10,7 @@ import Faq from 'components/Faq'
 
 export default function Faqs({ heading, faqs }) {
   return (
-    <Box background="#f8f8f8" margin={-39} padding={40}>
+    <Box background="#f8f8f8" marginX={-39} marginBottom={-40} padding={40}>
       <Heading h={3} margin={40} size={360} textAlign="center">
         {heading}
       </Heading>
