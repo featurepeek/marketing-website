@@ -24,7 +24,7 @@ export default function ForFrontendDevelopers(props) {
         <Heading color="#103c52" h={6} marginTop={0} {...scale(1 / 2)}>
           Built for
         </Heading>
-        <Heading color={theme} marginTop={0} {...scale(2)}>
+        <Heading color="#fa881e" marginTop={0} {...scale(2)}>
           Front-end Developers
         </Heading>
         <Paragraph {...scale(1 / 4)} width="50%">
