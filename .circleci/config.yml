@@ -62,9 +62,9 @@ workflows:
       - gcp-gcr/add-image-tag:
           requires:
             - build_and_push_image
-          # filters:
-          #   branches:
-          #     only: [master, dev]
+          filters:
+            branches:
+              only: [master, dev]
           image: ${CIRCLE_PROJECT_REPONAME}
           registry-url: gcr.io
           source-tag: ${CIRCLE_BRANCH}
@@ -73,9 +73,9 @@ workflows:
           requires:
             - build_and_push_image
             - gcp-gcr/add-image-tag
-          # filters:
-          #   branches:
-          #     only: [dev]
+          filters:
+            branches:
+              only: [dev]
       - deploy_prod:
           requires:
             - build_and_push_image
