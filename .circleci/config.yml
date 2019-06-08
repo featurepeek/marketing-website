@@ -23,8 +23,7 @@ commands:
       - run: gcloud container clusters get-credentials << parameters.cluster >> --zone ${GOOGLE_COMPUTE_ZONE} --project ${GOOGLE_PROJECT_ID}
   deploy:
     steps:
-      - run: kubectl set image deployment/${CIRCLE_PROJECT_REPONAME} ${CIRCLE_PROJECT_REPONAME}=gcr.io/${GOOGLE_PROJECT_ID}:${CIRCLE_PROJECT_REPONAME}/${CIRCLE_BRANCH}-${CIRCLE_WORKFLOW_ID}
-
+      - run: kubectl set image deployment/${CIRCLE_PROJECT_REPONAME} ${CIRCLE_PROJECT_REPONAME}=gcr.io/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_BRANCH}-${CIRCLE_WORKFLOW_ID}
 jobs:
   build_and_push_image:
     executor: default
@@ -45,6 +44,14 @@ jobs:
       - gcp-gcr/gcr-auth
       - get_cluster:
           cluster: ${DEV_CLUSTER_NAME} 
+      - deploy
+  deploy_prod:
+    docker:
+      - image: google/cloud-sdk:latest
+    steps:
+      - gcp-gcr/gcr-auth
+      - get_cluster:
+          cluster: ${PROD_CLUSTER_NAME} 
       - deploy
 
 
@@ -69,6 +76,13 @@ workflows:
           # filters:
           #   branches:
           #     only: [dev]
+      - deploy_prod:
+          requires:
+            - build_and_push_image
+            - gcp-gcr/add-image-tag
+          filters:
+            branches:
+              only: [master]
       - featurepeek/ping_featurepeek:
           requires:
             - build_and_push_image
