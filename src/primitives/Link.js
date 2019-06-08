@@ -11,7 +11,7 @@ export default function Link({ children, href = '', onMouseEnter, onMouseLeave, 
     </Box>
   )
 
-  if (!href || href.startsWith('http') || href.startsWith('mailto')) {
+  if (!href || href.startsWith('http') || href.startsWith('mailto') || href.startsWith('/pdfs')) {
     return (
       <a className={className} href={href} target={target}>
         {span}

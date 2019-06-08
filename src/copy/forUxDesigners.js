@@ -4,7 +4,7 @@ import Commenting from 'images/Commenting'
 
 export default [
   {
-    heading: 'Leave feedback earlier in the software development cycle',
+    heading: 'See your designs come to life earlier in the release cycle',
     paragraphs: [
       'With feature environments in their arsenal, your front-end developers will ask for your feedback sooner in the sprint.',
       'No more late requests for implementation feedback right before a release.',
@@ -34,7 +34,7 @@ export default [
     ],
   },
   {
-    heading: "Be more included in your team's release process",
+    heading: "Be more included in Engineering's release process",
     paragraphs: ["Solve 'is this what you meant?'"],
   },
 ]

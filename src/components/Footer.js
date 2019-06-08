@@ -56,18 +56,22 @@ const columns = [
       {
         text: 'Documentation',
         href: 'https://docs.featurepeek.com',
+        target: '_blank',
       },
       {
         text: 'Changelog',
         href: 'https://headwayapp.co/featurepeek-changelog',
+        target: '_blank',
       },
       {
         text: 'Roadmap',
-        href: 'https://featurepeek.nolt.io',
+        href: 'https://trello.com/b/KlPuYOCp/featurepeek-public-roadmap',
+        target: '_blank',
       },
       {
         text: 'Status',
         href: 'https://updown.io/ratp',
+        target: '_blank',
       },
     ],
   },
@@ -76,11 +80,11 @@ const columns = [
     links: [
       {
         text: 'Privacy policy',
-        href: 'https://featurepeek.com/pdfs/privacy.pdf',
+        href: '/pdfs/privacy.pdf',
       },
       {
         text: 'Terms',
-        href: 'https://featurepeek.com/pdfs/terms.pdf',
+        href: '/pdfs/terms.pdf',
       },
       {
         text: 'Contact',
@@ -184,7 +188,7 @@ export default function Footer(styles) {
                           marginRight={8}
                         />
                       )}
-                      <Link href={link.href} color="white" opacity={0.5}>
+                      <Link href={link.href} color="white" opacity={0.5} target={link.target}>
                         {link.text}
                       </Link>
                     </ListItem>
