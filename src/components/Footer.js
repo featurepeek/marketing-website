@@ -33,8 +33,8 @@ const columns = [
         href: '/for-ux-designers',
       },
       {
-        text: 'For Product Managers',
-        href: '/for-product-managers',
+        text: 'For Project Managers',
+        href: '/for-project-managers',
       },
       {
         text: 'How it works',
@@ -88,7 +88,7 @@ const columns = [
       },
       {
         text: 'Contact',
-        href: 'mailto:contact@featurepeek.com',
+        href: 'mailto:hello@featurepeek.com?subject=Hello',
       },
       {
         text: '',
@@ -98,7 +98,6 @@ const columns = [
         icon: 'fab fa-y-combinator',
         iconColor: '#ff6601',
         text: 'Y Combinator S19',
-        // href: 'mailto:founders@featurepeek.com',
       },
     ],
   },
