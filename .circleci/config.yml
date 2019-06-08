@@ -34,7 +34,7 @@ jobs:
       - gcp-gke/rollout-image:
           deployment: ${DEV_CLUSTER_NAME}
           container: ${CIRCLE_PROJECT_REPONAME}
-          image: gcr.io/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_BRANCH}-${CIRCLE_BUILD_NUM}
+          image: gcr.io/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_BRANCH}-${CIRCLE_SHA1}
 
 workflows:
   build_and_push_image:
@@ -43,13 +43,13 @@ workflows:
       - gcp-gcr/add-image-tag:
           requires:
             - build_and_push_image
-          filters:
-            branches:
-              only: [master, dev]
+          # filters:
+          #   branches:
+          #     only: [master, dev]
           image: ${CIRCLE_PROJECT_REPONAME}
           registry-url: gcr.io
           source-tag: ${CIRCLE_BRANCH}
-          target-tag: ${CIRCLE_BRANCH}-${CIRCLE_BUILD_NUM}
+          target-tag: ${CIRCLE_BRANCH}-${CIRCLE_SHA1}
       - deploy_dev:
           requires:
             - build_and_push_image
