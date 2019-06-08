@@ -29,25 +29,25 @@
     ]
   },
   "dependencies": {
-    "gatsby": "^2.7.1",
+    "gatsby": "^2.8.6",
     "gatsby-background-image": "^0.7.0",
-    "gatsby-image": "^2.1.1",
-    "gatsby-plugin-feed": "^2.2.1",
+    "gatsby-image": "^2.1.2",
+    "gatsby-plugin-feed": "^2.2.3",
     "gatsby-plugin-mailchimp": "^5.1.0",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-resolve-src": "^2.0.0",
     "gatsby-plugin-segment-js": "^3.0.1",
-    "gatsby-plugin-sharp": "^2.1.1",
+    "gatsby-plugin-sharp": "^2.1.3",
     "gatsby-plugin-typography": "^2.2.13",
-    "gatsby-remark-copy-linked-files": "^2.0.12",
-    "gatsby-remark-images": "^3.0.12",
-    "gatsby-remark-prismjs": "^3.2.9",
+    "gatsby-remark-copy-linked-files": "^2.0.13",
+    "gatsby-remark-images": "^3.0.14",
+    "gatsby-remark-prismjs": "^3.2.11",
     "gatsby-remark-responsive-iframe": "^2.1.1",
     "gatsby-remark-smartypants": "^2.0.9",
-    "gatsby-source-filesystem": "^2.0.37",
-    "gatsby-source-stripe": "^2.2.2",
+    "gatsby-source-filesystem": "^2.0.38",
+    "gatsby-source-stripe": "^3.0.1",
     "gatsby-transformer-remark": "^2.3.12",
-    "gatsby-transformer-sharp": "^2.1.19",
+    "gatsby-transformer-sharp": "^2.1.21",
     "prismjs": "^1.16.0",
     "rc-switch": "^1.9.0",
     "react": "^16.8.6",
@@ -56,7 +56,7 @@
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
     "typography-theme-github": "^0.16.19",
-    "ui-box": "^2.0.0"
+    "ui-box": "^2.1.0"
   },
   "devDependencies": {
     "@featurepeek/circleci": "^0.1.7",
@@ -68,9 +68,9 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-react-hooks": "^1.6.0",
-    "husky": "^2.3.0",
-    "lint-staged": "^8.1.7",
-    "prettier": "^1.17.1"
+    "husky": "^2.4.0",
+    "lint-staged": "^8.2.0",
+    "prettier": "^1.18.2"
   },
   "homepage": "https://github.com/featurepeek/marketing#readme",
   "keywords": [

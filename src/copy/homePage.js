@@ -7,16 +7,16 @@ import BirdsEyeView from 'images/BirdsEyeView'
 
 export const valueProps = [
   {
-    heading: 'Get implementation feedback from your designers sooner',
+    heading: 'Collect implementation feedback as early as possible',
     paragraphs: [
-      'Collect feedback from your designers faster by sending them a link to review visually before code review.',
+      'Get feedback from your whole team faster by sending them a link to review visually before code review.',
       "Don't wait for code review to finish before getting implementation feedback from Design — if there's a change requested, you'll have to go through code review again.",
       "Instead, get feedback from designers while you're waiting on code review, asynchronously.",
     ],
     color: gradientMap.green[0],
     buttonProps: {
       background: 'green',
-      children: 'Built for Front-end Devs',
+      children: 'Built for Front-end Developers',
       href: '/for-frontend-developers',
       iconAfter: 'fas fa-arrow-right',
     },
@@ -26,7 +26,7 @@ export const valueProps = [
     heading: 'Annotate directly on the implementation itself',
     paragraphs: [
       'Just like how tools like Figma and InVision let you collaborate on design, FeaturePeek lets you collaborate on implementation.',
-      "Take screenshots of an element on the page, and it'll be saved as a comment on the pull request, even if as a designer you don't have a GitHub account.",
+      "Take screenshots of an HTML element on the page, and it'll be saved as a comment on the relevant pull request — even if you don't have a GitHub account.",
       // 'Video recording support coming soon!',
     ],
     color: gradientMap.pink[0],
