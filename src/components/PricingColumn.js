@@ -50,7 +50,7 @@ export default function PricingColumn({ product, hasMounted }) {
       <Box paddingX={32}>
         {product.plans[0].amount === 0 && (
           <Heading h={2} marginTop={0} size={200} textAlign="center">
-            For public repositories only
+            Free for public repositories only
           </Heading>
         )}
         {product.plans.length > 1 && (

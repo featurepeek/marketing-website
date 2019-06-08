@@ -20,6 +20,7 @@ export default function Layout(props) {
         marginTop={16}
         marginX="auto"
         maxWidth={location.pathname.startsWith('/blog') ? rhythm(24) : rhythm(52)}
+        overflowX={location.pathname === '/' ? 'hidden' : undefined}
         padding={rhythm(1.5)}
       >
         <main>{children}</main>
