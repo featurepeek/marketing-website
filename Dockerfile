@@ -1,7 +1,11 @@
-FROM mhart/alpine-node:10.15
+FROM nginx:stable-alpine
 
 # force production when built from Docker
 ENV NODE_ENV production
+
+RUN apk update
+RUN apk add nodejs-current-npm
+RUN npm install -g yarn
 
 # Create directories all the way up to app
 RUN mkdir -p /usr/src/app
@@ -16,6 +20,9 @@ COPY . /usr/src/app
 
 # build
 RUN yarn build
-EXPOSE 3000
 
-CMD [ "yarn", "serve" ]
+# copy built assets to nginx
+RUN cp -r ./public/* /usr/share/nginx/html
+
+# expose public port
+EXPOSE 80
