@@ -14,16 +14,6 @@ executors:
   default:
     machine: true
 
-commands:
-  get_cluster:
-    parameters:
-      cluster:
-        type: string
-    steps:
-      - run: gcloud container clusters get-credentials << parameters.cluster >> --zone ${GOOGLE_COMPUTE_ZONE} --project ${GOOGLE_PROJECT_ID}
-  deploy:
-    steps:
-      - run: kubectl set image deployment/${CIRCLE_PROJECT_REPONAME} ${CIRCLE_PROJECT_REPONAME}=gcr.io/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_BRANCH}-${CIRCLE_WORKFLOW_ID}
 jobs:
   build_and_push_image:
     executor: default
@@ -37,23 +27,16 @@ jobs:
       - gcp-gcr/push-image:
           image: ${CIRCLE_PROJECT_REPONAME}
           tag: ${CIRCLE_BRANCH} 
-  deploy_dev:
+  deploy:
     docker:
       - image: google/cloud-sdk:latest
+    parameters:
+      cluster:
+        type: string
     steps:
       - gcp-gcr/gcr-auth
-      - get_cluster:
-          cluster: ${DEV_CLUSTER_NAME} 
-      - deploy
-  deploy_prod:
-    docker:
-      - image: google/cloud-sdk:latest
-    steps:
-      - gcp-gcr/gcr-auth
-      - get_cluster:
-          cluster: ${PROD_CLUSTER_NAME} 
-      - deploy
-
+      - run: gcloud container clusters get-credentials << parameters.cluster >> --zone ${GOOGLE_COMPUTE_ZONE} --project ${GOOGLE_PROJECT_ID}
+      - run: kubectl set image deployment/${CIRCLE_PROJECT_REPONAME} ${CIRCLE_PROJECT_REPONAME}=gcr.io/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_BRANCH}-${CIRCLE_WORKFLOW_ID}
 
 workflows:
   build_and_push_image:
@@ -69,14 +52,16 @@ workflows:
           registry-url: gcr.io
           source-tag: ${CIRCLE_BRANCH}
           target-tag: ${CIRCLE_BRANCH}-${CIRCLE_WORKFLOW_ID}
-      - deploy_dev:
+      - deploy:
+          cluster: ${DEV_CLUSTER_NAME}
           requires:
             - build_and_push_image
             - gcp-gcr/add-image-tag
           filters:
             branches:
               only: [dev]
-      - deploy_prod:
+      - deploy:
+          cluster: ${PROD_CLUSTER_NAME}
           requires:
             - build_and_push_image
             - gcp-gcr/add-image-tag
@@ -88,7 +73,6 @@ workflows:
             - build_and_push_image
           image: ${CIRCLE_PROJECT_REPONAME}
           tag: ${CIRCLE_BRANCH}
-          env: dev
           filters:
             branches:
               ignore: [master, dev]
