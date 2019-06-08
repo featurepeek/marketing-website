@@ -20,12 +20,12 @@ export default function IndexPage(props) {
       <Flex>
         <Box width="40%">
           <Heading marginTop={0} size={500}>
-            Collaborate on front-end implementations like never before.
+            Collaborate on front-end websites like never before.
           </Heading>
-          <Heading h={2} marginBottom={160} opacity={0.4} size={360}>
-            Annotate directly on your team's new features as they get built.
-            <br />
-            <br />
+          <Heading h={2} opacity={0.4} size={360}>
+            Annotate directly on your team's new features as they get implemented.
+          </Heading>
+          <Heading h={3} opacity={0.4} size={360}>
             No merging.
             <br />
             No hosting.
