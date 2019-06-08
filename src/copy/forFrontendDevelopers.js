@@ -3,6 +3,7 @@ import React from 'react'
 import LinkInPullRequest from 'images/LinkInPullRequest'
 import BrowserMetadata from 'images/BrowserMetadata'
 import PageViews from 'images/PageViews'
+import SlackReviewers from 'images/SlackReviewers'
 import Terminal from 'images/Terminal'
 
 export default [
@@ -49,5 +50,6 @@ export default [
   {
     heading: 'Remind your reviewers that they have pull requests to review',
     paragraphs: ["Set automated nudges in Slack to anyone on your team to review the WIP you've been working on."],
+    image: <SlackReviewers />,
   },
 ]
