@@ -5,7 +5,7 @@ import Image from 'gatsby-image'
 export default function HeroDashboard() {
   const { img } = useStaticQuery(
     graphql`
-      query Dashboard {
+      query HeroDashboard {
         img: file(absolutePath: { regex: "/dashboard.png/" }) {
           childImageSharp {
             fixed(width: 1225, quality: 100) {
@@ -17,5 +17,5 @@ export default function HeroDashboard() {
     `
   )
 
-  return <Image critical loading="eager" fadeIn={false} fixed={img.childImageSharp.fixed} alt="FeaturePeek Dashboard" />
+  return <Image loading="eager" fadeIn={false} fixed={img.childImageSharp.fixed} alt="FeaturePeek Dashboard" />
 }

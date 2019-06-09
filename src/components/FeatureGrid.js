@@ -10,9 +10,9 @@ import { features } from 'copy/homePage'
 
 export default function FeatureGrid(props) {
   return (
-    <Box marginTop={300}>
+    <Box marginY={200}>
       {features.map(feature => (
-        <Box display="inline-block" padding={16} width="33.33%" style={{ verticalAlign: 'top' }}>
+        <Box display="inline-block" marginBottom={40} padding={16} width="33.33%" style={{ verticalAlign: 'top' }}>
           <Icon color="#05c5cc" icon={feature.icon} fontSize={28} />
           <Heading h={4} marginTop={16} size={300}>
             {feature.heading}
