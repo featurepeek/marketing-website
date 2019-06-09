@@ -19,7 +19,6 @@ export default function HeroDesigners(props) {
 
   return (
     <BackgroundImage
-      critical
       loading="eager"
       fadeIn={false}
       fluid={img.childImageSharp.fluid}
