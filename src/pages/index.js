@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Box from 'ui-box'
 
-import { Flex, Heading, Paragraph } from 'primitives'
+import { Button, Flex, Heading, Paragraph } from 'primitives'
 
 import HeroDashboard from 'images/HeroDashboard'
 import FeatureGrid from 'components/FeatureGrid'
@@ -10,6 +10,7 @@ import IntegrationsOrbit from 'components/IntegrationsOrbit'
 import Layout from 'components/Layout'
 import RowReversal from 'components/RowReversal'
 import SEO from 'components/Seo'
+import VideoWalkthrough from 'components/VideoWalkthrough'
 
 import { valueProps } from 'copy/homePage'
 
@@ -60,8 +61,14 @@ export default function IndexPage(props) {
             From Continuous Integration services to container registries, and from bug tracking platforms to getting
             notified in Slack, we've got you covered.
           </Paragraph>
+          <Flex alignItems="center" height={100}>
+            <Button href="/how-it-works" iconAfter="fas fa-arrow-right">
+              Read how to install
+            </Button>
+          </Flex>
         </Box>
       </Flex>
+      <VideoWalkthrough />
     </Layout>
   )
 }
