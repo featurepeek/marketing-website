@@ -36,7 +36,7 @@ export default function SubNav(props) {
       borderRadius={8}
       boxShadow="0 1px 4px rgba(0, 0, 0, 0.1), 0 16px 40px rgba(0, 0, 0, 0.1)"
       className="subnav"
-      left={-70}
+      left={-44}
       opacity={isShowing ? 1 : 0}
       marginTop={8}
       pointerEvents={isShowing ? 'auto' : 'none'}
@@ -58,7 +58,7 @@ export default function SubNav(props) {
           marginBottom={0}
           transition="background 0.15s ease"
         >
-          <Link color={item.color[0]} fontSize={17} href={item.href} padding={16} underline={false}>
+          <Link color={item.color[0]} fontSize={17} href={item.href} padding={16} underline={false} width="100%">
             <Flex alignItems="center">
               <Flex
                 alignItems="center"
