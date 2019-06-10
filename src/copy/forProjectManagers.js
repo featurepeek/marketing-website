@@ -8,25 +8,28 @@ import Leaderboards from 'images/Leaderboards'
 
 export default [
   {
-    heading: "See a birds-eye view of your team's works in progress",
-    paragraphs: [
-      "Keep tabs on your team's progress without bothering them or asking for status updates.",
-      'All open pull requests across all your projects (with screenshot thumbnails) are visible at once in the FeaturePeek dashboard.',
-    ],
-    image: <BirdsEyeView />,
-  },
-  {
-    heading: 'Shorten feedback loops between Design and Engineering teams',
-    paragraphs: ['Tighten the iterative process of software development by giving your team the tools they need.'],
-    image: <Partnership />,
-  },
-  {
     heading: 'Save time during your release cycle',
     paragraphs: [
       'Catch mistakes earlier in the release cycle, before code lands on the master branch.',
       'Since each implementation on FeaturePeek runs in isolation, your team will run into fewer integration bugs when deploying to production.',
     ],
     image: <SaveTime />,
+  },
+  {
+    heading: "See a birds-eye view of your team's works in progress",
+    paragraphs: [
+      "Keep tabs on your team's progress without bothering them or asking for status updates.",
+      'All open pull requests for all your projects are visible in the FeaturePeek dashboard.',
+    ],
+    image: <BirdsEyeView />,
+  },
+  {
+    heading: 'Shorten feedback loops between Design and Engineering teams',
+    paragraphs: [
+      'Tighten the iterative process of software development by giving your team the tools they need.',
+      "The closer your designers and developers work together, the more confident you'll be in the quality of the release.",
+    ],
+    image: <Partnership />,
   },
   {
     heading: 'Run other branches without checking out locally',

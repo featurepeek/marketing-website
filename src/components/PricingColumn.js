@@ -98,7 +98,7 @@ export default function PricingColumn({ product, hasMounted }) {
             )}
             {product.plans[0].amount >= 5000000 && (
               <Heading h={2} marginTop={0} size={200} textAlign="center">
-                For security-focused companies
+                For on-prem deployments
               </Heading>
             )}
             <UnorderedList

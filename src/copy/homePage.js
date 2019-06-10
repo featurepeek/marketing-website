@@ -10,7 +10,7 @@ export const valueProps = [
     heading: 'Collect implementation feedback as early as possible',
     paragraphs: [
       "Connect your front-end repo to FeaturePeek, and we'll spin up your feature branches in a dedicated environment every time you open a pull request.",
-      'Get feedback from your whole team faster by sending them the link to review visually before you waiting on code review.',
+      'Get feedback from your whole team faster by sharing the link to review visually before waiting on code review.',
     ],
     color: gradientMap.green[0],
     buttonProps: {
@@ -41,7 +41,7 @@ export const valueProps = [
     heading: "See a birds-eye view of your team's works in progress",
     paragraphs: [
       "Keep tabs on your team's progress without bothering them or asking for status updates.",
-      'All open pull requests across all your projects (with screenshot thumbnails) are visible at once in the FeaturePeek dashboard.',
+      'All open pull requests for your projects are visible in the FeaturePeek dashboard.',
     ],
     color: gradientMap.blue[0],
     buttonProps: {
@@ -59,19 +59,19 @@ export const features = [
     icon: 'fas fa-layer-group',
     heading: 'Architecture agnostic',
     body:
-      "From static builds to Docker containers, we can support your configuration. Since we don't manage your production environments, we can attach to any existing pipeline no matter the provider.",
+      "From static builds to Docker images, we can support your configuration. Since we don't manage your production environments, we can attach to any existing pipeline no matter the provider.",
   },
   {
     icon: 'fas fa-sync-alt',
     heading: 'Always up-to-date',
     body:
-      "Environments restart whenever a pull request receives a new commit, so they're always up-to-date. Once a PR is merged, reviewers get pointed to where that feature lives on staging.",
+      "Environments restart whenever a pull request receives an update, so they're always current. Once a PR is merged, reviewers get pointed to where that feature lives on your staging / QA environment.",
   },
   {
     icon: 'fas fa-link',
     heading: 'Share deep links',
     body:
-      "Copy a path deep within your environment to share with someone else. They'll be taken to the exact page that you intended.",
+      "Copy a path deep within your environment to share with someone else. They'll be taken to the exact page to view your specific changes.",
   },
   // {
   //   icon: 'fas fa-comments',
@@ -88,13 +88,13 @@ export const features = [
     icon: 'fas fa-terminal',
     heading: 'Set environment variables',
     body:
-      'Restart an environment with any run-time environment variables you desire. Point to any existing back-end services that you may have.',
+      'Configure an environment with any run-time environment variables needed. Point to any existing back-end services that you may have.',
   },
   {
     icon: 'fas fa-unlock',
     heading: 'Control visibility',
     body:
-      'Your running environments are private and only accessible by your team by default, unless you set your project to be public. Then anyone with a link can view.',
+      'Your environments are private and only accessible by your team by default. You can choose to set your environments to public, and then anyone with the link can view it.',
   },
   // {
   //   icon: 'fas fa-stopwatch',
