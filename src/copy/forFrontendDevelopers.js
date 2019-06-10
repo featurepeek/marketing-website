@@ -2,6 +2,7 @@ import React from 'react'
 
 import LinkInPullRequest from 'images/LinkInPullRequest'
 import BrowserMetadata from 'images/BrowserMetadata'
+import AnotherMachine from 'images/AnotherMachine'
 import PageViews from 'images/PageViews'
 import SlackReviewers from 'images/SlackReviewers'
 import Terminal from 'images/Terminal'
@@ -20,7 +21,7 @@ export default [
     heading: 'Run other branches without checking out locally',
     paragraphs: [
       "Stop dev server, checkout branch, install dependencies, restart dev server... Sound familiar? Reviewing your peers' work shouldn't be so interruptive.",
-      'With FeaturePeek, every branch is waiting for you in a dedicated environment. Running a branch is as easy as visiting a link.',
+      'With FeaturePeek, every branch is waiting for you in a dedicated environment. Running a branch is as easy as visiting a web page.',
     ],
     image: <Terminal />,
   },
@@ -31,6 +32,7 @@ export default [
       'By using FeaturePeek, you get a preview of how it will look on the server before merging anything to the default branch.',
       'Kiss the "well it works on my machine" excuse goodbye.',
     ],
+    image: <AnotherMachine />,
   },
   {
     heading: "Get your reviewers' browser metadata automatically",

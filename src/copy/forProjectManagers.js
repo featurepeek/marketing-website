@@ -4,6 +4,7 @@ import BirdsEyeView from 'images/BirdsEyeView'
 import Partnership from 'images/Partnership'
 import SaveTime from 'images/SaveTime'
 import Terminal from 'images/Terminal'
+import Leaderboards from 'images/Leaderboards'
 
 export default [
   {
@@ -41,5 +42,6 @@ export default [
       'Sometimes reviewing a release takes all hand on deck.',
       "FeaturePeek's leaderboards show who in your team is the most engaged in leaving constructive implementation feedback, so you can give credit where credit is due.",
     ],
+    image: <Leaderboards />,
   },
 ]

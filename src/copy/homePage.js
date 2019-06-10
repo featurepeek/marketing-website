@@ -9,9 +9,8 @@ export const valueProps = [
   {
     heading: 'Collect implementation feedback as early as possible',
     paragraphs: [
-      'Get feedback from your whole team faster by sending them a link to review visually before code review.',
-      "Don't wait for code review to finish before getting implementation feedback from Design — if there's a change requested, you'll have to go through code review again.",
-      "Instead, get feedback from designers while you're waiting on code review, asynchronously.",
+      "Connect your front-end repo to FeaturePeek, and we'll spin up your feature branches in a dedicated environment every time you open a pull request.",
+      'Get feedback from your whole team faster by sending them the link to review visually before you waiting on code review.',
     ],
     color: gradientMap.green[0],
     buttonProps: {

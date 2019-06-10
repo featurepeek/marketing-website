@@ -18,9 +18,9 @@ export default function FeatureGrid(props) {
             <Box
               display="inline-block"
               marginBottom={56}
-              paddingRight={mobile ? 0 : i % 3 !== 2 ? 32 : 0}
-              paddingLeft={mobile ? 0 : i % 3 !== 0 ? 32 : 0}
-              paddingX={mobile ? 0 : i % 3 === 1 ? 16 : 'inherit'}
+              paddingX={mobile ? 0 : i % 3 === 1 ? 8 : 'inherit'}
+              paddingRight={mobile ? 0 : i % 3 !== 2 ? 16 : 0}
+              paddingLeft={mobile ? 0 : i % 3 !== 0 ? 16 : 0}
               width={mobile ? '100%' : '33.33%'}
               style={{ verticalAlign: 'top' }}
             >
