@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Box from 'ui-box'
 import MediaQuery from 'react-responsive'
 
-import { Button, Flex, Link } from 'primitives'
+import { Button, Icon, Flex, Link } from 'primitives'
 
 import SubNav from 'components/SubNav'
 
@@ -60,6 +60,7 @@ export default function Nav() {
                   <>
                     <Box
                       marginLeft={40}
+                      paddingY={16}
                       position="relative"
                       onMouseEnter={() => setShowingSubNav(true)}
                       onMouseLeave={() => setShowingSubNav(false)}
@@ -88,7 +89,9 @@ export default function Nav() {
                 )}
               </Flex>
             </nav>
-            {!mobile && (
+            {mobile ? (
+              <Icon icon="fas fa-bars" />
+            ) : (
               <Flex alignItems="center" justifyContent="center" width={240}>
                 <Button href="/pricing">Start your free trial</Button>
               </Flex>

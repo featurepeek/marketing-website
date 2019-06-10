@@ -34,19 +34,21 @@ export default function SubNav(props) {
       background="#fefcfb"
       border="2px solid #fbfbfb"
       borderRadius={8}
-      boxShadow="0 16px 40px rgba(0, 0, 0, 0.1)"
+      boxShadow="0 1px 4px rgba(0, 0, 0, 0.1), 0 16px 40px rgba(0, 0, 0, 0.1)"
       className="subnav"
       left={-70}
       opacity={isShowing ? 1 : 0}
+      marginTop={8}
       pointerEvents={isShowing ? 'auto' : 'none'}
       position="absolute"
-      transform={isShowing ? 'translateY(0)' : 'translateY(-8px)'}
+      transform={isShowing ? 'translateY(4px)' : 'translateY(-8px)'}
       transition="all 0.2s ease"
       width={280}
     >
       {items.map((item, i) => (
         <ListItem
           key={item.label}
+          // background="white"
           borderTopLeftRadius={i === 0 ? 8 : 0}
           borderTopRightRadius={i === 0 ? 8 : 0}
           borderBottomLeftRadius={i === items.length - 1 ? 8 : 0}
@@ -54,11 +56,9 @@ export default function SubNav(props) {
           className={`subnav${i + 1}`}
           marginTop={0}
           marginBottom={0}
-          paddingX={16}
-          paddingY={16}
           transition="background 0.15s ease"
         >
-          <Link color={item.color[0]} fontSize={17} href={item.href} underline={false}>
+          <Link color={item.color[0]} fontSize={17} href={item.href} padding={16} underline={false}>
             <Flex alignItems="center">
               <Flex
                 alignItems="center"

@@ -51,6 +51,21 @@
 }
 
 /* Subnav */
+.subnav::before {
+  background: #fefcfb;
+  border-left: 1px solid #f4f4f4;
+  border-radius: 2px;
+  border-top: 1px solid #f4f4f4;
+  box-shadow: none;
+  content: '';
+  height: 16px;
+  left: 108px;
+  position: absolute;
+  top: -10px;
+  transform: rotateZ(45deg);
+  width: 16px;
+  z-index: -999;
+}
 .subnav1 {
   border-bottom: 1px solid #eee;
 }
