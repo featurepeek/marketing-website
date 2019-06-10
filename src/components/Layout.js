@@ -1,5 +1,6 @@
 import React from 'react'
 import Box from 'ui-box'
+import MediaQuery from 'react-responsive'
 
 import CtaBox from 'components/CtaBox'
 import Nav from 'components/Nav'
@@ -12,19 +13,23 @@ export default function Layout(props) {
   // const rootBlogPath = `${__PATH_PREFIX__}/blog`
 
   return (
-    <div>
-      <Nav />
-      <Box
-        background={background}
-        marginTop={16}
-        marginX="auto"
-        maxWidth={location.pathname.startsWith('/blog') ? rhythm(24) : rhythm(52)}
-        padding={rhythm(1.5)}
-      >
-        <main>{children}</main>
-      </Box>
-      <CtaBox />
-      <Footer />
-    </div>
+    <MediaQuery maxWidth={504}>
+      {mobile => (
+        <div>
+          <Nav />
+          <Box
+            background={background}
+            marginTop={16}
+            marginX="auto"
+            maxWidth={location.pathname.startsWith('/blog') ? rhythm(24) : rhythm(52)}
+            padding={mobile ? 16 : rhythm(1.5)}
+          >
+            <main>{children}</main>
+          </Box>
+          <CtaBox />
+          <Footer />
+        </div>
+      )}
+    </MediaQuery>
   )
 }

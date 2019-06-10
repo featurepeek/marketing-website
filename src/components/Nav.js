@@ -1,14 +1,20 @@
 // @flow
 import React, { useState, useEffect } from 'react'
 import Box from 'ui-box'
+import MediaQuery from 'react-responsive'
 
-import { Button, Flex, Link } from 'primitives'
+import { Button, Icon, Flex, Link, ListItem, UnorderedList } from 'primitives'
 
 import SubNav from 'components/SubNav'
 
 export default function Nav() {
   const [isShowingSubNav, setShowingSubNav] = useState(false)
+  const [isShowingMobileNav, setShowingMobileNav] = useState(false)
   const [hasScrolled, setScrolled] = useState(false)
+
+  const toggleMobileNav = () => {
+    setShowingMobileNav(!isShowingMobileNav)
+  }
 
   useEffect(() => {
     const scrollListener = () => {
@@ -28,63 +34,119 @@ export default function Nav() {
   }, [hasScrolled])
 
   return (
-    <Box
-      is="header"
-      background="#fff"
-      boxShadow={hasScrolled ? '0 2px 4px rgba(0, 0, 0, 0.1)' : 'none'}
-      paddingX={16}
-      paddingY={8}
-      marginTop={16}
-      position="sticky"
-      transition="box-shadow 0.15s ease"
-      top={0}
-      width="100%"
-      zIndex={999}
-    >
-      <Flex justifyContent="space-between">
-        <nav>
-          <Flex alignItems="center">
-            <Link href="/" underline={false}>
-              <img
-                alt="FeaturePeek Logo"
-                src="/img/logo-full.svg"
-                height="60"
-                style={{ marginBottom: 0 }}
-                width="263"
-              />
-            </Link>
-            <Box
-              marginLeft={40}
-              position="relative"
-              onMouseEnter={() => setShowingSubNav(true)}
-              onMouseLeave={() => setShowingSubNav(false)}
-            >
-              <Link color="#103c52" href="/for-frontend-developers" fontSize={17}>
-                Product tour
-              </Link>
-              <SubNav isShowing={isShowingSubNav} />
-            </Box>
-            <Box marginLeft={40}>
-              <Link color="#103c52" href="/how-it-works" fontSize={17}>
-                How it works
-              </Link>
-            </Box>
-            <Box marginLeft={40}>
-              <Link color="#103c52" href="/pricing" fontSize={17}>
-                Pricing
-              </Link>
-            </Box>
-            {/* <Box marginLeft={40}> */}
-            {/*   <Link color="#103c52" href="/blog" fontSize={17}> */}
-            {/*     Blog */}
-            {/*   </Link> */}
-            {/* </Box> */}
+    <MediaQuery maxWidth={942}>
+      {mobile => (
+        <Box
+          is="header"
+          background="#fff"
+          boxShadow={hasScrolled ? '0 2px 4px rgba(0, 0, 0, 0.1)' : 'none'}
+          height={mobile && isShowingMobileNav ? 400 : 76}
+          marginTop={16}
+          overflow={mobile ? 'hidden' : 'inherit'}
+          paddingX={16}
+          paddingY={8}
+          position="sticky"
+          top={0}
+          transition="box-shadow 0.15s ease, height 0.3s ease"
+          width="100%"
+          zIndex={999}
+        >
+          <Flex justifyContent="space-between" flexDirection="row">
+            <nav>
+              <Flex alignItems="center">
+                <Link href="/" underline={false}>
+                  <img
+                    alt="FeaturePeek Logo"
+                    src="/img/logo-full.svg"
+                    height="60"
+                    style={{ marginBottom: 0, marginRight: 16 }}
+                    width="263"
+                  />
+                </Link>
+                {!mobile && (
+                  <>
+                    <Box
+                      paddingX={24}
+                      paddingY={16}
+                      position="relative"
+                      onMouseEnter={() => setShowingSubNav(true)}
+                      onMouseLeave={() => setShowingSubNav(false)}
+                    >
+                      <Link color="#103c52" href="/for-frontend-developers" fontSize={17}>
+                        Product tour
+                      </Link>
+                      <SubNav isShowing={isShowingSubNav} />
+                    </Box>
+                    <Box paddingX={24}>
+                      <Link color="#103c52" href="/how-it-works" fontSize={17}>
+                        How it works
+                      </Link>
+                    </Box>
+                    <Box paddingX={24}>
+                      <Link color="#103c52" href="/pricing" fontSize={17}>
+                        Pricing
+                      </Link>
+                    </Box>
+                    {/* <Box marginLeft={40}> */}
+                    {/*   <Link color="#103c52" href="/blog" fontSize={17}> */}
+                    {/*     Blog */}
+                    {/*   </Link> */}
+                    {/* </Box> */}
+                  </>
+                )}
+              </Flex>
+            </nav>
+            {mobile ? (
+              <Flex alignItems="center" justifyContent="center" paddingRight={24}>
+                <Icon
+                  cursor="pointer"
+                  icon={isShowingMobileNav ? 'fas fa-times' : 'fas fa-bars'}
+                  fontSize={24}
+                  onClick={toggleMobileNav}
+                />
+              </Flex>
+            ) : (
+              <Flex alignItems="center" justifyContent="center" width={240}>
+                <Button href="/pricing">Start your free trial</Button>
+              </Flex>
+            )}
           </Flex>
-        </nav>
-        <Flex alignItems="center" justifyContent="center" width={240}>
-          <Button href="/pricing">Start your free trial</Button>
-        </Flex>
-      </Flex>
-    </Box>
+          {mobile && isShowingMobileNav && (
+            <Box>
+              <UnorderedList marginLeft={76} marginTop={16}>
+                <ListItem>
+                  <Link href="/for-frontend-developers" fontSize={21}>
+                    For Front-end Developers
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link href="/for-ux-designers" fontSize={21}>
+                    For UX Designers
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link href="/for-project-managers" fontSize={21}>
+                    For Project Managers
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link href="/how-it-works" fontSize={21}>
+                    How it works
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link href="/pricing" fontSize={21}>
+                    Pricing
+                  </Link>
+                </ListItem>
+              </UnorderedList>
+              <Flex alignItems="center" justifyContent="center" height={100} width="100%">
+                <Button href="/pricing">Start your free trial</Button>
+              </Flex>
+            </Box>
+          )}
+        </Box>
+      )}
+    </MediaQuery>
   )
 }

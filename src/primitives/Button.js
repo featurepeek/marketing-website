@@ -27,17 +27,7 @@ export default function Button(props) {
       whiteSpace="nowrap"
       {...styles}
     >
-      <Link
-        color="white"
-        href={href}
-        onClick={onClick}
-        paddingBottom={10}
-        paddingLeft={20}
-        paddingRight={20}
-        paddingTop={10}
-        target={target}
-        underline={false}
-      >
+      <Link color="white" href={href} onClick={onClick} paddingX={20} paddingY={10} target={target} underline={false}>
         {iconBefore && <Icon icon={iconBefore} marginRight={12} />}
         {children}
         {iconAfter && <Icon icon={iconAfter} marginLeft={12} />}

@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
 import Box from 'ui-box'
+import MediaQuery from 'react-responsive'
 
 import { Heading, Icon, Paragraph } from 'primitives'
 
@@ -10,16 +11,28 @@ import { features } from 'copy/homePage'
 
 export default function FeatureGrid(props) {
   return (
-    <Box marginTop={200} marginBottom={100}>
-      {features.map(feature => (
-        <Box display="inline-block" marginBottom={40} padding={16} width="33.33%" style={{ verticalAlign: 'top' }}>
-          <Icon color="#05c5cc" icon={feature.icon} fontSize={28} />
-          <Heading h={4} marginTop={16} size={300}>
-            {feature.heading}
-          </Heading>
-          <Paragraph>{feature.body}</Paragraph>
+    <MediaQuery maxWidth={800}>
+      {mobile => (
+        <Box marginTop={mobile ? 100 : 200} marginBottom={mobile ? 40 : 100}>
+          {features.map((feature, i) => (
+            <Box
+              display="inline-block"
+              marginBottom={56}
+              paddingRight={mobile ? 0 : i % 3 !== 2 ? 32 : 0}
+              paddingLeft={mobile ? 0 : i % 3 !== 0 ? 32 : 0}
+              paddingX={mobile ? 0 : i % 3 === 1 ? 16 : 'inherit'}
+              width={mobile ? '100%' : '33.33%'}
+              style={{ verticalAlign: 'top' }}
+            >
+              <Icon color="#05c5cc" icon={feature.icon} fontSize={28} />
+              <Heading h={4} marginTop={16} size={300}>
+                {feature.heading}
+              </Heading>
+              <Paragraph>{feature.body}</Paragraph>
+            </Box>
+          ))}
         </Box>
-      ))}
-    </Box>
+      )}
+    </MediaQuery>
   )
 }
