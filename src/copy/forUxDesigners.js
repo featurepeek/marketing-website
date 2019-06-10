@@ -2,7 +2,9 @@ import React from 'react'
 
 import Commenting from 'images/Commenting'
 import DesignComeToLife from 'images/DesignComeToLife'
+import RealData from 'images/RealData'
 import BlockMerge from 'images/BlockMerge'
+import Balance from 'images/Balance'
 
 export default [
   {
@@ -23,8 +25,12 @@ export default [
     image: <DesignComeToLife />,
   },
   {
-    heading: 'See your designs filled with real production data',
-    paragraphs: ["Be included in your team's release process"],
+    heading: 'Fill your designs with real production data',
+    paragraphs: [
+      'Sometimes in theory a design can be sound, but when met with actual live data, the design can break.',
+      'Test your designs with real data earlier in your sprint so that you can catch and fix things otherwise overlooked.',
+    ],
+    image: <RealData />,
   },
   // {
   //   heading: 'File bugs correctly, with critical information pre-filled',
@@ -39,6 +45,10 @@ export default [
   },
   {
     heading: "Be more included in Engineering's release process",
-    paragraphs: ["Solve 'is this what you meant?'"],
+    paragraphs: [
+      'FeaturePeek gives you a lens inside the web development lifecycle so that your entire team can have a holistic understanding of features as they get built.',
+      "Leave reviews on your team's front-end with FeaturePeek so that your feedback can be on your developers' radar.",
+    ],
+    image: <Balance />,
   },
 ]
