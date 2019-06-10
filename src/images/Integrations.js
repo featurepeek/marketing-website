@@ -2,7 +2,8 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
 
-export default function Integrations() {
+export default function Integrations(props) {
+  const { width = 800, height = 800 } = props
   const { img } = useStaticQuery(
     graphql`
       query Integrations {
@@ -17,5 +18,13 @@ export default function Integrations() {
     `
   )
 
-  return <Image fixed={img.childImageSharp.fixed} alt="Integrations" loading="eager" className="spin-forever" />
+  return (
+    <Image
+      fixed={img.childImageSharp.fixed}
+      alt="Integrations"
+      loading="eager"
+      className="spin-forever"
+      style={{ width, height }}
+    />
+  )
 }

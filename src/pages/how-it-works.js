@@ -15,7 +15,6 @@ import productFAQs from 'copy/productFAQs'
 
 export default function HowItWorks(props) {
   const [stepIndex, setStepIndex] = useState(0)
-  // const siteTitle = props.data.site.siteMetadata.title
 
   const increment = step => {
     setStepIndex(Math.min(step + 1, steps.length))
@@ -77,13 +76,3 @@ export default function HowItWorks(props) {
     </Layout>
   )
 }
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

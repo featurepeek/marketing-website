@@ -31,7 +31,7 @@ export default function RowReversal(props) {
                   </Paragraph>
                 ))}
                 {buttonProps && (
-                  <Flex alignItems="center" height={100}>
+                  <Flex alignItems="center" height={100} marginTop={mobile ? 40 : 0}>
                     <Button {...buttonProps} />
                   </Flex>
                 )}

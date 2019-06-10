@@ -4,10 +4,11 @@ import { graphql } from 'gatsby'
 
 import copyWritings from 'copy/forFrontendDevelopers'
 
-import { Button, Flex, Heading, Paragraph } from 'primitives'
+import { Heading, Paragraph } from 'primitives'
 
 import HeroFrontend from 'images/HeroFrontend'
 import Layout from 'components/Layout'
+import NextPrevButtons from 'components/NextPrevButtons'
 import RowReversal from 'components/RowReversal'
 import SEO from 'components/Seo'
 
@@ -16,7 +17,6 @@ import { scale } from 'utils/typography'
 
 export default function ForFrontendDevelopers(props) {
   const theme = gradientMap.green[0]
-  // const siteTitle = props.data.site.siteMetadata.title
   return (
     <Layout background="#eef6ef" location={props.location}>
       <SEO title="FeaturePeek for Front-end Developers" />
@@ -32,28 +32,7 @@ export default function ForFrontendDevelopers(props) {
         </Paragraph>
       </HeroFrontend>
       <RowReversal copyWritings={copyWritings} theme={theme} />
-      <Flex justifyContent="space-evenly" marginTop={200} width="100%">
-        <Flex alignItems="center" justifyContent="center" height={100} width={1}>
-          <Button href="/for-project-managers" background="blue" iconBefore="fas fa-arrow-left" width={300}>
-            Project Managers
-          </Button>
-        </Flex>
-        <Flex alignItems="center" justifyContent="center" height={100} width={1}>
-          <Button href="/for-ux-designers" background="pink" iconAfter="fas fa-arrow-right" width={300}>
-            UX Designers
-          </Button>
-        </Flex>
-      </Flex>
+      <NextPrevButtons prev="managers" next="designers" />
     </Layout>
   )
 }
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

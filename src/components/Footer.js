@@ -146,7 +146,11 @@ export default function Footer(styles) {
                     marginRight={8}
                     name="email"
                     onChange={e => setEmail(e.target.value)}
-                    placeholder={`Enter your email address ${email.length === 0 ? 'to join our mailing list' : ''}`}
+                    placeholder={
+                      mobile
+                        ? 'Email address'
+                        : `Enter your email address ${email.length === 0 ? 'to join our mailing list' : ''}`
+                    }
                     type="email"
                     value={email}
                   />
@@ -160,6 +164,7 @@ export default function Footer(styles) {
                         color: 'white',
                         border: 0,
                         borderRadius: 8,
+                        marginTop: mobile ? 24 : 0,
                         padding: '8px 12px',
                         whiteSpace: 'nowrap',
                       }}
@@ -176,7 +181,7 @@ export default function Footer(styles) {
             <Column flexGrow={2} marginLeft={mobile ? 0 : 96}>
               <Flex>
                 {columns.map(column => (
-                  <Column key={column.section}>
+                  <Column key={column.section} marginTop={mobile ? 16 : 0}>
                     <Paragraph>
                       <Strong color="white">{column.section}</Strong>
                     </Paragraph>
