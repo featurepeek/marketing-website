@@ -1,6 +1,4 @@
 import React from 'react'
-// import Box from 'ui-box'
-import { graphql } from 'gatsby'
 
 import copyWritings from 'copy/forProjectManagers'
 

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Box from 'ui-box'
-import { graphql } from 'gatsby'
 
 import { Button, Code, Column, Flex, Heading, ListItem, Paragraph, Strong, UnorderedList } from 'primitives'
 

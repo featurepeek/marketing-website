@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-// import Box from 'ui-box'
 import { graphql } from 'gatsby'
 
 import { Heading, Flex } from 'primitives'

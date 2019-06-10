@@ -1,5 +1,4 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 
 import DesignedForGitHub from 'components/DesignedForGitHub'
 import Hero from 'components/Hero'
