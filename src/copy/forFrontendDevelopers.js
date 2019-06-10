@@ -12,7 +12,7 @@ export default [
     paragraphs: [
       'Collect feedback from your designers faster by sending them a link to review visually before code review.',
       "Don't wait for code review to finish before getting implementation feedback from Design — if there's a change requested, you'll have to go through code review again.",
-      "Instead, get feedback from designers while you're waiting on code review, asynchronously.",
+      "Instead, get feedback from designers while you're waiting on code review so that you aren't scrambling at the end of a release.",
     ],
     image: <LinkInPullRequest />,
   },

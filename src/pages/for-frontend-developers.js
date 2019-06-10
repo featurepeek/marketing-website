@@ -30,11 +30,6 @@ export default function ForFrontendDevelopers(props) {
         <Paragraph {...scale(1 / 4)} width="50%">
           Instant, dedicated environments for every open pull request.
         </Paragraph>
-        <Paragraph {...scale(1 / 4)} width="50%">
-          Get feedback from your designers earlier
-          <br />
-          so that you aren't scrambling at the end of a release.
-        </Paragraph>
       </HeroFrontend>
       <RowReversal copyWritings={copyWritings} theme={theme} />
       <Flex justifyContent="space-evenly" marginTop={200} width="100%">

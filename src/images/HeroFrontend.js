@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
+import MediaQuery from 'react-responsive'
 
 export default function HeroFrontend(props) {
   const { img } = useStaticQuery(
@@ -18,19 +19,23 @@ export default function HeroFrontend(props) {
   )
 
   return (
-    <BackgroundImage
-      loading="eager"
-      fadeIn={false}
-      fluid={img.childImageSharp.fluid}
-      alt="Built for Front-end Developers"
-      style={{
-        backgroundPosition: '0 0px',
-        backgroundSize: 'contain',
-        height: 800,
-        ...props.style,
-      }}
-    >
-      {props.children}
-    </BackgroundImage>
+    <MediaQuery maxWidth={904}>
+      {mobile => (
+        <BackgroundImage
+          loading="eager"
+          fadeIn={false}
+          fluid={img.childImageSharp.fluid}
+          alt="Built for Front-end Developers"
+          style={{
+            backgroundPosition: mobile ? 'bottom' : 'top',
+            backgroundSize: 'contain',
+            height: mobile ? 500 : 700,
+            ...props.style,
+          }}
+        >
+          {props.children}
+        </BackgroundImage>
+      )}
+    </MediaQuery>
   )
 }

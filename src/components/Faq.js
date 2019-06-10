@@ -17,7 +17,7 @@ export default function Faq({ question, answer }) {
       marginBottom={32}
       width="100%"
     >
-      <Flex>
+      <Flex flexDirection="row">
         <Icon icon="fas fa-question-circle" color="#05c5cc" fontSize={32} marginRight={16} />
         <div>
           <Paragraph>

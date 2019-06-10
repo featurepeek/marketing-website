@@ -4,7 +4,7 @@ import Box from 'ui-box'
 
 import { Button, Flex, Heading, Paragraph } from 'primitives'
 
-import HeroDashboard from 'images/HeroDashboard'
+import Hero from 'components/Hero'
 import FeatureGrid from 'components/FeatureGrid'
 import IntegrationsOrbit from 'components/IntegrationsOrbit'
 import Layout from 'components/Layout'
@@ -19,26 +19,7 @@ export default function IndexPage(props) {
   return (
     <Layout location={props.location}>
       <SEO title="Home" />
-      <Flex margin={-39} padding={40} overflowX="hidden">
-        <Box width="40%">
-          <Heading marginTop={0} size={500}>
-            Collaborate on front-end websites like never before.
-          </Heading>
-          <Heading h={2} opacity={0.4} size={360}>
-            Annotate directly on your team's new features as they get implemented.
-          </Heading>
-          <Heading h={3} opacity={0.4} size={360}>
-            No merging.
-            <br />
-            No hosting.
-            <br />
-            No browser extension.
-          </Heading>
-        </Box>
-        <Box position="relative" left={39} width="60%">
-          <HeroDashboard />
-        </Box>
-      </Flex>
+      <Hero />
       <RowReversal copyWritings={valueProps} flip={1} />
       <FeatureGrid />
       <Flex alignItems="center">

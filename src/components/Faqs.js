@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
 import Box from 'ui-box'
+import MediaQuery from 'react-responsive'
 
 import { Column, Flex, Heading } from 'primitives'
 
@@ -10,19 +11,27 @@ import Faq from 'components/Faq'
 
 export default function Faqs({ heading, faqs }) {
   return (
-    <Box background="#f8f8f8" marginX={-39} marginBottom={-40} padding={40}>
-      <Heading h={3} margin={40} size={360} textAlign="center">
-        {heading}
-      </Heading>
-      <Flex marginY={80}>
-        {faqs.map((column, i) => (
-          <Column key={i} marginLeft={i % 2 === 0 ? 0 : 16} marginRight={i % 2 === 0 ? 16 : 0}>
-            {column.map(faq => (
-              <Faq key={faq.question} {...faq} />
+    <MediaQuery maxWidth={800}>
+      {mobile => (
+        <Box background="#f8f8f8" marginX={-39} marginBottom={-40} padding={40}>
+          <Heading h={3} margin={40} size={360} textAlign="center">
+            {heading}
+          </Heading>
+          <Flex marginY={80}>
+            {faqs.map((column, i) => (
+              <Column
+                key={i}
+                marginLeft={mobile ? 0 : i % 2 === 0 ? 0 : 16}
+                marginRight={mobile ? 0 : i % 2 === 0 ? 16 : 0}
+              >
+                {column.map(faq => (
+                  <Faq key={faq.question} {...faq} />
+                ))}
+              </Column>
             ))}
-          </Column>
-        ))}
-      </Flex>
-    </Box>
+          </Flex>
+        </Box>
+      )}
+    </MediaQuery>
   )
 }
