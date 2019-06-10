@@ -1,15 +1,10 @@
 import React from 'react'
 
 import Commenting from 'images/Commenting'
+import DesignComeToLife from 'images/DesignComeToLife'
+import BlockMerge from 'images/BlockMerge'
 
 export default [
-  {
-    heading: 'See your designs come to life earlier in the release cycle',
-    paragraphs: [
-      'With feature environments in their arsenal, your front-end developers will ask for your feedback sooner in the sprint.',
-      'No more late requests for implementation feedback right before a release.',
-    ],
-  },
   {
     heading: 'Annotate directly on the implementation itself',
     paragraphs: [
@@ -18,6 +13,14 @@ export default [
       // 'Video recording support coming soon!',
     ],
     image: <Commenting />,
+  },
+  {
+    heading: 'See your designs come to life earlier in the release cycle',
+    paragraphs: [
+      'With feature environments in their arsenal, your front-end developers will ask for your feedback sooner in the sprint.',
+      'No more late requests for implementation feedback right before a release.',
+    ],
+    image: <DesignComeToLife />,
   },
   {
     heading: 'See your designs filled with real production data',
@@ -32,6 +35,7 @@ export default [
     paragraphs: [
       "If granted Veto Power by a team admin, you'll have the ability to block a new feature from deploying until its quality meets your standards.",
     ],
+    image: <BlockMerge />,
   },
   {
     heading: "Be more included in Engineering's release process",
