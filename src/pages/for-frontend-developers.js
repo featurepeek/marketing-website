@@ -25,8 +25,8 @@ export default function ForFrontendDevelopers(props) {
         <Heading color={theme} marginTop={0} {...scale(2)}>
           Front-end Developers
         </Heading>
-        <Heading color={theme} h={2} opacity={0.5} size={360} width="50%">
-          Instant, dedicated environments for every open pull request.
+        <Heading color={theme} h={2} opacity={0.5} size={300} width="60%">
+          Dedicated environments for every open pull request.
         </Heading>
       </HeroFrontend>
       <RowReversal copyWritings={copyWritings} theme={theme} />

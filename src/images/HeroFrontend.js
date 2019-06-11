@@ -29,7 +29,7 @@ export default function HeroFrontend(props) {
           style={{
             backgroundPosition: mobile ? 'bottom' : 'top',
             backgroundSize: 'contain',
-            height: mobile ? 500 : 700,
+            height: mobile ? 540 : 700,
             ...props.style,
           }}
         >
