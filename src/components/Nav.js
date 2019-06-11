@@ -43,7 +43,7 @@ export default function Nav() {
           height={mobile && isShowingMobileNav ? 400 : 76}
           marginTop={16}
           overflow={mobile ? 'hidden' : 'inherit'}
-          paddingX={16}
+          paddingX={mobile ? 0 : 16}
           paddingY={8}
           position="sticky"
           top={0}

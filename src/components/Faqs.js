@@ -13,7 +13,13 @@ export default function Faqs({ heading, faqs }) {
   return (
     <MediaQuery maxWidth={800}>
       {mobile => (
-        <Box background="#f8f8f8" marginX={-39} marginBottom={-40} padding={40}>
+        <Box
+          background="#f8f8f8"
+          marginX={mobile ? -15 : -39}
+          marginBottom={-40}
+          paddingX={mobile ? 16 : 40}
+          paddingY={40}
+        >
           <Heading h={3} margin={40} size={360} textAlign="center">
             {heading}
           </Heading>

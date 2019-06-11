@@ -14,7 +14,7 @@ export default function DesignedForGitHub(props) {
     <MediaQuery maxWidth={1000}>
       {mobile => (
         <Flex alignItems="center">
-          <Flex alignItems="center" width={mobile ? '100%' : '50%'}>
+          <Flex alignItems="center" width={mobile ? '100%' : '50%'} overflow={mobile ? 'hidden' : undefined}>
             <IntegrationsOrbit mobile={mobile} />
           </Flex>
           <Box width={mobile ? '100%' : '50%'}>

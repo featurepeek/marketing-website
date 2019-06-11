@@ -19,7 +19,7 @@ import { track } from 'utils/analytics'
 import { dollarsFromCents } from 'utils/money'
 
 export default function PricingColumn({ product, hasMounted }) {
-  const [isAnnual, setAnnual] = useState(false)
+  const [isAnnual, setAnnual] = useState(true)
 
   const { metadata } = product
 

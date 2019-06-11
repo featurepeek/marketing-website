@@ -13,23 +13,29 @@ export default function Hero() {
   return (
     <MediaQuery maxWidth={904}>
       {mobile => (
-        <Flex margin={-39} padding={40} overflowX="hidden">
+        <Flex margin={mobile ? -15 : -39} padding={mobile ? 16 : 40} overflowX="hidden">
           <Box width={mobile ? '100%' : '40%'}>
             <Heading marginTop={0} size={500}>
-              Collaborate on front-end websites like never before.
+              A new way to collect front-end feedback from your team.
             </Heading>
             <Heading h={2} opacity={0.4} size={360}>
-              Give feedback on your team's new features as they get implemented.
+              Spin up environments for every branch automatically.
             </Heading>
+            <Heading h={2} opacity={0.4} size={360}>
+              Annotate directly on the implementation.
+            </Heading>
+            {/* <Heading h={2} opacity={0.4} size={360}> */}
+            {/*   See a real-time overview of your active projects. */}
+            {/* </Heading> */}
             <Heading h={3} opacity={0.4} size={360}>
-              No merging.
+              All without merges,
               <br />
-              No hosting.
+              run-time dependencies,
               <br />
-              No browser extension.
+              or browser extensions.
             </Heading>
           </Box>
-          <Box position="relative" left={39} width={mobile ? '100%' : '60%'}>
+          <Box position="relative" left={mobile ? 0 : 39} width={mobile ? '100%' : '60%'}>
             <HeroDashboard />
           </Box>
         </Flex>
