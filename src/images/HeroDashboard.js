@@ -6,7 +6,7 @@ export default function HeroDashboard() {
   const { img } = useStaticQuery(
     graphql`
       query HeroDashboard {
-        img: file(absolutePath: { regex: "/dashboard.png/" }) {
+        img: file(absolutePath: { regex: "/general-hero-2.png/" }) {
           childImageSharp {
             fixed(width: 1225, quality: 100) {
               ...GatsbyImageSharpFixed_noBase64
