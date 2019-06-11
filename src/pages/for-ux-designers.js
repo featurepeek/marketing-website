@@ -25,7 +25,7 @@ export default function ForFrontendDevelopers(props) {
         <Heading color={theme} marginTop={0} {...scale(2)}>
           UX Designers
         </Heading>
-        <Heading color={theme} h={2} opacity={0.5} size={360} width="50%">
+        <Heading color={theme} h={2} opacity={0.5} size={300} width="60%">
           Leave implementation feedback in a whole new way.
         </Heading>
       </HeroDesigners>

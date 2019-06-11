@@ -29,7 +29,7 @@ export default function HeroDesigners(props) {
           style={{
             backgroundPosition: mobile ? 'bottom' : 'top',
             backgroundSize: 'contain',
-            height: mobile ? 480 : 740,
+            height: mobile ? 520 : 740,
             ...props.style,
           }}
         >
