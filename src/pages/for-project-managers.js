@@ -2,7 +2,7 @@ import React from 'react'
 
 import copyWritings from 'copy/forProjectManagers'
 
-import { Heading, Paragraph } from 'primitives'
+import { Heading } from 'primitives'
 
 import HeroManagers from 'images/HeroManagers'
 import Layout from 'components/Layout'
@@ -17,7 +17,7 @@ export default function ForProjectManagers(props) {
   const theme = gradientMap.blue[0]
   return (
     <Layout background="#e8f4f8" location={props.location}>
-      <SEO title="FeaturePeek for Project Managers" />
+      <SEO title="Built for Project Managers" />
       <HeroManagers>
         <Heading color="#103c52" h={6} marginTop={0} {...scale(1 / 2)}>
           Built for
@@ -25,9 +25,9 @@ export default function ForProjectManagers(props) {
         <Heading color={theme} marginTop={0} {...scale(2)}>
           Project Managers
         </Heading>
-        <Paragraph {...scale(1 / 4)} width="50%">
-          Get a visual overview of your team's work in progress.
-        </Paragraph>
+        <Heading color={theme} h={2} opacity={0.5} size={360} width="50%">
+          Shorter feedback loops = higher quality releases.
+        </Heading>
       </HeroManagers>
       <RowReversal copyWritings={copyWritings} theme={theme} />
       <NextPrevButtons prev="designers" next="developers" />

@@ -15,7 +15,7 @@ export default [
     {
       question: 'My project is a monorepo. How do I integrate with FeaturePeek?',
       answer:
-        "You can integrate your front-end within your monorepo the same as you'd integrate any front-end. For the backend, we recommend using environment variables to point to existing backend services. If your ",
+        "You can integrate your front-end within your monorepo the same as you'd integrate any front-end. For the backend, we recommend using environment variables to point to existing backend services.",
     },
     {
       question: 'When will {X} Continuous Integration service be supported?',

@@ -26,7 +26,7 @@ export default function Pricing(props) {
     }
   })
 
-  const sortedProducts = products.sort((a, b) => parseInt(a.metadata.position, 10) > parseInt(b.metadata.position, 10))
+  const sortedProducts = products.sort((a, b) => parseInt(a.metadata.position, 10) - parseInt(b.metadata.position, 10))
 
   return (
     <Layout location={props.location}>

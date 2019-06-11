@@ -39,7 +39,7 @@ export default [
   {
     heading: "Block features from being merged if they aren't up to par",
     paragraphs: [
-      "If granted Veto Power by a team admin, you'll have the ability to block a new feature from deploying until its quality meets your standards.",
+      "With Veto Power, you'll have the ability to block a new feature from deploying until its quality meets your standards.",
     ],
     image: <BlockMerge />,
   },

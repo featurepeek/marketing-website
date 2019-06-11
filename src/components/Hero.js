@@ -19,7 +19,7 @@ export default function Hero() {
               Collaborate on front-end websites like never before.
             </Heading>
             <Heading h={2} opacity={0.4} size={360}>
-              Annotate directly on your team's new features as they get implemented.
+              Give feedback on your team's new features as they get implemented.
             </Heading>
             <Heading h={3} opacity={0.4} size={360}>
               No merging.
