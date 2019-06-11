@@ -3,9 +3,12 @@ import { graphql } from 'gatsby'
 
 import { Heading, Flex } from 'primitives'
 
+import Faqs from 'components/Faqs'
 import PricingColumn from 'components/PricingColumn'
 import Layout from 'components/Layout'
 import SEO from 'components/Seo'
+
+import pricingFAQs from 'copy/pricingFAQs'
 
 export default function Pricing(props) {
   const [hasMounted, setMounted] = useState(false)
@@ -23,22 +26,23 @@ export default function Pricing(props) {
     }
   })
 
-  const sortedProducts = products.sort((a, b) => parseInt(a.metadata.position, 10) > parseInt(b.metadata.position, 10))
+  const sortedProducts = products.sort((a, b) => parseInt(a.metadata.position, 10) - parseInt(b.metadata.position, 10))
 
   return (
     <Layout location={props.location}>
       <SEO title="Pricing" />
-      <Heading marginTop={0} marginBottom={16} size={500} textAlign="center">
+      <Heading marginTop={0} size={500} textAlign="center">
         Flexible plans for companies of all sizes.
       </Heading>
-      <Heading marginTop={0} marginBottom={160} opacity={0.4} size={360} textAlign="center">
+      <Heading h={2} marginTop={0} marginBottom={160} opacity={0.4} size={360} textAlign="center">
         Our plans are simple and straightforward.
       </Heading>
-      <Flex alignItems="center">
+      <Flex alignItems="center" marginBottom={160}>
         {sortedProducts.map(product => (
           <PricingColumn key={product.id} hasMounted={hasMounted} product={product} />
         ))}
       </Flex>
+      <Faqs heading="Pricing FAQs" faqs={pricingFAQs} />
     </Layout>
   )
 }

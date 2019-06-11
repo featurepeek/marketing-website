@@ -1,7 +1,7 @@
 /* Button */
 .button:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  padding: 12px 24px;
+  padding: 4px 8px;
   text-decoration: none;
 }
 .button:active {
@@ -10,11 +10,11 @@
 }
 
 /* Link */
-a.underline {
+.active-link, .underline {
   display: inline-block;
   position: relative;
 }
-.active-link::after, a.underline::after {
+.active-link::after, .underline::after {
   background: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   content: '';
@@ -26,17 +26,17 @@ a.underline {
   transition: all 0.15s ease;
   width: 100%;
 }
-a.underline:hover {
+.underline:hover {
   text-decoration: none;
 }
-a.underline:hover::after {
+.active-link::after, .underline:hover::after {
   transform: scale(1);
 }
-.active-link span, a.underline:hover span {
+.underline:hover span {
   color: #13b7d1;
   opacity: 1;
 }
-a.underline:active span {
+.underline:active span {
   transform: translateY(1px);
 }
 
@@ -48,4 +48,48 @@ a.underline:active span {
 .rc-switch, .rc-switch-checked {
   background-color: #05c5cc;
   border-color: #05c5cc;
+}
+
+/* Subnav */
+.subnav::before {
+  background: #fefcfb;
+  border-left: 1px solid #f4f4f4;
+  border-radius: 2px;
+  border-top: 1px solid #f4f4f4;
+  box-shadow: none;
+  content: '';
+  height: 16px;
+  left: 104px;
+  position: absolute;
+  top: -10px;
+  transform: rotateZ(45deg);
+  width: 16px;
+  z-index: -999;
+}
+.subnav1 {
+  border-bottom: 1px solid #eee;
+}
+.subnav1:hover {
+  background: rgba(90, 191, 126, 0.1);
+}
+.subnav2 {
+  border-bottom: 1px solid #eee;
+}
+.subnav2:hover {
+  background: rgba(194, 116, 209, 0.1);
+}
+.subnav3:hover {
+  background: rgba(0, 176, 222, 0.1);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin-forever {
+  animation: rotate 60s linear infinite;
 }
