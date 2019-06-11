@@ -7,6 +7,7 @@ module.exports = {
     title: `A new way to collaborate on your team's front-end | FeaturePeek`,
     author: `Jason Barry`,
     description: `FeaturePeek spins up an environment for every branch of your front-end, so you can get feedback from your team earlier in the web development cycle. Our collaboration tools make it easy to effectively communicate with your team.`,
+    image: '/img/og-image.png',
     siteUrl: `https://featurepeek.com`,
     social: {
       twitter: `featurepeek`,
