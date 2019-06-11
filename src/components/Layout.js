@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Box from 'ui-box'
 import MediaQuery from 'react-responsive'
 
@@ -10,7 +10,27 @@ import { rhythm } from 'utils/typography'
 
 export default function Layout(props) {
   const { location, background, children } = props
-  // const rootBlogPath = `${__PATH_PREFIX__}/blog`
+
+  const [initialRender, setInitialRender] = useState(true)
+
+  // ultra-hack to combat react-responsive + Gatsby SSR woes.
+  // https://github.com/contra/react-responsive/issues/162
+  useEffect(() => {
+    const MAX_BREAK_POINT = 942
+    if (!window._didInitialRender && window.innerWidth <= MAX_BREAK_POINT) {
+      setTimeout(() => {
+        setInitialRender(false)
+      }, 100)
+      setTimeout(() => {
+        setInitialRender(true)
+      }, 101)
+      window._didInitialRender = true
+    }
+  }, [])
+
+  if (!initialRender) {
+    return null
+  }
 
   return (
     <MediaQuery maxWidth={504}>
