@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { graphql } from 'gatsby'
+import MediaQuery from 'react-responsive'
 
 import { Heading, Flex } from 'primitives'
 
@@ -29,21 +30,32 @@ export default function Pricing(props) {
   const sortedProducts = products.sort((a, b) => parseInt(a.metadata.position, 10) - parseInt(b.metadata.position, 10))
 
   return (
-    <Layout location={props.location}>
-      <SEO title="Pricing" />
-      <Heading marginTop={0} size={500} textAlign="center">
-        Flexible plans for companies of all sizes.
-      </Heading>
-      <Heading h={2} marginTop={0} marginBottom={160} opacity={0.4} size={360} textAlign="center">
-        Our plans are simple and straightforward.
-      </Heading>
-      <Flex alignItems="center" marginBottom={160}>
-        {sortedProducts.map(product => (
-          <PricingColumn key={product.id} hasMounted={hasMounted} product={product} />
-        ))}
-      </Flex>
-      <Faqs heading="Pricing FAQs" faqs={pricingFAQs} />
-    </Layout>
+    <MediaQuery maxWidth={800}>
+      {mobile => (
+        <Layout location={props.location}>
+          <SEO title="Pricing" />
+          <Heading marginTop={0} size={500} textAlign={mobile ? 'left' : 'center'}>
+            Flexible plans for companies of all sizes.
+          </Heading>
+          <Heading
+            h={2}
+            marginTop={0}
+            marginBottom={mobile ? 80 : 160}
+            opacity={0.4}
+            size={360}
+            textAlign={mobile ? 'left' : 'center'}
+          >
+            Our plans are simple and straightforward.
+          </Heading>
+          <Flex alignItems="center" marginBottom={mobile ? 80 : 160}>
+            {sortedProducts.map(product => (
+              <PricingColumn key={product.id} hasMounted={hasMounted} product={product} />
+            ))}
+          </Flex>
+          <Faqs heading="Pricing FAQs" faqs={pricingFAQs} />
+        </Layout>
+      )}
+    </MediaQuery>
   )
 }
 

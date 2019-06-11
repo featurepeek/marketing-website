@@ -24,7 +24,7 @@ export const valueProps = [
   {
     heading: 'Annotate directly on the implementation itself',
     paragraphs: [
-      'Just like how tools like Figma and InVision let you collaborate on design, FeaturePeek lets you collaborate on implementation.',
+      'Just like how Figma and InVision let you collaborate on design, FeaturePeek lets you collaborate on implementation.',
       "Take screenshots of an HTML element on the page, and it'll be saved as a comment on the relevant pull request — even if you don't have a GitHub account.",
       // 'Video recording support coming soon!',
     ],

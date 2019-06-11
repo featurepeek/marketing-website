@@ -7,7 +7,7 @@ import { Paragraph, Strong } from 'primitives'
 // import { rhythm, scale } from 'utils/typography'
 
 export default function ViewportArriver(props) {
-  const { strong, paragraph, image, handleArrival, handleDeparture, last } = props
+  const { strong, paragraph, image, handleArrival, handleDeparture, last, mobile } = props
   const [isInViewport, setInViewport] = useState(false)
   const imageEl = useRef(null)
 
@@ -38,7 +38,7 @@ export default function ViewportArriver(props) {
     <Box>
       {image}
       <div ref={imageEl} style={{ height: 1, width: '100%' }} />
-      <Paragraph marginTop={16} marginBottom={last ? 0 : 160}>
+      <Paragraph marginTop={16} marginBottom={last ? 0 : mobile ? 80 : 160}>
         <Strong>{strong}</Strong> {paragraph}
       </Paragraph>
     </Box>
