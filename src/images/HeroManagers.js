@@ -22,8 +22,7 @@ export default function HeroManagers(props) {
     <MediaQuery maxWidth={904}>
       {mobile => (
         <BackgroundImage
-          loading="eager"
-          fadeIn={false}
+          fadeIn="soft"
           fluid={img.childImageSharp.fluid}
           alt="Built for Project Managers"
           style={{

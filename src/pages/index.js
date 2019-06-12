@@ -13,7 +13,7 @@ import { valueProps } from 'copy/homePage'
 export default function IndexPage(props) {
   return (
     <Layout location={props.location}>
-      <SEO title="Home" />
+      <SEO title="Overview" />
       <Hero />
       <RowReversal copyWritings={valueProps} flip={1} />
       <FeatureGrid />

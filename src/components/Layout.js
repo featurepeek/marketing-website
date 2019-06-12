@@ -18,12 +18,10 @@ export default function Layout(props) {
   useEffect(() => {
     const MAX_BREAK_POINT = 942
     if (!window._didInitialRender && window.innerWidth <= MAX_BREAK_POINT) {
-      setTimeout(() => {
-        setInitialRender(false)
-      }, 100)
+      setInitialRender(false)
       setTimeout(() => {
         setInitialRender(true)
-      }, 101)
+      }, 1)
       window._didInitialRender = true
     }
   }, [])
