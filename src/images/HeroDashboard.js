@@ -17,5 +17,5 @@ export default function HeroDashboard() {
     `
   )
 
-  return <Image loading="eager" fadeIn={false} fixed={img.childImageSharp.fixed} alt="FeaturePeek Dashboard" />
+  return <Image fixed={img.childImageSharp.fixed} alt="FeaturePeek Dashboard" />
 }
