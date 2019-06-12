@@ -16,7 +16,7 @@ export default function Hero() {
         <Flex margin={mobile ? -15 : -39} padding={mobile ? 16 : 40} overflowX="hidden">
           <Box width={mobile ? '100%' : '40%'}>
             <Heading marginTop={0} size={500}>
-              A new way to collect front-end feedback from your team.
+              A new way to gather front-end feedback from your team.
             </Heading>
             <Heading h={2} opacity={0.4} size={360}>
               Spin up environments for every branch automatically.
