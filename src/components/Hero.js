@@ -42,7 +42,7 @@ export default function Hero() {
             </Heading>
             <Heading h={3} marginTop={32} size={360}>
               <Link href="#video" onClick={scrollToVideo}>
-                <span>Video walkthrough</span>
+                <span>Watch a demo.</span>
               </Link>
             </Heading>
           </Box>
