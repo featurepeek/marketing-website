@@ -2,14 +2,23 @@
 import React from 'react'
 import Box from 'ui-box'
 import MediaQuery from 'react-responsive'
+import jump from 'jump.js'
 
-import { Flex, Heading } from 'primitives'
+import { Flex, Heading, Link } from 'primitives'
 
 import HeroDashboard from 'images/HeroDashboard'
 
 // import { rhythm, scale } from 'utils/typography'
 
 export default function Hero() {
+  const scrollToVideo = event => {
+    event.preventDefault()
+    jump('#video', {
+      duration: 600,
+      offset: -100,
+    })
+  }
+
   return (
     <MediaQuery maxWidth={904}>
       {mobile => (
@@ -24,15 +33,17 @@ export default function Hero() {
             <Heading h={2} opacity={0.4} size={360}>
               Annotate directly on the implementation.
             </Heading>
-            {/* <Heading h={2} opacity={0.4} size={360}> */}
-            {/*   See a real-time overview of your active projects. */}
-            {/* </Heading> */}
             <Heading h={3} opacity={0.4} size={360}>
               All without merges,
               <br />
               run-time dependencies,
               <br />
               or browser extensions.
+            </Heading>
+            <Heading h={3} marginTop={32} size={360}>
+              <Link href="#video" onClick={scrollToVideo}>
+                <span>Watch a demo.</span>
+              </Link>
             </Heading>
           </Box>
           <Box position="relative" left={mobile ? 0 : 39} width={mobile ? '100%' : '60%'}>
