@@ -61,7 +61,8 @@
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
     "typography-theme-github": "^0.16.19",
-    "ui-box": "^2.1.0"
+    "ui-box": "^2.1.0",
+    "unfetch": "^4.1.0"
   },
   "devDependencies": {
     "@featurepeek/circleci": "^0.2.3",

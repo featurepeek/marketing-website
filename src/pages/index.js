@@ -1,6 +1,7 @@
 import React from 'react'
 
 import DesignedForGitHub from 'components/DesignedForGitHub'
+import Demo from 'components/Demo'
 import Hero from 'components/Hero'
 import FeatureGrid from 'components/FeatureGrid'
 import Layout from 'components/Layout'
@@ -15,6 +16,7 @@ export default function IndexPage(props) {
     <Layout location={props.location}>
       <SEO title="Overview" />
       <Hero />
+      <Demo />
       <RowReversal copyWritings={valueProps} flip={1} />
       <FeatureGrid />
       <DesignedForGitHub />

@@ -9,6 +9,11 @@
   transform: translateY(2px);
 }
 
+/* Code */
+code {
+  font-family: "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+}
+
 /* Link */
 .active-link, .underline {
   display: inline-block;
@@ -92,4 +97,14 @@
 }
 .spin-forever {
   animation: rotate 60s linear infinite;
+}
+
+.polaroid {
+  transition: transform 0.3s ease;
+}
+.polaroid:hover {
+  transform: translateY(-5px);
+}
+.polaroid a:hover {
+  text-decoration: none;
 }
