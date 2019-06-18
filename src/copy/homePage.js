@@ -3,7 +3,7 @@ import { gradientMap } from 'utils/color'
 
 import LinkInPullRequest from 'images/LinkInPullRequest'
 import Commenting from 'images/Commenting'
-import BirdsEyeView from 'images/BirdsEyeView'
+import SaveTime from 'images/SaveTime'
 
 export const valueProps = [
   {
@@ -38,10 +38,10 @@ export const valueProps = [
     image: <Commenting />,
   },
   {
-    heading: "See a birds-eye view of your team's works in progress",
+    heading: 'Save time during your release cycle',
     paragraphs: [
-      "Keep tabs on your team's progress without bothering them or asking for status updates.",
-      'All open pull requests for your projects are visible in the FeaturePeek dashboard.',
+      'Catch mistakes earlier in the release cycle, before code lands on the master branch.',
+      'Since each implementation on FeaturePeek runs in isolation, your team will run into fewer integration bugs when deploying to production.',
     ],
     color: gradientMap.blue[0],
     buttonProps: {
@@ -50,7 +50,7 @@ export const valueProps = [
       href: '/for-project-managers',
       iconAfter: 'fas fa-arrow-right',
     },
-    image: <BirdsEyeView />,
+    image: <SaveTime />,
   },
 ]
 

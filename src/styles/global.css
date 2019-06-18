@@ -1,3 +1,5 @@
+@import "~slick-carousel/slick/slick.css";
+
 /* Button */
 .button:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
@@ -7,6 +9,11 @@
 .button:active {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   transform: translateY(2px);
+}
+
+/* Code */
+code {
+  font-family: "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
 }
 
 /* Link */
@@ -92,4 +99,14 @@
 }
 .spin-forever {
   animation: rotate 60s linear infinite;
+}
+
+.polaroid {
+  transition: transform 0.3s ease;
+}
+.polaroid:hover {
+  transform: translateY(-4px);
+}
+.polaroid a:hover {
+  text-decoration: none;
 }
