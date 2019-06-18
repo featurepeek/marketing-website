@@ -18,7 +18,7 @@ jobs:
   # For pull requests, we can build just the static assets
   # FeaturePeek handles the deployment to feature environments, so we can ignore Docker-specific steps
   # and just ping FeaturePeek after the static assets have built
-  build_static_assets_only:
+  build_static_assets:
     docker: 
       - image: circleci/node:10.14.1
     steps:
@@ -40,6 +40,7 @@ jobs:
           command: yarn build
       - run:
           name: Pinging FeaturePeek
+          # This command is defined in the @featurepeek/circleci devDependency
           command: yarn featurepeek
   # Building and pushing an image is how we manage staging/production deployments
   # You likely already have something similar to this job if you deploy using CircleCI
