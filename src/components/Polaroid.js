@@ -28,7 +28,7 @@ export default function Polaroid(props) {
       width={304}
     >
       <a href={`https://dashboard.featurepeek.com/peek/${merge.id}`} target="_blank">
-        <img alt="Screenshot" height="200" src={merge.screenshot} style={{ marginBottom: 0 }} width="100%" />
+        <img alt="Screenshot" src={merge.screenshot} style={{ marginBottom: 0 }} width="100%" />
         <Box paddingTop={8} paddingX={16} wordBreak="break-word">
           <Paragraph marginBottom={0}>
             <a style={{ color: 'rgb(16, 112, 202)', fontSize: 16 }}>{merge.title}</a>
