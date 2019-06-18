@@ -8,13 +8,16 @@ version: 2.1
 orbs:
   gcp-gcr: circleci/gcp-gcr@0.6.0
   gcp-gke: circleci/gcp-gke@0.1.0
-  # featurepeek: featurepeek/ping@0.0.3
+  # featurepeek: featurepeek/ping@0.0.3 # Uncomment this line if you build a Docker image
 
 executors:
   default:
     machine: true
 
 jobs:
+  # For pull requests, we can build just the static assets
+  # FeaturePeek handles the deployment to feature environments, so we can ignore Docker-specific steps
+  # and just ping FeaturePeek after the static assets have built
   build_static_assets_only:
     docker: 
       - image: circleci/node:10.14.1
@@ -32,9 +35,14 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
+      - run: 
+          name: Building assets
+          command: yarn build
       - run:
           name: Pinging FeaturePeek
           command: yarn featurepeek
+  # Building and pushing an image is how we manage staging/production deployments
+  # You likely already have something similar to this job if you deploy using CircleCI
   build_and_push_image:
     executor: default
     steps:
@@ -61,11 +69,19 @@ jobs:
 workflows:
   frontend:
     jobs:
+      # This project builds static assets -- it has a Dockerfile, but that's only used for staging/production deployments
+      # For FeaturePeek, we can build just the static assets, which is faster than building a Docker image
       - build_static_assets_only:
           filters:
             branches:
+              # Only call this job on feature branches
               ignore: [master, dev]
-      - build_and_push_image
+      # We only build, push, and tag the image for our staging and production deployments
+      # The steps below aren't necessary if you're only building static assets
+      - build_and_push_image:
+          filters:
+            branches:
+              only: [master, dev]
       - gcp-gcr/add-image-tag:
           requires:
             - build_and_push_image
@@ -92,6 +108,7 @@ workflows:
           filters:
             branches:
               only: [master]
+      # If this project *didn't* build static assets, we'd uncomment these lines
       # - featurepeek/ping_featurepeek:
       #     requires:
       #       - build_and_push_image
