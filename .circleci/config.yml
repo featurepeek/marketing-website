@@ -17,7 +17,7 @@ executors:
 jobs:
   build_static_assets_only:
     docker: 
-      - circleci/node:10.14.1
+      - image: circleci/node:10.14.1
     steps:
       - checkout
       - run: env > .env.production
@@ -64,7 +64,7 @@ workflows:
       - build_static_assets_only:
           filters:
             branches:
-              except: [master, dev]
+              ignore: [master, dev]
       - build_and_push_image
       - gcp-gcr/add-image-tag:
           requires:
