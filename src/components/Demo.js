@@ -1,19 +1,17 @@
 // @flow
 import React, { useState, useEffect } from 'react'
 import Box from 'ui-box'
-import fetch from 'unfetch'
+// import fetch from 'unfetch'
 import Slider from 'react-slick'
 
 // TODO: delete this line
 import response from '../public_demo'
 
-import { Heading, Link, Paragraph } from 'primitives'
+import { Heading, Link } from 'primitives'
 import Polaroid from 'components/Polaroid'
 
 import Merge from 'interfaces/Merge'
 import { castArray } from 'utils/array'
-
-const MERGE_WIDTH = 328
 
 export default function Demo() {
   const [merges, setMerges] = useState([])
