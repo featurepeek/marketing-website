@@ -1,11 +1,9 @@
 // @flow
 import React, { useState, useEffect } from 'react'
 import Box from 'ui-box'
-// import fetch from 'unfetch'
+import fetch from 'unfetch'
 import Slider from 'react-slick'
-
-// TODO: delete this line
-import response from '../public_demo'
+import MediaQuery from 'react-responsive'
 
 import { Heading, Link } from 'primitives'
 import Polaroid from 'components/Polaroid'
@@ -17,31 +15,28 @@ export default function Demo() {
   const [merges, setMerges] = useState([])
 
   useEffect(() => {
-    // const url = 'https://api.dev.featurepeek.com/api/v1/public_demo'
-    // fetch(url)
-    //   .then(r => r.json())
-    //   .then(r => {
-    //     const ms = castArray(response, Merge)
-    //     const sorted = ms.sort((a, b) => (new Date(a.createdAt) > new Date(b.createdAt) ? -1 : 1))
-    //     setMerges(sorted)
-    //   })
-
-    const ms = castArray(response, Merge)
-    const sorted = ms.sort((a, b) => (new Date(a.createdAt) > new Date(b.createdAt) ? -1 : 1))
-    setMerges(sorted)
+    const baseURL = document.location.hash === 'featurepeek.com' ? 'api.featurepeek.com' : 'api.dev.featurepeek.com'
+    const url = `https://${baseURL}/api/v1/public_demo`
+    fetch(url)
+      .then(r => r.json())
+      .then(r => {
+        const ms = castArray(r, Merge)
+        const sorted = ms.sort((a, b) => (new Date(a.createdAt) > new Date(b.createdAt) ? -1 : 1))
+        setMerges(sorted)
+      })
   }, [])
 
   const settings = {
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3500,
     centerMode: true,
     centerPadding: '140px',
     // cssEase: 'linear',
     infinite: true,
     slidesToScroll: 1,
     slidesToShow: 3,
-    speed: 1000,
+    speed: 500,
     // swipeToSlide: true,
     touchThreshold: 10,
     responsive: [
@@ -90,34 +85,59 @@ export default function Demo() {
       {
         breakpoint: 504,
         settings: {
-          centerPadding: '80px',
+          centerPadding: '100px',
           slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 415,
+        settings: {
+          autoplaySpeed: 3000,
+          centerPadding: '25px',
+          cssEase: 'ease',
+          slidesToShow: 1,
+          speed: 1000,
         },
       },
     ],
   }
 
+  if (!merges.length) {
+    return null
+  }
+
   return (
-    <Box marginX={-39} paddingTop={80}>
-      <Heading marginTop={0} size={500} textAlign="center">
-        Take a peek at a demo.
-      </Heading>
-      <Heading h={2} color="#a1a3a5" marginBottom={40} paddingX={16} size={360} textAlign="center">
-        These are live environments for this website's{' '}
-        <Link href="https://github.com/featurepeek/marketing-website/pulls" target="_blank">
-          open pull requests
-        </Link>
-        .
-      </Heading>
-      <Box background="#edf0f2" paddingY={16}>
-        <Slider {...settings}>
-          {merges.map(merge => (
-            <div key={merge.id}>
-              <Polaroid merge={merge} />
-            </div>
-          ))}
-        </Slider>
-      </Box>
-    </Box>
+    <MediaQuery maxWidth={800}>
+      {mobile => (
+        <Box id="demo" marginX={mobile ? -15 : -39} paddingTop={mobile ? 0 : 80}>
+          <Heading marginTop={0} paddingX={16} size={500} textAlign={mobile ? 'left' : 'center'}>
+            Take a peek at a demo.
+          </Heading>
+          <Heading
+            h={2}
+            color="#a1a3a5"
+            marginBottom={40}
+            paddingX={16}
+            size={360}
+            textAlign={mobile ? 'left' : 'center'}
+          >
+            These are live environments for this website's{' '}
+            <Link href="https://github.com/featurepeek/marketing-website/pulls" target="_blank">
+              open pull requests
+            </Link>
+            .
+          </Heading>
+          <Box background="#edf0f2" paddingY={16}>
+            <Slider {...settings}>
+              {merges.map(merge => (
+                <div key={merge.id}>
+                  <Polaroid merge={merge} />
+                </div>
+              ))}
+            </Slider>
+          </Box>
+        </Box>
+      )}
+    </MediaQuery>
   )
 }

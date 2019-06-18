@@ -27,11 +27,17 @@ export default function Polaroid(props) {
       style={{ verticalAlign: 'top' }}
       width={304}
     >
-      <a href={`https://dashboard.featurepeek.com/peek/${merge.id}`} target="_blank">
+      <a
+        href={`https://dashboard.featurepeek.com/peek/${merge.id}`}
+        style={{ userDrag: 'none', '-webkit-user-drag': 'none' }}
+        target="_blank"
+      >
         <img alt="Screenshot" src={merge.screenshot} style={{ marginBottom: 0 }} width="100%" />
         <Box paddingTop={8} paddingX={16} wordBreak="break-word">
           <Paragraph marginBottom={0}>
-            <a style={{ color: 'rgb(16, 112, 202)', fontSize: 16 }}>{merge.title}</a>
+            <Text color="rgb(16, 112, 202)" fontSize={16}>
+              {merge.title}
+            </Text>
             <Text color="#a3aab1" fontSize={16} marginLeft={4}>
               #{merge.number}
             </Text>
@@ -66,8 +72,14 @@ export default function Polaroid(props) {
         </Box>
         <Box background="#f9f9fb" paddingBottom={8} paddingTop={8} paddingX={16} wordBreak="break-word">
           <Flex>
-            <Flex>
-              {/* <Avatar marginRight={8} name={merge.author.name} fontSize={12} src={merge.author.avatar} /> */}
+            <Flex alignItems="center" flexDirection="row">
+              <img
+                alt=""
+                src={merge.author.avatar}
+                style={{ borderRadius: 80, marginBottom: 0, marginRight: 8 }}
+                height="40"
+                width="40"
+              />
               <div>
                 <Paragraph color="#7c8b9a" fontSize={12} marginBottom={0}>
                   {merge.author.name} {merge.state}{' '}
