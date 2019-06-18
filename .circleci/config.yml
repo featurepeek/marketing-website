@@ -8,13 +8,35 @@ version: 2.1
 orbs:
   gcp-gcr: circleci/gcp-gcr@0.6.0
   gcp-gke: circleci/gcp-gke@0.1.0
-  featurepeek: featurepeek/ping@0.0.2
+  # featurepeek: featurepeek/ping@0.0.3
 
 executors:
   default:
     machine: true
+  node:
+    docker: 
+      - circleci/node:10.14.1
 
 jobs:
+  build_static_assets_only:
+    executor: node
+    steps:
+      - checkout
+      - run: env > .env.production
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "yarn.lock" }}
+          - v1-dependencies-
+      - run: 
+          name: Installing dependencies
+          command: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
+      - run:
+          name: Pinging FeaturePeek
+          command: yarn featurepeek
   build_and_push_image:
     executor: default
     steps:
@@ -39,8 +61,9 @@ jobs:
       - run: kubectl set image deployment/${CIRCLE_PROJECT_REPONAME} ${CIRCLE_PROJECT_REPONAME}=gcr.io/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_BRANCH}-${CIRCLE_WORKFLOW_ID}
 
 workflows:
-  build_and_push_image:
+  frontend:
     jobs:
+      - build_static_assets_only
       - build_and_push_image
       - gcp-gcr/add-image-tag:
           requires:
@@ -68,12 +91,12 @@ workflows:
           filters:
             branches:
               only: [master]
-      - featurepeek/ping_featurepeek:
-          requires:
-            - build_and_push_image
-          image: ${CIRCLE_PROJECT_REPONAME}
-          tag: ${CIRCLE_BRANCH}
-          filters:
-            branches:
-              ignore: [master, dev]
+      # - featurepeek/ping_featurepeek:
+      #     requires:
+      #       - build_and_push_image
+      #     image: ${CIRCLE_PROJECT_REPONAME}
+      #     tag: ${CIRCLE_BRANCH}
+      #     filters:
+      #       branches:
+      #         ignore: [master, dev]
 
