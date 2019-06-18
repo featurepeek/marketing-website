@@ -13,11 +13,11 @@ export default function Label(props) {
       borderRadius={2}
       color={getTextColorForBackgroundColor(label.color)}
       display="inline-block"
+      fontSize={12}
       marginBottom={2}
       marginRight={4}
       paddingX={6}
-      paddingY={3}
-      size={300}
+      paddingY={1}
       whiteSpace="nowrap"
     >
       {label.name}

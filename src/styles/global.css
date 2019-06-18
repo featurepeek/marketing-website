@@ -1,3 +1,5 @@
+@import "~slick-carousel/slick/slick.css";
+
 /* Button */
 .button:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
@@ -103,7 +105,7 @@ code {
   transition: transform 0.3s ease;
 }
 .polaroid:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 .polaroid a:hover {
   text-decoration: none;

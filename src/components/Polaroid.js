@@ -4,7 +4,7 @@ import Box from 'ui-box'
 
 // components
 import { Code, Flex, Icon, Paragraph, Text } from 'primitives'
-import Label from 'Components/Label'
+import Label from 'components/Label'
 
 // utils
 import { getColorFromStatus } from 'utils/color'
@@ -24,19 +24,14 @@ export default function Polaroid(props) {
       margin={12}
       overflow="hidden"
       position="relative"
+      style={{ verticalAlign: 'top' }}
       width={304}
     >
       <a href={`https://dashboard.featurepeek.com/peek/${merge.id}`} target="_blank">
-        <img
-          alt="Screenshot"
-          // height="200"
-          src={merge.screenshot}
-          style={{ marginBottom: 0 }}
-          width="100%"
-        />
+        <img alt="Screenshot" height="200" src={merge.screenshot} style={{ marginBottom: 0 }} width="100%" />
         <Box paddingTop={8} paddingX={16} wordBreak="break-word">
           <Paragraph marginBottom={0}>
-            <a style={{ color: '#1f8aed', fontSize: 16 }}>{merge.title}</a>
+            <a style={{ color: 'rgb(16, 112, 202)', fontSize: 16 }}>{merge.title}</a>
             <Text color="#a3aab1" fontSize={16} marginLeft={4}>
               #{merge.number}
             </Text>
@@ -91,14 +86,14 @@ export default function Polaroid(props) {
         </Box>
         <Box
           background={getColorFromStatus(merge.state)}
-          bottom={-24}
-          height={48}
+          bottom={-28}
+          height={56}
           position="absolute"
-          right={-24}
+          right={-28}
           transform="rotateZ(45deg)"
-          width={48}
+          width={56}
         />
-        <Icon bottom={4} color="white" icon="fas fa-code-branch" position="absolute" right={4} fontSize={12} />
+        <Icon bottom={4} color="white" icon="fas fa-code-branch" position="absolute" right={4} fontSize={16} />
       </a>
     </Box>
   )

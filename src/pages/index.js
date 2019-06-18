@@ -16,8 +16,8 @@ export default function IndexPage(props) {
     <Layout location={props.location}>
       <SEO title="Overview" />
       <Hero />
-      <Demo />
       <RowReversal copyWritings={valueProps} flip={1} />
+      <Demo />
       <FeatureGrid />
       <DesignedForGitHub />
       <VideoWalkthrough />
