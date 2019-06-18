@@ -72,7 +72,7 @@ workflows:
     jobs:
       # This project builds static assets -- it has a Dockerfile, but that's only used for staging/production deployments
       # For FeaturePeek, we can build just the static assets, which is faster than building a Docker image
-      - build_static_assets_only:
+      - build_static_assets:
           filters:
             branches:
               # Only call this job on feature branches
