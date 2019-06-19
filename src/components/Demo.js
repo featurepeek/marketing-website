@@ -50,7 +50,7 @@ export default function Demo() {
                 </Link>
                 .
               </Heading>
-              <Box background="#f8f8f8" paddingY={16}>
+              <Box paddingY={16}>
                 <Slider {...settings}>
                   {merges.map(merge => (
                     <div key={merge.id}>

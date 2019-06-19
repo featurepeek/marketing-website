@@ -9,9 +9,9 @@ import { Flex, Icon, Paragraph, Strong } from 'primitives'
 export default function Faq({ question, answer }) {
   return (
     <Box
-      background="white"
+      background="#121212"
       borderRadius={8}
-      boxShadow="0 2px 4px #eee"
+      boxShadow="0 2px 4px #000"
       paddingX={24}
       paddingY={32}
       marginBottom={32}

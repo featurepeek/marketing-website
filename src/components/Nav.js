@@ -38,7 +38,7 @@ export default function Nav() {
       {mobile => (
         <Box
           is="header"
-          background="#fff"
+          background="#121212"
           boxShadow={hasScrolled ? '0 2px 4px rgba(0, 0, 0, 0.1)' : 'none'}
           height={mobile && isShowingMobileNav ? 400 : 76}
           marginTop={16}
