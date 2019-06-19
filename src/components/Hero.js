@@ -13,17 +13,17 @@ import HeroDashboard from 'images/HeroDashboard'
 export default function Hero() {
   const scrollToDemo = event => {
     event.preventDefault()
+    window.history.replaceState({}, '', '#demo')
     jump('#demo', {
       duration: 600,
-      offset: -20,
     })
   }
 
   const scrollToVideo = event => {
     event.preventDefault()
+    window.history.replaceState({}, '', '#video')
     jump('#video', {
       duration: 600,
-      offset: -100,
     })
   }
 
