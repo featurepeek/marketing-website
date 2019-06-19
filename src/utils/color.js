@@ -1,10 +1,9 @@
 // @flow
 export const gradientMap = {
-  teal: ['#05c5cc', '#13b7d1'],
-  green: ['#5abf7e', '#1fae5f'],
-  // purple: ['#aa56a9', '#9f509d'],
-  blue: ['#00b0de', '#2896e0'],
-  pink: ['#c274d1', '#e16fbc'],
+  teal: ['#ffa80b', '#ffa80b'],
+  green: ['#ffa80b', '#ffa80b'],
+  blue: ['#ffa80b', '#ffa80b'],
+  pink: ['#ffa80b', '#ffa80b'],
 }
 
 export const getColorFromStatus = status => {
