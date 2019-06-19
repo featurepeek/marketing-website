@@ -24,7 +24,7 @@ export default function FeatureGrid(props) {
               width={mobile ? '100%' : '33.33%'}
               style={{ verticalAlign: 'top' }}
             >
-              <Icon color="#05c5cc" icon={feature.icon} fontSize={28} />
+              <Icon color="#ffa80b" icon={feature.icon} fontSize={28} />
               <Heading h={4} marginTop={16} size={300}>
                 {feature.heading}
               </Heading>

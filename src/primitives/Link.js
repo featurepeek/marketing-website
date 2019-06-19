@@ -8,7 +8,7 @@ export default function Link(props) {
 
   const className = underline ? 'underline' : 'normal'
   const span = (
-    <Box is="span" color="#05c5cc" display="inline-block" transition="all 0.15s ease" {...styles}>
+    <Box is="span" color="#ffa80b" display="inline-block" transition="all 0.15s ease" {...styles}>
       {children}
     </Box>
   )

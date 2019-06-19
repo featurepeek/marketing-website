@@ -40,7 +40,6 @@ code {
   transform: scale(1);
 }
 .underline:hover span {
-  color: #13b7d1;
   opacity: 1;
 }
 .underline:active span {
