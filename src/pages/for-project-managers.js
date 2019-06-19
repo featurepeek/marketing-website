@@ -16,7 +16,7 @@ import { scale } from 'utils/typography'
 export default function ForProjectManagers(props) {
   const theme = gradientMap.blue[0]
   return (
-    <Layout background="#e8f4f8" location={props.location}>
+    <Layout background="#fff6e7" location={props.location}>
       <SEO title="Built for Project Managers" />
       <HeroManagers>
         <Heading color="#103c52" h={6} marginTop={0} {...scale(1 / 2)}>

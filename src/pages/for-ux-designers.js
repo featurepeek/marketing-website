@@ -16,7 +16,7 @@ import { scale } from 'utils/typography'
 export default function ForFrontendDevelopers(props) {
   const theme = gradientMap.pink[0]
   return (
-    <Layout background="#f8eff6" location={props.location}>
+    <Layout background="#fff6e7" location={props.location}>
       <SEO title="Built for UX Designers" />
       <HeroDesigners>
         <Heading color="#103c52" h={6} marginTop={0} {...scale(1 / 2)}>
