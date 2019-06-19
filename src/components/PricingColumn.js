@@ -42,13 +42,6 @@ export default function PricingColumn({ product, hasMounted }) {
           transform={hasMounted ? `translateY(0px)` : `translateY(${metadata.recommended ? 240 : 200}px)`}
           width="100%"
         >
-          {!mobile && metadata.recommended && (
-            <Flex justifyContent="center">
-              <Heading h={6} size={200} opacity={0.5} position="absolute" top={-72}>
-                <Icon icon="fas fa-magic" marginRight={8} /> most popular
-              </Heading>
-            </Flex>
-          )}
           <Heading h={2} color="#103c52" marginTop={16} size={300} textAlign="center">
             {product.name}
           </Heading>
