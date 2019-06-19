@@ -4,6 +4,7 @@ import MediaQuery from 'react-responsive'
 
 import { Button, Code, Column, Flex, Heading, ListItem, Paragraph, Strong, UnorderedList } from 'primitives'
 
+import DesignedForGitHub from 'components/DesignedForGitHub'
 import Faqs from 'components/Faqs'
 import Layout from 'components/Layout'
 import SEO from 'components/Seo'
@@ -29,7 +30,8 @@ export default function HowItWorks(props) {
       {mobile => (
         <Layout location={props.location}>
           <SEO title="How it works" />
-          <Heading marginTop={0} size={500} textAlign={mobile ? 'left' : 'center'}>
+          <DesignedForGitHub />
+          <Heading marginTop={80} size={500} textAlign={mobile ? 'left' : 'center'}>
             Get up and running in no time.
           </Heading>
           <Heading
