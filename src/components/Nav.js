@@ -107,7 +107,9 @@ export default function Nav() {
               </Flex>
             ) : (
               <Flex alignItems="center" justifyContent="center" width={240}>
-                <Button href="/pricing">Start your free trial</Button>
+                <Button href="https://airtable.com/shrUZixSNBqSzmdTc?prefill_Plan=Business" target="_blank">
+                  Start your free trial
+                </Button>
               </Flex>
             )}
           </Flex>
@@ -141,7 +143,9 @@ export default function Nav() {
                 </ListItem>
               </UnorderedList>
               <Flex alignItems="center" justifyContent="center" height={100} width="100%">
-                <Button href="/pricing">Start your free trial</Button>
+                <Button href="https://airtable.com/shrUZixSNBqSzmdTc?prefill_Plan=Business" target="_blank">
+                  Start your free trial
+                </Button>
               </Flex>
             </Box>
           )}

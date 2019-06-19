@@ -62,7 +62,7 @@ export default function HowItWorks(props) {
                       opacity={stepIndex === i ? 1 : 0.4}
                       style={{ textIndent: -34 }}
                     >
-                      <Code color={stepIndex === i ? '#05c5cc' : 'inherit'} fontSize={18} marginRight={8}>
+                      <Code fontSize={18} marginRight={8}>
                         {i + 1}.
                       </Code>{' '}
                       <Strong color="#103c52">{step}</Strong>
@@ -70,7 +70,9 @@ export default function HowItWorks(props) {
                   ))}
                 </UnorderedList>
                 <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 180}>
-                  <Button href="/pricing">Get started today</Button>
+                  <Button href="https://airtable.com/shrUZixSNBqSzmdTc?prefill_Plan=Business" target="_blank">
+                    Get started today
+                  </Button>
                 </Flex>
               </Box>
             </Column>
