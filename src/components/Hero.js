@@ -31,6 +31,9 @@ export default function Hero() {
     <MediaQuery maxWidth={904}>
       {mobile => (
         <Flex margin={mobile ? -15 : -39} padding={mobile ? 16 : 40} overflowX="hidden">
+          <Box left={-48} top={-24} overflow="hidden" position="relative" width={mobile ? '100%' : '60%'}>
+            <HeroDashboard />
+          </Box>
           <Box width={mobile ? '100%' : '40%'}>
             <Heading marginTop={0} size={500}>
               A new way to gather front-end feedback from your team.
@@ -58,9 +61,6 @@ export default function Hero() {
                 <span>Watch a video.</span>
               </Link>
             </Heading>
-          </Box>
-          <Box position="relative" left={mobile ? 0 : 39} width={mobile ? '100%' : '60%'}>
-            <HeroDashboard />
           </Box>
         </Flex>
       )}
