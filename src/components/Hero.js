@@ -11,6 +11,14 @@ import HeroDashboard from 'images/HeroDashboard'
 // import { rhythm, scale } from 'utils/typography'
 
 export default function Hero() {
+  const scrollToDemo = event => {
+    event.preventDefault()
+    jump('#demo', {
+      duration: 600,
+      offset: -20,
+    })
+  }
+
   const scrollToVideo = event => {
     event.preventDefault()
     jump('#video', {
@@ -41,8 +49,13 @@ export default function Hero() {
               or browser extensions.
             </Heading>
             <Heading h={3} marginTop={32} size={360}>
+              <Link href="#demo" onClick={scrollToDemo}>
+                <span>See a demo.</span>
+              </Link>
+            </Heading>
+            <Heading h={3} marginTop={0} size={360}>
               <Link href="#video" onClick={scrollToVideo}>
-                <span>Watch a demo.</span>
+                <span>Watch a video.</span>
               </Link>
             </Heading>
           </Box>

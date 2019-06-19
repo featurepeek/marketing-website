@@ -13,7 +13,7 @@ export default function FeatureGrid(props) {
   return (
     <MediaQuery maxWidth={800}>
       {mobile => (
-        <Box marginTop={mobile ? 100 : 200} marginBottom={mobile ? 40 : 100}>
+        <Box marginTop={mobile ? 100 : 160} marginBottom={mobile ? 40 : 100}>
           {features.map((feature, i) => (
             <Box
               display="inline-block"

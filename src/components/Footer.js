@@ -51,10 +51,10 @@ const columns = [
   {
     section: 'More resources',
     links: [
-      // {
-      //   text: 'Blog',
-      //   href: '/blog',
-      // },
+      {
+        text: 'Video walkthrough',
+        href: 'https://www.youtube.com/watch?v=14UwLG1jQwU',
+      },
       {
         text: 'Documentation',
         href: 'https://docs.featurepeek.com',

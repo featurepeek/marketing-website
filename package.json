@@ -29,6 +29,7 @@
     ]
   },
   "dependencies": {
+    "date-fns": "^1.30.1",
     "gatsby": "^2.8.6",
     "gatsby-background-image": "^0.7.0",
     "gatsby-image": "^2.1.2",
@@ -56,14 +57,18 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-player": "^1.11.1",
     "react-responsive": "^7.0.0",
+    "react-slick": "^0.24.0",
     "react-typography": "^0.16.19",
+    "slick-carousel": "^1.8.1",
     "typography": "^0.16.19",
     "typography-theme-github": "^0.16.19",
-    "ui-box": "^2.1.0"
+    "ui-box": "^2.1.0",
+    "unfetch": "^4.1.0"
   },
   "devDependencies": {
-    "@featurepeek/circleci": "^0.1.7",
+    "@featurepeek/circleci": "^0.2.3",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-config-react-app": "^4.0.1",

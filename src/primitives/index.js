@@ -9,6 +9,7 @@ import Link from './Link'
 import ListItem from './ListItem'
 import Paragraph from './Paragraph'
 import Strong from './Strong'
+import Text from './Text'
 import TextInput from './TextInput'
 import UnorderedList from './UnorderedList'
 
@@ -24,6 +25,7 @@ export {
   ListItem,
   Paragraph,
   Strong,
+  Text,
   TextInput,
   UnorderedList,
 }
