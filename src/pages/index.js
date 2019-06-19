@@ -14,7 +14,7 @@ import { valueProps } from 'copy/homePage'
 export default function IndexPage(props) {
   return (
     <Layout location={props.location}>
-      <SEO title="Overview" />
+      <SEO title="Video" />
       <VideoWalkthrough />
     </Layout>
   )
