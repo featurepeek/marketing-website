@@ -15,7 +15,7 @@ export default function Demo() {
   const [merges, setMerges] = useState([])
 
   useEffect(() => {
-    const baseURL = document.location.hash === 'featurepeek.com' ? 'api.featurepeek.com' : 'api.dev.featurepeek.com'
+    const baseURL = document.location.host === 'featurepeek.com' ? 'api.featurepeek.com' : 'api.dev.featurepeek.com'
     const url = `https://${baseURL}/api/v1/public_demo`
     fetch(url)
       .then(r => r.json())
