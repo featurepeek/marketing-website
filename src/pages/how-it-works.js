@@ -28,7 +28,7 @@ export default function HowItWorks(props) {
     <MediaQuery maxWidth={800}>
       {mobile => (
         <Layout location={props.location}>
-          <SEO title="How it works" />
+          <SEO title="How it works" location={props.location} />
           <Heading marginTop={0} size={500} textAlign={mobile ? 'left' : 'center'}>
             Get up and running in no time.
           </Heading>
