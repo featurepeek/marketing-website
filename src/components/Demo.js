@@ -5,7 +5,7 @@ import fetch from 'unfetch'
 import Slider from 'react-slick'
 import MediaQuery from 'react-responsive'
 
-import { Heading, Link, Paragraph, Text } from 'primitives'
+import { Heading, Link, Text } from 'primitives'
 import Polaroid from 'components/Polaroid'
 
 import Merge from 'interfaces/Merge'
