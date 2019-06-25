@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, location }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -20,6 +20,7 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const pathname = location.pathname.replace(/\/$/, '') || '/'
 
   return (
     <Helmet
@@ -62,7 +63,9 @@ function SEO({ description, lang, meta, title }) {
           content: `${title} · ${site.siteMetadata.title}`,
         },
       ].concat(meta)}
-    />
+    >
+      <link rel="canonical" href={`https://featurepeek.com${pathname}`} />
+    </Helmet>
   )
 }
 

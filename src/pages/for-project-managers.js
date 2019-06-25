@@ -17,7 +17,7 @@ export default function ForProjectManagers(props) {
   const theme = gradientMap.blue[0]
   return (
     <Layout background="#e8f4f8" location={props.location}>
-      <SEO title="Built for Project Managers" />
+      <SEO title="Built for Project Managers" location={props.location} />
       <HeroManagers>
         <Heading color="#103c52" h={6} marginTop={0} {...scale(1 / 2)}>
           Built for

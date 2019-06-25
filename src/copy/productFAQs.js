@@ -19,7 +19,7 @@ export default [
     },
     {
       question: 'When will {X} Continuous Integration service be supported?',
-      answer: 'As of writing, we have the most support for CircleCI, and are supporting more every week.',
+      answer: 'As of writing, we have the most support for CircleCI and Travis, and are supporting more every week.',
     },
   ],
 ]
