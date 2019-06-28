@@ -101,11 +101,15 @@ code {
   animation: rotate 60s linear infinite;
 }
 
+.slick-track div {
+  outline: none !important;
+}
 .polaroid {
-  transition: transform 0.3s ease;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 .polaroid:hover {
-  transform: translateY(-4px);
+  box-shadow: rgba(67, 90, 111, 0.198039) 0px 8px 16px 0px, rgba(67, 90, 111, 0.170588) 0px 4px 8px -2px;
+  transform: scale(1.04);
 }
 .polaroid a:hover {
   text-decoration: none;

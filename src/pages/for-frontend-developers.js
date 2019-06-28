@@ -17,7 +17,7 @@ export default function ForFrontendDevelopers(props) {
   const theme = gradientMap.green[0]
   return (
     <Layout background="#eef6ef" location={props.location}>
-      <SEO title="Built for Front-end Developers" />
+      <SEO title="Built for Front-end Developers" location={props.location} />
       <HeroFrontend>
         <Heading color="#103c52" h={6} marginTop={0} {...scale(1 / 2)}>
           Built for
