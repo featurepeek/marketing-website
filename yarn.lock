@@ -679,10 +679,10 @@
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.7.1.tgz#9833722341379fb7d67f06a4b00ab3c37913da53"
 
-"@featurepeek/circleci@^0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@featurepeek/circleci/-/circleci-0.2.3.tgz#8782139b4d91d2cdf11376cf7370917c60e2170c"
-  integrity sha512-nr26ICo4l5pSSFoTHov8PEgNPonPluYhqF03p9gHkXE55i77BCoSNgqUtSRa6xgPUauE2ZQoR9cIoG6bmy1kLQ==
+"@featurepeek/circleci@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@featurepeek/circleci/-/circleci-0.2.5.tgz#397615dd503b63ff97a433e6e1ca4ac420a3a6d2"
+  integrity sha512-2Ax69nfviXnM1g9YVi2qY2JQhI8Zg0GQz/JtWcU1bMT5gActZP5SzHmJumVWUGklHaXaB13y3ahU6mWxGuUcZQ==
   dependencies:
     archiver "^3.0.0"
     js-yaml "^3.12.2"
