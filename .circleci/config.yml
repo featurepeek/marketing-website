@@ -2,120 +2,42 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
-# .circleci/config.yml
-version: 2.1
-
-orbs:
-  gcp-gcr: circleci/gcp-gcr@0.6.0
-  gcp-gke: circleci/gcp-gke@0.1.0
-  # featurepeek: featurepeek/ping@0.0.3 # Uncomment this line if you build a Docker image
-
-executors:
-  default:
-    machine: true
-
+version: 2
 jobs:
-  # For pull requests, we can build just the static assets
-  # FeaturePeek handles the deployment to feature environments, so we can ignore Docker-specific steps
-  # and just ping FeaturePeek after the static assets have built
-  build_static_assets:
-    docker: 
-      - image: circleci/node:10.14.1
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:10.14
+
+    working_directory: ~/marketing-website
+
     steps:
       - checkout
-      - run: env > .env.production
+
+      # Download and cache dependencies
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "yarn.lock" }}
+          # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
+
+      # install dependencies
       - run: 
           name: Installing dependencies
           command: yarn install
+
+      # save to cache
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
-      - run: 
-          name: Building assets
+
+      # build phase
+      - run:
+          name: Build static assets
           command: yarn build
+
+      # notify featurepeek
       - run:
           name: Pinging FeaturePeek
-          # This command is defined in the @featurepeek/circleci devDependency
           command: yarn featurepeek
-  # Building and pushing an image is how we manage staging/production deployments
-  # You likely already have something similar to this job if you deploy using CircleCI
-  # build_and_push_image:
-  #   executor: default
-  #   steps:
-  #     - checkout
-  #     - run: env > .env.production
-  #     - gcp-gcr/gcr-auth
-  #     - gcp-gcr/build-image:
-  #         image: ${CIRCLE_PROJECT_REPONAME}
-  #         tag: ${CIRCLE_BRANCH}
-  #     - gcp-gcr/push-image:
-  #         image: ${CIRCLE_PROJECT_REPONAME}
-  #         tag: ${CIRCLE_BRANCH} 
-  # deploy:
-  #   docker:
-  #     - image: google/cloud-sdk:latest
-  #   parameters:
-  #     cluster:
-  #       type: string
-  #   steps:
-  #     - gcp-gcr/gcr-auth
-  #     - run: gcloud container clusters get-credentials << parameters.cluster >> --zone ${GOOGLE_COMPUTE_ZONE} --project ${GOOGLE_PROJECT_ID}
-  #     - run: kubectl set image deployment/${CIRCLE_PROJECT_REPONAME} ${CIRCLE_PROJECT_REPONAME}=gcr.io/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_BRANCH}-${CIRCLE_WORKFLOW_ID}
-
-workflows:
-  frontend:
-    jobs:
-      # This project builds static assets -- it has a Dockerfile, but that's only used for staging/production deployments
-      # For FeaturePeek, we can build just the static assets, which is faster than building a Docker image
-      - build_static_assets:
-          filters:
-            branches:
-              # Only call this job on feature branches
-              ignore: [master, dev]
-      # We only build, push, and tag the image for our staging and production deployments
-      # The steps below aren't necessary if you're only building static assets
-      # - build_and_push_image:
-      #     filters:
-      #       branches:
-      #         only: [master, dev]
-      # - gcp-gcr/add-image-tag:
-      #     requires:
-      #       - build_and_push_image
-      #     filters:
-      #       branches:
-      #         only: [master, dev]
-      #     image: ${CIRCLE_PROJECT_REPONAME}
-      #     registry-url: gcr.io
-      #     source-tag: ${CIRCLE_BRANCH}
-      #     target-tag: ${CIRCLE_BRANCH}-${CIRCLE_WORKFLOW_ID}
-      # - deploy:
-      #     cluster: ${DEV_CLUSTER_NAME}
-      #     requires:
-      #       - build_and_push_image
-      #       - gcp-gcr/add-image-tag
-      #     filters:
-      #       branches:
-      #         only: [dev]
-      # - deploy:
-      #     cluster: ${PROD_CLUSTER_NAME}
-      #     requires:
-      #       - build_and_push_image
-      #       - gcp-gcr/add-image-tag
-      #     filters:
-      #       branches:
-      #         only: [master]
-      # If this project *didn't* build static assets, we'd uncomment these lines
-      # - featurepeek/ping_featurepeek:
-      #     requires:
-      #       - build_and_push_image
-      #     image: ${CIRCLE_PROJECT_REPONAME}
-      #     tag: ${CIRCLE_BRANCH}
-      #     filters:
-      #       branches:
-      #         ignore: [master, dev]
-
