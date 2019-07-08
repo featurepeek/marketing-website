@@ -2,12 +2,12 @@ node {
 
   try {
 
-    // if  (!(env.BRANCH_NAME =~ /(dev|master|PR-)/)){
-    //     // Only Build PRs, Dev, and Master, don't build on branch push
-    //    echo "Not master, dev, or a PR-* so not building"
-    //    currentBuild.result = 'SUCCESS'
-    //    return
-    // }
+    if  (!(env.BRANCH_NAME =~ /(dev|master|PR-)/)){
+        // Only Build PRs, Dev, and Master, don't build on branch push
+       echo "Not master, dev, or a PR-* so not building"
+       currentBuild.result = 'SUCCESS'
+       return
+    }
 
     def projectName = "marketing-website"
     def gcloudProject = "featurepeek-228719"
@@ -23,7 +23,7 @@ node {
 
     stage('Build') {
 
-        // if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev'){
+        if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev'){
             def branchReplaced = env.BRANCH_NAME.toLowerCase().replaceAll("\\/", "-")
             branchTag = "${gcr_path}:${branchReplaced}"
             imageTag = "${gcr_path}:${branchReplaced}-${env.BUILD_ID}"        
@@ -40,7 +40,7 @@ node {
                             sh  'env > .env.production'
                             container = docker.build(imageTag, ".")
                       }
-        // }
+        }
     }
   
     stage('push to gcr.io') {
