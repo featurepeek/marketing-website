@@ -36,7 +36,7 @@ node {
 
 
                             
-                            echo env['MAILCHIMP_DOMAIN_DEV'];
+                            echo env['MAILCHIMP_DOMAIN'];
                         
                             
                             // sh  'env > .env.production'
