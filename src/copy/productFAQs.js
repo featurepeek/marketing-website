@@ -18,8 +18,9 @@ export default [
         "You can integrate your front-end within your monorepo the same as you'd integrate any front-end. For the backend, we recommend using environment variables to point to existing backend services.",
     },
     {
-      question: 'When will {X} Continuous Integration service be supported?',
-      answer: 'As of writing, we have the most support for CircleCI and Travis, and are supporting more every week.',
+      question: 'Which Continuous Integration services and container registries are supported?',
+      answer:
+        'As of writing, we support Azure Pipelines, Buildkite, CircleCI, Codeship, Docker Cloud, Drone, Jenkins, Semaphore, and Travis; for container registries, we support Amazon ECR, DockerHub, and Google Container Registry.',
     },
   ],
 ]
