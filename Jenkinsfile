@@ -39,7 +39,9 @@ node {
                            env.MAILCHIMP_LIST_ID = "$MAILCHIMP_LIST_ID"
                            env.SEGMENT_ID = "$SEGMENT_ID"
                            env.STRIPE_SECRET_KEY = "$STRIPE_SECRET_KEY"
-                            sh 'printenv'
+                            
+                            sh  'env > .env.production'
+                            sh 'cat .env.production'
                             container = docker.build(imageTag, ".")
          │           }
 
