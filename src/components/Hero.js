@@ -33,18 +33,18 @@ export default function Hero() {
         <Flex margin={mobile ? -15 : -39} padding={mobile ? 16 : 40} overflowX="hidden">
           <Box width={mobile ? '100%' : '40%'}>
             <Heading marginTop={0} size={500}>
-              A new way to gather front-end feedback from your team.
+              Front-end review for the whole team.
             </Heading>
             <Heading h={2} opacity={0.4} size={360}>
               Spin up environments for every branch automatically.
             </Heading>
             <Heading h={2} opacity={0.4} size={360}>
-              Annotate directly on the implementation.
+              Gather team feedback
+              <br />
+              earlier in the dev cycle.
             </Heading>
             <Heading h={3} opacity={0.4} size={360}>
-              All without merges,
-              <br />
-              run-time dependencies,
+              Without dependencies
               <br />
               or browser extensions.
             </Heading>
