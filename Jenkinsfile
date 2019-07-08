@@ -34,8 +34,6 @@ node {
                        string(credentialsId: 'SEGMENT_ID_DEV', variable: 'SEGMENT_ID'),
                        string(credentialsId: 'STRIPE_SECRET_KEY_DEV', variable: 'STRIPE_SECRET_KEY')]) {
 
-
-
                           env.MAILCHIMP_DOMAIN = "$MAILCHIMP_DOMAIN"
                            env.MAILCHIMP_FORM_ID = "$MAILCHIMP_FORM_ID"
                            env.MAILCHIMP_LIST_ID = "$MAILCHIMP_LIST_ID"
