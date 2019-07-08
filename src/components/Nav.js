@@ -34,7 +34,7 @@ export default function Nav() {
   }, [hasScrolled])
 
   return (
-    <MediaQuery maxWidth={942}>
+    <MediaQuery maxWidth={950}>
       {mobile => (
         <Box
           is="header"
@@ -66,7 +66,7 @@ export default function Nav() {
                 {!mobile && (
                   <>
                     <Box
-                      paddingX={24}
+                      paddingRight={16}
                       paddingY={16}
                       position="relative"
                       onMouseEnter={() => setShowingSubNav(true)}
@@ -77,14 +77,19 @@ export default function Nav() {
                       </Link>
                       <SubNav isShowing={isShowingSubNav} />
                     </Box>
-                    <Box paddingX={24}>
+                    <Box paddingX={16}>
                       <Link color="#103c52" href="/how-it-works" fontSize={17}>
                         How it works
                       </Link>
                     </Box>
-                    <Box paddingX={24}>
+                    <Box paddingX={16}>
                       <Link color="#103c52" href="/pricing" fontSize={17}>
                         Pricing
+                      </Link>
+                    </Box>
+                    <Box paddingX={16}>
+                      <Link color="#103c52" href="https://docs.featurepeek.com/intro" fontSize={17} target="_blank">
+                        Docs
                       </Link>
                     </Box>
                     {/* <Box marginLeft={40}> */}
