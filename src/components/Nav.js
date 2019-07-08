@@ -40,7 +40,7 @@ export default function Nav() {
           is="header"
           background="#fff"
           boxShadow={hasScrolled ? '0 2px 4px rgba(0, 0, 0, 0.1)' : 'none'}
-          height={mobile && isShowingMobileNav ? 400 : 76}
+          height={mobile && isShowingMobileNav ? 440 : 76}
           marginTop={16}
           overflow={mobile ? 'hidden' : 'inherit'}
           paddingX={mobile ? 0 : 16}
@@ -144,6 +144,11 @@ export default function Nav() {
                 <ListItem>
                   <Link href="/pricing" fontSize={21}>
                     Pricing
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link href="https://docs.featurepeek.com/intro" fontSize={21}>
+                    Documentation
                   </Link>
                 </ListItem>
               </UnorderedList>
