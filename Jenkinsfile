@@ -28,11 +28,11 @@ node {
             branchTag = "${gcr_path}:${branchReplaced}"
             imageTag = "${gcr_path}:${branchReplaced}-${env.BUILD_ID}"
         
-         withCredentials([string(credentialsId: 'MAILCHIMP_DOMAIN', variable: 'MAILCHIMP_DOMAIN_DEV'),
-                       string(credentialsId: 'MAILCHIMP_FORM_ID', variable: 'MAILCHIMP_FORM_ID_DEV'),
-                       string(credentialsId: 'MAILCHIMP_LIST_ID', variable: 'MAILCHIMP_LIST_ID_DEV'),
-                       string(credentialsId: 'SEGMENT_ID', variable: 'SEGMENT_ID_DEV'),
-                       string(credentialsId: 'STRIPE_SECRET_KEY', variable: 'STRIPE_SECRET_KEY_DEV')]) {
+         withCredentials([string(credentialsId: 'MAILCHIMP_DOMAIN_DEV', variable: 'MAILCHIMP_DOMAIN'),
+                       string(credentialsId: 'MAILCHIMP_FORM_ID_DEV', variable: 'MAILCHIMP_FORM_ID'),
+                       string(credentialsId: 'MAILCHIMP_LIST_ID_DEV', variable: 'MAILCHIMP_LIST_ID'),
+                       string(credentialsId: 'SEGMENT_ID_DEV', variable: 'SEGMENT_ID'),
+                       string(credentialsId: 'STRIPE_SECRET_KEY_DEV', variable: 'STRIPE_SECRET_KEY')]) {
                             container = docker.build(imageTag, ".")
          │           }
 
