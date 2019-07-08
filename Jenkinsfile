@@ -40,7 +40,7 @@ node {
           // }
         }
 
-
+         sh 'printenv'
         // if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev'){
             def branchReplaced = env.BRANCH_NAME.toLowerCase().replaceAll("\\/", "-")
             branchTag = "${gcr_path}:${branchReplaced}"
