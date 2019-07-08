@@ -1,66 +1,44 @@
-pipeline {
-  
-   environment {
-          // if (env.BRANCH_NAME == 'dev'){
-                MAILCHIMP_DOMAIN = credentials('MAILCHIMP_DOMAIN_DEV')
-                MAILCHIMP_FORM_ID = credentials('MAILCHIMP_FORM_ID_DEV')
-                MAILCHIMP_LIST_ID = credentials('MAILCHIMP_LIST_ID_DEV')
-                SEGMENT_ID = credentials('SEGMENT_ID_DEV')
-                STRIPE_SECRET_KEY = credentials('STRIPE_SECRET_KEY_DEV')
-                TEST_ASSIGN = "okdude"
-          // }
-          // if (env.BRANCH_NAME == 'master'){
-          //       MAILCHIMP_DOMAIN = credentials('MAILCHIMP_DOMAIN')
-          //       MAILCHIMP_FORM_ID = credentials('MAILCHIMP_FORM_ID')
-          //       MAILCHIMP_LIST_ID = credentials('MAILCHIMP_LIST_ID')
-          //       SEGMENT_ID = credentials('SEGMENT_ID')
-          //       STRIPE_SECRET_KEY = credentials('STRIPE_SECRET_KEY')
-          // }
-        }
+node {
 
+  try {
 
+    // if  (!(env.BRANCH_NAME =~ /(dev|master|PR-)/)){
+    //     // Only Build PRs, Dev, and Master, don't build on branch push
+    //    echo "Not master, dev, or a PR-* so not building"
+    //    currentBuild.result = 'SUCCESS'
+    //    return
+    // }
 
- stages {
+    def projectName = "marketing-website"
+    def gcloudProject = "featurepeek-228719"
+    def gcr_path = "gcr.io/${gcloudProject}/${projectName}"
+    def container
+    def imageTag
+    def branchTag
+
     stage('Clone repository') {
-
-      steps {
-        if  (!(env.BRANCH_NAME =~ /(dev|master|PR-)/)){
-        // Only Build PRs, Dev, and Master, don't build on branch push
-         echo "Not master, dev, or a PR-* so not building"
-         currentBuild.result = 'SUCCESS'
-         return
-        }
-
-       step([$class: 'WsCleanup'])
+        step([$class: 'WsCleanup'])
         checkout scm
-      }
-
-
-        // step([$class: 'WsCleanup'])
-        // checkout scm
     }
 
     stage('Build') {
-       def projectName = "marketing-website"
-       def gcloudProject = "featurepeek-228719"
-       def gcr_path = "gcr.io/${gcloudProject}/${projectName}"
-       def container
-       def imageTag
-       def branchTag
+      
+          env.MAILCHIMP_DOMAIN = credentials('MAILCHIMP_DOMAIN_DEV')
+          env.MAILCHIMP_FORM_ID = credentials('MAILCHIMP_FORM_ID_DEV')
+          env.MAILCHIMP_LIST_ID = credentials('MAILCHIMP_LIST_ID_DEV')
+          env.SEGMENT_ID = credentials('SEGMENT_ID_DEV')
+          env.STRIPE_SECRET_KEY = credentials('STRIPE_SECRET_KEY_DEV')
+          env.TEST_ASSIGN = "okdude"
 
-      steps {
-           sh 'printenv'
+
         // if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev'){
             def branchReplaced = env.BRANCH_NAME.toLowerCase().replaceAll("\\/", "-")
             branchTag = "${gcr_path}:${branchReplaced}"
             imageTag = "${gcr_path}:${branchReplaced}-${env.BUILD_ID}"
             container = docker.build(imageTag, ".")
-        // }
-      }
-    }
- 
 
-       
+        // }
+    }
   
     stage('push to gcr.io') {
         if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev') {
@@ -87,6 +65,13 @@ pipeline {
 
     }
 
+  } catch (e) {
+      // If there was an exception thrown, the build failed
+      currentBuild.result = "FAILED"
+      throw e
+  } finally {
+      // Success or failure, always send notifications
+      // notifyBuild(currentBuild.result)
   }
 }
 
