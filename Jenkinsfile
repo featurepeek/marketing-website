@@ -23,7 +23,7 @@ node {
 
     stage('Build') {
 
-        if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev'){
+        // if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev'){
             def branchReplaced = env.BRANCH_NAME.toLowerCase().replaceAll("\\/", "-")
             branchTag = "${gcr_path}:${branchReplaced}"
             imageTag = "${gcr_path}:${branchReplaced}-${env.BUILD_ID}"        
@@ -41,7 +41,7 @@ node {
                             container = docker.build(imageTag, ".")
                       }
 
-        }
+        // }
     }
   
     stage('push to gcr.io') {
