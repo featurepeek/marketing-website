@@ -1,27 +1,5 @@
 pipeline {
-
-
-    // if  (!(env.BRANCH_NAME =~ /(dev|master|PR-)/)){
-    //     // Only Build PRs, Dev, and Master, don't build on branch push
-    //    echo "Not master, dev, or a PR-* so not building"
-    //    currentBuild.result = 'SUCCESS'
-    //    return
-    // }
-
-    def projectName = "marketing-website"
-    def gcloudProject = "featurepeek-228719"
-    def gcr_path = "gcr.io/${gcloudProject}/${projectName}"
-    def container
-    def imageTag
-    def branchTag
-
-    stage('Clone repository') {
-        step([$class: 'WsCleanup'])
-        checkout scm
-    }
-
-    stage('Build') {
-        environment {
+   environment {
           // if (env.BRANCH_NAME == 'dev'){
                 MAILCHIMP_DOMAIN = credentials('MAILCHIMP_DOMAIN_DEV')
                 MAILCHIMP_FORM_ID = credentials('MAILCHIMP_FORM_ID_DEV')
@@ -38,6 +16,31 @@ pipeline {
           //       STRIPE_SECRET_KEY = credentials('STRIPE_SECRET_KEY')
           // }
         }
+
+
+
+
+    stage('Clone repository') {
+
+      if  (!(env.BRANCH_NAME =~ /(dev|master|PR-)/)){
+        // Only Build PRs, Dev, and Master, don't build on branch push
+             echo "Not master, dev, or a PR-* so not building"
+             currentBuild.result = 'SUCCESS'
+             return
+      }
+
+
+        step([$class: 'WsCleanup'])
+        checkout scm
+    }
+
+    stage('Build') {
+        def projectName = "marketing-website"
+        def gcloudProject = "featurepeek-228719"
+        def gcr_path = "gcr.io/${gcloudProject}/${projectName}"
+        def container
+        def imageTag
+        def branchTag
 
          sh 'printenv'
         // if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev'){
