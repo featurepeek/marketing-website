@@ -34,13 +34,13 @@ export default function Nav() {
   }, [hasScrolled])
 
   return (
-    <MediaQuery maxWidth={942}>
+    <MediaQuery maxWidth={950}>
       {mobile => (
         <Box
           is="header"
           background="#fff"
           boxShadow={hasScrolled ? '0 2px 4px rgba(0, 0, 0, 0.1)' : 'none'}
-          height={mobile && isShowingMobileNav ? 400 : 76}
+          height={mobile && isShowingMobileNav ? 440 : 76}
           marginTop={16}
           overflow={mobile ? 'hidden' : 'inherit'}
           paddingX={mobile ? 0 : 16}
@@ -66,7 +66,7 @@ export default function Nav() {
                 {!mobile && (
                   <>
                     <Box
-                      paddingX={24}
+                      paddingRight={16}
                       paddingY={16}
                       position="relative"
                       onMouseEnter={() => setShowingSubNav(true)}
@@ -77,14 +77,19 @@ export default function Nav() {
                       </Link>
                       <SubNav isShowing={isShowingSubNav} />
                     </Box>
-                    <Box paddingX={24}>
+                    <Box paddingX={16}>
                       <Link color="#103c52" href="/how-it-works" fontSize={17}>
                         How it works
                       </Link>
                     </Box>
-                    <Box paddingX={24}>
+                    <Box paddingX={16}>
                       <Link color="#103c52" href="/pricing" fontSize={17}>
                         Pricing
+                      </Link>
+                    </Box>
+                    <Box paddingX={16}>
+                      <Link color="#103c52" href="https://docs.featurepeek.com/intro" fontSize={17} target="_blank">
+                        Docs
                       </Link>
                     </Box>
                     {/* <Box marginLeft={40}> */}
@@ -139,6 +144,11 @@ export default function Nav() {
                 <ListItem>
                   <Link href="/pricing" fontSize={21}>
                     Pricing
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link href="https://docs.featurepeek.com/intro" fontSize={21}>
+                    Documentation
                   </Link>
                 </ListItem>
               </UnorderedList>
