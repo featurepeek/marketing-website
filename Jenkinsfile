@@ -2,12 +2,12 @@ node {
 
   try {
 
-    if  (!(env.BRANCH_NAME =~ /(dev|master|PR-)/)){
-        // Only Build PRs, Dev, and Master, don't build on branch push
-       echo "Not master, dev, or a PR-* so not building"
-       currentBuild.result = 'SUCCESS'
-       return
-    }
+    // if  (!(env.BRANCH_NAME =~ /(dev|master|PR-)/)){
+    //     // Only Build PRs, Dev, and Master, don't build on branch push
+    //    echo "Not master, dev, or a PR-* so not building"
+    //    currentBuild.result = 'SUCCESS'
+    //    return
+    // }
 
     def projectName = "marketing-website"
     def gcloudProject = "featurepeek-228719"
