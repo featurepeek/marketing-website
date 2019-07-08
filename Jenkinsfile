@@ -22,13 +22,31 @@ node {
     }
 
     stage('Build') {
-        if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev'){
+
+        environment {
+          // if (env.BRANCH_NAME == 'dev'){
+                MAILCHIMP_DOMAIN = credentials('MAILCHIMP_DOMAIN_DEV')
+                MAILCHIMP_FORM_ID = credentials('MAILCHIMP_FORM_ID_DEV')
+                MAILCHIMP_LIST_ID = credentials('MAILCHIMP_LIST_ID_DEV')
+                SEGMENT_ID = credentials('SEGMENT_ID_DEV')
+                STRIPE_SECRET_KEY = credentials('STRIPE_SECRET_KEY_DEV')
+          // }
+          // if (env.BRANCH_NAME == 'master'){
+          //       MAILCHIMP_DOMAIN = credentials('MAILCHIMP_DOMAIN')
+          //       MAILCHIMP_FORM_ID = credentials('MAILCHIMP_FORM_ID')
+          //       MAILCHIMP_LIST_ID = credentials('MAILCHIMP_LIST_ID')
+          //       SEGMENT_ID = credentials('SEGMENT_ID')
+          //       STRIPE_SECRET_KEY = credentials('STRIPE_SECRET_KEY')
+          // }
+        }
+
+
+        // if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev'){
             def branchReplaced = env.BRANCH_NAME.toLowerCase().replaceAll("\\/", "-")
             branchTag = "${gcr_path}:${branchReplaced}"
             imageTag = "${gcr_path}:${branchReplaced}-${env.BUILD_ID}"
             container = docker.build(imageTag, ".")
-
-        }
+        // }
     }
   
     stage('push to gcr.io') {
