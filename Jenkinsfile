@@ -22,6 +22,7 @@ node {
     }
 
     stage('Build') {
+     
       environment {
 
 
@@ -32,7 +33,8 @@ node {
         STRIPE_SECRET_KEY = credentials('STRIPE_SECRET_KEY_DEV')
         TEST_ASSIGN = "okdude"
 
-             }
+      }
+      steps {
           sh 'printenv'
 
           echo "TEST"
@@ -43,7 +45,7 @@ node {
             branchTag = "${gcr_path}:${branchReplaced}"
             imageTag = "${gcr_path}:${branchReplaced}-${env.BUILD_ID}"
             container = docker.build(imageTag, ".")
-
+      }
         // }
     }
   
