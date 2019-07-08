@@ -34,14 +34,13 @@ node {
                        string(credentialsId: 'SEGMENT_ID_DEV', variable: 'SEGMENT_ID'),
                        string(credentialsId: 'STRIPE_SECRET_KEY_DEV', variable: 'STRIPE_SECRET_KEY')]) {
 
-                          env.MAILCHIMP_DOMAIN = "$MAILCHIMP_DOMAIN"
-                           env.MAILCHIMP_FORM_ID = "$MAILCHIMP_FORM_ID"
-                           env.MAILCHIMP_LIST_ID = "$MAILCHIMP_LIST_ID"
-                           env.SEGMENT_ID = "$SEGMENT_ID"
-                           env.STRIPE_SECRET_KEY = "$STRIPE_SECRET_KEY"
+
                             
-                            sh  'env > .env.production'
-                            sh 'cat .env.production'
+                            echo env['MAILCHIMP_DOMAIN_DEV'];
+                        
+                            
+                            // sh  'env > .env.production'
+                            // sh 'cat .env.production'
                             container = docker.build(imageTag, ".")
          │           }
 
