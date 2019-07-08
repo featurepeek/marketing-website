@@ -22,30 +22,20 @@ node {
     }
 
     stage('Build') {
-     
-      environment {
 
-
-        MAILCHIMP_DOMAIN = credentials('MAILCHIMP_DOMAIN_DEV')
-        MAILCHIMP_FORM_ID = credentials('MAILCHIMP_FORM_ID_DEV')
-        MAILCHIMP_LIST_ID = credentials('MAILCHIMP_LIST_ID_DEV')
-        SEGMENT_ID = credentials('SEGMENT_ID_DEV')
-        STRIPE_SECRET_KEY = credentials('STRIPE_SECRET_KEY_DEV')
-        TEST_ASSIGN = "okdude"
-
-      }
-      steps {
-          sh 'printenv'
-
-          echo "TEST"
-          echo env.TEST_ASSIGN
-          echo env.STRIPE_SECRET_KEY
         // if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev'){
             def branchReplaced = env.BRANCH_NAME.toLowerCase().replaceAll("\\/", "-")
             branchTag = "${gcr_path}:${branchReplaced}"
             imageTag = "${gcr_path}:${branchReplaced}-${env.BUILD_ID}"
-            container = docker.build(imageTag, ".")
-      }
+        
+         withCredentials([string(credentialsId: 'MAILCHIMP_DOMAIN', variable: 'MAILCHIMP_DOMAIN_DEV'),
+                       string(credentialsId: 'MAILCHIMP_FORM_ID', variable: 'MAILCHIMP_FORM_ID_DEV'),
+                       string(credentialsId: 'MAILCHIMP_LIST_ID', variable: 'MAILCHIMP_LIST_ID_DEV'),
+                       string(credentialsId: 'SEGMENT_ID', variable: 'SEGMENT_ID_DEV'),
+                       string(credentialsId: 'STRIPE_SECRET_KEY', variable: 'STRIPE_SECRET_KEY_DEV')]) {
+                            container = docker.build(imageTag, ".")
+         │           }
+
         // }
     }
   
