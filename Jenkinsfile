@@ -1,5 +1,3 @@
-node {
-
 
         environment {
           // if (env.BRANCH_NAME == 'dev'){
@@ -19,6 +17,10 @@ node {
           // }
         }
         
+node {
+
+
+
   try {
 
     // if  (!(env.BRANCH_NAME =~ /(dev|master|PR-)/)){
