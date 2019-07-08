@@ -22,12 +22,24 @@ node {
     }
 
     stage('Build') {
+
         if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev'){
             def branchReplaced = env.BRANCH_NAME.toLowerCase().replaceAll("\\/", "-")
             branchTag = "${gcr_path}:${branchReplaced}"
-            imageTag = "${gcr_path}:${branchReplaced}-${env.BUILD_ID}"
-            container = docker.build(imageTag, ".")
+            imageTag = "${gcr_path}:${branchReplaced}-${env.BUILD_ID}"        
 
+            def secret_addition = ""
+            if (env.BRANCH_NAME != 'master'){
+              secret_addition = "_DEV"
+            }
+            withCredentials([string(credentialsId: "MAILCHIMP_DOMAIN${secret_addition}", variable: 'MAILCHIMP_DOMAIN'),
+                         string(credentialsId: "MAILCHIMP_FORM_ID${secret_addition}", variable: 'MAILCHIMP_FORM_ID'),
+                         string(credentialsId: "MAILCHIMP_LIST_ID${secret_addition}", variable: 'MAILCHIMP_LIST_ID'),
+                         string(credentialsId: "SEGMENT_ID${secret_addition}", variable: 'SEGMENT_ID'),
+                         string(credentialsId: "STRIPE_SECRET_KEY${secret_addition}", variable: 'STRIPE_SECRET_KEY')]){
+                            sh  'env > .env.production'
+                            container = docker.build(imageTag, ".")
+                      }
         }
     }
   
