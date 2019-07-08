@@ -23,34 +23,44 @@ pipeline {
  stages {
     stage('Clone repository') {
 
-      if  (!(env.BRANCH_NAME =~ /(dev|master|PR-)/)){
+      steps {
+        if  (!(env.BRANCH_NAME =~ /(dev|master|PR-)/)){
         // Only Build PRs, Dev, and Master, don't build on branch push
-             echo "Not master, dev, or a PR-* so not building"
-             currentBuild.result = 'SUCCESS'
-             return
+         echo "Not master, dev, or a PR-* so not building"
+         currentBuild.result = 'SUCCESS'
+         return
+        }
+
+       step([$class: 'WsCleanup'])
+        checkout scm
       }
 
 
-        step([$class: 'WsCleanup'])
-        checkout scm
+        // step([$class: 'WsCleanup'])
+        // checkout scm
     }
 
     stage('Build') {
-        def projectName = "marketing-website"
-        def gcloudProject = "featurepeek-228719"
-        def gcr_path = "gcr.io/${gcloudProject}/${projectName}"
-        def container
-        def imageTag
-        def branchTag
+       def projectName = "marketing-website"
+       def gcloudProject = "featurepeek-228719"
+       def gcr_path = "gcr.io/${gcloudProject}/${projectName}"
+       def container
+       def imageTag
+       def branchTag
 
-         sh 'printenv'
+      steps {
+           sh 'printenv'
         // if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev'){
             def branchReplaced = env.BRANCH_NAME.toLowerCase().replaceAll("\\/", "-")
             branchTag = "${gcr_path}:${branchReplaced}"
             imageTag = "${gcr_path}:${branchReplaced}-${env.BUILD_ID}"
             container = docker.build(imageTag, ".")
         // }
+      }
     }
+ 
+
+       
   
     stage('push to gcr.io') {
         if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev') {
