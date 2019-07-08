@@ -1,4 +1,8 @@
 pipeline {
+  agent {
+        // Define agent details here
+  }
+
    environment {
           // if (env.BRANCH_NAME == 'dev'){
                 MAILCHIMP_DOMAIN = credentials('MAILCHIMP_DOMAIN_DEV')
@@ -19,7 +23,7 @@ pipeline {
 
 
 
-
+ stages {
     stage('Clone repository') {
 
       if  (!(env.BRANCH_NAME =~ /(dev|master|PR-)/)){
@@ -76,6 +80,6 @@ pipeline {
 
     }
 
-  
+  }
 }
 
