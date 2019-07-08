@@ -35,11 +35,11 @@ node {
                        string(credentialsId: 'STRIPE_SECRET_KEY_DEV', variable: 'STRIPE_SECRET_KEY')]) {
 
 
-                            
+
                             echo env['MAILCHIMP_DOMAIN'];
                         
                             
-                            // sh  'env > .env.production'
+                            sh  'env > .env.production'
                             // sh 'cat .env.production'
                             container = docker.build(imageTag, ".")
          │           }
