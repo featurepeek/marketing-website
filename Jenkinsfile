@@ -29,6 +29,7 @@ node {
           env.SEGMENT_ID = credentials('SEGMENT_ID_DEV')
           env.STRIPE_SECRET_KEY = credentials('STRIPE_SECRET_KEY_DEV')
           env.TEST_ASSIGN = "okdude"
+          sh 'printenv'
 
 
         // if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev'){
