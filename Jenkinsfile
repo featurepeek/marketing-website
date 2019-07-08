@@ -30,6 +30,7 @@ node {
                 MAILCHIMP_LIST_ID = credentials('MAILCHIMP_LIST_ID_DEV')
                 SEGMENT_ID = credentials('SEGMENT_ID_DEV')
                 STRIPE_SECRET_KEY = credentials('STRIPE_SECRET_KEY_DEV')
+                TEST_ASSIGN = "okdude"
           // }
           // if (env.BRANCH_NAME == 'master'){
           //       MAILCHIMP_DOMAIN = credentials('MAILCHIMP_DOMAIN')
