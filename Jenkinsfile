@@ -22,13 +22,17 @@ node {
     }
 
     stage('Build') {
+      environment {
 
-          env.MAILCHIMP_DOMAIN = credentials('MAILCHIMP_DOMAIN_DEV')
-          env.MAILCHIMP_FORM_ID = credentials('MAILCHIMP_FORM_ID_DEV')
-          env.MAILCHIMP_LIST_ID = credentials('MAILCHIMP_LIST_ID_DEV')
-          env.SEGMENT_ID = credentials('SEGMENT_ID_DEV')
-          env.STRIPE_SECRET_KEY = credentials('STRIPE_SECRET_KEY_DEV')
-          env.TEST_ASSIGN = "okdude"
+
+        MAILCHIMP_DOMAIN = credentials('MAILCHIMP_DOMAIN_DEV')
+        MAILCHIMP_FORM_ID = credentials('MAILCHIMP_FORM_ID_DEV')
+        MAILCHIMP_LIST_ID = credentials('MAILCHIMP_LIST_ID_DEV')
+        SEGMENT_ID = credentials('SEGMENT_ID_DEV')
+        STRIPE_SECRET_KEY = credentials('STRIPE_SECRET_KEY_DEV')
+        TEST_ASSIGN = "okdude"
+
+             }
           sh 'printenv'
 
           echo "TEST"
