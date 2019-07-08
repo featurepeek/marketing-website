@@ -22,7 +22,7 @@ node {
     }
 
     stage('Build') {
-      
+
           env.MAILCHIMP_DOMAIN = credentials('MAILCHIMP_DOMAIN_DEV')
           env.MAILCHIMP_FORM_ID = credentials('MAILCHIMP_FORM_ID_DEV')
           env.MAILCHIMP_LIST_ID = credentials('MAILCHIMP_LIST_ID_DEV')
@@ -31,7 +31,9 @@ node {
           env.TEST_ASSIGN = "okdude"
           sh 'printenv'
 
-
+          echo "TEST"
+          echo env.TEST_ASSIGN
+          echo env.STRIPE_SECRET_KEY
         // if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev'){
             def branchReplaced = env.BRANCH_NAME.toLowerCase().replaceAll("\\/", "-")
             branchTag = "${gcr_path}:${branchReplaced}"
