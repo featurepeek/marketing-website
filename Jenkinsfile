@@ -36,12 +36,12 @@ node {
 
 
 
-                          env.MAILCHIMP_DOMAIN = $MAILCHIMP_DOMAIN
-                           env.MAILCHIMP_FORM_ID = $MAILCHIMP_FORM_ID
-                           env.MAILCHIMP_LIST_ID = $MAILCHIMP_LIST_ID
-                           env.SEGMENT_ID = $SEGMENT_ID
-                           env.STRIPE_SECRET_KEY = $STRIPE_SECRET_KEY
-                          
+                          env.MAILCHIMP_DOMAIN = "$MAILCHIMP_DOMAIN"
+                           env.MAILCHIMP_FORM_ID = "$MAILCHIMP_FORM_ID"
+                           env.MAILCHIMP_LIST_ID = "$MAILCHIMP_LIST_ID"
+                           env.SEGMENT_ID = "$SEGMENT_ID"
+                           env.STRIPE_SECRET_KEY = "$STRIPE_SECRET_KEY"
+                            sh 'printenv'
                             container = docker.build(imageTag, ".")
          │           }
 
