@@ -64,14 +64,15 @@ node {
         if (env.BRANCH_NAME == 'dev'){
             echo 'Getting Kube context for dev cluster'
             sh "gcloud container clusters get-credentials ${DEV_CUSTER_NAME} --zone ${GOOGLE_COMPUTE_ZONE} --project ${GOOGLE_PROJECT_ID}"
+            sh "kubectl set image deployment/${projectName} ${projectName}=${imageTag}"
         }
 
         if (env.BRANCH_NAME == 'master'){
             echo 'Getting Kube context for prod cluster'
             sh "gcloud container clusters get-credentials ${PROD_CLUSTER_NAME} --zone ${GOOGLE_COMPUTE_ZONE} --project ${GOOGLE_PROJECT_ID}"
+            sh "kubectl set image deployment/${projectName} ${projectName}=${imageTag}"
         }
 
-        sh "kubectl set image deployment/${projectName} ${projectName}=${imageTag}"
 
       }
     }
