@@ -10,8 +10,6 @@ node {
     }
 
     def projectName = "marketing-website"
-    def gcloudProject = "featurepeek-228719"
-    def gcr_path = "gcr.io/${gcloudProject}/${projectName}"
     def container
     def imageTag
     def branchTag
@@ -25,8 +23,11 @@ node {
 
         if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev'){
             def branchReplaced = env.BRANCH_NAME.toLowerCase().replaceAll("\\/", "-")
-            branchTag = "${gcr_path}:${branchReplaced}"
-            imageTag = "${gcr_path}:${branchReplaced}-${env.BUILD_ID}"        
+         
+            withCredentials([string(credentialsId: "GOOGLE_PROJECT_ID", variable: 'GOOGLE_PROJECT_ID')]){ 
+              branchTag = "gcr.io/${GOOGLE_PROJECT_ID}/${projectName}:${branchReplaced}"
+              imageTag = "gcr.io/${GOOGLE_PROJECT_ID}/${projectName}:${branchReplaced}-${env.BUILD_ID}"        
+            }
 
             def secret_addition = ""
             if (env.BRANCH_NAME != 'master'){
@@ -39,6 +40,7 @@ node {
                          string(credentialsId: "STRIPE_SECRET_KEY${secret_addition}", variable: 'STRIPE_SECRET_KEY')]){
                             sh  'env > .env.production'
                             container = docker.build(imageTag, ".")
+                            sh  'rm .env.production'
                       }
         }
     }
@@ -54,18 +56,24 @@ node {
     stage('deploy') {
         milestone()
 
+        withCredentials([string(credentialsId: "GOOGLE_COMPUTE_ZONE", variable: 'GOOGLE_COMPUTE_ZONE'),
+            string(credentialsId: "GOOGLE_PROJECT_ID", variable: 'GOOGLE_PROJECT_ID'),
+            string(credentialsId: "DEV_CLUSTER_NAME", variable: 'DEV_CLUSTER_NAME'),
+            string(credentialsId: "PROD_CLUSTER_NAME", variable: 'PROD_CLUSTER_NAME')]){    
+
         if (env.BRANCH_NAME == 'dev'){
             echo 'Getting Kube context for dev cluster'
-            sh "gcloud container clusters get-credentials featurepeek-dev --zone us-central1-a --project ${gcloudProject}"
+            sh "gcloud container clusters get-credentials ${DEV_CUSTER_NAME} --zone ${GOOGLE_COMPUTE_ZONE} --project ${GOOGLE_PROJECT_ID}"
         }
 
         if (env.BRANCH_NAME == 'master'){
             echo 'Getting Kube context for prod cluster'
-            sh "gcloud container clusters get-credentials featurepeek-prod --zone us-central1-a --project ${gcloudProject}"
+            sh "gcloud container clusters get-credentials ${PROD_CLUSTER_NAME} --zone ${GOOGLE_COMPUTE_ZONE} --project ${GOOGLE_PROJECT_ID}"
         }
 
         sh "kubectl set image deployment/${projectName} ${projectName}=${imageTag}"
 
+      }
     }
 
   } catch (e) {
