@@ -4,10 +4,11 @@ import Box from 'ui-box'
 import MediaQuery from 'react-responsive'
 import jump from 'jump.js'
 
-import { Flex, Heading, Link } from 'primitives'
+import { Button, Flex, Heading } from 'primitives'
 
 import HeroDashboard from 'images/HeroDashboard'
 
+import { track } from 'utils/analytics'
 // import { rhythm, scale } from 'utils/typography'
 
 export default function Hero() {
@@ -40,13 +41,24 @@ export default function Hero() {
               <br />
               or browser extensions.
             </Heading>
-            <Heading h={3} marginTop={32} size={360}>
-              <Link href="#video" onClick={scrollToVideo}>
-                <span>Watch a video.</span>
-              </Link>
-            </Heading>
+            <Flex flexDirection="row">
+              <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 180}>
+                <Button
+                  href="https://dashboard.featurepeek.com/login"
+                  onClick={() => track('Clicked Plan', 'Hero')}
+                  target="_blank"
+                >
+                  Get started now
+                </Button>
+              </Flex>
+              <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 180}>
+                <Button background="white" onClick={scrollToVideo}>
+                  Watch a video
+                </Button>
+              </Flex>
+            </Flex>
           </Box>
-          <Box position="relative" left={mobile ? 0 : 39} width={mobile ? '100%' : '60%'}>
+          <Box position="relative" top={mobile ? 0 : -48} left={mobile ? 0 : 39} width={mobile ? '100%' : '60%'}>
             <HeroDashboard />
           </Box>
         </Flex>

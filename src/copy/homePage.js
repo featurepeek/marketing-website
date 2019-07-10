@@ -7,6 +7,7 @@ import SaveTime from 'images/SaveTime'
 
 export const valueProps = [
   {
+    builtFor: 'Front-end Developers',
     heading: 'Collect implementation feedback as early as possible',
     paragraphs: [
       "Connect your front-end repo to FeaturePeek, and we'll spin up your feature branches in a dedicated environment every time you open a pull request.",
@@ -22,11 +23,11 @@ export const valueProps = [
     image: <LinkInPullRequest />,
   },
   {
+    builtFor: 'UX Designers',
     heading: 'Ensure your actual designs ship',
     paragraphs: [
-      'Just like how Figma and InVision let you collaborate on design, FeaturePeek lets you collaborate on implementation.',
-      "Take screenshots of an HTML element on the page, and it'll be saved as a comment on the relevant pull request — even if you don't have a GitHub account.",
-      // 'Video recording support coming soon!',
+      'Iterate more quickly by leaving feedback on your implemented designs before code lands on your staging or QA server.',
+      "Take screenshots of an HTML element on the page, and it'll be saved as a comment on the open pull request — even if you don't have a GitHub account.",
     ],
     color: gradientMap.pink[0],
     buttonProps: {
@@ -38,10 +39,11 @@ export const valueProps = [
     image: <DesignComeToLife />,
   },
   {
-    heading: 'Save time during your release cycle',
+    builtFor: 'Project Managers',
+    heading: 'Prevent last-minute scrambles at the end of your release cycle',
     paragraphs: [
-      'Catch mistakes earlier in the release cycle, before code lands on the master branch.',
-      'Since each implementation on FeaturePeek runs in isolation, your team will run into fewer integration bugs when deploying to production.',
+      'Catch mistakes earlier in your sprint cycle, before code lands on the default branch.',
+      'Since each feature branch on FeaturePeek runs in its own isolated environment, your team will run into fewer integration bugs when deploying to production.',
     ],
     color: gradientMap.blue[0],
     buttonProps: {
