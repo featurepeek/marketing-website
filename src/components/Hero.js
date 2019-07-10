@@ -2,7 +2,6 @@
 import React from 'react'
 import Box from 'ui-box'
 import MediaQuery from 'react-responsive'
-import jump from 'jump.js'
 
 import { Button, Flex, Heading } from 'primitives'
 
@@ -11,13 +10,10 @@ import HeroDashboard from 'images/HeroDashboard'
 import { track } from 'utils/analytics'
 // import { rhythm, scale } from 'utils/typography'
 
-export default function Hero() {
-  const scrollToVideo = event => {
+export default function Hero({ setModalShowing }) {
+  const showVideo = event => {
     event.preventDefault()
-    window.history.replaceState({}, '', '#video')
-    jump('#video', {
-      duration: 600,
-    })
+    setModalShowing(true)
   }
 
   return (
@@ -42,17 +38,18 @@ export default function Hero() {
               or browser extensions.
             </Heading>
             <Flex flexDirection="row">
-              <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 180}>
+              <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 200}>
                 <Button
                   href="https://dashboard.featurepeek.com/login"
+                  iconAfter="fas fa-arrow-right"
                   onClick={() => track('Clicked Plan', 'Hero')}
                   target="_blank"
                 >
                   Get started now
                 </Button>
               </Flex>
-              <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 180}>
-                <Button background="white" onClick={scrollToVideo}>
+              <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 200}>
+                <Button background="white" href="#" onClick={showVideo}>
                   Watch a video
                 </Button>
               </Flex>

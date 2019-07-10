@@ -41,18 +41,8 @@ export default function Demo() {
             </Link>
             .
           </Heading>
-          <Heading
-            h={2}
-            color="#a1a3a5"
-            marginBottom={40}
-            paddingX={16}
-            size={300}
-            textAlign={mobile ? 'left' : 'center'}
-          >
-            <Text color="#333">Click a card below</Text> to open the environment in a new tab.
-          </Heading>
           {merges.length > 0 && (
-            <Box background="#f8f8f8" paddingY={16}>
+            <Box background="#f8f8f8" marginY={40} paddingY={16}>
               <Slider {...settings}>
                 {merges.map(merge => (
                   <div key={merge.id}>
@@ -62,6 +52,9 @@ export default function Demo() {
               </Slider>
             </Box>
           )}
+          <Heading h={2} color="#a1a3a5" paddingX={16} size={300} textAlign={mobile ? 'left' : 'center'}>
+            <Text color="#333">Click a card above</Text> to open the environment in a new tab.
+          </Heading>
         </Box>
       )}
     </MediaQuery>
