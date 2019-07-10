@@ -13,6 +13,8 @@ import ViewportArriver from 'components/ViewportArriver'
 import { steps, elaborations } from 'copy/howItWorks'
 import productFAQs from 'copy/productFAQs'
 
+import { track } from 'utils/analytics'
+
 export default function HowItWorks(props) {
   const [stepIndex, setStepIndex] = useState(0)
 
@@ -70,8 +72,12 @@ export default function HowItWorks(props) {
                   ))}
                 </UnorderedList>
                 <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 180}>
-                  <Button href="https://airtable.com/shrUZixSNBqSzmdTc?prefill_Plan=Business" target="_blank">
-                    Get started today
+                  <Button
+                    href="https://dashboard.featurepeek.com/login"
+                    onClick={() => track('Clicked Plan', 'How it works')}
+                    target="_blank"
+                  >
+                    Get started now
                   </Button>
                 </Flex>
               </Box>

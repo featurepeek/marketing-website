@@ -92,15 +92,15 @@ const columns = [
         text: 'Contact',
         href: 'mailto:hello@featurepeek.com?subject=Hello',
       },
-      // {
-      //   text: '',
-      //   href: '',
-      // },
-      // {
-      //   icon: 'fab fa-y-combinator',
-      //   iconColor: '#ff6601',
-      //   text: 'Y Combinator S19',
-      // },
+      {
+        text: '',
+        href: '',
+      },
+      {
+        icon: 'fab fa-y-combinator',
+        iconColor: '#ff6601',
+        text: 'Y Combinator S19',
+      },
     ],
   },
 ]

@@ -6,6 +6,7 @@ import MediaQuery from 'react-responsive'
 import { Button, Icon, Flex, Link, ListItem, UnorderedList } from 'primitives'
 
 import SubNav from 'components/SubNav'
+import { track } from 'utils/analytics'
 
 export default function Nav() {
   const [isShowingSubNav, setShowingSubNav] = useState(false)
@@ -34,7 +35,7 @@ export default function Nav() {
   }, [hasScrolled])
 
   return (
-    <MediaQuery maxWidth={950}>
+    <MediaQuery maxWidth={936}>
       {mobile => (
         <Box
           is="header"
@@ -92,11 +93,6 @@ export default function Nav() {
                         Docs
                       </Link>
                     </Box>
-                    {/* <Box marginLeft={40}> */}
-                    {/*   <Link color="#103c52" href="/blog" fontSize={17}> */}
-                    {/*     Blog */}
-                    {/*   </Link> */}
-                    {/* </Box> */}
                   </>
                 )}
               </Flex>
@@ -111,9 +107,13 @@ export default function Nav() {
                 />
               </Flex>
             ) : (
-              <Flex alignItems="center" justifyContent="center" width={240}>
-                <Button href="https://airtable.com/shrUZixSNBqSzmdTc?prefill_Plan=Business" target="_blank">
-                  Start your free trial
+              <Flex alignItems="center" justifyContent="center" width={224}>
+                <Button
+                  href="https://dashboard.featurepeek.com/login"
+                  onClick={() => track('Clicked Plan', 'Nav')}
+                  target="_blank"
+                >
+                  Go to Dashboard
                 </Button>
               </Flex>
             )}
@@ -153,8 +153,12 @@ export default function Nav() {
                 </ListItem>
               </UnorderedList>
               <Flex alignItems="center" justifyContent="center" height={100} width="100%">
-                <Button href="https://airtable.com/shrUZixSNBqSzmdTc?prefill_Plan=Business" target="_blank">
-                  Start your free trial
+                <Button
+                  href="https://dashboard.featurepeek.com/login"
+                  onClick={() => track('Clicked Plan', 'Mobile Nav')}
+                  target="_blank"
+                >
+                  Go to Dashboard
                 </Button>
               </Flex>
             </Box>

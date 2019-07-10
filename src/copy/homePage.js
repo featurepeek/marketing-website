@@ -2,7 +2,7 @@ import React from 'react'
 import { gradientMap } from 'utils/color'
 
 import LinkInPullRequest from 'images/LinkInPullRequest'
-import Commenting from 'images/Commenting'
+import DesignComeToLife from 'images/DesignComeToLife'
 import SaveTime from 'images/SaveTime'
 
 export const valueProps = [
@@ -15,14 +15,14 @@ export const valueProps = [
     color: gradientMap.green[0],
     buttonProps: {
       background: 'green',
-      children: 'Built for Front-end Developers',
+      children: 'Features for Front-end Developers',
       href: '/for-frontend-developers',
       iconAfter: 'fas fa-arrow-right',
     },
     image: <LinkInPullRequest />,
   },
   {
-    heading: 'Annotate directly on the implementation itself',
+    heading: 'Ensure your actual designs ship',
     paragraphs: [
       'Just like how Figma and InVision let you collaborate on design, FeaturePeek lets you collaborate on implementation.',
       "Take screenshots of an HTML element on the page, and it'll be saved as a comment on the relevant pull request — even if you don't have a GitHub account.",
@@ -31,11 +31,11 @@ export const valueProps = [
     color: gradientMap.pink[0],
     buttonProps: {
       background: 'pink',
-      children: 'Built for UX Designers',
+      children: 'Features for UX Designers',
       href: '/for-ux-designers',
       iconAfter: 'fas fa-arrow-right',
     },
-    image: <Commenting />,
+    image: <DesignComeToLife />,
   },
   {
     heading: 'Save time during your release cycle',
@@ -46,7 +46,7 @@ export const valueProps = [
     color: gradientMap.blue[0],
     buttonProps: {
       background: 'blue',
-      children: 'Built for Project Managers',
+      children: 'Features for Project Managers',
       href: '/for-project-managers',
       iconAfter: 'fas fa-arrow-right',
     },

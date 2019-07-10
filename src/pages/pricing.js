@@ -70,6 +70,7 @@ export const pageQuery = graphql`
             position
             recommended
             cta
+            cta_href
             perks
           }
           name
