@@ -2,7 +2,7 @@
 
 Interested in using FeaturePeek? Take a look at this repository to get an idea of how it works.
 
-✨ [Create an account](https://airtable.com/shrUZixSNBqSzmdTc?prefill_Plan=Business)
+✨ [Create an account](https://dashboard.featurepeek.com/login)
 
 🔮 [View pull requests for links to live demos](https://github.com/featurepeek/marketing-website/pulls)
 

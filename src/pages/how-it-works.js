@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Box from 'ui-box'
 import MediaQuery from 'react-responsive'
 
-import { Button, Code, Column, Flex, Heading, ListItem, Paragraph, Strong, UnorderedList } from 'primitives'
+import { Button, Column, Flex, Heading, ListItem, Paragraph, Strong, UnorderedList } from 'primitives'
 
 import Faqs from 'components/Faqs'
 import Layout from 'components/Layout'
@@ -12,6 +12,8 @@ import ViewportArriver from 'components/ViewportArriver'
 
 import { steps, elaborations } from 'copy/howItWorks'
 import productFAQs from 'copy/productFAQs'
+
+import { track } from 'utils/analytics'
 
 export default function HowItWorks(props) {
   const [stepIndex, setStepIndex] = useState(0)
@@ -62,16 +64,20 @@ export default function HowItWorks(props) {
                       opacity={stepIndex === i ? 1 : 0.4}
                       style={{ textIndent: -34 }}
                     >
-                      <Code fontSize={18} marginRight={8}>
+                      <Strong fontFamily="monospace" fontSize={18} marginRight={8}>
                         {i + 1}.
-                      </Code>{' '}
+                      </Strong>{' '}
                       <Strong color="#103c52">{step}</Strong>
                     </ListItem>
                   ))}
                 </UnorderedList>
                 <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 180}>
-                  <Button href="https://airtable.com/shrUZixSNBqSzmdTc?prefill_Plan=Business" target="_blank">
-                    Get started today
+                  <Button
+                    href="https://dashboard.featurepeek.com/login"
+                    onClick={() => track('Clicked Plan', 'How it works')}
+                    target="_blank"
+                  >
+                    Get started now
                   </Button>
                 </Flex>
               </Box>
