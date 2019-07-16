@@ -8,7 +8,7 @@ export default function LinkInPullRequest() {
   const { img } = useStaticQuery(
     graphql`
       query LinkInPullRequest {
-        img: file(absolutePath: { regex: "/link-in-pr.png/" }) {
+        img: file(absolutePath: { regex: "/deployment-status.png/" }) {
           childImageSharp {
             fluid(maxWidth: 600, quality: 100) {
               ...GatsbyImageSharpFluid
