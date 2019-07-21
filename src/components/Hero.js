@@ -41,8 +41,8 @@ export default function Hero({ setModalShowing }) {
               <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 200}>
                 <Button
                   href="https://dashboard.featurepeek.com/login"
-                  iconAfter="fas fa-arrow-right"
-                  onClick={() => track('Clicked Plan', 'Hero')}
+                  iconAfter={mobile ? undefined : 'fas fa-arrow-right'}
+                  onClick={() => track('Clicked CTA', { cta: 'Hero' })}
                   target="_blank"
                 >
                   Get started now

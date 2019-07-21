@@ -41,7 +41,9 @@ export default function RowReversal(props) {
                   </Flex>
                 )}
               </Box>
-              <Box width={mobile ? '100%' : '45%'}>{image}</Box>
+              <Box marginBottom={mobile ? 24 : undefined} width={mobile ? '100%' : '45%'}>
+                {image}
+              </Box>
             </Flex>
           ))}
         </Box>

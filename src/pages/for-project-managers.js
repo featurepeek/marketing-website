@@ -26,7 +26,7 @@ export default function ForProjectManagers(props) {
           Project Managers
         </Heading>
         <Heading color={theme} h={2} opacity={0.5} size={300} width="50%">
-          Shorter feedback loops equals higher quality releases.
+          Prevent last-minute scrambles at the end of your release cycle.
         </Heading>
       </HeroManagers>
       <RowReversal copyWritings={copyWritings} theme={theme} />

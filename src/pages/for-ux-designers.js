@@ -26,7 +26,7 @@ export default function ForFrontendDevelopers(props) {
           UX Designers
         </Heading>
         <Heading color={theme} h={2} opacity={0.5} size={300} width="60%">
-          Leave implementation feedback in a whole new way.
+          See your designs come to life earlier in the development cycle.
         </Heading>
       </HeroDesigners>
       <RowReversal copyWritings={copyWritings} theme={theme} />
