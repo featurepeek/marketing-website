@@ -8,7 +8,7 @@ export default function InstallGitHubApp() {
       query InstallGitHubApp {
         img: file(absolutePath: { regex: "/install-gh-app.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 605, quality: 100) {
+            fluid(maxWidth: 800, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

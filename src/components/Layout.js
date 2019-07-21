@@ -33,13 +33,12 @@ export default function Layout(props) {
   return (
     <MediaQuery maxWidth={504}>
       {mobile => (
-        <div>
+        <Box background={background ? background : undefined}>
           <Nav />
           <Box
-            background={background}
             marginTop={16}
             marginX="auto"
-            maxWidth={location.pathname.startsWith('/blog') ? rhythm(24) : rhythm(52)}
+            maxWidth={location.pathname.startsWith('/blog') ? rhythm(24) : rhythm(64)}
             overflowX={location.pathname === '/' ? 'hidden' : undefined}
             padding={mobile ? 16 : rhythm(1.5)}
           >
@@ -47,7 +46,7 @@ export default function Layout(props) {
           </Box>
           <CtaBox />
           <Footer />
-        </div>
+        </Box>
       )}
     </MediaQuery>
   )

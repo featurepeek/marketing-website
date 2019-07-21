@@ -8,7 +8,7 @@ export default function AnotherMachine() {
       query AnotherMachine {
         img: file(absolutePath: { regex: "/another-machine.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 100) {
+            fluid(maxWidth: 750, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

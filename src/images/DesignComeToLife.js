@@ -8,7 +8,7 @@ export default function DesignComeToLife() {
       query DesignComeToLife {
         img: file(absolutePath: { regex: "/design-come-to-life.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 100) {
+            fluid(maxWidth: 750, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

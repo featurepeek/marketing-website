@@ -10,7 +10,7 @@ export default function BrowserMetadata() {
       query BrowserMetadata {
         img: file(absolutePath: { regex: "/browser-metadata.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 100) {
+            fluid(maxWidth: 750, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
