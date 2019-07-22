@@ -10,7 +10,7 @@ export default function SlackReviewers() {
       query SlackReviewers {
         img: file(absolutePath: { regex: "/slack-reviewers.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 100) {
+            fluid(maxWidth: 750, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

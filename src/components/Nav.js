@@ -110,7 +110,7 @@ export default function Nav() {
               <Flex alignItems="center" justifyContent="center" width={224}>
                 <Button
                   href="https://dashboard.featurepeek.com/login"
-                  onClick={() => track('Clicked Plan', 'Nav')}
+                  onClick={() => track('Clicked CTA', { cta: 'Nav' })}
                   target="_blank"
                 >
                   Go to Dashboard
@@ -155,7 +155,7 @@ export default function Nav() {
               <Flex alignItems="center" justifyContent="center" height={100} width="100%">
                 <Button
                   href="https://dashboard.featurepeek.com/login"
-                  onClick={() => track('Clicked Plan', 'Mobile Nav')}
+                  onClick={() => track('Clicked CTA', { cta: 'Mobile Nav' })}
                   target="_blank"
                 >
                   Go to Dashboard

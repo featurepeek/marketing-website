@@ -10,7 +10,7 @@ export default function Leaderboards() {
       query Leaderboards {
         img: file(absolutePath: { regex: "/leaderboards.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 100) {
+            fluid(maxWidth: 750, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

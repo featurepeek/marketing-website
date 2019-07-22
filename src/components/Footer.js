@@ -112,7 +112,7 @@ export default function Footer(styles) {
   const handleSubmit = event => {
     event.preventDefault()
     addToMailchimp(email).then(() => {
-      track('Joined Waitlist', email)
+      track('Joined Waitlist', { email })
       setEmail('')
       setSubscribedEmail(email)
     })

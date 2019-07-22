@@ -8,7 +8,7 @@ export default function SaveTime() {
       query SaveTime {
         img: file(absolutePath: { regex: "/save-time.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 100) {
+            fluid(maxWidth: 750, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

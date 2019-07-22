@@ -8,7 +8,7 @@ export default function OpenPullRequest() {
       query OpenPullRequest {
         img: file(absolutePath: { regex: "/open-a-pull-request.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 605, quality: 100) {
+            fluid(maxWidth: 800, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
