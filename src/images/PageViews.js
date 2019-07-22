@@ -10,7 +10,7 @@ export default function PageViews() {
       query PageViews {
         img: file(absolutePath: { regex: "/page-views.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 100) {
+            fluid(maxWidth: 750, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

@@ -10,7 +10,7 @@ export default function LinkInPullRequest() {
       query LinkInPullRequest {
         img: file(absolutePath: { regex: "/deployment-status.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 100) {
+            fluid(maxWidth: 750, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

@@ -8,7 +8,7 @@ export default function Terminal() {
       query Terminal {
         img: file(absolutePath: { regex: "/terminal.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 100) {
+            fluid(maxWidth: 750, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

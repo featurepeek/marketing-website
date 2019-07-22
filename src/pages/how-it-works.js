@@ -74,7 +74,7 @@ export default function HowItWorks(props) {
                 <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 180}>
                   <Button
                     href="https://dashboard.featurepeek.com/login"
-                    onClick={() => track('Clicked Plan', 'How it works')}
+                    onClick={() => track('Clicked CTA', { cta: 'How it works' })}
                     target="_blank"
                   >
                     Get started now

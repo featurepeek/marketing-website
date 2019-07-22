@@ -115,7 +115,7 @@ export default function PricingColumn({ product, hasMounted }) {
             <Flex alignItems="center" height={100} justifyContent="center">
               <Button
                 href={`${metadata.cta_href}${isAnnual ? '' : '&interval=monthly'}`}
-                onClick={() => track('Clicked Plan', product.name)}
+                onClick={() => track('Clicked CTA', { cta: product.name })}
                 target="_blank"
               >
                 {metadata.cta}

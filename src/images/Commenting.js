@@ -10,7 +10,7 @@ export default function Commenting() {
       query Commenting {
         img: file(absolutePath: { regex: "/commenting.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 100) {
+            fluid(maxWidth: 750, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

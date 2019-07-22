@@ -20,7 +20,7 @@ export default function CtaBox({ question, answer }) {
           <Flex alignItems="center" justifyContent="center" height={100}>
             <Button
               href="https://dashboard.featurepeek.com/login"
-              onClick={() => track('Clicked Plan', 'CtaBox')}
+              onClick={() => track('Clicked CTA', { cta: 'CtaBox' })}
               target="_blank"
             >
               Create account

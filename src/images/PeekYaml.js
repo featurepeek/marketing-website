@@ -8,7 +8,7 @@ export default function PeekYaml() {
       query PeekYaml {
         img: file(absolutePath: { regex: "/peek-yaml.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 605, quality: 100) {
+            fluid(maxWidth: 800, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
