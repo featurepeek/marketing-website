@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+import AsSeenOn from 'components/AsSeenOn'
 import DesignedForGitHub from 'components/DesignedForGitHub'
 import Hero from 'components/Hero'
 import Layout from 'components/Layout'
@@ -17,6 +18,7 @@ export default function IndexPage(props) {
       <SEO title="Overview" location={props.location} />
       <ModalVideo isShowing={isModalShowing} setShowing={setModalShowing} />
       <Hero setModalShowing={setModalShowing} />
+      <AsSeenOn />
       <RowReversal copyWritings={valueProps} flip={1} />
       <DesignedForGitHub />
       <VideoWalkthrough />

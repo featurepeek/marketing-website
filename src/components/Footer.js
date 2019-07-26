@@ -92,15 +92,17 @@ const columns = [
         text: 'Contact',
         href: 'mailto:hello@featurepeek.com?subject=Hello',
       },
-      // {
-      //   text: '',
-      //   href: '',
-      // },
-      // {
-      //   icon: 'fab fa-y-combinator',
-      //   iconColor: '#ff6601',
-      //   text: 'Y Combinator S19',
-      // },
+      {
+        text: '',
+        href: '',
+      },
+      {
+        icon: 'fab fa-y-combinator',
+        iconColor: '#ff6601',
+        text: 'Y Combinator S19',
+        href: 'https://techcrunch.com/2019/07/26/featurepeek-wants-put-an-end-to-last-minute-front-end-design-reviews/',
+        target: '_blank',
+      },
     ],
   },
 ]
@@ -133,6 +135,14 @@ export default function Footer(styles) {
                     <Icon icon={social.icon} color="white" fontSize={24} marginLeft={32} opacity={0.5} />
                   </Link>
                 ))}
+                <Link href="https://www.crunchbase.com/organization/featurepeek" underline={false} target="_blank">
+                  <img
+                    alt="Crunchbase"
+                    src="/img/crunchbase.svg"
+                    style={{ marginBottom: 0, marginLeft: 32 }}
+                    width="32"
+                  />
+                </Link>
               </Flex>
               <Paragraph color="white" fontSize={14} marginBottom={24}>
                 FeaturePeek shortens feedback loops for teams building web products. Enter your email below to receive
