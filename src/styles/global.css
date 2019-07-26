@@ -1,5 +1,9 @@
 @import "~slick-carousel/slick/slick.css";
 
+.as-seen-on img {
+  margin-bottom: 0;
+}
+
 /* Button */
 .button:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
