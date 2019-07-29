@@ -36,6 +36,7 @@ export default function Layout(props) {
         <Box background={background ? background : undefined}>
           <Nav />
           <Box
+            className="layout-padding-fouc"
             marginTop={16}
             marginX="auto"
             maxWidth={location.pathname.startsWith('/blog') ? rhythm(24) : rhythm(64)}

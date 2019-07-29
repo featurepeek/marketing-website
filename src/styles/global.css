@@ -118,3 +118,28 @@ code {
 .polaroid a:hover {
   text-decoration: none;
 }
+
+@media screen and (max-width: 504px) {
+  .layout-padding-fouc {
+    padding: 16px !important;
+  }
+}
+
+@media screen and (max-width: 904px) {
+  .nav-padding-fouc {
+    padding: 8px 0 !important;
+  }
+  .hero-flex-direction-fouc {
+    flex-direction: column !important;
+  }
+  .hero-fouc {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 936px) {
+  .nav-links-hide-fouc {
+    display: none !important;
+  }
+}
+
