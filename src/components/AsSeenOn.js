@@ -38,13 +38,14 @@ export default function AsSeenOn({ question, answer }) {
         <Box paddingY={16}>
           <a
             href="https://techcrunch.com/2019/07/26/featurepeek-wants-put-an-end-to-last-minute-front-end-design-reviews/"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <TechCrunch />
           </a>
         </Box>
         <Box paddingY={16}>
-          <a href="https://www.producthunt.com/posts/featurepeek" target="_blank">
+          <a href="https://www.producthunt.com/posts/featurepeek" rel="noopener noreferrer" target="_blank">
             <img
               src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=161889&theme=light"
               alt="FeaturePeek - Front-end review for the whole team | Product Hunt Embed"
