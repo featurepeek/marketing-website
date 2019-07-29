@@ -66,7 +66,7 @@ export default function Nav() {
                   />
                 </Link>
                 {!mobile && (
-                  <Box className="nav-links-hide-fouc">
+                  <>
                     <Box
                       paddingRight={16}
                       paddingY={16}
@@ -74,27 +74,32 @@ export default function Nav() {
                       onMouseEnter={() => setShowingSubNav(true)}
                       onMouseLeave={() => setShowingSubNav(false)}
                     >
-                      <Link color="#103c52" href="/for-frontend-developers" fontSize={17}>
+                      <Link
+                        className="nav-links-hide-fouc"
+                        color="#103c52"
+                        href="/for-frontend-developers"
+                        fontSize={17}
+                      >
                         Product tour
                       </Link>
                       <SubNav isShowing={isShowingSubNav} />
                     </Box>
-                    <Box paddingX={16}>
+                    <Box className="nav-links-hide-fouc" paddingX={16}>
                       <Link color="#103c52" href="/how-it-works" fontSize={17}>
                         How it works
                       </Link>
                     </Box>
-                    <Box paddingX={16}>
+                    <Box className="nav-links-hide-fouc" paddingX={16}>
                       <Link color="#103c52" href="/pricing" fontSize={17}>
                         Pricing
                       </Link>
                     </Box>
-                    <Box paddingX={16}>
+                    <Box className="nav-links-hide-fouc" paddingX={16}>
                       <Link color="#103c52" href="https://docs.featurepeek.com/intro" fontSize={17} target="_blank">
                         Docs
                       </Link>
                     </Box>
-                  </Box>
+                  </>
                 )}
               </Flex>
             </nav>
