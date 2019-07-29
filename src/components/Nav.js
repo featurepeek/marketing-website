@@ -41,6 +41,7 @@ export default function Nav() {
           is="header"
           background="#fff"
           boxShadow={hasScrolled ? '0 2px 4px rgba(0, 0, 0, 0.1)' : 'none'}
+          className="nav-padding-fouc"
           height={mobile && isShowingMobileNav ? 440 : 76}
           marginTop={16}
           overflow={mobile ? 'hidden' : 'inherit'}
@@ -65,7 +66,7 @@ export default function Nav() {
                   />
                 </Link>
                 {!mobile && (
-                  <>
+                  <Box className="nav-links-hide-fouc">
                     <Box
                       paddingRight={16}
                       paddingY={16}
@@ -93,7 +94,7 @@ export default function Nav() {
                         Docs
                       </Link>
                     </Box>
-                  </>
+                  </Box>
                 )}
               </Flex>
             </nav>
@@ -107,7 +108,7 @@ export default function Nav() {
                 />
               </Flex>
             ) : (
-              <Flex alignItems="center" justifyContent="center" width={224}>
+              <Flex alignItems="center" className="nav-links-hide-fouc" justifyContent="center" width={224}>
                 <Button
                   href="https://dashboard.featurepeek.com/login"
                   onClick={() => track('Clicked CTA', { cta: 'Nav' })}
