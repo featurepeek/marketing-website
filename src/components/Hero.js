@@ -19,8 +19,8 @@ export default function Hero({ setModalShowing }) {
   return (
     <MediaQuery maxWidth={904}>
       {mobile => (
-        <Flex>
-          <Box width={mobile ? '100%' : '40%'}>
+        <Flex className="hero-flex-direction-fouc">
+          <Box className="hero-fouc" width={mobile ? '100%' : '40%'}>
             <Heading marginTop={0} size={500}>
               Front-end review for the whole team.
             </Heading>

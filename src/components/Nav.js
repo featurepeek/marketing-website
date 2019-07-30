@@ -41,6 +41,7 @@ export default function Nav() {
           is="header"
           background="#fff"
           boxShadow={hasScrolled ? '0 2px 4px rgba(0, 0, 0, 0.1)' : 'none'}
+          className="nav-padding-fouc"
           height={mobile && isShowingMobileNav ? 440 : 76}
           marginTop={16}
           overflow={mobile ? 'hidden' : 'inherit'}
@@ -73,22 +74,27 @@ export default function Nav() {
                       onMouseEnter={() => setShowingSubNav(true)}
                       onMouseLeave={() => setShowingSubNav(false)}
                     >
-                      <Link color="#103c52" href="/for-frontend-developers" fontSize={17}>
+                      <Link
+                        className="nav-links-hide-fouc"
+                        color="#103c52"
+                        href="/for-frontend-developers"
+                        fontSize={17}
+                      >
                         Product tour
                       </Link>
                       <SubNav isShowing={isShowingSubNav} />
                     </Box>
-                    <Box paddingX={16}>
+                    <Box className="nav-links-hide-fouc" paddingX={16}>
                       <Link color="#103c52" href="/how-it-works" fontSize={17}>
                         How it works
                       </Link>
                     </Box>
-                    <Box paddingX={16}>
+                    <Box className="nav-links-hide-fouc" paddingX={16}>
                       <Link color="#103c52" href="/pricing" fontSize={17}>
                         Pricing
                       </Link>
                     </Box>
-                    <Box paddingX={16}>
+                    <Box className="nav-links-hide-fouc" paddingX={16}>
                       <Link color="#103c52" href="https://docs.featurepeek.com/intro" fontSize={17} target="_blank">
                         Docs
                       </Link>
@@ -107,7 +113,7 @@ export default function Nav() {
                 />
               </Flex>
             ) : (
-              <Flex alignItems="center" justifyContent="center" width={224}>
+              <Flex alignItems="center" className="nav-links-hide-fouc" justifyContent="center" width={224}>
                 <Button
                   href="https://dashboard.featurepeek.com/login"
                   onClick={() => track('Clicked CTA', { cta: 'Nav' })}
