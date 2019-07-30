@@ -67,7 +67,6 @@
     "unfetch": "^4.1.0"
   },
   "devDependencies": {
-    "@featurepeek/circleci": "^0.2.5",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-config-react-app": "^4.0.1",
