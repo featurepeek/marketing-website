@@ -97,8 +97,8 @@ export default function HowItWorks(props) {
               ))}
             </Column>
           </Flex>
-          <VideoWalkthrough />
           <Faqs heading="Product FAQs" faqs={productFAQs} />
+          <VideoWalkthrough />
         </Layout>
       )}
     </MediaQuery>
