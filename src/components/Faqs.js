@@ -20,7 +20,7 @@ export default function Faqs({ heading, faqs }) {
           paddingX={mobile ? 16 : 40}
           paddingY={40}
         >
-          <Heading h={3} margin={40} size={360} textAlign="center">
+          <Heading h={3} id="faqs" margin={40} size={360} textAlign="center">
             {heading}
           </Heading>
           <Flex marginY={80}>

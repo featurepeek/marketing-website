@@ -10,11 +10,18 @@ import { Flex, Link, Paragraph } from 'primitives'
 
 export default function ModalVideo({ isShowing, setShowing }) {
   const [isDemoShowing, setDemoShowing] = useState(false)
+  const [isPlaying, setPlaying] = useState(true)
 
   const showDemoAfterTimeout = () => {
+    setPlaying(true)
     setTimeout(() => {
       setDemoShowing(true)
     }, 60 * 1000)
+  }
+
+  const dismiss = () => {
+    setShowing(false)
+    setPlaying(false)
   }
 
   return (
@@ -27,7 +34,7 @@ export default function ModalVideo({ isShowing, setShowing }) {
           height="100%"
           justifyContent="center"
           left={0}
-          onClick={() => setShowing(false)}
+          onClick={dismiss}
           opacity={isShowing ? 1 : 0}
           pointerEvents={isShowing ? 'inherit' : 'none'}
           position="fixed"
@@ -51,7 +58,7 @@ export default function ModalVideo({ isShowing, setShowing }) {
             <ReactPlayer
               controls
               onPlay={showDemoAfterTimeout}
-              playing
+              playing={isPlaying}
               light
               url="https://www.youtube.com/embed/14UwLG1jQwU"
               width={mobile ? '100%' : 640}
