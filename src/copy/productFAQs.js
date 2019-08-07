@@ -20,7 +20,7 @@ export default [
     {
       question: 'My project is a monorepo. How do I integrate with FeaturePeek?',
       answer:
-        "You can integrate your front-end within your monorepo the same as you'd integrate any front-end. In your peek.yaml file, point to your static front-end build path relative to your repo root; or, if you use Docker, point to your front-end Dockerfile relative to your repo root.",
+        "You can integrate your front-end within your monorepo the same as you'd integrate any front-end. In your peek.yml file, point to your static front-end build path relative to your repo root; or, if you use Docker, point to your front-end Dockerfile relative to your repo root.",
     },
     {
       question: 'Which Continuous Integration services and container registries are supported?',

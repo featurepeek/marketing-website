@@ -17,5 +17,5 @@ export default function PeekYaml() {
     `
   )
 
-  return <Image fluid={img.childImageSharp.fluid} alt="Add a peek.yaml file to your repo root" />
+  return <Image fluid={img.childImageSharp.fluid} alt="Add a peek.yml file to your repo root" />
 }
