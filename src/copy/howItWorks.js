@@ -21,7 +21,7 @@ export const elaborations = [
   {
     strong: 'Check-in a file to your repo root.',
     body:
-      'For each project you want on FeaturePeek, check-in a peek.yaml file to your repo root. You can track an unlimited number of projects on FeaturePeek.',
+      'For each project you want on FeaturePeek, check-in a peek.yml file to your repo root. You can track an unlimited number of projects on FeaturePeek.',
     image: <PeekYaml />,
   },
   {
