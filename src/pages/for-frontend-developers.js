@@ -17,7 +17,7 @@ export default function ForFrontendDevelopers(props) {
   const theme = gradientMap.green[0]
   return (
     <Layout background="#eef6ef" location={props.location}>
-      <SEO title="Built for Front-end Developers" />
+      <SEO title="Built for Front-end Developers" location={props.location} />
       <HeroFrontend>
         <Heading color="#103c52" h={6} marginTop={0} {...scale(1 / 2)}>
           Built for
@@ -26,7 +26,7 @@ export default function ForFrontendDevelopers(props) {
           Front-end Developers
         </Heading>
         <Heading color={theme} h={2} opacity={0.5} size={300} width="60%">
-          Dedicated environments for every open pull request.
+          Automatic environments for every open pull request.
         </Heading>
       </HeroFrontend>
       <RowReversal copyWritings={copyWritings} theme={theme} />

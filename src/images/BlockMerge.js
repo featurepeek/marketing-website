@@ -10,7 +10,7 @@ export default function BlockMerge() {
       query BlockMerge {
         img: file(absolutePath: { regex: "/block.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 100) {
+            fluid(maxWidth: 750, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

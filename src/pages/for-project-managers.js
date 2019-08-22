@@ -17,7 +17,7 @@ export default function ForProjectManagers(props) {
   const theme = gradientMap.blue[0]
   return (
     <Layout background="#e8f4f8" location={props.location}>
-      <SEO title="Built for Project Managers" />
+      <SEO title="Built for Project Managers" location={props.location} />
       <HeroManagers>
         <Heading color="#103c52" h={6} marginTop={0} {...scale(1 / 2)}>
           Built for
@@ -26,7 +26,7 @@ export default function ForProjectManagers(props) {
           Project Managers
         </Heading>
         <Heading color={theme} h={2} opacity={0.5} size={300} width="50%">
-          Shorter feedback loops equals higher quality releases.
+          Prevent last-minute scrambles at the end of your release cycle.
         </Heading>
       </HeroManagers>
       <RowReversal copyWritings={copyWritings} theme={theme} />

@@ -9,6 +9,10 @@ p,strong,span {
   color: #f8f8f8;
 }
 
+.as-seen-on img {
+  margin-bottom: 0;
+}
+
 /* Button */
 .button:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
@@ -110,12 +114,41 @@ code {
   animation: rotate 60s linear infinite;
 }
 
+.slick-track div {
+  outline: none !important;
+}
 .polaroid {
-  transition: transform 0.3s ease;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 .polaroid:hover {
-  transform: translateY(-4px);
+  box-shadow: rgba(67, 90, 111, 0.198039) 0px 8px 16px 0px, rgba(67, 90, 111, 0.170588) 0px 4px 8px -2px;
+  transform: scale(1.04);
 }
 .polaroid a:hover {
   text-decoration: none;
 }
+
+@media screen and (max-width: 504px) {
+  .layout-padding-fouc {
+    padding: 16px !important;
+  }
+}
+
+@media screen and (max-width: 904px) {
+  .nav-padding-fouc {
+    padding: 8px 0 !important;
+  }
+  .hero-flex-direction-fouc {
+    flex-direction: column !important;
+  }
+  .hero-fouc {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 936px) {
+  .nav-links-hide-fouc {
+    display: none !important;
+  }
+}
+

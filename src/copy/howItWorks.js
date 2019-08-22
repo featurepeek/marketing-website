@@ -21,13 +21,13 @@ export const elaborations = [
   {
     strong: 'Check-in a file to your repo root.',
     body:
-      'For each project you want on FeaturePeek, check-in a peek.yaml file to your repo root. You can track an unlimited number of projects on FeaturePeek.',
+      'For each project you want on FeaturePeek, check-in a peek.yml file to your repo root. You can track an unlimited number of projects on FeaturePeek.',
     image: <PeekYaml />,
   },
   {
     strong: 'Ping our service after your build phase.',
     body:
-      'Tell us when your pull request builds are ready by pinging our service. We have a build dependency for a number of CI platforms that makes this as easy as adding a few lines.',
+      'Tell us when your pull request builds are ready by pinging our service. Our single-line command works with a number of CI platforms and container registries.',
     image: <CiScript />,
   },
   {

@@ -12,7 +12,7 @@ const size = mobile => (mobile ? 400 : 800)
 export default function IntegrationsOrbit(props) {
   const { mobile } = props
   return (
-    <Box position="relative" left={mobile ? 0 : -280} width={size(mobile)} height={size(mobile)}>
+    <Box position="relative" left={mobile ? 0 : 40} width={size(mobile)} height={size(mobile)}>
       <Box position="absolute" width={size(mobile)} height={size(mobile)}>
         <GitHubMark width={size(mobile)} height={size(mobile)} />
       </Box>

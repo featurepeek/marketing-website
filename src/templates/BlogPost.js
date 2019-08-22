@@ -16,7 +16,11 @@ export default function BlogPost(props) {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+        location={props.location}
+      />
       <Heading marginTop={0} size={400}>
         {post.frontmatter.title}
       </Heading>

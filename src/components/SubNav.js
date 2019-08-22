@@ -36,7 +36,7 @@ export default function SubNav(props) {
       borderRadius={8}
       boxShadow="0 1px 4px rgba(0, 0, 0, 0.1), 0 16px 40px rgba(0, 0, 0, 0.1)"
       className="subnav"
-      left={-44}
+      left={-70}
       opacity={isShowing ? 1 : 0}
       marginTop={8}
       pointerEvents={isShowing ? 'auto' : 'none'}

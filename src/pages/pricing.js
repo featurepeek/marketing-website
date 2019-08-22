@@ -33,7 +33,7 @@ export default function Pricing(props) {
     <MediaQuery maxWidth={800}>
       {mobile => (
         <Layout location={props.location}>
-          <SEO title="Pricing" />
+          <SEO title="Pricing" location={props.location} />
           <Heading marginTop={0} size={500} textAlign={mobile ? 'left' : 'center'}>
             Flexible plans for companies of all sizes.
           </Heading>
@@ -70,6 +70,7 @@ export const pageQuery = graphql`
             position
             recommended
             cta
+            cta_href
             perks
           }
           name

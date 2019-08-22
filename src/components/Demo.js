@@ -5,7 +5,7 @@ import fetch from 'unfetch'
 import Slider from 'react-slick'
 import MediaQuery from 'react-responsive'
 
-import { Heading, Link } from 'primitives'
+import { Heading, Link, Text } from 'primitives'
 import Polaroid from 'components/Polaroid'
 
 import Merge from 'interfaces/Merge'
@@ -30,37 +30,31 @@ export default function Demo() {
   return (
     <MediaQuery maxWidth={800}>
       {mobile => (
-        <Box id="demo" marginX={mobile ? -15 : -39} paddingTop={100}>
+        <Box id="demo" marginX={mobile ? -15 : -39} paddingBottom={100}>
+          <Heading marginTop={0} paddingX={16} size={500} textAlign={mobile ? 'left' : 'center'}>
+            Take a peek at a demo.
+          </Heading>
+          <Heading h={2} color="#a1a3a5" paddingX={16} size={360} textAlign={mobile ? 'left' : 'center'}>
+            These are live environments for this website's{' '}
+            <Link href="https://github.com/featurepeek/marketing-website/pulls" target="_blank">
+              open pull requests
+            </Link>
+            .
+          </Heading>
           {merges.length > 0 && (
-            <>
-              <Heading marginTop={0} paddingX={16} size={500} textAlign={mobile ? 'left' : 'center'}>
-                Take a peek at a demo.
-              </Heading>
-              <Heading
-                h={2}
-                color="#a1a3a5"
-                marginBottom={40}
-                paddingX={16}
-                size={360}
-                textAlign={mobile ? 'left' : 'center'}
-              >
-                These are live environments for this website's{' '}
-                <Link href="https://github.com/featurepeek/marketing-website/pulls" target="_blank">
-                  open pull requests
-                </Link>
-                .
-              </Heading>
-              <Box paddingY={16}>
-                <Slider {...settings}>
-                  {merges.map(merge => (
-                    <div key={merge.id}>
-                      <Polaroid merge={merge} />
-                    </div>
-                  ))}
-                </Slider>
-              </Box>
-            </>
+            <Box paddingY={16}>
+              <Slider {...settings}>
+                {merges.map(merge => (
+                  <div key={merge.id}>
+                    <Polaroid merge={merge} />
+                  </div>
+                ))}
+              </Slider>
+            </Box>
           )}
+          <Heading h={2} color="#a1a3a5" paddingX={16} size={300} textAlign={mobile ? 'left' : 'center'}>
+            <Text color="#333">Click a card above</Text> to open the environment in a new tab.
+          </Heading>
         </Box>
       )}
     </MediaQuery>
