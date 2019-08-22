@@ -8,7 +8,7 @@ export default function RealData() {
       query RealData {
         img: file(absolutePath: { regex: "/real-data.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 100) {
+            fluid(maxWidth: 750, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

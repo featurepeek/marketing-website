@@ -114,8 +114,8 @@ export default function PricingColumn({ product, hasMounted }) {
             </UnorderedList>
             <Flex alignItems="center" height={100} justifyContent="center">
               <Button
-                href={`https://airtable.com/shrUZixSNBqSzmdTc?prefill_Plan=${product.name}`}
-                onClick={() => track('Clicked Plan', product.name)}
+                href={`${metadata.cta_href}${isAnnual ? '' : '&interval=monthly'}`}
+                onClick={() => track('Clicked CTA', { cta: product.name })}
                 target="_blank"
               >
                 {metadata.cta}

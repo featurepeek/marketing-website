@@ -50,7 +50,6 @@
     "gatsby-source-stripe": "^3.0.1",
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.21",
-    "jump.js": "^1.0.2",
     "postcss-preset-env": "^6.6.0",
     "prismjs": "^1.16.0",
     "rc-switch": "^1.9.0",
@@ -68,7 +67,6 @@
     "unfetch": "^4.1.0"
   },
   "devDependencies": {
-    "@featurepeek/circleci": "^0.2.3",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-config-react-app": "^4.0.1",

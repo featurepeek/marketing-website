@@ -14,9 +14,6 @@ export default function DesignedForGitHub(props) {
     <MediaQuery maxWidth={1000}>
       {mobile => (
         <Flex alignItems="center">
-          <Flex alignItems="center" width={mobile ? '100%' : '50%'} overflow={mobile ? 'hidden' : undefined}>
-            <IntegrationsOrbit mobile={mobile} />
-          </Flex>
           <Box width={mobile ? '100%' : '50%'}>
             <Heading h={3} marginTop={mobile ? 40 : 0} size={500}>
               Designed for GitHub.
@@ -35,10 +32,13 @@ export default function DesignedForGitHub(props) {
             </Paragraph>
             <Flex alignItems="center" height={100} marginTop={mobile ? 40 : 0}>
               <Button href="/how-it-works" iconAfter="fas fa-arrow-right">
-                Read how to install
+                Learn how to set up your front-end
               </Button>
             </Flex>
           </Box>
+          <Flex alignItems="center" width={mobile ? '100%' : '50%'} overflow={mobile ? 'hidden' : undefined}>
+            <IntegrationsOrbit mobile={mobile} />
+          </Flex>
         </Flex>
       )}
     </MediaQuery>

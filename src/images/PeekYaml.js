@@ -8,7 +8,7 @@ export default function PeekYaml() {
       query PeekYaml {
         img: file(absolutePath: { regex: "/peek-yaml.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 605, quality: 100) {
+            fluid(maxWidth: 800, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -17,5 +17,5 @@ export default function PeekYaml() {
     `
   )
 
-  return <Image fluid={img.childImageSharp.fluid} alt="Add a peek.yaml file to your repo root" />
+  return <Image fluid={img.childImageSharp.fluid} alt="Add a peek.yml file to your repo root" />
 }

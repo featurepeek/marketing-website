@@ -2,8 +2,10 @@
 export const gradientMap = {
   teal: ['#ffa80b', '#ffa80b'],
   green: ['#ffa80b', '#ffa80b'],
+  purple: ['#ffa80b', '#ffa80b'],
   blue: ['#ffa80b', '#ffa80b'],
   pink: ['#ffa80b', '#ffa80b'],
+  white: ['#ffa80b', '#ffa80b'],
 }
 
 export const getColorFromStatus = status => {

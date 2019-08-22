@@ -8,7 +8,7 @@ export default function BirdsEyeView() {
       query BirdsEyeView {
         img: file(absolutePath: { regex: "/birds-eye-view-cropped.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 100) {
+            fluid(maxWidth: 750, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

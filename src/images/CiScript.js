@@ -6,9 +6,9 @@ export default function CiScript() {
   const { img } = useStaticQuery(
     graphql`
       query CiScript {
-        img: file(absolutePath: { regex: "/ci-script.png/" }) {
+        img: file(absolutePath: { regex: "/bash-script.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 605, quality: 100) {
+            fluid(maxWidth: 800, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

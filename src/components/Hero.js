@@ -2,64 +2,60 @@
 import React from 'react'
 import Box from 'ui-box'
 import MediaQuery from 'react-responsive'
-import jump from 'jump.js'
 
-import { Flex, Heading, Link } from 'primitives'
+import { Button, Flex, Heading } from 'primitives'
 
 import HeroDashboard from 'images/HeroDashboard'
 
+import { track } from 'utils/analytics'
 // import { rhythm, scale } from 'utils/typography'
 
-export default function Hero() {
-  const scrollToDemo = event => {
+export default function Hero({ setModalShowing }) {
+  const showVideo = event => {
     event.preventDefault()
-    window.history.replaceState({}, '', '#demo')
-    jump('#demo', {
-      duration: 600,
-    })
-  }
-
-  const scrollToVideo = event => {
-    event.preventDefault()
-    window.history.replaceState({}, '', '#video')
-    jump('#video', {
-      duration: 600,
-    })
+    setModalShowing(true)
   }
 
   return (
     <MediaQuery maxWidth={904}>
       {mobile => (
-        <Flex margin={mobile ? -15 : -39} padding={mobile ? 16 : 40} overflowX="hidden">
-          <Box width={mobile ? '100%' : '40%'}>
+        <Flex className="hero-flex-direction-fouc">
+          <Box className="hero-fouc" width={mobile ? '100%' : '40%'}>
             <Heading marginTop={0} size={500}>
-              A new way to gather front-end feedback from your team.
+              Front-end review for the whole team.
             </Heading>
             <Heading h={2} opacity={0.4} size={360}>
               Spin up environments for every branch automatically.
             </Heading>
             <Heading h={2} opacity={0.4} size={360}>
-              Annotate directly on the implementation.
+              Gather team feedback
+              <br />
+              earlier in the dev cycle.
             </Heading>
             <Heading h={3} opacity={0.4} size={360}>
-              All without merges,
-              <br />
-              run-time dependencies,
+              Without dependencies
               <br />
               or browser extensions.
             </Heading>
-            <Heading h={3} marginTop={32} size={360}>
-              <Link href="#demo" onClick={scrollToDemo}>
-                <span>See a demo.</span>
-              </Link>
-            </Heading>
-            <Heading h={3} marginTop={0} size={360}>
-              <Link href="#video" onClick={scrollToVideo}>
-                <span>Watch a video.</span>
-              </Link>
-            </Heading>
+            <Flex flexDirection="row">
+              <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 200}>
+                <Button
+                  href="https://dashboard.featurepeek.com/login"
+                  iconAfter={mobile ? undefined : 'fas fa-arrow-right'}
+                  onClick={() => track('Clicked CTA', { cta: 'Hero' })}
+                  target="_blank"
+                >
+                  Get started now
+                </Button>
+              </Flex>
+              <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 200}>
+                <Button background="white" href="#" onClick={showVideo}>
+                  Watch a video
+                </Button>
+              </Flex>
+            </Flex>
           </Box>
-          <Box position="relative" left={mobile ? 0 : 39} width={mobile ? '100%' : '60%'}>
+          <Box position="relative" top={mobile ? 0 : -48} left={mobile ? 0 : 39} width={mobile ? '100%' : '60%'}>
             <HeroDashboard />
           </Box>
         </Flex>
