@@ -71,8 +71,8 @@ const columns = [
         target: '_blank',
       },
       {
-        text: 'Status',
-        href: 'https://updown.io/ratp',
+        text: 'Demo',
+        href: 'https://dashboard.featurepeek.com/demo',
         target: '_blank',
       },
     ],

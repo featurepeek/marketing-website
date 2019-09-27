@@ -10,12 +10,7 @@ import HeroDashboard from 'images/HeroDashboard'
 import { track } from 'utils/analytics'
 // import { rhythm, scale } from 'utils/typography'
 
-export default function Hero({ setModalShowing }) {
-  const showVideo = event => {
-    event.preventDefault()
-    setModalShowing(true)
-  }
-
+export default function Hero() {
   return (
     <MediaQuery maxWidth={904}>
       {mobile => (
@@ -40,7 +35,7 @@ export default function Hero({ setModalShowing }) {
             <Flex flexDirection="row">
               <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 200}>
                 <Button
-                  href="https://dashboard.featurepeek.com/login"
+                  href="https://dashboard.featurepeek.com"
                   iconAfter={mobile ? undefined : 'fas fa-arrow-right'}
                   onClick={() => track('Clicked CTA', { cta: 'Hero' })}
                   target="_blank"
@@ -49,8 +44,8 @@ export default function Hero({ setModalShowing }) {
                 </Button>
               </Flex>
               <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 200}>
-                <Button background="white" href="#" onClick={showVideo}>
-                  Watch a video
+                <Button background="white" href="https://dashboard.featurepeek.com/demo" target="_blank">
+                  View a demo
                 </Button>
               </Flex>
             </Flex>

@@ -115,7 +115,7 @@ export default function Nav() {
             ) : (
               <Flex alignItems="center" className="nav-links-hide-fouc" justifyContent="center" width={224}>
                 <Button
-                  href="https://dashboard.featurepeek.com/login"
+                  href="https://dashboard.featurepeek.com"
                   onClick={() => track('Clicked CTA', { cta: 'Nav' })}
                   target="_blank"
                 >
@@ -160,7 +160,7 @@ export default function Nav() {
               </UnorderedList>
               <Flex alignItems="center" justifyContent="center" height={100} width="100%">
                 <Button
-                  href="https://dashboard.featurepeek.com/login"
+                  href="https://dashboard.featurepeek.com"
                   onClick={() => track('Clicked CTA', { cta: 'Mobile Nav' })}
                   target="_blank"
                 >
