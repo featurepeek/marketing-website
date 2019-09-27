@@ -1,5 +1,3 @@
-@import "~slick-carousel/slick/slick.css";
-
 .as-seen-on img {
   margin-bottom: 0;
 }
@@ -105,7 +103,7 @@ code {
   animation: rotate 60s linear infinite;
 }
 
-.slick-track div {
+/*.slick-track div {
   outline: none !important;
 }
 .polaroid {
@@ -117,7 +115,7 @@ code {
 }
 .polaroid a:hover {
   text-decoration: none;
-}
+}*/
 
 @media screen and (max-width: 504px) {
   .layout-padding-fouc {
