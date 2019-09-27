@@ -73,7 +73,7 @@ export default function HowItWorks(props) {
                 </UnorderedList>
                 <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 180}>
                   <Button
-                    href="https://dashboard.featurepeek.com/login"
+                    href="https://dashboard.featurepeek.com"
                     onClick={() => track('Clicked CTA', { cta: 'How it works' })}
                     target="_blank"
                   >

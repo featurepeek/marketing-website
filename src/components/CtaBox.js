@@ -19,7 +19,7 @@ export default function CtaBox({ question, answer }) {
           {/* <Paragraph color="white" fontSize={40} textAlign="center">Request your free trial now.</Paragraph> */}
           <Flex alignItems="center" justifyContent="center" height={100}>
             <Button
-              href="https://dashboard.featurepeek.com/login"
+              href="https://dashboard.featurepeek.com"
               onClick={() => track('Clicked CTA', { cta: 'CtaBox' })}
               target="_blank"
             >
