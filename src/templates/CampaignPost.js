@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import cheerio from 'cheerio'
 
 import Layout from 'components/Layout'
 import SEO from 'components/Seo'
@@ -13,9 +14,13 @@ export default function CampaignPost(props) {
   const siteTitle = props.data.site.siteMetadata.title
   const { previous, next } = props.pageContext
 
-  const parser = new DOMParser()
-  const doc = parser.parseFromString(post.html, 'text/html')
-  const bodyTable = doc.querySelector('.bodyContainer').innerHTML
+  // this is cool but doesn't work with node!
+  // const parser = new DOMParser()
+  // const doc = parser.parseFromString(post.html, 'text/html')
+  // const bodyTable = doc.querySelector('.bodyContainer').innerHTML
+
+  const $ = cheerio.load(post.html)
+  const bodyTable = $('.bodyContainer').html()
 
   return (
     <Layout location={props.location} title={siteTitle}>
