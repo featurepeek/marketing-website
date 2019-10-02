@@ -33,7 +33,9 @@ node {
             if (env.BRANCH_NAME != 'master'){
               secret_addition = "_DEV"
             }
-            withCredentials([string(credentialsId: "MAILCHIMP_DOMAIN${secret_addition}", variable: 'MAILCHIMP_DOMAIN'),
+            withCredentials([
+                         string(credentialsId: "MAILCHIMP_API_KEY${secret_addition}", variable: 'MAILCHIMP_API_KEY'),
+                         string(credentialsId: "MAILCHIMP_DOMAIN${secret_addition}", variable: 'MAILCHIMP_DOMAIN'),
                          string(credentialsId: "MAILCHIMP_FORM_ID${secret_addition}", variable: 'MAILCHIMP_FORM_ID'),
                          string(credentialsId: "MAILCHIMP_LIST_ID${secret_addition}", variable: 'MAILCHIMP_LIST_ID'),
                          string(credentialsId: "SEGMENT_ID${secret_addition}", variable: 'SEGMENT_ID'),
