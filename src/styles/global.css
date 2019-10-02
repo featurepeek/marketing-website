@@ -141,3 +141,14 @@ code {
   }
 }
 
+/* product update mailchimp overrides */
+#campaign td {
+  border: 0;
+  padding: 0 !important;
+}
+#campaign .mcnButton {
+  padding: 16px !important;
+}
+#campaign .mcnImage {
+  max-width: 100% !important;
+}

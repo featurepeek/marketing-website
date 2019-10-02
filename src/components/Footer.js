@@ -66,9 +66,8 @@ const columns = [
         target: '_blank',
       },
       {
-        text: 'Roadmap',
-        href: 'https://trello.com/b/KlPuYOCp/featurepeek-public-roadmap',
-        target: '_blank',
+        text: 'Product updates',
+        href: '/product-updates',
       },
       {
         text: 'Demo',
