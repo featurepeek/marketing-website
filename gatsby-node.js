@@ -55,6 +55,7 @@ exports.createPages = ({ graphql, actions }) => {
               }
               campaignId
               send_time
+              status
             }
           }
         }

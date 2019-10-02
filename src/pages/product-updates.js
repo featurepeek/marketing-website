@@ -1,8 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Box from 'ui-box'
 
 import Layout from 'components/Layout'
 import SEO from 'components/Seo'
+import JoinMailingList from 'components/JoinMailingList'
 
 import { Heading, Link, Paragraph } from 'primitives'
 
@@ -23,9 +25,13 @@ export default function Campaign(props) {
         We send out a product newsletter once or twice a month, informing our users of new features and product
         improvements.
       </Paragraph>
-      <Paragraph marginBottom={40}>
-        Below is an archive of the product newsletters we've sent out in the past.
-      </Paragraph>
+      <Paragraph>Enter your email address below to get notified as soon as new features become available.</Paragraph>
+      <Box maxWidth={420}>
+        <JoinMailingList />
+      </Box>
+      <Heading marginTop={40} size={300}>
+        Archive
+      </Heading>
       {campaigns.map(({ node }) => {
         const title = node.settings.title
         return (
