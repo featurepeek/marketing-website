@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
 
-import { Flex, Paragraph, Strong } from 'primitives'
+import { Flex, Paragraph, Strong, Text } from 'primitives'
 
 import { rhythm } from 'utils/typography'
 
@@ -13,7 +13,7 @@ export default function Bio() {
       render={data => {
         const { author } = data.site.siteMetadata
         return (
-          <Flex marginBottom={rhythm(2.5)}>
+          <Flex flexDirection="row" marginTop={rhythm(2.5)}>
             <Image
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
@@ -28,7 +28,11 @@ export default function Bio() {
               }}
             />
             <Paragraph>
-              Written by <Strong>{author}</Strong> who lives and works in San Francisco building useful things.
+              <Text>
+                Written by <Strong>{author}</Strong>
+              </Text>
+              <br />
+              <Text>FeaturePeek Co-founder</Text>
             </Paragraph>
           </Flex>
         )

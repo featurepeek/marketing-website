@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Bio from 'components/Bio'
 import Layout from 'components/Layout'
 import SEO from 'components/Seo'
 
@@ -17,7 +16,6 @@ export default function Blog(props) {
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title="All posts" location={props.location} />
-      <Bio />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (

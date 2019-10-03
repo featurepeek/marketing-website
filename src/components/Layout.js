@@ -39,7 +39,7 @@ export default function Layout(props) {
             className="layout-padding-fouc"
             marginTop={16}
             marginX="auto"
-            maxWidth={location.pathname.startsWith('/blog') ? rhythm(24) : rhythm(64)}
+            maxWidth={rhythm(64)}
             overflowX={location.pathname === '/' ? 'hidden' : undefined}
             padding={mobile ? 16 : rhythm(1.5)}
           >
