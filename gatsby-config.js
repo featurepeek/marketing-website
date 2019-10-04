@@ -12,6 +12,16 @@ module.exports = {
     social: {
       twitter: `featurepeek`,
     },
+    authors: {
+      jasonbarry: {
+        name: 'Jason Barry',
+        title: 'FeaturePeek Co-founder',
+      },
+      ericsilverman: {
+        name: 'Eric Silverman',
+        title: 'Co-founder & CEO',
+      },
+    }
   },
   plugins: [
     {

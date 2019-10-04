@@ -46,7 +46,7 @@ export default function BlogPost(props) {
             <Paragraph marginTop={0} fontSize={24}>
               {post.frontmatter.description}
             </Paragraph>
-            <Bio />
+            <Bio author={post.frontmatter.author} />
           </Box>
         </Flex>
         <Box borderRadius={28} boxShadow="0 8px 16px rgba(0, 0, 0, 0.15)" overflow="hidden" width="100%">
@@ -54,7 +54,7 @@ export default function BlogPost(props) {
         </Box>
       </Flex>
       <Box margin={-39}>
-        <img alt="" height="40" src="/img/divider.svg" width="100%" />
+        <img alt="" height="40" src="/img/curve.svg" width="100%" />
       </Box>
       <Box marginTop={rhythm(4)} marginX="auto" maxWidth={rhythm(28)}>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -86,7 +86,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        author
         siteUrl
       }
     }
@@ -98,6 +97,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        author
         hero {
           childImageSharp {
             fluid(maxWidth: 800) {

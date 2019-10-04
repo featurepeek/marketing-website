@@ -1,8 +1,8 @@
 ---
-title: Party like it's 2017 with fidget spinners
-date: "2019-06-04T22:12:03.284Z"
-description: The tye-dye one looks dope.
-hero: hero.jpg
+title: Corgis Ruuule
+date: "2019-10-04T22:12:03.284Z"
+description: Aren't they just the cutest little creatures.
+hero: corgi.jpg
 author: jasonbarry
 ---
 
