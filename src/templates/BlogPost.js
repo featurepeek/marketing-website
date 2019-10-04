@@ -23,7 +23,7 @@ export default function BlogPost(props) {
         description={post.frontmatter.description || post.excerpt}
         location={props.location}
       />
-      <Flex background="linear-gradient(#fff, #f8f8f8)" margin={-39} padding={40}>
+      <Flex background="linear-gradient(#fff, #effefe)" margin={-39} paddingBottom={80} paddingTop={40} paddingX={40}>
         <Flex alignItems="center" width="100%">
           <Box paddingRight={32}>
             <Link href="/blog" underline={false}>
@@ -45,6 +45,9 @@ export default function BlogPost(props) {
           <Image fluid={post.frontmatter.hero.childImageSharp.fluid} />
         </Box>
       </Flex>
+      <Box margin={-39}>
+        <img alt="" height="40" src="/img/divider.svg" width="100%" />
+      </Box>
       <Box marginTop={rhythm(4)} marginX="auto" maxWidth={rhythm(28)}>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </Box>

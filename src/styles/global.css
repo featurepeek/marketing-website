@@ -141,6 +141,15 @@ code {
   }
 }
 
+.hover-card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.15s ease;
+}
+.hover-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: scale(1.015);
+}
+
 /* product update mailchimp overrides */
 #campaign td {
   border: 0;
@@ -162,4 +171,5 @@ code {
 .gatsby-highlight pre > code {
   font-size: 14px;
   line-height: 14px;
+  letter-spacing: 0;
 }

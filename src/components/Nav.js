@@ -80,18 +80,23 @@ export default function Nav() {
                         href="/for-frontend-developers"
                         fontSize={17}
                       >
-                        Product tour
+                        Product
                       </Link>
                       <SubNav isShowing={isShowingSubNav} />
                     </Box>
                     <Box className="nav-links-hide-fouc" paddingX={16}>
                       <Link color="#103c52" href="/how-it-works" fontSize={17}>
-                        How it works
+                        Setup
                       </Link>
                     </Box>
                     <Box className="nav-links-hide-fouc" paddingX={16}>
                       <Link color="#103c52" href="/pricing" fontSize={17}>
                         Pricing
+                      </Link>
+                    </Box>
+                    <Box className="nav-links-hide-fouc" paddingX={16}>
+                      <Link color="#103c52" href="/blog" fontSize={17}>
+                        Blog
                       </Link>
                     </Box>
                     <Box className="nav-links-hide-fouc" paddingX={16}>
