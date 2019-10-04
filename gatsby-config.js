@@ -89,6 +89,12 @@ module.exports = {
       options: {
         endpoint: `https://${process.env.MAILCHIMP_DOMAIN}/subscribe/post?u=${process.env.MAILCHIMP_FORM_ID}&id=${process.env.MAILCHIMP_LIST_ID}`,
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `featurepeek`,
+      }
+    },
   ],
 }
