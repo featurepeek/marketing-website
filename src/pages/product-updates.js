@@ -17,7 +17,7 @@ export default function Campaign(props) {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO title="All campaigns" location={props.location} />
+      <SEO title="All product updates" location={props.location} />
       <Heading marginTop={0} size={400}>
         FeaturePeek product updates
       </Heading>

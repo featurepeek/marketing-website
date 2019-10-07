@@ -20,7 +20,7 @@ export default function Blog(props) {
     <MediaQuery maxWidth={936}>
       {mobile => (
         <Layout location={props.location} title={siteTitle}>
-          <SEO title="All posts" location={props.location} />
+          <SEO title="All blog posts" location={props.location} />
           <Heading marginTop={0} size={400}>
             Blog posts
           </Heading>
