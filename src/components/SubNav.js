@@ -2,7 +2,7 @@
 import React from 'react'
 import Box from 'ui-box'
 
-import { Flex, Heading, Icon, Link, ListItem, Paragraph, Text, UnorderedList } from 'primitives'
+import { Flex, Icon, Link, ListItem, Paragraph, Text, UnorderedList } from 'primitives'
 
 import { gradientMap } from 'utils/color'
 
