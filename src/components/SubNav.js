@@ -1,8 +1,8 @@
 // @flow
 import React from 'react'
-// import Box from 'ui-box'
+import Box from 'ui-box'
 
-import { Flex, Icon, Link, ListItem, Paragraph, UnorderedList } from 'primitives'
+import { Flex, Icon, Link, ListItem, Paragraph, Text, UnorderedList } from 'primitives'
 
 import { gradientMap } from 'utils/color'
 
@@ -36,7 +36,7 @@ export default function SubNav(props) {
       borderRadius={8}
       boxShadow="0 1px 4px rgba(0, 0, 0, 0.1), 0 16px 40px rgba(0, 0, 0, 0.1)"
       className="subnav"
-      left={-70}
+      left={-82}
       opacity={isShowing ? 1 : 0}
       marginTop={8}
       pointerEvents={isShowing ? 'auto' : 'none'}
@@ -71,7 +71,12 @@ export default function SubNav(props) {
               >
                 <Icon color="white" icon={item.icon} fontSize={18} />
               </Flex>
-              <Paragraph>{item.label}</Paragraph>
+              <Box>
+                <Text margin={0} opacity={0.5} fontSize={14}>
+                  FeaturePeek for
+                </Text>
+                <Paragraph paddingTop={0}>{item.label}</Paragraph>
+              </Box>
             </Flex>
           </Link>
         </ListItem>

@@ -2,33 +2,37 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
 
-import { Flex, Paragraph, Strong } from 'primitives'
+import { Flex, Paragraph, Strong, Text } from 'primitives'
 
 import { rhythm } from 'utils/typography'
 
-export default function Bio() {
+export default function Bio(props) {
   return (
     <StaticQuery
       query={bioQuery}
       render={data => {
-        const { author } = data.site.siteMetadata
+        const author = data.site.siteMetadata.authors[props.author]
         return (
-          <Flex marginBottom={rhythm(2.5)}>
+          <Flex alignItems="center" flexDirection="row" marginBottom={rhythm(1)} marginTop={rhythm(2.5)}>
             <Image
-              fixed={data.avatar.childImageSharp.fixed}
-              alt={author}
+              fixed={data[props.author].childImageSharp.fixed}
+              alt={author.name}
               style={{
                 marginRight: rhythm(1 / 2),
                 marginBottom: 0,
-                minWidth: 50,
+                minWidth: 56,
                 borderRadius: `100%`,
               }}
               imgStyle={{
                 borderRadius: `50%`,
               }}
             />
-            <Paragraph>
-              Written by <Strong>{author}</Strong> who lives and works in San Francisco building useful things.
+            <Paragraph marginBottom={0}>
+              <Text>
+                Written by <Strong>{author.name}</Strong>
+              </Text>
+              <br />
+              <Text>{author.title}</Text>
             </Paragraph>
           </Flex>
         )
@@ -39,18 +43,31 @@ export default function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+    jasonbarry: file(absolutePath: { regex: "/jasonbarry.jpg/" }) {
       childImageSharp {
-        fixed(width: 50, height: 50) {
+        fixed(width: 56, height: 56) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    ericsilverman: file(absolutePath: { regex: "/ericsilverman.jpg/" }) {
+      childImageSharp {
+        fixed(width: 56, height: 56) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     site {
       siteMetadata {
-        author
-        social {
-          twitter
+        authors {
+          jasonbarry {
+            name
+            title
+          }
+          ericsilverman {
+            name
+            title
+          }
         }
       }
     }
