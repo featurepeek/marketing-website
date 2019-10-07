@@ -74,6 +74,7 @@
     "unfetch": "^4.1.0"
   },
   "devDependencies": {
+    "@storybook/addon-knobs": "^5.2.3",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.4.0",
     "eslint-config-react-app": "^5.0.2",
