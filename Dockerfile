@@ -8,7 +8,6 @@ RUN apk add nodejs-current-npm
 RUN npm install -g yarn
 
 # Copy nginx config 
-COPY default.conf /etc/nginx/conf.d/default.conf
 COPY gzip.conf /etc/nginx/conf.d/gzip.conf
 COPY nginx.conf /etc/nginx/nginx.conf
 
