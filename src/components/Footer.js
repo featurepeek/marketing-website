@@ -78,6 +78,10 @@ const columns = [
   {
     section: 'Company',
     links: [
+      // {
+      //   text: 'Blog',
+      //   href: '/blog',
+      // },
       {
         text: 'Privacy policy',
         href: '/pdfs/privacy.pdf',

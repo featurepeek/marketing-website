@@ -1,7 +1,7 @@
 ---
-title: Coming Soon!
-date: "2019-06-04T22:12:03.284Z"
-description: The FeaturePeek blog will be coming soon.
+title: Coming soon
+date: "2019-10-07T22:12:03.284Z"
+description: Stay tuned...
+hero: hero.jpg
+author: jasonbarry
 ---
-
-Stay tuned :-) 

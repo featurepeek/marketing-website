@@ -13,6 +13,8 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "lint": "eslint 'src/**/*.{js,jsx}' --cache --ignore-path .gitignore",
     "serve": "gatsby serve --port 3000",
+    "storybook:build": "build-storybook -c .storybook -o .out",
+    "storybook:dev": "start-storybook",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "husky": {
@@ -29,11 +31,15 @@
     ]
   },
   "dependencies": {
+    "@babel/core": "^7.6.2",
+    "@storybook/react": "^5.2.3",
+    "babel-loader": "^8.0.6",
     "cheerio": "^1.0.0-rc.3",
     "date-fns": "^1.30.1",
     "gatsby": "^2.15.28",
     "gatsby-background-image": "^0.8.14",
     "gatsby-image": "^2.2.23",
+    "gatsby-plugin-disqus": "^1.1.2",
     "gatsby-plugin-feed": "^2.3.15",
     "gatsby-plugin-mailchimp": "^5.1.2",
     "gatsby-plugin-postcss": "^2.1.10",
@@ -53,6 +59,7 @@
     "gatsby-transformer-remark": "^2.6.26",
     "gatsby-transformer-sharp": "^2.2.19",
     "postcss-preset-env": "^6.6.0",
+    "prism-themes": "^1.2.0",
     "prismjs": "^1.16.0",
     "rc-switch": "^1.9.0",
     "react": "^16.10.0",
@@ -67,6 +74,7 @@
     "unfetch": "^4.1.0"
   },
   "devDependencies": {
+    "@storybook/addon-knobs": "^5.2.3",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.4.0",
     "eslint-config-react-app": "^5.0.2",

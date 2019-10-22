@@ -141,6 +141,15 @@ code {
   }
 }
 
+.hover-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.15s ease;
+}
+.hover-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: scale(1.015);
+}
+
 /* product update mailchimp overrides */
 #campaign td {
   border: 0;
@@ -151,4 +160,20 @@ code {
 }
 #campaign .mcnImage {
   max-width: 100% !important;
+}
+
+/* syntax highlighting on blog via prism.js */
+.gatsby-highlight pre {
+  padding: 16px;
+  border-radius: 8px;
+  word-wrap: normal;
+}
+.gatsby-highlight pre > code {
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0;
+}
+#disqus_thread {
+  margin-top: 80px;
+  width: 100% !important;
 }
