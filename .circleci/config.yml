@@ -40,4 +40,4 @@ jobs:
       # notify featurepeek
       - run:
           name: Pinging FeaturePeek
-          command: bash <(curl -s https://peek.run/ci)
+          command: bash <(curl -s https://dev.peek.run/ci) -d
