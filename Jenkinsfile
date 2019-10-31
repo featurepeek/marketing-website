@@ -26,7 +26,9 @@ node {
          
             withCredentials([string(credentialsId: "GOOGLE_PROJECT_ID", variable: 'GOOGLE_PROJECT_ID')]){ 
               branchTag = "gcr.io/${GOOGLE_PROJECT_ID}/${projectName}:${branchReplaced}"
-              imageTag = "gcr.io/${GOOGLE_PROJECT_ID}/${projectName}:${branchReplaced}-${env.BUILD_ID}"        
+              imageTag = "gcr.io/${GOOGLE_PROJECT_ID}/${projectName}:${branchReplaced}-${env.BUILD_ID}"
+              buildBranchTag = "gcr.io/featurepeek-build/${projectName}:${branchReplaced}"
+              buildImageTag = "gcr.io/featurepeek-build/${projectName}:${branchReplaced}-${env.BUILD_ID}"
             }
 
             def secret_addition = ""
@@ -50,8 +52,12 @@ node {
     stage('push to gcr.io') {
         if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev') {
             sh "docker tag ${imageTag} ${branchTag}"
+            sh "docker tag ${imageTag} ${buildBranchTag}"
+            sh "docker tag ${imageTag} ${buildImageTag}"
             sh "gcloud docker -- push ${imageTag}"
-            sh "gcloud docker -- push ${branchTag}"       
+            sh "gcloud docker -- push ${branchTag}"
+            sh "gcloud docker -- push ${buildBranchTag}"
+            sh "gcloud docker -- push ${buildImageTag}"
         } 
     }
 
