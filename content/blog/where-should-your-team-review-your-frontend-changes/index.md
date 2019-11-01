@@ -76,15 +76,15 @@ This is less than ideal though. Your machine must be powered on and online, and 
 
 ## Remote server, staging / QA environment
 
-This is the traditional method. 
+This is the traditional method. More content TBD
 
 ### Feedback from reviewers causes more code review
 
-Your developer peer must be asking themselves, "Didn't I already review this feature?".
+Your developer peer must be asking themselves, "Didn't I already review this feature?". More content TBD
 
 ### Integration warzone
 
-Bleeding-edge nature could cause feature to become broken.
+Bleeding-edge nature could cause feature to become broken. More content TBD
 
 ## Remote server, feature environment
 
@@ -103,4 +103,4 @@ Imagine every pull request in your repo having its own live, up-to-date environm
 
 [FeaturePeek](https://featurepeek.com) is a feature-environments-as-a-service platform that plugs into your GitHub organization. In just a few clicks, you can start building on-demand feature environments for every front-end pull request.
 
-We launched to solve this problem that we've seen so many small- to medium-sized startups encounter. Transform your existing git flow into something more productive for everyone on your team. [Start a free trial today](https://dashboard.featurepeek.com) and let us know how you like it.
+We launched to solve this problem that we've seen so many small- to medium-sized startups encounter. [Start a free trial today](https://dashboard.featurepeek.com) and let us know how you like it.
