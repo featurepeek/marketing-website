@@ -7,9 +7,8 @@ RUN apk update
 RUN apk add nodejs-current-npm
 RUN npm install -g yarn
 
-# Copy nginx config 
+# Copy gzip config 
 COPY gzip.conf /etc/nginx/conf.d/gzip.conf
-COPY nginx.conf /etc/nginx/nginx.conf
 
 # Create directories all the way up to app
 RUN mkdir -p /usr/src/app
