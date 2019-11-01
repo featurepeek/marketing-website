@@ -150,6 +150,10 @@ code {
   transform: scale(1.015);
 }
 
+.blog-post p {
+  margin-bottom: 1.5rem;
+}
+
 /* product update mailchimp overrides */
 #campaign td {
   border: 0;

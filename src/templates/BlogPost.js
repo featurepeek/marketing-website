@@ -33,7 +33,7 @@ export default function BlogPost(props) {
       />
       <Flex background="linear-gradient(#fff, #effefe)" margin={-39} paddingBottom={80} paddingTop={40} paddingX={40}>
         <Flex alignItems="center" width="100%">
-          <Box paddingRight={32}>
+          <Box paddingRight={40}>
             <Link href="/blog" underline={false}>
               ← All blog posts
             </Link>
@@ -49,7 +49,7 @@ export default function BlogPost(props) {
             <Bio author={post.frontmatter.author} />
           </Box>
         </Flex>
-        <Box borderRadius={28} boxShadow="0 8px 16px rgba(0, 0, 0, 0.15)" overflow="hidden" width="100%">
+        <Box borderRadius={28} boxShadow="0 8px 16px rgba(0, 0, 0, 0.15)" margin="auto" overflow="hidden" width="100%">
           <Image fluid={post.frontmatter.hero.childImageSharp.fluid} />
         </Box>
       </Flex>
@@ -57,7 +57,7 @@ export default function BlogPost(props) {
         <img alt="" height="40" src="/img/curve.svg" width="100%" />
       </Box>
       <Box marginTop={rhythm(4)} marginX="auto" maxWidth={rhythm(28)}>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="blog-post" dangerouslySetInnerHTML={{ __html: post.html }} />
         <UnorderedList display="flex" flexWrap="wrap" justifyContent="space-between">
           <ListItem>
             {previous && (
