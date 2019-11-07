@@ -19,11 +19,11 @@ code {
 }
 
 /* Link */
-.active-link, .underline {
+.active-link, .underline, .blog-post a {
   display: inline-block;
   position: relative;
 }
-.active-link::after, .underline::after {
+.active-link::after, .underline::after, .blog-post a::after {
   background: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   content: '';
@@ -38,7 +38,7 @@ code {
 .underline:hover {
   text-decoration: none;
 }
-.active-link::after, .underline:hover::after {
+.active-link::after, .underline:hover::after, .blog-post a:hover::after {
   transform: scale(1);
 }
 .underline:hover span {
@@ -150,8 +150,15 @@ code {
   transform: scale(1.015);
 }
 
+.blog-post a {
+  color: #05c5cc;
+  text-decoration: none;
+}
 .blog-post p {
   margin-bottom: 1.5rem;
+}
+.blog-post strong {
+  color: #000;
 }
 
 /* product update mailchimp overrides */

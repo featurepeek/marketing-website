@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import MediaQuery from 'react-responsive'
 import Image from 'gatsby-image'
 import Box from 'ui-box'
 import { Disqus } from 'gatsby-plugin-disqus'
@@ -25,59 +26,75 @@ export default function BlogPost(props) {
   }
 
   return (
-    <Layout location={props.location} title={siteTitle}>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-        location={props.location}
-      />
-      <Flex background="linear-gradient(#fff, #effefe)" margin={-39} paddingBottom={80} paddingTop={40} paddingX={40}>
-        <Flex alignItems="center" width="100%">
-          <Box paddingRight={40}>
-            <Link href="/blog" underline={false}>
-              ← All blog posts
-            </Link>
-            <Heading marginTop={0} size={480}>
-              {post.frontmatter.title}
-            </Heading>
-            <Paragraph color="#999" {...scale(-1 / 8)} marginBottom={rhythm(1)} marginTop={rhythm(-0.5)}>
-              {post.frontmatter.date}
-            </Paragraph>
-            <Paragraph marginTop={0} fontSize={24}>
-              {post.frontmatter.description}
-            </Paragraph>
-            <Bio author={post.frontmatter.author} />
+    <MediaQuery maxWidth={504}>
+      {mobile => (
+        <Layout location={props.location} title={siteTitle}>
+          <SEO
+            title={post.frontmatter.title}
+            description={post.frontmatter.description || post.excerpt}
+            location={props.location}
+          />
+          <Flex
+            background="linear-gradient(#fff, #effefe)"
+            margin={mobile ? -15 : -39}
+            paddingBottom={80}
+            paddingTop={40}
+            paddingX={mobile ? 16 : 40}
+          >
+            <Flex alignItems="center" width="100%">
+              <Box paddingRight={40}>
+                <Link href="/blog" underline={false}>
+                  ← All blog posts
+                </Link>
+                <Heading marginTop={0} size={480}>
+                  {post.frontmatter.title}
+                </Heading>
+                <Paragraph color="#999" {...scale(-1 / 8)} marginBottom={rhythm(1)} marginTop={rhythm(-0.5)}>
+                  {post.frontmatter.date}
+                </Paragraph>
+                <Paragraph marginTop={0} fontSize={24}>
+                  {post.frontmatter.description}
+                </Paragraph>
+                <Bio author={post.frontmatter.author} />
+              </Box>
+            </Flex>
+            <Box
+              borderRadius={28}
+              boxShadow="0 8px 16px rgba(0, 0, 0, 0.15)"
+              margin="auto"
+              overflow="hidden"
+              width="100%"
+            >
+              <Image fluid={post.frontmatter.hero.childImageSharp.fluid} />
+            </Box>
+          </Flex>
+          <Box marginX={mobile ? -15 : -39} marginY={-39}>
+            <img alt="" height="40" src="/img/curve.svg" width="100%" />
           </Box>
-        </Flex>
-        <Box borderRadius={28} boxShadow="0 8px 16px rgba(0, 0, 0, 0.15)" margin="auto" overflow="hidden" width="100%">
-          <Image fluid={post.frontmatter.hero.childImageSharp.fluid} />
-        </Box>
-      </Flex>
-      <Box margin={-39}>
-        <img alt="" height="40" src="/img/curve.svg" width="100%" />
-      </Box>
-      <Box marginTop={rhythm(4)} marginX="auto" maxWidth={rhythm(28)}>
-        <div className="blog-post" dangerouslySetInnerHTML={{ __html: post.html }} />
-        <UnorderedList display="flex" flexWrap="wrap" justifyContent="space-between">
-          <ListItem>
-            {previous && (
-              <Link href={`/blog${previous.fields.slug}`} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </ListItem>
-          <ListItem>
-            {next && (
-              <Link href={`/blog${next.fields.slug}`} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </ListItem>
-        </UnorderedList>
-        <hr style={{ height: 0, margin: 80 }} />
-        <Disqus config={disqusConfig} />
-      </Box>
-    </Layout>
+          <Box marginTop={rhythm(4)} marginX="auto" maxWidth={rhythm(28)}>
+            <div className="blog-post" dangerouslySetInnerHTML={{ __html: post.html }} />
+            <UnorderedList display="flex" flexWrap="wrap" justifyContent="space-between">
+              <ListItem>
+                {previous && (
+                  <Link href={`/blog${previous.fields.slug}`} rel="prev">
+                    ← {previous.frontmatter.title}
+                  </Link>
+                )}
+              </ListItem>
+              <ListItem>
+                {next && (
+                  <Link href={`/blog${next.fields.slug}`} rel="next">
+                    {next.frontmatter.title} →
+                  </Link>
+                )}
+              </ListItem>
+            </UnorderedList>
+            <hr style={{ height: 0, margin: 80 }} />
+            <Disqus config={disqusConfig} />
+          </Box>
+        </Layout>
+      )}
+    </MediaQuery>
   )
 }
 
