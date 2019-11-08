@@ -1,6 +1,6 @@
 ---
 title: Where should your team review your front-end changes?
-date: "2019-10-07T22:12:03.284Z"
+date: "2019-11-07T22:12:03.284Z"
 description: Discovering the ideal method of gathering front-end feedback from your team — and the tools for collecting it
 hero: hero.jpg
 author: jasonbarry
@@ -29,11 +29,11 @@ Ideally, we'd want a solution that:
 
 
 
-# In person (or screenshare)
+# In person (or screenshare) 👎
 
-While rolling up to your colleague's desk (or [virtual desk](https://tandem.chat) if your team is remote) can clear up quick clarifying questions, it poses problems when trying to gather detailed critique. 
+While rolling up to your colleague's desk (or [virtual desk](https://tandem.chat) if your team is remote) can clear up quick clarifying questions, it poses problems when trying to gather detailed critique. Common pitfalls include: 
 
-- **Scheduling common availability is difficult.** What if your reviewer is in a meeting? Or working heads-down on an upcoming deliverable? You both need to have uninterruptible availability to get their feedback synchronously. Trying to get two people's schedule to sync up is time-intensive, especially in fast-moving startups. 
+- **Scheduling common availability is difficult.** What if your reviewer is in a meeting? Or working heads-down on an upcoming deliverable? You both need to have uninterruptible availability to get their feedback synchronously. Trying to get two people's schedule to sync up is too time-intensive, especially in fast-moving startups. 
 
 <!--Moreover, you risk interrupting your reviewer's [flow](https://en.wikipedia.org/wiki/Flow_(psychology)). Think of the context switching that needs to happen when juggling their tasks plus a surprise visit from you. -->
 
@@ -41,9 +41,19 @@ While rolling up to your colleague's desk (or [virtual desk](https://tandem.chat
 
 - **You become responsible for taking notes of reviewer feedback.** You can jot reviewer feedback down while in person, or create a quick todo list, but ad-hoc review that exists outside of formal tools is undocumented and bound to slip through the cracks. 
 
-The productivity benefits of [asynchronous communication](https://blog.remote.com/why-you-should-be-doing-async-work/) are clear. Let's explore some options in gathering feedback asynchronously. 
+The productivity benefits of [asynchronous communication](https://blog.remote.com/why-you-should-be-doing-async-work/) are clear. You should avoid collecting feedback synchronously whenever possible.
 
-# Locally during code review
+# Local dev server tunnel 👎
+
+How about opening a tunnel to your local development server's running port? You could use [ngrok](https://ngrok.com) to expose a port so that someone outside of your LAN could access your local dev server. 
+
+- Your machine must be powered on and online.
+- You can't checkout another branch while the tunnel is live. 
+- Your reviewers aren't getting a production build.
+
+This is less than ideal though. Your machine must be powered on and online, and you must keep your feature branch checked out, meaning you can't work on any other branch while the tunnel is live.
+
+# Local build during code review 👎
 
 As a developer, you're familiar with conducting code review when your coworkers open pull requests. The code may look correct... but does it work? A good way to test if it works is to run the code yourself. However, to do that on your own machine requires you to: 
 
@@ -61,13 +71,7 @@ You can see the trouble with this &mdash; there are **many steps you must accomp
 
 Furthermore, unless your entire team is fluent with git, this option is only available to developers. What about non-developers on your team?
 
-# Tunnel into your local development server
-
-How about opening a tunnel to your local development server's running port? You could use [ngrok](https://ngrok.com) to expose a port so that someone outside of your LAN could access your local dev server. 
-
-This is less than ideal though. Your machine must be powered on and online, and you must keep your feature branch checked out, meaning you can't work on any other branch while the tunnel is live.
-
-# Staging / QA server
+# Staging or QA server 👎
 
 This is the traditional method. More content TBD
 
@@ -75,7 +79,7 @@ This is the traditional method. More content TBD
 
 - **Integration warzone.** Bleeding-edge nature could cause feature to become broken. More content TBD
 
-# Feature environments
+# Feature environments 👍
 
 The best place for the review of your feature to happen is on the feature branch itself. Ideally, as soon as you push your branch to your repo, your CI builds an image that is deployed on a server with a unique URL.
 
@@ -88,7 +92,7 @@ The best place for the review of your feature to happen is on the feature branch
 
 Imagine every pull request in your repo having its own live, up-to-date environment. Links to the environment are posted as a comment in your pull request, and to a Slack channel. As soon as your feature gets merged, the environment gets torn down.
 
-# Feature environments as a service
+# Feature environments as a service 👍
 
 [FeaturePeek](https://featurepeek.com) is a feature-environments-as-a-service platform that plugs into your GitHub organization. In just a few clicks, you can start building on-demand feature environments for every front-end pull request.
 

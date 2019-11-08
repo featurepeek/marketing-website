@@ -8,6 +8,7 @@ import { Disqus } from 'gatsby-plugin-disqus'
 import Bio from 'components/Bio'
 import Layout from 'components/Layout'
 import SEO from 'components/Seo'
+import Share from 'components/Share'
 
 import { Flex, Heading, ListItem, Link, Paragraph, UnorderedList } from 'primitives'
 
@@ -19,8 +20,9 @@ export default function BlogPost(props) {
   const siteUrl = props.data.site.siteMetadata.siteUrl
   const { previous, next } = props.pageContext
 
+  const url = `${siteUrl}${props.location.pathname}`
   const disqusConfig = {
-    url: `${siteUrl}${props.location.pathname}`,
+    url,
     identifier: post.id,
     title: post.frontmatter.title,
   }
@@ -33,6 +35,7 @@ export default function BlogPost(props) {
             title={post.frontmatter.title}
             description={post.frontmatter.description || post.excerpt}
             location={props.location}
+            image={post.frontmatter.hero.childImageSharp.fluid.src}
           />
           <Flex
             background="linear-gradient(#fff, #effefe)"
@@ -72,7 +75,14 @@ export default function BlogPost(props) {
             <img alt="" height="40" src="/img/curve.svg" width="100%" />
           </Box>
           <Box marginTop={rhythm(4)} marginX="auto" maxWidth={rhythm(28)}>
-            <div className="blog-post" dangerouslySetInnerHTML={{ __html: post.html }} />
+            <Box>
+              {!mobile && (
+                <Box style={{ position: '-webkit-sticky', position: 'sticky' }} top={96}>
+                  <Share title={post.frontmatter.title} url={url} />
+                </Box>
+              )}
+              <div className="blog-post" dangerouslySetInnerHTML={{ __html: post.html }} />
+            </Box>
             <UnorderedList display="flex" flexWrap="wrap" justifyContent="space-between">
               <ListItem>
                 {previous && (

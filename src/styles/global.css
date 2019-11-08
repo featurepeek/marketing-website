@@ -160,6 +160,9 @@ code {
 .blog-post strong {
   color: #000;
 }
+.SocialMediaShareButton:hover:not(:active) {
+  opacity: 0.75;
+}
 
 /* product update mailchimp overrides */
 #campaign td {
