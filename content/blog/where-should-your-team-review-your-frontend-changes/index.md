@@ -1,6 +1,6 @@
 ---
 title: Where should your team review your front-end changes?
-date: "2019-11-07T22:12:03.284Z"
+date: "2019-11-13T22:12:03.284Z"
 description: Discovering the ideal method of gathering front-end feedback from your team — and the tools for collecting it
 hero: hero.jpg
 author: jasonbarry
@@ -11,6 +11,8 @@ author: jasonbarry
 **You've just finished developing a new feature** for your web app, and you're ready to get feedback from the rest of your team. You're pretty sure it's what your designer intended in their prototypes, although you had to take *a few* liberties – you did some guesswork when mockups for tablet breakpoints weren't supplied, and you had to come up with a workaround or two due to a technical constraint. You want to get some feedback on your work before rolling out the feature to production. 
 
 Engineers can leave feedback on GitHub or similar during code review, but this part of the [product development lifecycle](https://blog.ycombinator.com/product-development-cycle-fundamentals/) isn't accessible to those in non-code-savvy roles. What's the best way to open up your work to the rest of your team? 
+
+Let's explore some options.
 
 Ideally, we'd want a solution that: 
 
@@ -26,8 +28,6 @@ Ideally, we'd want a solution that:
 
 **What tools do you use to collect feedback?** Do you create an ad-hoc todo list of feedback items? Do you track progress in the original ticket, or do you create a follow-up ticket that contains received feedback? 
 -->
-
-
 
 # In person (or screenshare) 👎
 
@@ -47,9 +47,9 @@ The productivity benefits of [asynchronous communication](https://blog.remote.co
 
 How about opening a tunnel to your local development server's running port? You could use [ngrok](https://ngrok.com) to expose a port so that someone outside of your LAN could access your local dev server. 
 
-- Your machine must be powered on and online.
-- You can't checkout another branch while the tunnel is live. 
-- Your reviewers aren't getting a production build.
+- **Your machine must be powered on and online.** As soon as you close your laptop, the bridge to your dev server is terminated. 
+- **You can't checkout another branch while the tunnel is live.** If you wanted to show someone something on a specific branch, you'd have to stay on that branch. This means that you are blocked from working on anything else.
+- **Your reviewers aren't getting a production build.** 
 
 This is less than ideal though. Your machine must be powered on and online, and you must keep your feature branch checked out, meaning you can't work on any other branch while the tunnel is live.
 
@@ -62,7 +62,7 @@ As a developer, you're familiar with conducting code review when your coworkers 
 3. Fetch from origin
 4. Checkout their branch
 5. Install dependencies (and potentially restart your development server)
-6. ➡️ **Actually verify the new feature**
+6. ➡️ **Actually verify the new feature and provide feedback**
 7. Checkout your original branch
 8. Pop your git stash
 9. Reinstall dependencies (and potentially restart your development server)
@@ -73,7 +73,7 @@ Furthermore, unless your entire team is fluent with git, this option is only ava
 
 # Staging or QA server 👎
 
-This is the traditional method. More content TBD
+This is the traditional method. 
 
 - **Feedback from reviewers causes more code review.** Your developer peer must be asking themselves, "Didn't I already review this feature?". More content TBD
 

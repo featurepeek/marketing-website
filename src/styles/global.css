@@ -160,8 +160,15 @@ code {
 .blog-post strong {
   color: #000;
 }
-.SocialMediaShareButton:hover:not(:active) {
-  opacity: 0.75;
+.SocialMediaShareButton {
+  opacity: 0.8;
+  transform: scale(0.95);
+  transition: all 0.2s ease;
+  outline: none;
+}
+.SocialMediaShareButton:hover {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 /* product update mailchimp overrides */
