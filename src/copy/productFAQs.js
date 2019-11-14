@@ -25,7 +25,7 @@ export default [
     {
       question: 'Which Continuous Integration services and container registries are supported?',
       answer:
-        'As of writing, we support Azure Pipelines, Buildkite, CircleCI, Codeship, Docker Cloud, Drone, Jenkins, Semaphore, and Travis; for container registries, we support Amazon ECR, DockerHub, and Google Container Registry.',
+        'As of writing, we support AWS CodeBuild, Azure Pipelines, Buildkite, CircleCI, Cirrus CI, CodeShip, Docker Cloud, Drone, GitHub Actions, Heroku CI, Jenkins, Netlify, Semaphore, TeamCity, Travis, and Wercker; for container registries, we support Amazon ECR, DockerHub, and Google Container Registry.',
     },
   ],
 ]
