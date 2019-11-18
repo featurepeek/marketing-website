@@ -38,13 +38,12 @@ export default function Hero() {
                   href="https://dashboard.featurepeek.com"
                   iconAfter={mobile ? undefined : 'fas fa-arrow-right'}
                   onClick={() => track('Clicked CTA', { cta: 'Hero' })}
-                  target="_blank"
                 >
                   Get started now
                 </Button>
               </Flex>
               <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 200}>
-                <Button background="white" href="https://dashboard.featurepeek.com/demo" target="_blank">
+                <Button background="white" href="https://dashboard.featurepeek.com/demo">
                   View a demo
                 </Button>
               </Flex>

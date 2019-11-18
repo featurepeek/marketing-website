@@ -116,7 +116,6 @@ export default function PricingColumn({ product, hasMounted }) {
               <Button
                 href={`${metadata.cta_href}${isAnnual ? '' : '&interval=monthly'}`}
                 onClick={() => track('Clicked CTA', { cta: product.name })}
-                target="_blank"
               >
                 {metadata.cta}
               </Button>

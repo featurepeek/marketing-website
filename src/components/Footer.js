@@ -57,7 +57,6 @@ const columns = [
       {
         text: 'Documentation',
         href: 'https://docs.featurepeek.com',
-        target: '_blank',
       },
       {
         text: 'Changelog',
@@ -71,7 +70,6 @@ const columns = [
       {
         text: 'Demo',
         href: 'https://dashboard.featurepeek.com/demo',
-        target: '_blank',
       },
     ],
   },
