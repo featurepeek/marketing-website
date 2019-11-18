@@ -8,6 +8,8 @@ author: jasonbarry
 
 <!--_This article intended to be read by front-end engineers, full-stack engineers, and web developer generalists._-->
 
+**TL;DR:** Ask for visual feedback on your new front-end features in isolated remote environments. You can quickly achieve this setup with [FeaturePeek](https://featurepeek.com), a new service that enables front-end deployment previews for static and containerized web apps on any cloud provider.
+
 **You've just finished developing a new feature** for your web app, and you're ready to get feedback from the rest of your team. You're pretty sure it's what your designer intended in their prototypes, although you had to take *a few* liberties – you did some guesswork when mockups for tablet breakpoints weren't supplied, and you had to come up with a workaround or two due to a technical constraint. You want to get some feedback on your work before rolling out the feature to production. 
 
 Engineers can leave feedback on GitHub or similar during code review, but this part of the [product development lifecycle](https://blog.ycombinator.com/product-development-cycle-fundamentals/) isn't accessible to those in non-code-savvy roles. What's the best way to open up your work to the rest of your team? 
@@ -55,7 +57,7 @@ This is less than ideal though. Your machine must be powered on and online, and 
 
 # Local build during code review 👎
 
-As a developer, you're familiar with conducting code review when your coworkers open pull requests. The code may look correct... but does it work? A good way to test if it works is to run the code yourself. However, to do that on your own machine requires you to: 
+As a developer, you're familiar with conducting code review when your coworkers open pull requests. The code may look correct... but does it work? A good way to test if it works is to run the code yourself. However, to do that on your own machine requires you to jump through a few hoops. The following flow should look all too familiar:
 
 1. Stop what you're doing 
 2. Stash any unstaged changes
@@ -73,11 +75,11 @@ Furthermore, unless your entire team is fluent with git, this option is only ava
 
 # Staging or QA server 👎
 
-This is the traditional method. 
+Your continuous integration pipeline builds the latest changes from a protected branch in your git repo, and deploys the build to an internal server. Seems like a safe place to test, because it's a close representation of what production will look like when it eventually goes out the door. However, there are some problems with using this traditional method. 
 
-- **Feedback from reviewers causes more code review.** Your developer peer must be asking themselves, "Didn't I already review this feature?". More content TBD
+- **Feedback from reviewers causes more code review.** When you ask someone for feedback on your work, they will most likely respond with at least *some* critique, which will require code changes to fix.  Your developer peer must be asking themselves, "Didn't I already review this feature?". You should aim to have every new feature 
 
-- **Integration warzone.** Bleeding-edge nature could cause feature to become broken. More content TBD
+- **Integration warzone.** The problem with this approach is that other developers on your team could inadvertantly merge a change of theirs that breaks the functionality of your new feature. By passing around a link of an environment that gets fed from top-of-tree, you aren't guaranteeing that your feature is isolated. By the time your reviewer tests your new feature, a part of it (or the whole thing!) could not function as intended, even though it worked when it was on its own branch. Not only does this waste your reviewer's time, but it causes them to think that you incompetently didn't perform a basic test of your own work. A better option would be to guarantee that the code you push is the code your reviewer tests &mdash; this is what we mean when we say **you should test features in isolation**. A staging / QA environment is great for testing a whole release, not individual features. 
 
 # Feature environments 👍
 
