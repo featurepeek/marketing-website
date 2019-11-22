@@ -75,7 +75,6 @@ export default function HowItWorks(props) {
                   <Button
                     href="https://dashboard.featurepeek.com"
                     onClick={() => track('Clicked CTA', { cta: 'How it works' })}
-                    target="_blank"
                   >
                     Get started now
                   </Button>

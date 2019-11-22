@@ -1,3 +1,16 @@
+@import url('https://rsms.me/inter/inter.css');
+h1, h2, h3, h4, h5, h6, 
+a, b, button, em, i, p, span, strong { 
+  font-family: 'Inter', sans-serif; 
+  letter-spacing: -0.011em;
+}
+@supports (font-variation-settings: normal) {
+  h1, h2, h3, h4, h5, h6, 
+  a, b, button, em, i, p, span, strong { 
+    font-family: 'Inter var', sans-serif; 
+  }
+}
+
 .as-seen-on img {
   margin-bottom: 0;
 }

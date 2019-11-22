@@ -100,7 +100,7 @@ export default function Nav() {
                     {/*   </Link> */}
                     {/* </Box> */}
                     <Box className="nav-links-hide-fouc" paddingX={16}>
-                      <Link color="#103c52" href="https://docs.featurepeek.com/intro" fontSize={17} target="_blank">
+                      <Link color="#103c52" href="https://docs.featurepeek.com/intro" fontSize={17}>
                         Docs
                       </Link>
                     </Box>
@@ -119,11 +119,7 @@ export default function Nav() {
               </Flex>
             ) : (
               <Flex alignItems="center" className="nav-links-hide-fouc" justifyContent="center" width={224}>
-                <Button
-                  href="https://dashboard.featurepeek.com"
-                  onClick={() => track('Clicked CTA', { cta: 'Nav' })}
-                  target="_blank"
-                >
+                <Button href="https://dashboard.featurepeek.com" onClick={() => track('Clicked CTA', { cta: 'Nav' })}>
                   Go to Dashboard
                 </Button>
               </Flex>
@@ -167,7 +163,6 @@ export default function Nav() {
                 <Button
                   href="https://dashboard.featurepeek.com"
                   onClick={() => track('Clicked CTA', { cta: 'Mobile Nav' })}
-                  target="_blank"
                 >
                   Go to Dashboard
                 </Button>
