@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { albacross } from 'utils/analytics'
+
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
@@ -21,6 +23,7 @@ export default function HTML(props) {
           integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
           crossOrigin="anonymous"
         />
+        <script key={`albacross`} type="text/javascript" dangerouslySetInnerHTML={{ __html: albacross }} />
       </body>
     </html>
   )
