@@ -22,7 +22,7 @@ Let's explore some options. Ideally, we'd want a solution that:
 
 - **Requires as little maintenance and code changes as possible.** You shouldn't have to spend time building infrastructure to support a basic review process. If possible, you'd like to lean on an existing tool that has already solved this problem.
 
-# In person (or screenshare) 👎
+# In person (or screensharing) 👎
 
 While rolling up to your colleague's desk (or [virtual desk](https://tandem.chat) if your team is remote) can clear up quick clarifying questions, it poses problems when trying to gather detailed critique. Common pitfalls include: 
 
@@ -42,7 +42,7 @@ There are lots of problems with this approach:
 
 - **Your machine must be powered on and online.** As soon as you close your laptop, the bridge to your dev server is terminated. 
 - **You can't checkout another branch while the tunnel is live.** If you wanted to show someone something on a specific branch, you'd have to stay on that branch. This means that you are blocked from working on anything else.
-- **Your reviewers aren't getting a production build.** 
+- **Your reviewers aren't getting a production build.** Instead, what they're seeing is the development build, which isn't as performant as what eventually gets pushed to production.
 
 # Local build during code review 👎
 
@@ -66,7 +66,7 @@ Furthermore, unless your entire team is fluent with git, this option is only ava
 
 Your continuous integration pipeline builds the latest changes from a protected branch in your git repo, and deploys the build to an internal server. It seems like a safe place to review new features, because it's a close representation of what production will look like when it eventually goes out the door. However, there are some problems with using this traditional method: 
 
-- **Feedback from reviewers causes more code review.** When you ask someone for feedback on your work, they will most likely respond with at least *some* critique, which will require code changes to fix.  Your developer peer must be asking themselves, "Didn't I already review this feature?". You should aim to have every new feature 
+- **Feedback from reviewers causes more code review.** When you ask someone for feedback on your work, they will most likely respond with at least *some* critique, which will require code changes to fix.  Your developer peer must be asking themselves, "Didn't I already review this feature?" You should aim to have every new feature only go through code review once to avoid bottlenecks in your workflow.
 
 - **Other developers could break your changes.** The problem with this approach is that other developers on your team could inadvertently merge a change of theirs that breaks the functionality of your new feature. By passing around a link to an environment that gets fed from top-of-tree, you aren't guaranteeing that your feature is isolated. By the time your reviewer tests your new feature, a part of it (or the whole thing!) could not function as intended, even though it worked when it was on its own branch. Not only does this waste your reviewer's time, but it causes them to think that you incompetently didn't perform a basic test of your own work. A better option would be to guarantee that the code you push is the code your reviewer tests &mdash; this is what we mean when we say **you should test features in isolation**. A staging / QA environment is great for testing a whole release, not individual features. 
 
