@@ -77,7 +77,7 @@ export default function BlogPost(props) {
           <Box marginTop={rhythm(4)} marginX="auto" maxWidth={rhythm(28)}>
             <Box>
               {!mobile && (
-                <Box style={{ position: '-webkit-sticky', position: 'sticky' }} top={96}>
+                <Box style={{ position: 'sticky' }} top={96}>
                   <Share title={post.frontmatter.title} url={url} />
                 </Box>
               )}
