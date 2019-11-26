@@ -76,10 +76,10 @@ const columns = [
   {
     section: 'Company',
     links: [
-      // {
-      //   text: 'Blog',
-      //   href: '/blog',
-      // },
+      {
+        text: 'Blog',
+        href: '/blog',
+      },
       {
         text: 'Privacy policy',
         href: '/pdfs/privacy.pdf',
@@ -91,10 +91,6 @@ const columns = [
       {
         text: 'Contact',
         href: 'mailto:hello@featurepeek.com?subject=Hello',
-      },
-      {
-        text: '',
-        href: '',
       },
       {
         icon: 'fab fa-y-combinator',

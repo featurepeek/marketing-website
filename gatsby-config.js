@@ -15,7 +15,7 @@ module.exports = {
     authors: {
       jasonbarry: {
         name: 'Jason Barry',
-        title: 'FeaturePeek Co-founder',
+        title: 'Co-founder & Head of Product',
       },
       ericsilverman: {
         name: 'Eric Silverman',
