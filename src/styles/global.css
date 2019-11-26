@@ -32,11 +32,11 @@ code {
 }
 
 /* Link */
-.active-link, .underline {
+.active-link, .underline, .blog-post a {
   display: inline-block;
   position: relative;
 }
-.active-link::after, .underline::after {
+.active-link::after, .underline::after, .blog-post a::after {
   background: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   content: '';
@@ -51,7 +51,7 @@ code {
 .underline:hover {
   text-decoration: none;
 }
-.active-link::after, .underline:hover::after {
+.active-link::after, .underline:hover::after, .blog-post a:hover::after {
   transform: scale(1);
 }
 .underline:hover span {
@@ -161,6 +161,27 @@ code {
 .hover-card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   transform: scale(1.015);
+}
+
+.blog-post a {
+  color: #05c5cc;
+  text-decoration: none;
+}
+.blog-post p {
+  margin-bottom: 1.5rem;
+}
+.blog-post strong {
+  color: #000;
+}
+.SocialMediaShareButton {
+  opacity: 0.8;
+  transform: scale(0.95);
+  transition: all 0.2s ease;
+  outline: none;
+}
+.SocialMediaShareButton:hover {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 /* product update mailchimp overrides */
