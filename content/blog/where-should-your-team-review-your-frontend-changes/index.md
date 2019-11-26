@@ -1,6 +1,6 @@
 ---
 title: Where should your team review your front-end changes?
-date: "2019-11-13T22:12:03.284Z"
+date: "2019-11-26T12:12:03.284Z"
 description: Discovering the ideal method of gathering front-end feedback from your team — and the tools for collecting it
 hero: hero.jpg
 author: jasonbarry
