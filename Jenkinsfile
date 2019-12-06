@@ -2,7 +2,7 @@ node {
 
   try {
 
-    isTag = !(env.TAG_NAME == null)
+    isTag = (env.TAG_NAME != null)
     
     if  ( !(env.BRANCH_NAME =~ /(dev|master|PR-)/) && !isTag ){
         // Only Build PRs, Dev, and Master and tags, don't build on branch push
@@ -61,13 +61,11 @@ node {
         echo 'Getting Kube context for dev cluster'
         sh "gcloud container clusters get-credentials primary --zone us-central1-a --project featurepeek-dev"
       }
-
-      if (env.BRANCH_NAME == 'master'){
+      else if (env.BRANCH_NAME == 'master'){
         echo 'Getting Kube context for stable cluster'
         sh "gcloud container clusters get-credentials primary --zone us-central1-a --project featurepeek-stable"
       }
-
-      if (isTag){
+      else if (isTag){
         echo 'Getting Kube context for production cluster'
         sh "gcloud container clusters get-credentials primary --zone us-central1-a --project featurepeek-production"
       }
