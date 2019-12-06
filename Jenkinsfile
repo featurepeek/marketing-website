@@ -2,7 +2,8 @@ node {
 
   try {
 
-    isTag = env.TAG_NAME != ""
+    isTag = !(env.TAG_NAME == null)
+    
     if  ( !(env.BRANCH_NAME =~ /(dev|master|PR-)/) && !isTag ){
         // Only Build PRs, Dev, and Master and tags, don't build on branch push
        echo "Not master, dev, PR-*, or tag so not building"
