@@ -4,7 +4,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Front-end review for the whole team · FeaturePeek`,
+    title: `Front-end review for the whole team \u00B7 FeaturePeek`,
     author: `Jason Barry`,
     description: `FeaturePeek spins up an environment for every branch of your front-end, so you can get feedback from your team earlier in the web development cycle. Our collaboration tools make it easy to effectively communicate with your team.`,
     image: 'https://featurepeek.com/img/og-rect.png',

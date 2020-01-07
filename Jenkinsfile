@@ -2,9 +2,11 @@ node {
 
   try {
 
-    if  (!(env.BRANCH_NAME =~ /(dev|master|PR-)/)){
-        // Only Build PRs, Dev, and Master, don't build on branch push
-       echo "Not master, dev, or a PR-* so not building"
+    isTag = (env.TAG_NAME != null)
+    
+    if  ( !(env.BRANCH_NAME =~ /(dev|master|PR-)/) && !isTag ){
+        // Only Build PRs, Dev, and Master and tags, don't build on branch push
+       echo "Not master, dev, PR-*, or tag so not building"
        currentBuild.result = 'SUCCESS'
        return
     }
@@ -21,14 +23,14 @@ node {
 
     stage('Build') {
 
-        if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev'){
+        if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev'|| isTag){
             def branchReplaced = env.BRANCH_NAME.toLowerCase().replaceAll("\\/", "-")
          
             branchTag = "gcr.io/featurepeek-build/${projectName}:${branchReplaced}"
             imageTag = "gcr.io/featurepeek-build/${projectName}:${branchReplaced}-${env.BUILD_ID}"
 
             def secret_addition = ""
-            if (env.BRANCH_NAME != 'master'){
+            if (!isTag){
               secret_addition = "_DEV"
             }
             withCredentials([
@@ -46,35 +48,29 @@ node {
     }
   
     stage('push to gcr.io') {
-        if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev') {
-            sh "docker tag ${imageTag} ${branchTag}"
-            sh "gcloud docker -- push ${imageTag}"
-            sh "gcloud docker -- push ${branchTag}"
-
-        } 
+      if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev' || isTag) {
+        sh "docker tag ${imageTag} ${branchTag}"
+        sh "gcloud docker -- push ${imageTag}"
+        sh "gcloud docker -- push ${branchTag}"
+      } 
     }
 
     stage('deploy') {
-        milestone()
-
-        withCredentials([string(credentialsId: "GOOGLE_COMPUTE_ZONE", variable: 'GOOGLE_COMPUTE_ZONE'),
-            string(credentialsId: "GOOGLE_PROJECT_ID_DEV", variable: 'GOOGLE_PROJECT_ID_DEV'),
-            string(credentialsId: "GOOGLE_PROJECT_ID_PRODUCTION", variable: 'GOOGLE_PROJECT_ID_PRODUCTION')]){    
-
-        if (env.BRANCH_NAME == 'dev'){
-            echo 'Getting Kube context for dev cluster'
-            sh "gcloud container clusters get-credentials primary --zone ${GOOGLE_COMPUTE_ZONE} --project ${GOOGLE_PROJECT_ID_DEV}"
-            sh "kubectl set image deployment/${projectName} ${projectName}=${imageTag}"
-        }
-
-        if (env.BRANCH_NAME == 'master'){
-            echo 'Getting Kube context for prod cluster'
-            sh "gcloud container clusters get-credentials primary --zone ${GOOGLE_COMPUTE_ZONE} --project ${GOOGLE_PROJECT_ID_PRODUCTION}"
-            sh "kubectl set image deployment/${projectName} ${projectName}=${imageTag}"
-        }
-
-
+      milestone()
+      if (env.BRANCH_NAME == 'dev'){
+        echo 'Getting Kube context for dev cluster'
+        sh "gcloud container clusters get-credentials primary --zone us-central1-a --project featurepeek-dev"
       }
+      else if (env.BRANCH_NAME == 'master'){
+        echo 'Getting Kube context for stable cluster'
+        sh "gcloud container clusters get-credentials primary --zone us-central1-a --project featurepeek-stable"
+      }
+      else if (isTag){
+        echo 'Getting Kube context for production cluster'
+        sh "gcloud container clusters get-credentials primary --zone us-central1-a --project featurepeek-production"
+      }
+
+      sh "kubectl set image deployment/${projectName} ${projectName}=${imageTag}"
     }
 
   } catch (e) {
