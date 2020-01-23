@@ -15,7 +15,7 @@ module.exports = {
     authors: {
       jasonbarry: {
         name: 'Jason Barry',
-        title: 'Co-founder & Head of Product',
+        title: 'Co-founder & CPO',
       },
       ericsilverman: {
         name: 'Eric Silverman',
@@ -53,6 +53,12 @@ module.exports = {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
               wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: 96,
             },
           },
           `gatsby-remark-prismjs`,

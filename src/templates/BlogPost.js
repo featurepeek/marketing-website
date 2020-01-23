@@ -9,6 +9,7 @@ import Bio from 'components/Bio'
 import Layout from 'components/Layout'
 import SEO from 'components/Seo'
 import Share from 'components/Share'
+import TableOfContents from 'components/TableOfContents'
 
 import { Flex, Heading, ListItem, Link, Paragraph, UnorderedList } from 'primitives'
 
@@ -53,7 +54,7 @@ export default function BlogPost(props) {
                   {post.frontmatter.title}
                 </Heading>
                 <Paragraph color="#999" {...scale(-1 / 8)} marginBottom={rhythm(1)} marginTop={rhythm(-0.5)}>
-                  {post.frontmatter.date}
+                  {post.frontmatter.date}&nbsp;&nbsp;{'\u00B7'}&nbsp;&nbsp;{post.timeToRead} minute read
                 </Paragraph>
                 <Paragraph marginTop={0} fontSize={24}>
                   {post.frontmatter.description}
@@ -74,16 +75,17 @@ export default function BlogPost(props) {
           <Box marginX={mobile ? -15 : -39} marginY={-39}>
             <img alt="" height="40" src="/img/curve.svg" width="100%" />
           </Box>
-          <Box marginTop={rhythm(4)} marginX="auto" maxWidth={rhythm(28)}>
+          <Box marginTop={rhythm(4)} marginX="auto" maxWidth={rhythm(24)}>
             <Box>
               {!mobile && (
                 <Box style={{ position: 'sticky' }} top={96}>
                   <Share title={post.frontmatter.title} url={url} />
                 </Box>
               )}
+              <TableOfContents html={post.tableOfContents} />
               <div className="blog-post" dangerouslySetInnerHTML={{ __html: post.html }} />
             </Box>
-            <UnorderedList display="flex" flexWrap="wrap" justifyContent="space-between">
+            <UnorderedList display="flex" flexWrap="wrap" justifyContent="space-between" marginTop={64}>
               <ListItem>
                 {previous && (
                   <Link href={`/blog${previous.fields.slug}`} rel="prev">
@@ -120,6 +122,7 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      tableOfContents(absolute: false)
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
@@ -133,6 +136,7 @@ export const pageQuery = graphql`
           }
         }
       }
+      timeToRead
     }
   }
 `

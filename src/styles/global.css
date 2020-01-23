@@ -173,8 +173,36 @@ code {
 .blog-post strong {
   color: #000;
 }
-.SocialMediaShareButton {
+.blog-post h2, .blog-post h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.toc {
+  font-size: 13px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+.toc:hover {
   opacity: 0.8;
+}
+.toc a {
+  color: #333333;
+  transition: color 0.15s ease;
+}
+.toc a:hover {
+  color: #05c5cc;
+  text-decoration: none;
+}
+.toc li, .toc p {
+  margin-bottom: 4px;
+}
+.toc ul {
+  list-style-type: none;
+  margin-top: 0;
+  margin-left: 16px;
+}
+.SocialMediaShareButton {
+  opacity: 0.5;
   transform: scale(0.95);
   transition: all 0.2s ease;
   outline: none;

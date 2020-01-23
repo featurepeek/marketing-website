@@ -16,12 +16,9 @@ But, pull requests can be notoriously cumbersome and slow to approve, causing a 
 
 **But, what exactly _is_ a pull request, and why are they so tricky for developers to push through? Most importantly, what can be done to minimize the problem?**
 
-In this article, we’ll explain all.
+## What exactly is a pull request?
 
-
-## What exactly is a pull request (the TL;DR version)?
-
-Put simply: a pull request is how developers submit their contributions. 
+Put simply, a pull request is how developers submit their contributions. 
 
 At its most basic, a pull request contains the changes made to the code of the project. The best pull requests will contain a description of **what** has changed, **why** those changes have been made, and facilitate **discussion** between developers, product managers, designers and UXers. 
 
@@ -61,7 +58,7 @@ The good news, though, is that they can be avoided by following these 3 simple r
 
 *   **Keep the changes in your branch as small as possible** — With fewer code changes, it is less likely conflicts will occur
 *   **Rebase from master when it changes** –— This updates your branch with the latest version of the master, so you can resolve any conflicts locally.
-*   **Review pull requests faster and more frequently** — The longer a pull request stays open, the more likely the code will be behind merged changes. \
+*   **Review pull requests faster and more frequently** — The longer a pull request stays open, the more likely the code will be behind merged changes.
 
 ### 3. You have bad pull request etiquette
 
@@ -118,10 +115,8 @@ If you’ve made all the changes above and pull requests are still slow, it migh
 Resolving merge conflicts drains time, enthusiasm and productivity from developer teams. Most are unnecessarily caused by bad pull-request etiquette, so following the other tips in this article should reduce them.  
 
 
-## Are you ready to fix your innovation bottleneck and streamline your pull requests? 
+## Are you ready to fix your pull request bottlenecks? 
 
 Once you’ve encouraged your team to follow good pull request etiquette, document clearly and fix toxic review habits, the next step is to automate as much of the pull request process as possible.
 
-Try adding FeaturePeek into your review workflow. For every pull request, we automatically spin up a dedicated environment with commenting, screenshotting, and bug filing tools overlaid on top, making getting feedback from stakeholders effortless. 
-
-[Find out more.](https://featurepeek.com/)
+Try adding [FeaturePeek](https://featurepeek.com/) into your review workflow. For every pull request, we automatically spin up a dedicated environment with commenting, screenshotting, and bug filing tools overlaid on top, making getting feedback from stakeholders effortless. 
