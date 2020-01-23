@@ -187,7 +187,6 @@ code {
 }
 .toc a {
   color: #333333;
-  transition: color 0.15s ease;
 }
 .toc a:hover {
   color: #05c5cc;

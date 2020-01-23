@@ -15,7 +15,7 @@ module.exports = {
     authors: {
       jasonbarry: {
         name: 'Jason Barry',
-        title: 'Co-founder & CPO',
+        title: 'Co-founder & Head of Product',
       },
       ericsilverman: {
         name: 'Eric Silverman',
