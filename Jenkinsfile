@@ -15,6 +15,7 @@ node {
     def container
     def imageTag
     def branchTag
+    def slidingTag
 
     stage('Clone repository') {
         step([$class: 'WsCleanup'])
@@ -23,10 +24,20 @@ node {
 
     stage('Build') {
 
+      if (env.BRANCH_NAME == 'dev') {
+        slidingTag = "dev"
+      }
+      else if (env.BRANCH_NAME == 'master') {
+        slidingTag = "master"
+      }
+      else if (isTag) {
+        slidingTag = "production"
+      }
+
         if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'dev'|| isTag){
             def branchReplaced = env.BRANCH_NAME.toLowerCase().replaceAll("\\/", "-")
          
-            branchTag = "gcr.io/featurepeek-build/${projectName}:${branchReplaced}"
+            branchTag = "gcr.io/featurepeek-build/${projectName}:${slidingTag}"
             imageTag = "gcr.io/featurepeek-build/${projectName}:${branchReplaced}-${env.BUILD_ID}"
 
             def secret_addition = ""
