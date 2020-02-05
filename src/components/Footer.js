@@ -51,12 +51,14 @@ const columns = [
     section: 'More resources',
     links: [
       {
-        text: 'Video walkthrough',
-        href: 'https://www.youtube.com/watch?v=14UwLG1jQwU',
-      },
-      {
         text: 'Documentation',
         href: 'https://docs.featurepeek.com',
+        target: '_blank',
+      },
+      {
+        text: 'Help desk',
+        href: 'https://help.featurepeek.com',
+        target: '_blank',
       },
       {
         text: 'Changelog',
@@ -68,8 +70,9 @@ const columns = [
         href: '/product-updates',
       },
       {
-        text: 'Demo',
-        href: 'https://dashboard.featurepeek.com/demo',
+        text: 'Status page',
+        href: 'https://status.featurepeek.com',
+        target: '_blank',
       },
     ],
   },

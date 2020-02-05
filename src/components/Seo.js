@@ -47,6 +47,10 @@ function SEO({ description, lang, meta, title, location, image }) {
           content: image || site.siteMetadata.image,
         },
         {
+          name: `twitter:image`,
+          content: image || site.siteMetadata.image,
+        },
+        {
           property: `og:type`,
           content: `website`,
         },
