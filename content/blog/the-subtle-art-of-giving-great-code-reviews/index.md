@@ -1,7 +1,7 @@
 ---
 title: The subtle art of giving great code reviews
-date: "2020-02-03T12:12:03.284Z"
-description: How to ensure your feedback is interpreted as constructive criticism for fast knowledge transfers
+date: "2020-02-06T12:12:03.284Z"
+description: How to ensure your feedback is interpreted as constructive criticism
 hero: hero.jpg
 author: jasonbarry
 ---
@@ -16,14 +16,13 @@ So much so, that in the book [Code Complete](https://www.amazon.com/exec/obidos/
 *   Jet Propulsion Laboratories estimates that it **saves about $25,000 per inspection** by fixing defects at an early stage.
 *   Aetna Insurance Company was able to **decrease its development resources by 20%.**
 
-If you aren't doing code reviews right now, in the words of Nike and Shia LaBeouf  — 'Just Do It'.
-
+Having a second pair of eyes give your work a once-over can help prevent mission-critical bugs from entering into the wild. And you can learn a thing or two along the way. 
 
 ## So, what exactly is a code review?
 
 A code review happens once a developer has submitted a contribution to the project.
 
-This is known as a 'pull request', and you can read a detailed definition and learn how to use them effectively in [our previous article here](/blog/why-are-so-many-orgs-slow-to-approve-pull-requests/). 
+This is known as a 'pull request', and you can read a detailed definition and learn how to use them effectively in [our previous article](/blog/why-are-so-many-orgs-slow-to-approve-pull-requests/). 
 
 Before this contribution can be added to the project, other team members will review the code, checking for issues, suggesting improvements and ensuring overall product quality.
 
@@ -45,7 +44,7 @@ Therefore, your code reviews must never be _entirely_ automated. Instead, try in
 *   **Sharing Knowledge:** When programming, there are often several ways to solve a problem. Reflecting on why this particular approach was chosen reveals hidden knowledge. For example, the reviewee might have a different understanding of the architecture of the application, a superior knowledge of the technology being used or is lacking a key skill — all of which are opportunities to share knowledge. 
 *   **Better Estimates:** When estimates are wrong, code reviews are an opportunity to see where the hidden complexities or difficulties were. This leads to more accurate estimates in the future.
 *   **Mentoring:** Code reviews can uncover areas for improvement and self-development, which is invaluable to any reviewee. It can also be valuable for the reviewer, who will learn by teaching others.
-*   **Check requirements:** Code reviews are the perfect opportunity for agile teams to return to the user story acceptance criteria and check that requirements are met. For added insight, involve stakeholders, designers and product managers with a review tool like [FeaturePeek](https://featurepeek.com/), so they can see what has been done easily.
+*   **Check requirements:** Code reviews are the perfect opportunity for agile teams to return to the user story acceptance criteria and check that requirements are met. For added insight, involve stakeholders, designers, and product managers with review tools like [FeaturePeek](https://featurepeek.com/).
 
 
 ## How to give great code reviews 
@@ -55,11 +54,11 @@ Therefore, your code reviews must never be _entirely_ automated. Instead, try in
 
 Nobody likes being criticized, especially by their fellow team members. For a code review to be great, the reviewer must balance being positive with avoiding code defects.
 
-The first step is to remove the _stigma_ from defects. Bugs should not be seen as negatives, but instead as an opportunity to teach, fix bad habits and to improve code quality. 
+The first step is to **remove the _stigma_ from reviews**. Bugs should not be seen as negatives, but instead as an opportunity to teach, fix bad habits and to improve code quality. 
 
-This means that the number of defects produced by each team member should not be tracked, nor used in performance evaluation reviews. 
+This means that the number of errors produced by each team member should not be tracked, nor used in performance evaluation reviews. 
 
-The next step is to reframe the code review as a _coaching opportunity_. The most effective way to do this is to switch criticisms with self-evaluation questions, just like this:  
+The next step is to reframe the code review as a _coaching opportunity_. Instead of harsh criticisms, employ the [Socratic method](https://en.wikipedia.org/wiki/Socratic_method). The most effective way to do this is to **encourage self-evaluation by asking questions**, paving the way while helping them discover it for themselves. Just like this: 
 
 
 <table>
@@ -98,7 +97,7 @@ The next step is to reframe the code review as a _coaching opportunity_. The mos
 </table>
 
 
-If one of your reviewers is struggling with constructive feedback, coaching or relationship training might also be appropriate — the goal is to always keep your team feeling motivated and ready to do their best work! 
+If one of your reviewers is struggling with constructive feedback, coaching or relationship training might also be appropriate — **the goal is to always keep your team feeling motivated** and ready to do their best work! 
 
 
 ### Agree standards and follow them
@@ -109,7 +108,7 @@ So, follow these steps to ensure that each reviewer is doing the best they can:
 
 
 
-1. Agree a definition of 'good code' with your team. This might include formatting, commenting, security considerations or other considerations unique to your industry or team. It should also include a summary of how to make a pull request that can be reviewed quickly — [see our guide to better pull requests here](/blog/why-are-so-many-orgs-slow-to-approve-pull-requests/#how-can-you-speed-up-pull-requests). 
+1. Agree a definition of 'good code' with your team. This might include formatting, commenting, security considerations or other considerations unique to your industry or team. Use a [linter](https://github.com/eslint/eslint) if you aren't already. It should also include a summary of how to make a pull request that can be reviewed quickly — [see our guide to authoring better pull requests](/blog/why-are-so-many-orgs-slow-to-approve-pull-requests/#how-can-you-speed-up-pull-requests). 
 2. Include a 'good code' checklist in every pull request. The submitter must complete this pull request.
 3. The reviewer should check the code to ensure this checklist is accurately completed. 
 
