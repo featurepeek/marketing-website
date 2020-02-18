@@ -1,9 +1,8 @@
-
 ---
 title: The 8 Best Tools For Code Review In 2020
 date: "2020-02-20T12:12:03.284Z"
 description: How to ensure your feedback is interpreted as constructive criticism
-hero: hero.png
+hero: hero.jpg
 author: jasonbarry
 ---
 
