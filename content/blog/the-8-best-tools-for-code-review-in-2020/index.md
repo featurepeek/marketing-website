@@ -3,7 +3,7 @@
 title: The 8 Best Tools For Code Review In 2020
 date: "2020-02-20T12:12:03.284Z"
 description: How to ensure your feedback is interpreted as constructive criticism
-hero: hero.jpg
+hero: hero.png
 author: jasonbarry
 ---
 
@@ -183,27 +183,26 @@ But smaller images mean a better experience for your users, with fast load times
 *   $10 per month for personal projects
 *   $30 per month for professional projects
 
-## SourceSpy
+## CodeScene
 
-[SourceSpy](https://github.com/marketplace/sourcespy) automatically generates architecture diagrams for your repositories. This makes it easy to see how parts of the application interlink and interact with each other, speeding up the code review process and helping document the project to make future development easier.
+[CodeScene](https://empear.com) is a behavioral code analysis tool that analyzes behavioral data as recorded in version-control systems. This lets CodeScene uncover both organizational information such as knowledge distribution, inter-team coordination bottlenecks in code, as well as prioritizing technical issues based on the estimated return on investment if the findings are addressed. 
 
-Future you will thank you for using this tool, trust us!
-
-![SourceSpy](sourcespy.jpg)
+![CodeScene](codescene.jpg)
 
 **Pros:**
 
-*   Beautiful diagrams automatically generated nightly
-*   Works for a range of architectures
+*  Explore the efficiency of your organization with respect to Conway’s Law.
+*  Detect sub-systems with low team autonomy that become productivity bottlenecks.
+*  Measure the technical risk when a key developer leaves the project.
 
 **Cons:**
 
-*   Only works with Java projects, but has C++ support coming soon
-*   Limited documentation
+*  TBD
 
 **Pricing:**
 
-*   Free for all projects
+*  Analyze up to 5 projects for free
+*  Unlimited git repos in analyses starts at $249/month
 
 ## FeaturePeek 
 
@@ -219,7 +218,7 @@ This is where [FeaturePeek](https://featurepeek.com/) shines. With automated dep
 
 Like all the tools in this review, we plug into GitHub seamlessly, so signing up takes moments.
 
-[You can try us for free for 14 days by creating a new account here.](https://dashboard.featurepeek.com/login)
+[You can try FeaturePeek for free for 14 days by creating a new account here.](https://dashboard.featurepeek.com/login)
 
 
 ## Are you ready for drastically better code reviews in 2020?
