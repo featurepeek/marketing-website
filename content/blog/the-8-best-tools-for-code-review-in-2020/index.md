@@ -1,21 +1,16 @@
 ---
 title: The 8 Best Tools For Code Review In 2020
 date: "2020-02-20T12:12:03.284Z"
-description: How to ensure your feedback is interpreted as constructive criticism
+description: Improve your team's productivity during the review process with these new SaaS products
 hero: hero.jpg
 author: jasonbarry
 ---
 
 We love great code reviews. They dramatically improve the quality of your code, which ultimately means better and more reliable products.
 
-What we _don’t_ love about code reviews is how long they take, with many pull requests being painfully [slow to approve](/blog/why-are-so-many-orgs-slow-to-approve-pull-requests/). 
+What we _don’t_ love about code reviews is how long they take, with many pull requests being painfully slow to approve. We shared a few tips to [speed code reviews up here](/blog/why-are-so-many-orgs-slow-to-approve-pull-requests/), but another big factor is having the right _tools_ for the job. 
 
-We shared a few tips to [speed code reviews up here](/blog/why-are-so-many-orgs-slow-to-approve-pull-requests/), but another big factor is having the right _tools_ for the job. 
-
-To help cover this off, in this article we'll share some of the best tools we've used across the code review workflow. All of the tools listed here are available through the [GitHub Marketplace](https://github.com/marketplace), and we've given the pros and cons of each one below. 
-
-So, if you’re ready to improve your code review process in 2020, read on! 
-
+In this article we'll share some of the best tools we've used during the code review process. Many of the tools listed here are available through the [GitHub Marketplace](https://github.com/marketplace), and we've given the pros and cons of each one below. 
 
 ## AccessLint
 
@@ -95,7 +90,6 @@ DeepSource automatically adds annotations and comments to pull requests, making 
 **Cons:**
 
 *   Limited to Python and Go
-*   Only supports GitLab and GitHub
 
 **Pricing:**
 
@@ -122,7 +116,6 @@ Should the rules not be met in a pull request, Codelingo automatically comments 
 **Cons:**
 
 *   Only supports PHP, Python, Go and C#
-*   Only works with GitHub
 
 **Pricing:**
 
@@ -148,7 +141,6 @@ We also love their grading system, which assigns your projects a simple grade of
 
 **Cons:**
 
-*   On free and starter plan, it only supports GitHub
 *   Limits on language and library support 
 
 **Pricing:**
@@ -194,10 +186,6 @@ But smaller images mean a better experience for your users, with fast load times
 *  Detect sub-systems with low team autonomy that become productivity bottlenecks.
 *  Measure the technical risk when a key developer leaves the project.
 
-**Cons:**
-
-*  TBD
-
 **Pricing:**
 
 *  Analyze up to 5 projects for free
@@ -205,21 +193,33 @@ But smaller images mean a better experience for your users, with fast load times
 
 ## FeaturePeek 
 
-Before we go, there is one more tool for your consideration - our very own FeaturePeek.
-
-We built FeaturePeek to make it easier to do front-end review.
+Before we go, there is one more tool for your consideration &mdash; our very own FeaturePeek.
 
 ![FeaturePeek](featurepeek.png)
 
-One of the worst parts of the code review process is when you need to get it working locally to check everything works as expected. This is particularly true for non-technical stakeholders (such as a UXer or a product manager) who might not even know how to do this.
+One of the most tedious parts of the code review process is running your peers' branches locally to confirm that their code works as expected. 
 
-This is where [FeaturePeek](https://featurepeek.com/) shines. With automated deployment for every pull request, reviewers can see the code working instantly on a web page and give feedback quickly. Even better, it’ll automatically remind the reviewer on Slack that they need to approve the pull request, to avoid unnecessary delays.
+The truth is, many times this step simply just gets skipped. And non-technical stakeholders (such as a designer or a product manager) with no knowledge of git or front-end development *definitely* don't do it.
 
-Like all the tools in this review, we plug into GitHub seamlessly, so signing up takes moments.
+With **automated deployment previews for every pull request**, reviewers can see the code working, just by clicking a link, before any code gets merged into the default branch. 
+
+What sets FeaturePeek apart from other deployment preview services? **FeaturePeek overlays collaboration tools on top of every environment to empower your reviewers leave great reviews**. The collaboration tools include commenting, filing new issues with bug templates, screen recording, pixel measurement, and more. This functionality comes standard just by deploying to FeaturePeek &mdash; no modifications to your front-end stack required.
+
+Like all the tools in this blog post, FeaturePeek plugs into GitHub seamlessly, so getting up and running just takes a few minutes. 
 
 [You can try FeaturePeek for free for 14 days by creating a new account here.](https://dashboard.featurepeek.com/login)
 
+**Pros:**
 
-## Are you ready for drastically better code reviews in 2020?
+*  Ephemeral, on-demand deployment previews for every front-end pull request
+*  Floating widget on every preview makes it easy for your team to leave feedback
+*  Hosting provider / PaaS agnostic, works with static and dockerized front-ends
 
-By using a mixture of code review tools, you'll speed up your code review process and write better quality code as a result. You might even identify issues you didn't know you had - saving drama and emergency troubleshooting in the future.
+**Cons:**
+
+*  Let us know if you can think of any!
+
+**Pricing:**
+
+*  Free for public repos
+*  $19/user/month for private repos ($16/user/month for annual commitment)
