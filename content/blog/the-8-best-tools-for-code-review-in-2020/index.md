@@ -26,22 +26,37 @@ If you’re not already on your accessibility, you really need to be. In many co
 
 In the US, there have been various lawsuits against inaccessible websites that do not comply with ADA guidelines. In the UK, web accessibility is protected by the Equalities Act.
 
-**Pros:**
+- **Pros:**
+  - Gives instant WCAG 2.0 accessibility feedback for common accessibility issues
+  - Available through GitHub Marketplace, so can be added instantly
+- **Cons:**
+  - Not a comprehensive review and only covers basic issues
+  - Limited file type support (Haml, HTML, ERB/Rails)
+- **Pricing:**
+  - Free for all open-source public projects
+  - Free for educational institutions for public and private projects
+  - $49/month for unlimited public and private projects
 
-*   Gives instant WCAG 2.0 accessibility feedback for common accessibility issues
-*   Available through GitHub Marketplace, so can be added instantly
+## Imgbot
 
-**Cons:**
+When you are focused on shipping code and reaching deadlines, it's easy to forget to optimize images. 
 
-*   Not a comprehensive review and only covers basic issues
-*   Limited file type support (Haml, HTML, ERB/Rails)
+But smaller images mean a better experience for your users, with fast load times, higher conversion rates and reduced bandwidth costs. So it’s really important not to overlook this. 
 
+[Imgbot](https://imgbot.net) is a simple tool that handles losslessly compressing all the images in your repositories. There’s no fancy stuff going on here, just a super simple and mega effective tool to cover off this specific review necessity.
 
-**Pricing:**
+![Imgbot](imgbot.jpg)
 
-*   Free for all open-source public projects
-*   Free for educational institutions for public and private projects
-*   $49/month for unlimited public and private projects
+- **Pros:**
+  - Automatically optimizes images losslessly, but can be set to more aggressive compression if required
+  - Once set up, no interaction is required - just approve the incoming merges.
+- **Cons:**
+  - Pricing is high for small teams 
+  - Would love to see support for video files in future
+- **Pricing:**
+  - Free for open source projects
+  - $10 per month for personal projects
+  - $30 per month for professional projects
 
 ## LGTM
 
@@ -53,20 +68,13 @@ If an issue is detected by their 1600+ analyses, it is automatically flagged on 
 
 Their security analysis is unparalleled in the industry, with a dedicated team of security researchers who have found [107 CVEs](https://lgtm.com/security) to date in high-profile projects like UBoot, Apache Struts, the Linux Kernel, Memcached, VLC, and Apple's XNU.
 
-Example issues detected can include:
+Example issues detected includes regular expression injection, XSS detection, and poor code quality leading to security issues.
 
-*   Potential for regular expression injection
-*   XSS detection
-*   Poor code quality leading to security issues
-
-**Pros:**
-
-*   Wide support for programming languages, including C, C++, Java, Javascript, and Python
-*   High level of detection of vulnerabilities and important code problems
-
-**Cons:**
-
-*   No Go support - try Deep Source below for this
+- **Pros:**
+  - Wide support for programming languages, including C, C++, Java, Javascript, and Python
+  - High level of detection of vulnerabilities and important code problems
+- **Cons:**
+  - No Go support - try Deep Source below for this
 
 ## DeepSource
 
@@ -82,19 +90,14 @@ Example issues detected include:
 
 DeepSource automatically adds annotations and comments to pull requests, making it easy to see issues and ensure good security code. This makes the _entire_ code review process quicker and ensures higher code quality across the project.
 
-**Pros**:
-
-*   Gives instant security feedback in a friendly way
-*   Easy-to-use web interface
-
-**Cons:**
-
-*   Limited to Python and Go
-
-**Pricing:**
-
-*   Free for all open-source public projects
-*   For private projects, from $12 per month
+- **Pros**:
+  - Gives instant security feedback in a friendly way
+  - Easy-to-use web interface
+- **Cons:**
+  - Limited to Python and Go
+- **Pricing:**
+  - Free for all open-source public projects
+  - For private projects, from $12 per month
 
 ## Codelingo
 
@@ -108,19 +111,14 @@ The main advantage of Codelingo over generic code quality tools is that you can 
 
 Should the rules not be met in a pull request, Codelingo automatically comments on the pull request and notifies the contributor to be fixed. Simple.
 
-**Pros:**
-
-*   Can define bespoke code quality rules 
-*   Automatically resolves minor code quality issues
-
-**Cons:**
-
-*   Only supports PHP, Python, Go and C#
-
-**Pricing:**
-
-*   Generous free plan for public repositories
-*   £15 p/month per organization member, with inclusive assistance to write rules for your most significant issues
+- **Pros:**
+  - Can define bespoke code quality rules 
+  - Automatically resolves minor code quality issues
+- **Cons:**
+  - Only supports PHP, Python, Go and C#
+- **Pricing:**
+  - Generous free plan for public repositories
+  - $15/month per organization member, with assistance to write rules for your most significant issues
 
 ## DeepScan
 
@@ -130,49 +128,18 @@ Should the rules not be met in a pull request, Codelingo automatically comments 
 
 It automatically identifies possible runtime errors and potential quality issues, going beyond what ESLint can do by truly understanding the data-flow of your entire application.
 
-It also provides helpful metrics on team member performance and how closely they follow code standards, helping managers provide constructive feedback. 
+DeepScan also provides helpful metrics on team member performance and how closely they follow code standards, helping managers provide constructive feedback. 
 
-We also love their grading system, which assigns your projects a simple grade of either "Poor", "Normal" or "Good".
+We also love their grading system, which assigns your projects a simple grade of either "Poor", "Normal", or "Good".
 
-**Pros:**
-
-*   Specialist tools for JavaScript, TypeScript, React, and Vue.js projects
-*   A simple grading system for feedback
-
-**Cons:**
-
-*   Limits on language and library support 
-
-**Pricing:**
-
-*   Free for open source projects
-*   From $15.96 per seat per month
-
-## Imgbot
-
-When you are focused on shipping code and reaching deadlines, it's easy to forget to optimize images. 
-
-But smaller images mean a better experience for your users, with fast load times, higher conversion rates and reduced bandwidth costs. So it’s really important not to overlook this. 
-
-[Imgbot](https://imgbot.net) is a simple tool that handles losslessly compressing all the images in your repositories. There’s no fancy stuff going on here, just a super simple and mega effective tool to cover off this specific review necessity. Check it out!
-
-![Imgbot](imgbot.jpg)
-
-**Pros:**
-
-*   Automatically optimizes images losslessly, but can be set to more aggressive compression if required
-*   Once set up, no interaction is required - just approve the incoming merges.
-
-**Cons:**
-
-*   Pricing is high for small teams 
-*   Would love to see support for video files in future
-
-**Pricing:**
-
-*   Free for open source projects
-*   $10 per month for personal projects
-*   $30 per month for professional projects
+- **Pros:**
+  - Specialist tools for JavaScript, TypeScript, React, and Vue.js projects
+  - A simple grading system for feedback
+- **Cons:**
+  - Limits on language and library support 
+- **Pricing:**
+  - Free for open source projects
+  - From $15.96 per seat per month
 
 ## CodeScene
 
@@ -180,20 +147,17 @@ But smaller images mean a better experience for your users, with fast load times
 
 ![CodeScene](codescene.jpg)
 
-**Pros:**
-
-*  Explore the efficiency of your organization with respect to Conway’s Law.
-*  Detect sub-systems with low team autonomy that become productivity bottlenecks.
-*  Measure the technical risk when a key developer leaves the project.
-
-**Pricing:**
-
-*  Analyze up to 5 projects for free
-*  Unlimited git repos in analyses starts at $249/month
+- **Pros:**
+  - Explore the efficiency of your organization with respect to Conway’s Law.
+  - Detect sub-systems with low team autonomy that become productivity bottlenecks.
+  - Measure the technical risk when a key developer leaves the project.
+- **Pricing:**
+  - Analyze up to 5 projects for free
+  - Unlimited git repos in analyses starts at $249/month
 
 ## FeaturePeek 
 
-Before we go, there is one more tool for your consideration &mdash; our very own FeaturePeek.
+Before we go, there is one more tool for your consideration &mdash; our very own [FeaturePeek](https://featurepeek.com).
 
 ![FeaturePeek](featurepeek.png)
 
@@ -209,17 +173,12 @@ Like all the tools in this blog post, FeaturePeek plugs into GitHub seamlessly, 
 
 [You can try FeaturePeek for free for 14 days by creating a new account here.](https://dashboard.featurepeek.com/login)
 
-**Pros:**
-
-*  Ephemeral, on-demand deployment previews for every front-end pull request
-*  Floating widget on every preview makes it easy for your team to leave feedback
-*  Hosting provider / PaaS agnostic, works with static and dockerized front-ends
-
-**Cons:**
-
-*  Let us know if you can think of any!
-
-**Pricing:**
-
-*  Free for public repos
-*  $19/user/month for private repos ($16/user/month for annual commitment)
+- **Pros:**
+  - Ephemeral, on-demand deployment previews for every front-end pull request
+  - Floating widget on every preview makes it easy for your team to leave feedback
+  - Hosting provider / PaaS agnostic, works with static and dockerized front-ends
+- **Cons:**
+  - Let us know if you can think of any!
+- **Pricing:**
+  - Free for public repos
+  - $19/user/month for private repos ($16/user/month for annual commitment)
