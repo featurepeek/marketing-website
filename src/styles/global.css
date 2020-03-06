@@ -177,6 +177,9 @@ code {
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
+.blog-post > ul > li > p {
+  margin-bottom: 0;
+}
 .toc {
   font-size: 13px;
   opacity: 0.5;
