@@ -26,13 +26,13 @@ If you’re not already on your accessibility, you really need to be. In many co
 
 In the US, there have been various lawsuits against inaccessible websites that do not comply with ADA guidelines. In the UK, web accessibility is protected by the Equalities Act.
 
-- **Pros:**
+- Pros
   - Gives instant WCAG 2.0 accessibility feedback for common accessibility issues
   - Available through GitHub Marketplace, so can be added instantly
-- **Cons:**
+- Cons
   - Not a comprehensive review and only covers basic issues
   - Limited file type support (Haml, HTML, ERB/Rails)
-- **Pricing:**
+- Pricing
   - Free for all open-source public projects
   - Free for educational institutions for public and private projects
   - $49/month for unlimited public and private projects
@@ -47,13 +47,13 @@ But smaller images mean a better experience for your users, with fast load times
 
 ![Imgbot](imgbot.jpg)
 
-- **Pros:**
+- Pros
   - Automatically optimizes images losslessly, but can be set to more aggressive compression if required
   - Once set up, no interaction is required - just approve the incoming merges.
-- **Cons:**
+- Cons
   - Pricing is high for small teams 
   - Would love to see support for video files in future
-- **Pricing:**
+- Pricing
   - Free for open source projects
   - $10 per month for personal projects
   - $30 per month for professional projects
@@ -70,10 +70,10 @@ Their security analysis is unparalleled in the industry, with a dedicated team o
 
 Example issues detected includes regular expression injection, XSS detection, and poor code quality leading to security issues.
 
-- **Pros:**
+- Pros
   - Wide support for programming languages, including C, C++, Java, Javascript, and Python
   - High level of detection of vulnerabilities and important code problems
-- **Cons:**
+- Cons
   - No Go support - try Deep Source below for this
 
 ## DeepSource
@@ -90,12 +90,12 @@ Example issues detected include:
 
 DeepSource automatically adds annotations and comments to pull requests, making it easy to see issues and ensure good security code. This makes the _entire_ code review process quicker and ensures higher code quality across the project.
 
-- **Pros**:
+- Pros
   - Gives instant security feedback in a friendly way
   - Easy-to-use web interface
-- **Cons:**
+- Cons
   - Limited to Python and Go
-- **Pricing:**
+- Pricing
   - Free for all open-source public projects
   - For private projects, from $12 per month
 
@@ -111,12 +111,12 @@ The main advantage of Codelingo over generic code quality tools is that you can 
 
 Should the rules not be met in a pull request, Codelingo automatically comments on the pull request and notifies the contributor to be fixed. Simple.
 
-- **Pros:**
+- Pros
   - Can define bespoke code quality rules 
   - Automatically resolves minor code quality issues
-- **Cons:**
+- Cons
   - Only supports PHP, Python, Go and C#
-- **Pricing:**
+- Pricing
   - Generous free plan for public repositories
   - $15/month per organization member, with assistance to write rules for your most significant issues
 
@@ -132,12 +132,12 @@ DeepScan also provides helpful metrics on team member performance and how closel
 
 We also love their grading system, which assigns your projects a simple grade of either "Poor", "Normal", or "Good".
 
-- **Pros:**
+- Pros
   - Specialist tools for JavaScript, TypeScript, React, and Vue.js projects
   - A simple grading system for feedback
-- **Cons:**
+- Cons
   - Limits on language and library support 
-- **Pricing:**
+- Pricing
   - Free for open source projects
   - From $15.96 per seat per month
 
@@ -147,11 +147,11 @@ We also love their grading system, which assigns your projects a simple grade of
 
 ![CodeScene](codescene.jpg)
 
-- **Pros:**
+- Pros
   - Explore the efficiency of your organization with respect to Conway’s Law.
   - Detect sub-systems with low team autonomy that become productivity bottlenecks.
   - Measure the technical risk when a key developer leaves the project.
-- **Pricing:**
+- Pricing
   - Analyze up to 5 projects for free
   - Unlimited git repos in analyses starts at $249/month
 
@@ -173,12 +173,12 @@ Like all the tools in this blog post, FeaturePeek plugs into GitHub seamlessly, 
 
 [You can try FeaturePeek for free for 14 days by creating a new account here.](https://dashboard.featurepeek.com/login)
 
-- **Pros:**
+- Pros
   - Ephemeral, on-demand deployment previews for every front-end pull request
   - Floating widget on every preview makes it easy for your team to leave feedback
   - Hosting provider / PaaS agnostic, works with static and dockerized front-ends
-- **Cons:**
+- Cons
   - Let us know if you can think of any!
-- **Pricing:**
+- Pricing
   - Free for public repos
   - $19/user/month for private repos ($16/user/month for annual commitment)
