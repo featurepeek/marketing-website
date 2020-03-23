@@ -32,8 +32,7 @@ export default function Layout(props) {
     if (location.search) {
       const { r } = queryString.parse(location.search)
       if (r) {
-        const opts = { expires: 365 * 10, domain: `dashboard.${location.host}`, secure: location.protocol === 'https:' }
-        Cookies.set('referralCode', r, opts)
+        Cookies.set('referralCode', r, { expires: 365 * 10, sameSite: 'lax' })
       }
     }
   }, [])
