@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Box from 'ui-box'
 import MediaQuery from 'react-responsive'
+import Cookies from 'js-cookie'
+import queryString from 'query-string'
 
 import CtaBox from 'components/CtaBox'
 import Nav from 'components/Nav'
@@ -13,9 +15,9 @@ export default function Layout(props) {
 
   const [initialRender, setInitialRender] = useState(true)
 
-  // ultra-hack to combat react-responsive + Gatsby SSR woes.
-  // https://github.com/contra/react-responsive/issues/162
   useEffect(() => {
+    // ultra-hack to combat react-responsive + Gatsby SSR woes.
+    // https://github.com/contra/react-responsive/issues/162
     const MAX_BREAK_POINT = 942
     if (!window._didInitialRender && window.innerWidth <= MAX_BREAK_POINT) {
       setInitialRender(false)
@@ -23,6 +25,15 @@ export default function Layout(props) {
         setInitialRender(true)
       }, 1)
       window._didInitialRender = true
+    }
+
+    // if there's a referral query param, save in a domain-wide cookie (to pass to dashboard)
+    const { location } = document
+    if (location.search) {
+      const { r } = queryString.parse(location.search)
+      if (r) {
+        Cookies.set('referralCode', r, { expires: 365 * 10, sameSite: 'lax' })
+      }
     }
   }, [])
 
