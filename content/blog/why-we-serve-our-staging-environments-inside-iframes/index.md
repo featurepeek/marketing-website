@@ -40,8 +40,10 @@ Alas, the protections of [Same-Origin Policy](https://security.stackexchange.com
 
 ```js
 const { pathname } = $('frame').contentWindow.document.location
-
-SecurityError: Blocked a frame with origin "https://webcast.livephish.com" from accessing a cross-origin frame. 
+```
+```
+SecurityError: Blocked a frame with origin X 
+from accessing a cross-origin frame. 
 Protocols, domains, and ports must match.
 ```
 
