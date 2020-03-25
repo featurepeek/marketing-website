@@ -32,7 +32,7 @@ export default function Layout(props) {
     if (location.search) {
       const { r } = queryString.parse(location.search)
       if (r) {
-        Cookies.set('referralCode', r, { expires: 365 * 10, sameSite: 'lax' })
+        Cookies.set('referralCode', r, { expires: 365 * 10, sameSite: 'lax', domain: '.featurepeek.com' })
       }
     }
   }, [])
