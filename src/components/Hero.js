@@ -2,10 +2,9 @@
 import React from 'react'
 import Box from 'ui-box'
 import MediaQuery from 'react-responsive'
+import ReactPlayer from 'react-player'
 
 import { Button, Flex, Heading } from 'primitives'
-
-import HeroDashboard from 'images/HeroDashboard'
 
 import { track } from 'utils/analytics'
 // import { rhythm, scale } from 'utils/typography'
@@ -14,25 +13,24 @@ export default function Hero() {
   return (
     <MediaQuery maxWidth={904}>
       {mobile => (
-        <Flex className="hero-flex-direction-fouc">
-          <Box className="hero-fouc" width={mobile ? '100%' : '40%'}>
-            <Heading marginTop={0} size={500}>
-              Front-end review for the whole team.
+        <Flex alignItems="center" className="hero-flex-direction-fouc" justifyContent="center">
+          <Box className="hero-fouc" width={mobile ? '100%' : 420}>
+            <Heading h={2} opacity={0.4} size={320} textAlign={mobile ? 'center' : 'left'}>
+              On-demand front-end
+              <br />
+              staging environments.
             </Heading>
-            <Heading h={2} opacity={0.4} size={360}>
-              Spin up environments for every branch automatically.
-            </Heading>
-            <Heading h={2} opacity={0.4} size={360}>
+            <Heading h={2} opacity={0.4} size={320} textAlign={mobile ? 'center' : 'left'}>
               Gather team feedback
               <br />
               earlier in the dev cycle.
             </Heading>
-            <Heading h={3} opacity={0.4} size={360}>
-              Without dependencies
+            <Heading h={3} opacity={0.4} size={320} textAlign={mobile ? 'center' : 'left'}>
+              Works with all frameworks
               <br />
-              or browser extensions.
+              and hosting providers.
             </Heading>
-            <Flex flexDirection="row">
+            <Flex flexDirection="row" marginTop={40}>
               <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 200}>
                 <Button
                   href="https://dashboard.featurepeek.com"
@@ -49,8 +47,33 @@ export default function Hero() {
               </Flex>
             </Flex>
           </Box>
-          <Box position="relative" top={mobile ? 0 : -48} left={mobile ? 0 : 39} width={mobile ? '100%' : '60%'}>
-            <HeroDashboard />
+          <Box
+            marginTop={mobile ? 80 : 0}
+            paddingLeft={mobile ? 0 : 79}
+            paddingRight={0}
+            width={mobile ? '100%' : '60%'}
+          >
+            <Box boxShadow="0px 20px 80px rgba(40, 40, 40, 0.15)" position="relative" paddingTop="56.25%">
+              <ReactPlayer
+                className="react-player"
+                config={{
+                  youtube: {
+                    preload: true,
+                    playerVars: {
+                      autoplay: 1,
+                      modestbranding: 1,
+                    },
+                  },
+                }}
+                controls
+                height="100%"
+                muted
+                playing
+                url="https://www.youtube.com/embed/OSvst-lCySE?background=transparent"
+                width="100%"
+                wrapper="center"
+              />
+            </Box>
           </Box>
         </Flex>
       )}

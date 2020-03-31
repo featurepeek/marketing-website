@@ -10,7 +10,7 @@ import TechCrunch from 'images/TechCrunch'
 
 export default function AsSeenOn({ question, answer }) {
   return (
-    <Box className="as-seen-on" paddingY={32} width="100%">
+    <Box className="as-seen-on" paddingBottom={32} paddingTop={104} width="100%">
       <Box
         background="linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 49%, rgba(173,173,173,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 100%)"
         textAlign="center"
