@@ -51,7 +51,7 @@ export default function Layout(props) {
             marginTop={16}
             marginX="auto"
             maxWidth={rhythm(64)}
-            overflowX={location.pathname === '/' ? 'hidden' : undefined}
+            overflow={location.pathname === '/' ? 'hidden' : undefined}
             padding={mobile ? 16 : rhythm(1.5)}
           >
             <main>{children}</main>
