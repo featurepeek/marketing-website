@@ -14,9 +14,9 @@ import { gradientMap } from 'utils/color'
 import { scale } from 'utils/typography'
 
 export default function ForFrontendDevelopers(props) {
-  const theme = gradientMap.green[0]
+  const theme = gradientMap.green[0] //  background="#eef6ef"
   return (
-    <Layout background="#eef6ef" location={props.location}>
+    <Layout location={props.location}>
       <SEO title="Built for Front-end Developers" location={props.location} />
       <HeroFrontend>
         <Heading color="#103c52" h={6} marginTop={0} {...scale(1 / 2)}>

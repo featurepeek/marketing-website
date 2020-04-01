@@ -1,9 +1,9 @@
 import React from 'react'
 import { gradientMap } from 'utils/color'
 
-import LinkInPullRequest from 'images/LinkInPullRequest'
-import DesignComeToLife from 'images/DesignComeToLife'
-import SaveTime from 'images/SaveTime'
+// import LinkInPullRequest from 'images/LinkInPullRequest'
+// import DesignComeToLife from 'images/DesignComeToLife'
+// import SaveTime from 'images/SaveTime'
 
 export const valueProps = [
   {
@@ -20,7 +20,7 @@ export const valueProps = [
       href: '/for-frontend-developers',
       iconAfter: 'fas fa-arrow-right',
     },
-    image: <LinkInPullRequest />,
+    image: <img alt="Annotate the website" src="/img/art/annotate.svg" />,
   },
   {
     builtFor: 'UX Designers',
@@ -36,7 +36,7 @@ export const valueProps = [
       href: '/for-ux-designers',
       iconAfter: 'fas fa-arrow-right',
     },
-    image: <DesignComeToLife />,
+    image: <img alt="Visual code review" src="/img/art/swatch.svg" />,
   },
   {
     builtFor: 'Project Managers',
@@ -52,7 +52,7 @@ export const valueProps = [
       href: '/for-project-managers',
       iconAfter: 'fas fa-arrow-right',
     },
-    image: <SaveTime />,
+    image: <img alt="Save time during the release cycle" src="/img/art/save-time.svg" />,
   },
 ]
 
