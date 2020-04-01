@@ -124,18 +124,8 @@ export default function Nav() {
             <Box>
               <UnorderedList marginLeft={76} marginTop={16}>
                 <ListItem>
-                  <Link href="/for-frontend-developers" fontSize={21}>
-                    For Front-end Developers
-                  </Link>
-                </ListItem>
-                <ListItem>
-                  <Link href="/for-ux-designers" fontSize={21}>
-                    For UX Designers
-                  </Link>
-                </ListItem>
-                <ListItem>
-                  <Link href="/for-project-managers" fontSize={21}>
-                    For Project Managers
+                  <Link href="/product" fontSize={21}>
+                    Product
                   </Link>
                 </ListItem>
                 <ListItem>
@@ -146,6 +136,11 @@ export default function Nav() {
                 <ListItem>
                   <Link href="/pricing" fontSize={21}>
                     Pricing
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link href="/blog" fontSize={21}>
+                    Blog
                   </Link>
                 </ListItem>
                 <ListItem>
