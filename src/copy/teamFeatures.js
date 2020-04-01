@@ -1,8 +1,8 @@
 import React from 'react'
 
-import SlackReviewers from 'images/SlackReviewers'
-import Leaderboards from 'images/Leaderboards'
-import BlockMerge from 'images/BlockMerge'
+// import SlackReviewers from 'images/SlackReviewers'
+// import Leaderboards from 'images/Leaderboards'
+// import BlockMerge from 'images/BlockMerge'
 
 export default [
   {

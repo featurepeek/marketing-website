@@ -4,7 +4,7 @@ import copyWritings from 'copy/forUxDesigners'
 
 import { Heading } from 'primitives'
 
-import HeroDesigners from 'images/HeroDesigners'
+// import HeroDesigners from 'images/HeroDesigners'
 import Layout from 'components/Layout'
 import NextPrevButtons from 'components/NextPrevButtons'
 import RowReversal from 'components/RowReversal'
