@@ -1,7 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
-import Box from 'ui-box'
+
+import Mask from 'components/Mask'
 
 export default function SlackReviewers() {
   const { img } = useStaticQuery(
@@ -19,8 +20,8 @@ export default function SlackReviewers() {
   )
 
   return (
-    <Box padding={32}>
+    <Mask padding={8}>
       <Image fluid={img.childImageSharp.fluid} alt="Remind your reviewers that they have pull requests to review" />
-    </Box>
+    </Mask>
   )
 }

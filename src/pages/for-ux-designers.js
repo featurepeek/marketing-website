@@ -18,18 +18,16 @@ export default function ForFrontendDevelopers(props) {
   return (
     <Layout location={props.location}>
       <SEO title="Built for UX Designers" location={props.location} />
-      <HeroDesigners>
-        <Heading color="#103c52" h={6} marginTop={0} {...scale(1 / 2)}>
-          Built for
-        </Heading>
-        <Heading color={theme} marginTop={0} {...scale(2)}>
-          UX Designers
-        </Heading>
-        <Heading color={theme} h={2} opacity={0.5} size={300} width="60%">
-          See your designs come to life earlier in the development cycle.
-        </Heading>
-      </HeroDesigners>
-      <RowReversal copyWritings={copyWritings} theme={theme} />
+      <Heading color="#103c52" h={6} marginTop={0} {...scale(1 / 2)}>
+        Built for
+      </Heading>
+      <Heading color={theme} marginTop={0} {...scale(2)}>
+        UX Designers
+      </Heading>
+      <Heading color={theme} h={2} opacity={0.5} size={300}>
+        See your designs come to life earlier in the development cycle.
+      </Heading>
+      <RowReversal copyWritings={copyWritings} flip={1} theme={theme} />
       <NextPrevButtons prev="developers" next="managers" />
     </Layout>
   )

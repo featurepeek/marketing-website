@@ -26,7 +26,7 @@ export default function NextPrevButtons({ next, prev }) {
   return (
     <MediaQuery maxWidth={800}>
       {mobile => (
-        <Flex justifyContent="space-evenly" marginTop={200} width="100%">
+        <Flex justifyContent="space-around" marginTop={200} width="100%">
           <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? undefined : 1}>
             <Button iconBefore="fas fa-arrow-left" width={mobile ? undefined : 300} {...buttonProps[prev]} />
           </Flex>

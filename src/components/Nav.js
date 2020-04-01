@@ -74,12 +74,7 @@ export default function Nav() {
                       onMouseEnter={() => setShowingSubNav(true)}
                       onMouseLeave={() => setShowingSubNav(false)}
                     >
-                      <Link
-                        className="nav-links-hide-fouc"
-                        color="#103c52"
-                        href="/for-frontend-developers"
-                        fontSize={17}
-                      >
+                      <Link className="nav-links-hide-fouc" color="#103c52" href="/product" fontSize={17}>
                         Product
                       </Link>
                       <SubNav isShowing={isShowingSubNav} />
