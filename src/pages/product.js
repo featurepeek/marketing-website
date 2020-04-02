@@ -13,7 +13,7 @@ import SEO from 'components/Seo'
 
 import HeroSVG from '../../static/img/art/ci-pipeline-hero.svg'
 
-export default function ForFrontendDevelopers(props) {
+export default function Product(props) {
   return (
     <Layout location={props.location}>
       <SEO title="Features" location={props.location} />
