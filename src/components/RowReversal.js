@@ -21,7 +21,7 @@ export default function RowReversal(props) {
               justifyContent="space-between"
               marginY={100}
             >
-              <Box width={mobile ? '100%' : '45%'}>
+              <Box width={mobile ? '100%' : '48%'}>
                 {builtFor && (
                   <Heading color={theme || color || 'inherit'} h={3} {...scale(1 / 2)} marginBottom={0}>
                     Built for {builtFor}
@@ -41,7 +41,7 @@ export default function RowReversal(props) {
                   </Flex>
                 )}
               </Box>
-              <Box marginBottom={mobile ? 24 : undefined} width={mobile ? '100%' : '45%'}>
+              <Box marginBottom={mobile ? 24 : undefined} width={mobile ? '100%' : '48%'}>
                 {image}
               </Box>
             </Flex>

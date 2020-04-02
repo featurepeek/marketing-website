@@ -1,17 +1,17 @@
 import React from 'react'
 import { gradientMap } from 'utils/color'
 
-import LinkInPullRequest from 'images/LinkInPullRequest'
-import DesignComeToLife from 'images/DesignComeToLife'
-import SaveTime from 'images/SaveTime'
+// import LinkInPullRequest from 'images/LinkInPullRequest'
+// import DesignComeToLife from 'images/DesignComeToLife'
+// import SaveTime from 'images/SaveTime'
 
 export const valueProps = [
   {
     builtFor: 'Front-end Developers',
-    heading: 'Collect implementation feedback as early as possible',
+    heading: 'Collect implementation feedback with deployment previews',
     paragraphs: [
-      "Connect your front-end repo to FeaturePeek, and we'll spin up your feature branches in a dedicated environment every time you open a pull request.",
-      'Get feedback from your whole team faster by sharing the link to review visually before waiting on code review.',
+      "Connect your front-end repo to FeaturePeek, and we'll spin up a staging environment whenever you open a pull request.",
+      'Get feedback from your whole team faster by sharing the link to review visually before waiting on code review to finish.',
     ],
     color: gradientMap.green[0],
     buttonProps: {
@@ -20,23 +20,7 @@ export const valueProps = [
       href: '/for-frontend-developers',
       iconAfter: 'fas fa-arrow-right',
     },
-    image: <LinkInPullRequest />,
-  },
-  {
-    builtFor: 'UX Designers',
-    heading: 'Ensure your actual designs ship',
-    paragraphs: [
-      'Iterate more quickly by leaving feedback on your implemented designs before code lands on your staging or QA server.',
-      "Take screenshots of an HTML element on the page, and it'll be saved as a comment on the open pull request — even if you don't have a GitHub account.",
-    ],
-    color: gradientMap.pink[0],
-    buttonProps: {
-      background: 'pink',
-      children: 'Features for UX Designers',
-      href: '/for-ux-designers',
-      iconAfter: 'fas fa-arrow-right',
-    },
-    image: <DesignComeToLife />,
+    image: <img alt="Annotate the website" src="/img/art/annotate.svg" />,
   },
   {
     builtFor: 'Project Managers',
@@ -52,7 +36,23 @@ export const valueProps = [
       href: '/for-project-managers',
       iconAfter: 'fas fa-arrow-right',
     },
-    image: <SaveTime />,
+    image: <img alt="Save time during the release cycle" src="/img/art/save-time.svg" />,
+  },
+  {
+    builtFor: 'UX Designers',
+    heading: 'Ensure your actual designs ship',
+    paragraphs: [
+      'Iterate more quickly by leaving feedback on your implemented designs before code lands on your staging or QA server.',
+      "Take screenshots of an HTML element on the page, and it'll be saved as a comment on the open pull request — even if you don't have a GitHub account.",
+    ],
+    color: gradientMap.pink[0],
+    buttonProps: {
+      background: 'pink',
+      children: 'Features for UX Designers',
+      href: '/for-ux-designers',
+      iconAfter: 'fas fa-arrow-right',
+    },
+    image: <img alt="Visual code review" src="/img/art/swatch.svg" />,
   },
 ]
 
