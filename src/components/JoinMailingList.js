@@ -26,7 +26,7 @@ export default function JoinMailingList({ dark }) {
         <Flex>
           <TextInput
             background={dark ? '#0d5166' : undefined}
-            border={dark ? 0 : '1px solid #ccc'}
+            border={dark ? '0' : '1px solid #ccc'}
             color={dark ? 'white' : undefined}
             marginBottom={24}
             marginRight={8}

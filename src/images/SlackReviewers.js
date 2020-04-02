@@ -20,7 +20,7 @@ export default function SlackReviewers() {
   )
 
   return (
-    <Mask padding={16}>
+    <Mask padding={8}>
       <Image fluid={img.childImageSharp.fluid} alt="Remind your reviewers that they have pull requests to review" />
     </Mask>
   )

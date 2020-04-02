@@ -14,16 +14,16 @@ const items = [
     label: 'Front-end Developers',
   },
   {
-    color: gradientMap.pink,
-    icon: 'fas fa-pen-nib',
-    href: '/for-ux-designers',
-    label: 'UX Designers',
-  },
-  {
     color: gradientMap.blue,
     icon: 'fas fa-tasks',
     href: '/for-project-managers',
     label: 'Project Managers',
+  },
+  {
+    color: gradientMap.pink,
+    icon: 'fas fa-pen-nib',
+    href: '/for-ux-designers',
+    label: 'UX Designers',
   },
 ]
 

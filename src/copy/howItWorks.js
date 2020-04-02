@@ -7,7 +7,7 @@ import OpenPullRequest from 'images/OpenPullRequest'
 
 export const steps = [
   'Install our GitHub App on your org',
-  'Check-in a file to your repo root',
+  'Check-in a config file to your repo root',
   'Ping our service after your build phase in CI',
   'Open a new pull request and celebrate 🎉',
 ]
@@ -19,7 +19,7 @@ export const elaborations = [
     image: <InstallGitHubApp />,
   },
   {
-    strong: 'Check-in a file to your repo root.',
+    strong: 'Check-in a config file to your repo root.',
     body:
       'For each project you want on FeaturePeek, check-in a peek.yml file to your repo root. You can track an unlimited number of projects on FeaturePeek.',
     image: <PeekYaml />,
