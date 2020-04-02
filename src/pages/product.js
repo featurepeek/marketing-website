@@ -11,8 +11,7 @@ import Layout from 'components/Layout'
 import RowReversal from 'components/RowReversal'
 import SEO from 'components/Seo'
 
-// import { gradientMap } from 'utils/color'
-// import { scale } from 'utils/typography'
+import HeroSVG from '../../static/img/art/ci-pipeline-hero.svg'
 
 export default function ForFrontendDevelopers(props) {
   return (
@@ -22,9 +21,9 @@ export default function ForFrontendDevelopers(props) {
         FeaturePeek fits into your CI pipeline
       </Heading>
       <Box padding={16}>
-        <img alt="Fits in your CI pipeline" src="/img/art/ci-pipeline-hero.svg" />
+        <HeroSVG />
       </Box>
-      <hr />
+      <hr style={{ background: '#eee' }} />
       <Heading marginTop={80} size={500} textAlign="center">
         Features for the whole team
       </Heading>
