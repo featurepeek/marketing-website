@@ -18,11 +18,11 @@ export default function CtaBox({ light }) {
           paddingY={mobile ? 60 : 120}
         >
           <Heading color={light ? undefined : 'white'} h={5} size={500} textAlign="center">
-            Start a free trial today.
+            Start your free trial today.
           </Heading>
           <Flex alignItems="center" justifyContent="center" height={100}>
             <Button href="https://dashboard.featurepeek.com" onClick={() => track('Clicked CTA', { cta: 'CtaBox' })}>
-              Start two-week trial
+              Sign up for a two-week trial
             </Button>
           </Flex>
         </Box>

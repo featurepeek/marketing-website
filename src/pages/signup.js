@@ -15,9 +15,11 @@ export default function Signup(props) {
     <Layout location={props.location}>
       <SEO title="Features" location={props.location} />
       <Heading marginTop={0} size={500} textAlign="center">
-        Thanks for watching!
+        Sign up now... it's free!
       </Heading>
-      <Paragraph textAlign="center">Here are three reasons why you should start a free trial right now:</Paragraph>
+      <Paragraph textAlign="center">
+        Here are three extra reasons why you should start a free trial right now:
+      </Paragraph>
       <Flex flexDirection="column" alignItems="center">
         {copyWritings.map(copy => (
           <Flex alignItems="center" borderTop="1px solid #eee" marginTop={24} width="80%">
