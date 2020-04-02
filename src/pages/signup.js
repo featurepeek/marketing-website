@@ -13,7 +13,7 @@ import SEO from 'components/Seo'
 export default function Signup(props) {
   return (
     <Layout location={props.location}>
-      <SEO title="Features" location={props.location} />
+      <SEO title="Sign up today" location={props.location} />
       <Heading marginTop={0} size={500} textAlign="center">
         Sign up now... it's free!
       </Heading>
