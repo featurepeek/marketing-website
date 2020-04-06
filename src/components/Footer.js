@@ -133,7 +133,7 @@ export default function Footer(styles) {
               </Flex>
               <Paragraph color="white" fontSize={14} marginBottom={24}>
                 FeaturePeek shortens feedback loops for teams building web products. Enter your email below to receive
-                our newsletter about the software development lifecycle.
+                our monthly product update newsletter.
               </Paragraph>
               <JoinMailingList dark />
             </Column>
