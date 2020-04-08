@@ -9,7 +9,8 @@ export default function TableOfContents({ html }) {
       {mobile => (
         <Box style={{ position: 'sticky' }} top={96}>
           {!mobile && (
-            <Box right={-304} position="absolute" width={264}>
+            <Box right={-308} position="absolute" width={264}>
+              <h6 style={{ marginTop: 5 }}>Table of Contents</h6>
               <div className="toc" dangerouslySetInnerHTML={{ __html: html }} />
             </Box>
           )}

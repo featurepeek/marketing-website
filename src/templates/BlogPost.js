@@ -75,7 +75,7 @@ export default function BlogPost(props) {
           <Box marginX={mobile ? -15 : -39} marginY={-39}>
             <img alt="" height="40" src="/img/curve.svg" width="100%" />
           </Box>
-          <Box marginTop={rhythm(4)} marginX="auto" maxWidth={rhythm(24)}>
+          <Box marginTop={rhythm(4)} marginLeft={mobile ? 0 : 77} maxWidth={rhythm(30)}>
             <Box>
               {!mobile && (
                 <Box style={{ position: 'sticky' }} top={96}>

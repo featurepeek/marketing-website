@@ -188,11 +188,11 @@ code {
 }
 .toc {
   font-size: 13px;
-  opacity: 0.5;
+  opacity: 0.7;
   transition: opacity 0.3s ease;
 }
 .toc:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
 .toc a {
   color: #333333;
@@ -205,9 +205,16 @@ code {
   margin-bottom: 4px;
 }
 .toc ul {
-  list-style-type: none;
+  /*list-style-type: none;*/
   margin-top: 0;
   margin-left: 16px;
+}
+.SocialMediaShareList {
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+.SocialMediaShareList:hover {
+  opacity: 1;
 }
 .SocialMediaShareButton {
   opacity: 0.5;
