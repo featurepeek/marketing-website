@@ -1,6 +1,6 @@
 ---
 title: How to import Mailchimp campaigns as a Gatsby source
-date: "2020-04-06T12:12:03.284Z"
+date: "2020-04-08T12:12:03.284Z"
 description: Sync your Gatsby site with Mailchimp so that it fetches and renders your newsletter campaigns at build-time
 hero: hero.png
 author: jasonbarry
@@ -53,7 +53,7 @@ Don't forget to add this value to your servers and continuous integration platfo
 
 Tell Gatsby that you'd like to use the `gatsby-source-mailchimp` plugin in your `gatsby-config.js` file. This will read from the `MAILCHIMP_API_KEY` environment variable that you defined earlier.
 
-```javascript
+```jsx
 // gatsby-config.js
 module.exports = {
   plugins: [
@@ -68,30 +68,30 @@ module.exports = {
     }
     // ...
   ]
-};
+}
 ```
 
 ## Create the CampaignPost template component
 
 This component will be what renders when someone loads an individual campaign post page. You might recognize the format of this component if you followed any of the Gatsby blog starters – it's very [similar to the blog-post.js template component](https://github.com/DSchau/gatsby-blog-starter-kit/blob/master/src/templates/blog-post.js).
 
-```javascript
+```jsx
 // src/templates/CampaignPost.js
-import React from "react";
-import { graphql, Link } from "gatsby";
-import cheerio from "cheerio";
+import React from "react"
+import { graphql, Link } from "gatsby"
+import cheerio from "cheerio"
 
-import Layout from "components/Layout";
-import SEO from "components/Seo";
+import Layout from "components/Layout"
+import SEO from "components/Seo"
 
 export default function CampaignPost(props) {
-  const post = props.data.mailchimpCampaign;
-  const siteTitle = props.data.site.siteMetadata.title;
-  const { previous, next } = props.pageContext;
+  const post = props.data.mailchimpCampaign
+  const siteTitle = props.data.site.siteMetadata.title
+  const { previous, next } = props.pageContext
 
   // we don't want the full post.html -- just what is in the body container
-  const $ = cheerio.load(post.html);
-  const bodyTable = $(".bodyContainer").html();
+  const $ = cheerio.load(post.html)
+  const bodyTable = $(".bodyContainer").html()
 
   return (
     <Layout title={siteTitle}>
@@ -122,7 +122,7 @@ export default function CampaignPost(props) {
         </li>
       </ul>
     </Layout>
-  );
+  )
 }
 
 export const pageQuery = graphql`
@@ -145,26 +145,26 @@ export const pageQuery = graphql`
       status
     }
   }
-`;
+`
 ```
 
 ## Create ProductUpdates page component
 
 This page serves as the collection page for all of your campaigns.
 
-```javascript
+```jsx
 // src/pages/ProductUpdates.js
-import React from "react";
-import { graphql, Link } from "gatsby";
+import React from "react"
+import { graphql, Link } from "gatsby"
 
-import Layout from "components/Layout";
-import SEO from "components/Seo";
-import JoinMailingList from "components/JoinMailingList";
+import Layout from "components/Layout"
+import SEO from "components/Seo"
+import JoinMailingList from "components/JoinMailingList"
 
 export default function ProductUpdates(props) {
-  const { data } = props;
-  const siteTitle = data.site.siteMetadata.title;
-  const campaigns = data.allMailchimpCampaign.edges;
+  const { data } = props
+  const siteTitle = data.site.siteMetadata.title
+  const campaigns = data.allMailchimpCampaign.edges
 
   return (
     <Layout title={siteTitle}>
@@ -181,19 +181,19 @@ export default function ProductUpdates(props) {
       <JoinMailingList />
       <h2>Archive</h2>
       {campaigns.map(({ node }) => {
-        const title = node.settings.title;
+        const title = node.settings.title
         return (
           <div key={node.campaignId}>
+            <small>{node.send_time}</small>
             <h3>
               <Link href={`/product-updates/${node.campaignId}`}>{title}</Link>
             </h3>
-            <small>{node.send_time}</small>
             <p>{node.settings.preview_text}</p>
           </div>
-        );
+        )
       })}
     </Layout>
-  );
+  )
 }
 
 export const pageQuery = graphql`
@@ -220,7 +220,7 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
 ```
 
 ## Extend createPages
@@ -229,11 +229,11 @@ Finally, we need to create the graphQL query to pull the data from the Mailchimp
 
 If your Gatsby project already contains a blog, your `createPages` method in `gatsby-node.js` is probably already in use. You'll need to combine what you already have with what is written in detail below.
 
-```javascript
+```jsx
 // gatsby-node.js
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
-  const campaignPost = path.resolve(`./src/templates/CampaignPost.js`);
+  const { createPage } = actions
+  const campaignPost = path.resolve(`./src/templates/CampaignPost.js`)
 
   return graphql(`
     {
@@ -273,16 +273,16 @@ exports.createPages = ({ graphql, actions }) => {
     }
   `).then(result => {
     if (result.errors) {
-      throw result.errors;
+      throw result.errors
     }
 
     // Create product update pages
-    const campaigns = result.data.allMailchimpCampaign.edges;
+    const campaigns = result.data.allMailchimpCampaign.edges
 
     campaigns.forEach((campaign, index) => {
       const previous =
-        index === campaigns.length - 1 ? null : campaigns[index + 1].node;
-      const next = index === 0 ? null : campaigns[index - 1].node;
+        index === campaigns.length - 1 ? null : campaigns[index + 1].node
+      const next = index === 0 ? null : campaigns[index - 1].node
 
       createPage({
         path: `/product-updates/${campaign.node.campaignId}`,
@@ -293,12 +293,12 @@ exports.createPages = ({ graphql, actions }) => {
           previous,
           next
         }
-      });
-    });
+      })
+    })
 
-    return null;
-  });
-};
+    return null
+  })
+}
 ```
 
 ## Rejoice
