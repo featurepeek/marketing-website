@@ -14,7 +14,7 @@ export default function Faqs({ heading, faqs }) {
     <MediaQuery maxWidth={800}>
       {mobile => (
         <Box
-          background="#f8f8f8"
+          background="#f9f9fb"
           marginX={mobile ? -15 : -39}
           marginBottom={-40}
           paddingX={mobile ? 16 : 40}

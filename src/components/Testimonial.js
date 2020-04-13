@@ -15,9 +15,11 @@ export default function Testimonial({ name, title, userAvatar, company, companyA
       borderWidth={1}
       borderRadius={8}
       boxShadow="0 4px 32px #e8e8e8"
-      padding={40}
+      paddingX={32}
+      paddingY={40}
       paddingBottom={24}
       position="relative"
+      marginX={8}
       marginY={32}
       maxWidth={540}
     >
@@ -33,7 +35,7 @@ export default function Testimonial({ name, title, userAvatar, company, companyA
           width={64}
         />
       </Flex>
-      <Paragraph fontSize={21} marginBottom={64}>
+      <Paragraph fontSize={18} marginBottom={48}>
         &quot;{quote}&quot;
       </Paragraph>
       <Flex
@@ -44,8 +46,8 @@ export default function Testimonial({ name, title, userAvatar, company, companyA
         flexDirection="row"
         marginY={-24}
         paddingY={24}
-        marginX={-40}
-        paddingX={40}
+        marginX={-32}
+        paddingX={32}
       >
         <Box
           is="img"
@@ -55,16 +57,20 @@ export default function Testimonial({ name, title, userAvatar, company, companyA
           borderWidth={1}
           borderRadius={99}
           height={64}
+          marginBottom={0}
           padding={4}
           src={userAvatar}
           width={64}
         />
         <Box marginLeft={24}>
-          <Paragraph marginBottom={4} marginTop={0}>
+          <Paragraph margin={0}>
             <Strong fontSize={19}>{name}</Strong>
           </Paragraph>
           <Text fontSize={17}>
-            {title}, <Text>{company}</Text>
+            {title},{' '}
+            <Link href={url} target="_blank">
+              {company}
+            </Link>
           </Text>
         </Box>
       </Flex>
