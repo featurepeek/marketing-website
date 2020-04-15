@@ -38,10 +38,11 @@ code {
 }
 p > code.language-text {
   font-size: 14px;
-  padding: 2px 6px;
+  padding: 1px 5px;
   background: rgba(0, 0, 0, 0.04);
+  border: 1px solid #eaeaea;
   text-shadow: none;
-  color: #ff6665;
+  color: #000;
 }
 
 /* Link */
@@ -182,6 +183,16 @@ p > code.language-text {
 }
 .blog-post p {
   margin-bottom: 1.5rem;
+}
+.blog-post blockquote p:last-child {
+  margin-bottom: 0;
+}
+.blog-post blockquote {
+  background: rgba(198, 226, 251, 0.2);
+  border-color: rgb(0, 124, 255);
+  border-radius: 4px;
+  margin: 40px 80px;
+  padding: 16px;
 }
 .blog-post strong {
   color: #000;

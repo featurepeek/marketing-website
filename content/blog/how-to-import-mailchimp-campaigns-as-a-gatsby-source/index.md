@@ -1,6 +1,6 @@
 ---
 title: How to import Mailchimp campaigns as a Gatsby source
-date: "2020-04-08T12:12:03.284Z"
+date: "2020-04-16T12:12:03.284Z"
 description: Sync your Gatsby site with Mailchimp so that it fetches and renders your newsletter campaigns at build-time
 hero: hero.png
 author: jasonbarry
@@ -29,7 +29,7 @@ yarn add gatsby-source-mailchimp cheerio
 
 ## Create a Mailchimp API key
 
-After logging in to Mailchimp, click your avatar in the top right and then click Account in the resulting dropdown menu. From there, click on Extras > API keys.
+After logging in to [Mailchimp](https://login.mailchimp.com/), click your avatar in the top right and then click Account in the resulting dropdown menu. From there, click on Extras > API keys.
 
 Click the "Create A Key" button to generate a new API key.
 
@@ -73,7 +73,9 @@ module.exports = {
 
 ## Create the CampaignPost template component
 
-This component will be what renders when someone loads an individual campaign post page. You might recognize the format of this component if you followed any of the Gatsby blog starters – it's very [similar to the blog-post.js template component](https://github.com/DSchau/gatsby-blog-starter-kit/blob/master/src/templates/blog-post.js).
+This component will be what renders when someone loads an individual campaign post page. You might recognize the format of this component if you followed any of the Gatsby blog starters – it's very [similar to the BlogPost template component](https://github.com/DSchau/gatsby-blog-starter-kit/blob/master/src/templates/blog-post.js). 
+
+We'll be checking that `status === 'sent'` and `post.send_time !== 'Invalid date'` in order to prevent accidentally publishing draft campaigns that haven't been sent out yet.
 
 ```jsx
 // src/templates/CampaignPost.js
@@ -90,8 +92,9 @@ export default function CampaignPost(props) {
   const { previous, next } = props.pageContext
 
   // we don't want the full post.html -- just what is in the body container
+  
   const $ = cheerio.load(post.html)
-  const bodyTable = $(".bodyContainer").html()
+  const bodyTable = $('.bodyContainer').html()
 
   return (
     <Layout title={siteTitle}>
@@ -99,22 +102,22 @@ export default function CampaignPost(props) {
         title={post.settings.title}
         description={post.settings.preview_text}
       />
-      <div style={{ margin: "auto", maxWidth: 600 }}>
+      <div style={{ margin: 'auto', maxWidth: 600 }}>
         <Link href="/product-updates">← All product updates</Link>
         <h1>{post.settings.title}</h1>
-        {post.send_time !== "Invalid date" && <p>{post.send_time}</p>}
+        {post.send_time !== 'Invalid date' && <p>{post.send_time}</p>}
       </div>
       <div id="campaign" dangerouslySetInnerHTML={{ __html: bodyTable }} />
       <ul>
         <li>
-          {previous && previous.status === "sent" && previous.settings.title && (
+          {previous && previous.status === 'sent' && previous.settings.title && (
             <Link href={`/product-updates/${previous.campaignId}`} rel="prev">
               ← {previous.settings.title}
             </Link>
           )}
         </li>
         <li>
-          {next && next.status === "sent" && next.settings.title && (
+          {next && next.status === 'sent' && next.settings.title && (
             <Link href={`/product-updates/${next.campaignId}`} rel="next">
               {next.settings.title} →
             </Link>
@@ -150,16 +153,19 @@ export const pageQuery = graphql`
 
 ## Create ProductUpdates page component
 
-This page serves as the collection page for all of your campaigns.
+This page serves as the collection page for all of your campaigns. In this example, it'll be served from the `/product-updates` route.
 
 ```jsx
-// src/pages/ProductUpdates.js
+// src/pages/product-updates.js
 import React from "react"
 import { graphql, Link } from "gatsby"
 
 import Layout from "components/Layout"
 import SEO from "components/Seo"
 import JoinMailingList from "components/JoinMailingList"
+
+const reverseChronologically = (a, b) => 
+  new Date(a.node.send_time) < new Date(b.node.send_time) ? 1 : -1
 
 export default function ProductUpdates(props) {
   const { data } = props
@@ -170,28 +176,23 @@ export default function ProductUpdates(props) {
     <Layout title={siteTitle}>
       <SEO title="All product updates" />
       <h1>FeaturePeek product updates</h1>
-      <Paragraph>
-        We send out a product newsletter once or twice a month, informing our
-        users of new features and product improvements.
-      </Paragraph>
-      <Paragraph>
-        Enter your email address below to get notified as soon as new features
-        become available.
-      </Paragraph>
       <JoinMailingList />
       <h2>Archive</h2>
-      {campaigns.map(({ node }) => {
-        const title = node.settings.title
-        return (
-          <div key={node.campaignId}>
-            <small>{node.send_time}</small>
-            <h3>
-              <Link href={`/product-updates/${node.campaignId}`}>{title}</Link>
-            </h3>
-            <p>{node.settings.preview_text}</p>
-          </div>
-        )
-      })}
+      {campaigns
+        .sort(reverseChronologically)
+        .map(({ node }) => {
+          const title = node.settings.title
+          return (
+            <div key={node.campaignId}>
+              <small>{node.send_time}</small>
+              <h3>
+                <Link href={`/product-updates/${node.campaignId}`}>{title}</Link>
+              </h3>
+              <p>{node.settings.preview_text}</p>
+            </div>
+          )
+        })
+      }
     </Layout>
   )
 }
@@ -204,7 +205,12 @@ export const pageQuery = graphql`
       }
     }
     allMailchimpCampaign(
-      filter: { status: { eq: "sent" }, settings: { title: { ne: "" } } }
+      filter: { 
+        status: { eq: "sent" }, 
+        settings: { 
+          title: { ne: "" } 
+        } 
+      }
     ) {
       edges {
         node {
@@ -227,13 +233,13 @@ export const pageQuery = graphql`
 
 Finally, we need to create the graphQL query to pull the data from the Mailchimp source.
 
-If your Gatsby project already contains a blog, your `createPages` method in `gatsby-node.js` is probably already in use. You'll need to combine what you already have with what is written in detail below.
+If your Gatsby project already contains a blog, your `createPages` method in `gatsby-node.js` is probably already in use. You'll need to combine what you already have with what is written in detail below in order to iterate over both your blog posts and Mailchimp campaigns. 
 
 ```jsx
 // gatsby-node.js
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  const campaignPost = path.resolve(`./src/templates/CampaignPost.js`)
+  const CampaignPost = path.resolve(`./src/templates/CampaignPost.js`)
 
   return graphql(`
     {
@@ -286,12 +292,12 @@ exports.createPages = ({ graphql, actions }) => {
 
       createPage({
         path: `/product-updates/${campaign.node.campaignId}`,
-        component: campaignPost,
+        component: CampaignPost,
         context: {
           slug: campaign.node.campaignId,
           postPath: `/product-updates/${campaign.node.campaignId}`,
           previous,
-          next
+          next,
         }
       })
     })
@@ -301,7 +307,7 @@ exports.createPages = ({ graphql, actions }) => {
 }
 ```
 
-## Rejoice
+## Rejoice in the glory of automation
 
 That's all there is to it! Now the next time you rebuild your site, your campaigns will be pulled from Mailchimp and built as static HTML pages. You can [check out how ours look here](https://featurepeek.com/product-updates).
 
@@ -311,4 +317,6 @@ Remember, the source only gets queried at build time – so when you mail out a 
 
 ## Thanks for following along!
 
-Time for a plug. FeaturePeek blah blah blah
+One closing note: While I was writing this article, I verified that the code samples worked as expected by building the deployment preview of this blog post on [FeaturePeek](https://featurepeek.com). It was super useful to confirm that the whole idea behind was behaving correctly on a server besides my local machine.
+
+We use FeaturePeek on featurepeek.com (meta) to iterate faster during development. Our blog (and entire marketing site for that matter) is open source on GitHub, so you can take a peek at the preview environments that deploy on [our open pull requests](https://github.com/featurepeek/marketing-website/pulls). 
