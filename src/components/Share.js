@@ -28,7 +28,7 @@ import { Flex } from 'primitives'
 
 export default function Share({ title, url }) {
   return (
-    <Flex alignItems="center" flexDirection="column" left={-100} position="absolute">
+    <Flex alignItems="center" className="SocialMediaShareList" flexDirection="column" left={-80} position="absolute">
       <Box cursor="pointer" marginBottom={8} textAlign="center">
         <FacebookShareButton title={title} url={url}>
           <FacebookIcon round size={40} />
