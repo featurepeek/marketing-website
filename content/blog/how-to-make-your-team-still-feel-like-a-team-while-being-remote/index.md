@@ -1,12 +1,12 @@
 ---
 title: How to make your team still feel like a team while being remote
 date: "2020-04-16T12:12:03.284Z"
-description: Need a description
+description: We're all in this together, here are some tips for doing it well
 hero: hero.jpg
 author: ericsilverman
 ---
 
-Well, we're just over a month into shelter in place and it's it's starting to feel like the initial panic of "oh shit, what do we do" has worn off a bit. Teams are meeting regularly on Zoom, but a new set of challenges exist.
+Well, we're just over a month into shelter in place and it's it's starting to feel like the initial panic of "well, what do we do?" has worn off a bit. Teams are meeting regularly on Zoom, but a new set of challenges exist.
 
 We don't know how long this will last, and even once sheltering in place is over, life most likely won't go back to normal for quite some time, or possibly ever. The norm has changed and the past month has definitely shown that more teams will go fully remote in the future, pandemic or not.
 
@@ -21,6 +21,9 @@ Here are some ideas that have helped me and my team still feel like a team while
 Zoom has had a massive increase in popularity over the past month and for good reason. However, with teams scrambling to maximize video conferencing, they can quickly become counterproductive if no thought is put into best practices.
 
 Save Zoom meetings for presentations or information distribution meetings, and don't feel the need to have every meeting be an all-hands video call. It's also important to not expect your team to spend all day on Zoom. If your team didn't spend their whole day in the office in meetings, don't expect them to be on a Zoom call all day. The idea that an employee has a camera on most of the time doesn’t promote autonomy or personal ownership, and can show a lack of trust.
+
+
+![trust.gif](trust.gif)
 
 ## Figure out how to brainstorm
 
@@ -37,6 +40,10 @@ Nothing will ever replace getting in the same room and jamming on an idea, but t
 ## Make yourself available to be a rubber duck
 
 If you ask my team, I probably use the [Rubber duck debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging) method more than anyone else at FeaturePeek. Being at home has made that slightly more difficult, but making yourself available for a quick 5 minute chat can unblock you technically, and maintain the feeling of team collaboration and spontaneity.
+
+![duck.jpg](duck.jpg)
+
+My favorite debugging tool
 
 ## Perfect the daily stand-up
 
