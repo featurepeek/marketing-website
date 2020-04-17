@@ -43,7 +43,7 @@ If you ask my team, I probably use the [Rubber duck debugging](https://en.wikipe
 
 ![duck.jpg](duck.jpg)
 
-My favorite debugging tool
+*My favorite debugging tool*
 
 ## Perfect the daily stand-up
 
