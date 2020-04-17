@@ -43,16 +43,16 @@ function SEO({ description, lang, meta, title, location, image }) {
           content: metaDescription,
         },
         {
-          name: `og:image`,
-          content: image || site.siteMetadata.image,
-        },
-        {
-          name: `twitter:image`,
+          property: `og:image`,
           content: image || site.siteMetadata.image,
         },
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          name: `twitter:image`,
+          content: image || site.siteMetadata.image,
         },
         {
           name: `twitter:card`,
