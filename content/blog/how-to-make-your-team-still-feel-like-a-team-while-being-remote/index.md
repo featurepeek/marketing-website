@@ -12,7 +12,7 @@ We don't know how long this will last, and even once sheltering in place is over
 
 This pandemic has proven that remote work isn't just the way of the future. It's happening now, and there are plenty of positives. Technology has made it easier to connect, and educational programs are adapting. The world has changed, and it will never fully go back the way it was, nor should it just return to the status quo.
 
-On first glance, it might seem like teams have it figured out. Sure, you use Zoom for team meetings, and your team is still producing solid work, but how about the things that you can't measure? _How does your team **feel**? Are ideas still free flowing between team members? How is company culture maintaining or changing?_
+At first glance, it might seem like teams have it figured out. Sure, you use Zoom for team meetings, and your team is still producing solid work, but how about the things that you can't measure? _How does your team **feel**? Are ideas still free flowing between team members? How is company culture maintaining or changing?_
 
 Here are some ideas that have helped me and my team still feel like a team while staying remote.
 
@@ -20,14 +20,16 @@ Here are some ideas that have helped me and my team still feel like a team while
 
 Zoom has had a massive increase in popularity over the past month and for good reason. However, with teams scrambling to maximize video conferencing, they can quickly become counterproductive if no thought is put into best practices.
 
-Save Zoom meetings for presentations or information distribution meetings, and don't feel the need to have every meeting be an all-hands video call. It's also important to not expect your team to spend all day on Zoom. If your team didn't spend their whole day in the office in meetings, don't expect them to be on a Zoom call all day. The idea that an employee has a camera on most of the time doesn’t promote autonomy or personal ownership, and can show a lack of trust.
+Save Zoom meetings for presentations or information distribution meetings, and don't feel the need to have every meeting be an all-hands video call. It's also important to not expect your team to spend all day on Zoom. If your team didn't spend their whole day in the office in meetings, don't expect them to be on a Zoom call all day. People still want to put their headphones on and be left alone sometimes. The idea that an teammate has a camera on most of the time doesn’t promote autonomy or personal ownership, and can show a lack of trust. 
 
 
 ![trust.gif](trust.gif)
 
-## Figure out how to brainstorm
+## Figure out how to brainstorm remotely
 
 Nothing will ever replace getting in the same room and jamming on an idea, but there are some great tools that are helping to bridge that gap without just being a video conference platform.
+
+Here’s how we do it at Feature Peek. 
 
 - [Tandem](https://tandem.chat/) - great app for workspace sharing. easy to jump into a spontaneous chat
 - [Slack](https://slack.com/) - Pro tip, make specific channels for work and non work conversations. #project-chat, #water-cooler, etc
@@ -36,7 +38,9 @@ Nothing will ever replace getting in the same room and jamming on an idea, but t
 - There.pm - Simple way to keep track of your teammate's timezones
 - [Donut](https://www.donut.com) - Slack add on to make team bonding easier
 - [Zync](https://zynq.io/remote/) - Avoid calendar Tetris by having Zync intelligently schedule meetings.
+- [FeaturePeek](https://featurepeek.com) - Great for front end feedback and collaboration (shameless plug) 
 
+ 
 ## Make yourself available to be a rubber duck
 
 If you ask my team, I probably use the [Rubber duck debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging) method more than anyone else at FeaturePeek. Being at home has made that slightly more difficult, but making yourself available for a quick 5 minute chat can unblock you technically, and maintain the feeling of team collaboration and spontaneity.
