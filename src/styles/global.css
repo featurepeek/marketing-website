@@ -1,12 +1,12 @@
 @import url('https://rsms.me/inter/inter.css');
 h1, h2, h3, h4, h5, h6, 
-a, b, button, em, i, p, span, strong { 
+a, b, button, em, i, p, strong { 
   font-family: 'Inter', sans-serif; 
   letter-spacing: -0.011em;
 }
 @supports (font-variation-settings: normal) {
   h1, h2, h3, h4, h5, h6, 
-  a, b, button, em, i, p, span, strong { 
+  a, b, button, em, i, p, strong { 
     font-family: 'Inter var', sans-serif; 
   }
 }
@@ -34,7 +34,15 @@ a, b, button, em, i, p, span, strong {
 
 /* Code */
 code {
-  font-family: "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+  font-family: "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace !important;
+}
+p > code.language-text {
+  font-size: 14px;
+  padding: 1px 5px;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid #eaeaea;
+  text-shadow: none;
+  color: #000;
 }
 
 /* Link */
@@ -175,6 +183,16 @@ code {
 }
 .blog-post p {
   margin-bottom: 1.5rem;
+}
+.blog-post blockquote p:last-child {
+  margin-bottom: 0;
+}
+.blog-post blockquote {
+  background: rgba(198, 226, 251, 0.2);
+  border-color: rgb(0, 124, 255);
+  border-radius: 4px;
+  margin: 40px 80px;
+  padding: 16px;
 }
 .blog-post strong {
   color: #000;
