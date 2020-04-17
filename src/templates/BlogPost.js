@@ -36,7 +36,7 @@ export default function BlogPost(props) {
             title={post.frontmatter.title}
             description={post.frontmatter.description || post.excerpt}
             location={props.location}
-            image={`https://featurepeek.com/${post.frontmatter.hero.childImageSharp.fluid.src}`}
+            image={`https://featurepeek.com${post.frontmatter.hero.childImageSharp.fluid.src}`}
           />
           <Flex
             background="linear-gradient(#fff, #effefe)"
