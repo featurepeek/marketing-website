@@ -7,36 +7,45 @@ import { Flex, Heading } from 'primitives'
 
 import Testimonial from 'components/Testimonial'
 
+import Shawn from 'images/socialproof/Shawn'
+import WandB from 'images/socialproof/WandB'
+import Hamza from 'images/socialproof/Hamza'
+import GitStart from 'images/socialproof/GitStart'
+import Andros from 'images/socialproof/Andros'
+import Coil from 'images/socialproof/Coil'
+
 // import { rhythm, scale } from 'utils/typography'
 
 const testimonials = [
   {
-    company: 'Weights and Biases',
-    companyAvatar: 'https://avatars2.githubusercontent.com/u/26401354?v=4',
+    company: 'Weights & Biases',
+    companyAvatar: <WandB />,
     name: 'Shawn Lewis',
-    quote: 'FeaturePeek has increased our productivity 10000000%.',
+    quote:
+      'With FeaturePeek, we can review UI as easily (and as often) as we review code. Our product is better because of it.',
     title: 'CTO',
     url: 'https://www.wandb.com',
-    userAvatar: 'https://avatars1.githubusercontent.com/u/499383?v=4',
-  },
-  {
-    company: 'Coil HQ',
-    companyAvatar: 'https://avatars3.githubusercontent.com/u/39016252?v=4',
-    name: 'Travis Crist',
-    quote: 'FeaturePeek is super cool. This quote has a few sentences. So that it is longer than others.',
-    title: 'Front-end Engineer',
-    url: 'https://coil.com',
-    userAvatar: 'https://avatars0.githubusercontent.com/u/4206970?v=4',
+    userAvatar: <Shawn />,
   },
   {
     company: 'GitStart',
-    companyAvatar: 'https://avatars3.githubusercontent.com/u/31163758?v=4',
+    companyAvatar: <GitStart />,
     name: 'Hamza Zia',
     quote:
-      'FeaturePeek allowed us to save a TON of time reviewing PRs and getting direct feedback from external stakeholders. FeaturePeek is now a critical integration with every new project that is rolled out by GitStart!',
+      'FeaturePeek allowed us to save a ton of time reviewing PRs and getting direct feedback from external stakeholders. FeaturePeek is now a critical integration with every new project that is rolled out by GitStart!',
     title: 'CEO',
     url: 'https://gitstart.com',
-    userAvatar: 'https://avatars1.githubusercontent.com/u/206640?v=4',
+    userAvatar: <Hamza />,
+  },
+  {
+    company: 'Coil',
+    companyAvatar: <Coil />,
+    name: 'Andros Wong',
+    quote:
+      'Using FeaturePeek has reduced the disconnect between our design and engineering teams. It has made design reviews much easier, allowing for quicker code deploys.',
+    title: 'Software Engineer',
+    url: 'https://coil.com',
+    userAvatar: <Andros />,
   },
 ]
 

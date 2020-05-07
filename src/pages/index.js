@@ -23,7 +23,7 @@ export default function IndexPage(props) {
       <AsSeenOn />
       <RowReversal copyWritings={valueProps} flip={1} />
       <DesignedForGitHub />
-      <SocialProof extraMarginTop={160} heading="What our users are saying..." />
+      <SocialProof extraMarginTop={160} heading="See what our users are saying..." />
     </Layout>
   )
 }
