@@ -6,6 +6,7 @@ import Hero from 'components/Hero'
 import Layout from 'components/Layout'
 import RowReversal from 'components/RowReversal'
 import SEO from 'components/Seo'
+import SocialProof from 'components/SocialProof'
 
 import { Heading } from 'primitives'
 
@@ -22,6 +23,7 @@ export default function IndexPage(props) {
       <AsSeenOn />
       <RowReversal copyWritings={valueProps} flip={1} />
       <DesignedForGitHub />
+      <SocialProof extraMarginTop={160} heading="See what our users are saying..." />
     </Layout>
   )
 }

@@ -7,6 +7,7 @@ import { Heading, Flex } from 'primitives'
 import Faqs from 'components/Faqs'
 import PricingColumn from 'components/PricingColumn'
 import Layout from 'components/Layout'
+import SocialProof from 'components/SocialProof'
 import SEO from 'components/Seo'
 
 import pricingFAQs from 'copy/pricingFAQs'
@@ -52,6 +53,7 @@ export default function Pricing(props) {
               <PricingColumn key={product.id} hasMounted={hasMounted} product={product} />
             ))}
           </Flex>
+          <SocialProof heading="Don't just take our word for it..." />
           <Faqs heading="Pricing FAQs" faqs={pricingFAQs} />
         </Layout>
       )}
