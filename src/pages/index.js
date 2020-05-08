@@ -20,10 +20,10 @@ export default function IndexPage(props) {
         Front-end review for the whole team
       </Heading>
       <Hero />
-      <AsSeenOn />
+      <SocialProof extraMarginTop={160} heading="See what our users are saying..." />
       <RowReversal copyWritings={valueProps} flip={1} />
       <DesignedForGitHub />
-      <SocialProof extraMarginTop={160} heading="See what our users are saying..." />
+      <AsSeenOn />
     </Layout>
   )
 }
