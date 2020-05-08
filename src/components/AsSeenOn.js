@@ -27,14 +27,7 @@ export default function AsSeenOn({ question, answer }) {
           As seen on
         </Heading>
       </Box>
-      <Flex
-        alignItems="center"
-        borderBottom="1px solid #e3e3e3"
-        justifyContent="space-around"
-        paddingY={32}
-        textAlign="center"
-        width="100%"
-      >
+      <Flex alignItems="center" justifyContent="space-around" paddingY={32} textAlign="center" width="100%">
         <Box paddingY={16}>
           <a
             href="https://techcrunch.com/2019/07/26/featurepeek-wants-put-an-end-to-last-minute-front-end-design-reviews/"
