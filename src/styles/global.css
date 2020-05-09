@@ -112,10 +112,10 @@ p > code.language-text {
   border-bottom: 1px solid #eee;
 }
 .subnav2:hover {
-  background: rgba(194, 116, 209, 0.1);
+  background: rgba(0, 176, 222, 0.1);
 }
 .subnav3:hover {
-  background: rgba(0, 176, 222, 0.1);
+  background: rgba(194, 116, 209, 0.1);
 }
 
 @keyframes rotate {
