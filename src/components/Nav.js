@@ -12,7 +12,8 @@ import { track } from 'utils/analytics'
 import Logo from '../../static/img/full-logo.svg'
 
 export default function Nav() {
-  const [isShowingBanner, setShowingBanner] = useState(true)
+  const initialBannerState = typeof window !== 'undefined' ? !window.isHidingBanner : true
+  const [isShowingBanner, setShowingBanner] = useState(initialBannerState)
   const [isShowingSubNav, setShowingSubNav] = useState(false)
   const [isShowingMobileNav, setShowingMobileNav] = useState(false)
   const [hasScrolled, setScrolled] = useState(false)
@@ -23,6 +24,7 @@ export default function Nav() {
 
   const dismissBanner = () => {
     setShowingBanner(false)
+    window.isHidingBanner = true
   }
 
   useEffect(() => {
