@@ -25,6 +25,10 @@ export default function Banner(props) {
           <Paragraph textAlign="center" width="100%">
             <Link color="white !important" href="#">
               FeaturePeek Raises $1.8M in Seed Funding
+              <Text className="nav-links-hide-fouc" color="white !important">
+                {' '}
+                and Releases FeaturePeek Indie{' '}
+              </Text>
               <Text className="nav-links-hide-fouc" color="#3f4250 !important" marginX={8}>
                 {' '}
                 &mdash;{' '}
@@ -37,6 +41,7 @@ export default function Banner(props) {
             </Link>
           </Paragraph>
           <Icon
+            className="nav-links-hide-fouc"
             color="#bbb"
             cursor="pointer"
             fontSize={12}
