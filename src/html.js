@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 import { albacross } from 'utils/analytics'
 
 export default function HTML(props) {
+  const [isShowingBanner, setShowingBanner] = useState(false)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowingBanner(true)
+    }, 1000)
+  })
+
   return (
     <html {...props.htmlAttributes}>
       <head>
@@ -13,7 +21,7 @@ export default function HTML(props) {
         <link href="https://use.fontawesome.com" rel="dns-prefetch" />
         {props.headComponents}
       </head>
-      <body {...props.bodyAttributes}>
+      <body {...props.bodyAttributes} className={isShowingBanner ? 'show-banner' : undefined}>
         {props.preBodyComponents}
         <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: props.body }} />
         {props.postBodyComponents}

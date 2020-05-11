@@ -5,18 +5,24 @@ import MediaQuery from 'react-responsive'
 
 import { Button, Icon, Flex, Link, ListItem, UnorderedList } from 'primitives'
 
+import Banner from 'components/Banner'
 import SubNav from 'components/SubNav'
 import { track } from 'utils/analytics'
 
 import Logo from '../../static/img/full-logo.svg'
 
 export default function Nav() {
+  const [isShowingBanner, setShowingBanner] = useState(true)
   const [isShowingSubNav, setShowingSubNav] = useState(false)
   const [isShowingMobileNav, setShowingMobileNav] = useState(false)
   const [hasScrolled, setScrolled] = useState(false)
 
   const toggleMobileNav = () => {
     setShowingMobileNav(!isShowingMobileNav)
+  }
+
+  const dismissBanner = () => {
+    setShowingBanner(false)
   }
 
   useEffect(() => {
@@ -45,17 +51,19 @@ export default function Nav() {
           boxShadow={hasScrolled ? '0 2px 4px rgba(0, 0, 0, 0.1)' : 'none'}
           className="nav-padding-fouc"
           height={mobile && isShowingMobileNav ? 440 : 76}
+          marginBottom={isShowingBanner ? 42 : 0}
           marginTop={8}
-          overflow={mobile ? 'hidden' : 'inherit'}
+          // overflow={mobile ? 'hidden' : 'inherit'}
           paddingX={mobile ? 0 : 16}
           paddingY={8}
           position="sticky"
-          top={0}
+          top={isShowingBanner ? 42 : 0}
           transition="box-shadow 0.15s ease, height 0.3s ease"
           width="100%"
           zIndex={999}
         >
           <Flex justifyContent="space-between" flexDirection="row">
+            {isShowingBanner && <Banner dismiss={dismissBanner} />}
             <nav>
               <Flex alignItems="center">
                 <Link href="/" underline={false}>
@@ -113,7 +121,7 @@ export default function Nav() {
             ) : (
               <Flex alignItems="center" className="nav-links-hide-fouc" justifyContent="center" width={224}>
                 <Button href="https://dashboard.featurepeek.com" onClick={() => track('Clicked CTA', { cta: 'Nav' })}>
-                  Go to Dashboard
+                  Log in / Sign up
                 </Button>
               </Flex>
             )}
@@ -152,7 +160,7 @@ export default function Nav() {
                   href="https://dashboard.featurepeek.com"
                   onClick={() => track('Clicked CTA', { cta: 'Mobile Nav' })}
                 >
-                  Go to Dashboard
+                  Log in / Sign up
                 </Button>
               </Flex>
             </Box>
