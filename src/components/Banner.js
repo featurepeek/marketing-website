@@ -1,9 +1,9 @@
 // @flow
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Box from 'ui-box'
 import MediaQuery from 'react-responsive'
 
-import { Button, Icon, Flex, Link, Paragraph, Text } from 'primitives'
+import { Icon, Link, Paragraph, Text } from 'primitives'
 
 export default function Banner(props) {
   return (
