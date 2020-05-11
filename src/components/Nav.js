@@ -60,7 +60,7 @@ export default function Nav() {
           paddingY={8}
           position="sticky"
           top={isShowingBanner ? 42 : 0}
-          transition="box-shadow 0.15s ease, height 0.3s ease"
+          transition="all 0.3s ease"
           width="100%"
           zIndex={999}
         >
