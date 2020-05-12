@@ -6,7 +6,6 @@ import MediaQuery from 'react-responsive'
 import { Button, Icon, Flex, Link, ListItem, UnorderedList } from 'primitives'
 
 import Banner from 'components/Banner'
-import SubNav from 'components/SubNav'
 import { track } from 'utils/analytics'
 
 import Logo from '../../static/img/full-logo.svg'
@@ -14,7 +13,6 @@ import Logo from '../../static/img/full-logo.svg'
 export default function Nav() {
   const initialBannerState = typeof window !== 'undefined' ? !window.isHidingBanner : true
   const [isShowingBanner, setShowingBanner] = useState(initialBannerState)
-  const [isShowingSubNav, setShowingSubNav] = useState(false)
   const [isShowingMobileNav, setShowingMobileNav] = useState(false)
   const [hasScrolled, setScrolled] = useState(false)
 
@@ -73,19 +71,15 @@ export default function Nav() {
                 </Link>
                 {!mobile && (
                   <>
-                    <Box
-                      marginLeft={20}
-                      paddingRight={16}
-                      paddingY={16}
-                      position="relative"
-                      top={2}
-                      onMouseEnter={() => setShowingSubNav(true)}
-                      onMouseLeave={() => setShowingSubNav(false)}
-                    >
+                    <Box marginLeft={20} paddingRight={16} paddingY={16} position="relative" top={2}>
                       <Link className="nav-links-hide-fouc" color="#103c52" href="/product/teams" fontSize={17}>
-                        Products
+                        Teams
                       </Link>
-                      <SubNav isShowing={isShowingSubNav} />
+                    </Box>
+                    <Box className="nav-links-hide-fouc" paddingX={16} position="relative" top={2}>
+                      <Link color="#103c52" href="/product/indie" fontSize={17}>
+                        Indie
+                      </Link>
                     </Box>
                     <Box className="nav-links-hide-fouc" paddingX={16} position="relative" top={2}>
                       <Link color="#103c52" href="/how-it-works" fontSize={17}>
@@ -122,7 +116,10 @@ export default function Nav() {
               </Flex>
             ) : (
               <Flex alignItems="center" className="nav-links-hide-fouc" justifyContent="center" width={224}>
-                <Button href="https://dashboard.featurepeek.com" onClick={() => track('Clicked CTA', { cta: 'Nav' })}>
+                <Button
+                  href="https://dashboard.featurepeek.com/login"
+                  onClick={() => track('Clicked CTA', { cta: 'Nav' })}
+                >
                   Log in / Sign up
                 </Button>
               </Flex>
@@ -164,7 +161,7 @@ export default function Nav() {
               </UnorderedList>
               <Flex alignItems="center" justifyContent="center" height={100} width="100%">
                 <Button
-                  href="https://dashboard.featurepeek.com"
+                  href="https://dashboard.featurepeek.com/login"
                   onClick={() => track('Clicked CTA', { cta: 'Mobile Nav' })}
                 >
                   Log in / Sign up

@@ -226,7 +226,7 @@ export default function Terminal() {
             <Box marginY={16}>
               <Code background="transparent" border="none" boxShadow="none" color="#29fe13" fontSize={24}>
                 Visit your deployment preview here:{' '}
-                <a href="https://dashboard.featurepeek.com/demo">
+                <a href="https://dashboard.featurepeek.com/demo" target="_blank">
                   <Code background="transparent" border="none" boxShadow="none" color="#29fe13" fontSize={24}>
                     https://peek.run/{hashid}
                   </Code>

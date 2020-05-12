@@ -30,7 +30,7 @@ export default function CtaBox({ light, brew }) {
               </Heading>
               <Flex alignItems="center" justifyContent="center" height={100}>
                 <Button
-                  href="https://dashboard.featurepeek.com"
+                  href="https://dashboard.featurepeek.com/login"
                   onClick={() => track('Clicked CTA', { cta: 'CtaBox' })}
                 >
                   Sign up for a two-week trial
