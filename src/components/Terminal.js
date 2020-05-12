@@ -6,6 +6,65 @@ import Typist from 'react-typist'
 
 import { Button, Code, Flex, Heading } from 'primitives'
 
+const emojis = [
+  '🧡',
+  '💛',
+  '💚',
+  '💙',
+  '💜',
+  '💖',
+  '🆒',
+  '🎉',
+  '✨',
+  '😄',
+  '🚀',
+  '😍',
+  '😁',
+  '💪',
+  '😀',
+  '🥳',
+  '😎',
+  '🤩',
+  '🙌',
+  '✌️',
+  '🤘',
+  '👌',
+  '🤙',
+  '👏',
+  '🌈',
+  '⭐️',
+  '🌟',
+  '💫',
+  '⚡️',
+  '🌶',
+  '🍉',
+  '🍕',
+  '🍦',
+  '🍭',
+  '🍪',
+  '🍻',
+  '🏆',
+  '🎖',
+  '🏅',
+  '🥇',
+  '🏄‍♂️',
+  '⛳️',
+  '🎯',
+  '🎇',
+  '🌠',
+  '🖖',
+  '💯',
+  '🎊',
+  '📈',
+  '🔮',
+  '💎',
+  '🔥',
+  '🌻',
+  '👩‍🎤',
+  '👨‍🎤',
+]
+const randomEmoji = () => emojis[Math.floor(Math.random() * emojis.length)]
+
 export default function Terminal() {
   const [mounted, setMounted] = useState(false)
   const [uploading, setUploading] = useState(false)
@@ -16,6 +75,7 @@ export default function Terminal() {
   const [success, setSuccess] = useState(false)
   const [visit, setVisit] = useState(false)
   const [brew, setBrew] = useState(false)
+  const [emoji, setEmoji] = useState(randomEmoji())
 
   const play = () => {
     setMounted(true)
@@ -26,10 +86,11 @@ export default function Terminal() {
     setTimeout(() => setDone(true), 2400)
     setTimeout(() => setSuccess(true), 3000)
     setTimeout(() => setVisit(true), 3500)
-    setTimeout(() => setBrew(true), 5000)
+    setTimeout(() => setBrew(true), 6000)
   }
 
   const reset = () => {
+    setEmoji(randomEmoji())
     setMounted(false)
     setUploading(false)
     setDot1(false)
@@ -138,8 +199,8 @@ export default function Terminal() {
             <Box marginTop={48}>
               <Code background="transparent" border="none" boxShadow="none" color="#29fe13" fontSize={24}>
                 Assets uploaded successfully!{' '}
-                <span aria-label="love" role="img">
-                  😍
+                <span aria-label="random emoji" role="img">
+                  {emoji}
                 </span>
               </Code>
             </Box>
