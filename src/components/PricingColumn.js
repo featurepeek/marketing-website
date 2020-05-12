@@ -68,7 +68,7 @@ export default function PricingColumn({ product, hasMounted }) {
                   </Heading>
                   <Box marginLeft={8}>
                     <Paragraph marginBottom={0} position="relative" top={8}>
-                      <Emphasis opacity={0.5}>per user</Emphasis>
+                      <Emphasis opacity={0.5}>per seat</Emphasis>
                     </Paragraph>
                     <Paragraph marginBottom={0}>
                       <Emphasis opacity={0.5}>per month</Emphasis>
