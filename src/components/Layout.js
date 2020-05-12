@@ -56,7 +56,7 @@ export default function Layout(props) {
           >
             <main>{children}</main>
           </Box>
-          <CtaBox light={location.pathname === '/signup'} />
+          <CtaBox brew={location.pathname === '/product/indie'} light={location.pathname === '/signup'} />
           <Footer />
         </Box>
       )}

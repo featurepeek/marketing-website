@@ -1,14 +1,15 @@
 import React from 'react'
-// import Box from 'ui-box'
+import Box from 'ui-box'
 
 import copyWritings from 'copy/featuresIndie'
 
 import { Heading } from 'primitives'
 
+import Gallery from 'components/Gallery'
 import Layout from 'components/Layout'
 import RowReversal from 'components/RowReversal'
-import Terminal from 'components/Terminal'
 import SEO from 'components/Seo'
+import Terminal from 'components/Terminal'
 
 export default function Product(props) {
   return (
@@ -21,7 +22,10 @@ export default function Product(props) {
         Review your static site with a single command
       </Heading>
       <Terminal />
-      <RowReversal copyWritings={copyWritings} />
+      <Gallery width={2640} />
+      <Box>
+        <RowReversal copyWritings={copyWritings} />
+      </Box>
       {/* <NextPrevButtons prev="managers" next="designers" /> */}
     </Layout>
   )
