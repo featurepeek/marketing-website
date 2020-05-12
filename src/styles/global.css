@@ -80,6 +80,13 @@ p > code.language-text {
   transform: translateY(1px);
 }
 
+.Typist, .Typist .Cursor {
+  display: inline-block; 
+}
+#terminal a {
+  text-decoration: none;
+}
+
 /* Switch */
 .rc-switch {
   margin: 0 16px;
@@ -110,16 +117,10 @@ p > code.language-text {
   border-bottom: 1px solid #eee;
 }
 .subnav1:hover {
-  background: rgba(90, 191, 126, 0.1);
-}
-.subnav2 {
-  border-bottom: 1px solid #eee;
+  background: rgba(0, 176, 222, 0.1);
 }
 .subnav2:hover {
   background: rgba(0, 176, 222, 0.1);
-}
-.subnav3:hover {
-  background: rgba(194, 116, 209, 0.1);
 }
 
 @keyframes rotate {
@@ -149,8 +150,14 @@ p > code.language-text {
 }*/
 
 @media screen and (max-width: 504px) {
+  .is-hidden-mobile {
+    display: none !important;
+  }
   .layout-padding-fouc {
     padding: 16px !important;
+  }
+  #terminal code {
+    font-size: 16px !important;
   }
 }
 

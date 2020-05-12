@@ -6,6 +6,7 @@ export const gradientMap = {
   blue: ['#00b0de', '#2896e0'],
   pink: ['#c274d1', '#e16fbc'],
   white: ['#f6f6f6', '#ececec'],
+  black: ['#1f2337', '#000'],
 }
 
 export const getColorFromStatus = status => {

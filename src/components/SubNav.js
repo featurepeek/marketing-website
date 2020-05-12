@@ -8,22 +8,18 @@ import { gradientMap } from 'utils/color'
 
 const items = [
   {
-    color: gradientMap.green,
-    icon: 'fas fa-code',
-    href: '/for-frontend-developers',
-    label: 'Front-end Developers',
-  },
-  {
+    for: 'For Continuous Integration',
     color: gradientMap.blue,
-    icon: 'fas fa-tasks',
-    href: '/for-project-managers',
-    label: 'Project Managers',
+    icon: 'fas fa-users',
+    href: '/product/teams',
+    label: 'FeaturePeek Teams',
   },
   {
-    color: gradientMap.pink,
-    icon: 'fas fa-pen-nib',
-    href: '/for-ux-designers',
-    label: 'UX Designers',
+    for: 'For the Command Line',
+    color: gradientMap.black,
+    icon: 'fas fa-terminal',
+    href: '/product/indie',
+    label: 'FeaturePeek Indie',
   },
 ]
 
@@ -72,8 +68,8 @@ export default function SubNav(props) {
                 <Icon color="white" icon={item.icon} fontSize={18} />
               </Flex>
               <Box>
-                <Text margin={0} opacity={0.5} fontSize={14}>
-                  FeaturePeek for
+                <Text margin={0} opacity={0.6} fontSize={14}>
+                  {item.for}
                 </Text>
                 <Paragraph paddingTop={0}>{item.label}</Paragraph>
               </Box>

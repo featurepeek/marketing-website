@@ -11,14 +11,17 @@ import Layout from 'components/Layout'
 import RowReversal from 'components/RowReversal'
 import SEO from 'components/Seo'
 
-import HeroSVG from '../../static/img/art/ci-pipeline-hero.svg'
+import HeroSVG from '../../../static/img/art/ci-pipeline-hero.svg'
 
 export default function Product(props) {
   return (
     <Layout location={props.location}>
-      <SEO title="Features" location={props.location} />
+      <SEO title="FeaturePeek Teams" location={props.location} />
       <Heading marginTop={0} size={500} textAlign="center">
-        FeaturePeek fits into your CI pipeline
+        FeaturePeek Teams fits into your CI pipeline
+      </Heading>
+      <Heading h={2} marginTop={0} opacity={0.4} size={360} textAlign="center">
+        Get front-end staging environments on demand
       </Heading>
       <Box padding={16}>
         <HeroSVG />

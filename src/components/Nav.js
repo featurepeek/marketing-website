@@ -82,8 +82,8 @@ export default function Nav() {
                       onMouseEnter={() => setShowingSubNav(true)}
                       onMouseLeave={() => setShowingSubNav(false)}
                     >
-                      <Link className="nav-links-hide-fouc" color="#103c52" href="/product" fontSize={17}>
-                        Product
+                      <Link className="nav-links-hide-fouc" color="#103c52" href="/product/teams" fontSize={17}>
+                        Products
                       </Link>
                       <SubNav isShowing={isShowingSubNav} />
                     </Box>
@@ -132,8 +132,13 @@ export default function Nav() {
             <Box>
               <UnorderedList marginLeft={76} marginTop={16}>
                 <ListItem>
-                  <Link href="/product" fontSize={21}>
-                    Product
+                  <Link href="/product/teams" fontSize={21}>
+                    FeaturePeek Teams
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link href="/product/indie" fontSize={21}>
+                    FeaturePeek Indie
                   </Link>
                 </ListItem>
                 <ListItem>
