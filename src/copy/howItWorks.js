@@ -48,8 +48,7 @@ export const elaborations = [
   },
   {
     strong: 'Open a new pull request.',
-    body:
-      "That's it! Every new pull request opened will have a corresponding FeaturePeek environment. Once you merge it in, every new branch will be able to use our suite of collaboration tools.",
+    body: "That's it! Every new pull request opened will have a corresponding FeaturePeek deployment.",
     image: (
       <Mask padding={8}>
         <OpenPullRequest />

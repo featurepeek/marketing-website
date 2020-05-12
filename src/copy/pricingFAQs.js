@@ -6,12 +6,12 @@ export default [
     },
     {
       question: 'What counts as a user?',
-      answer: 'Anyone able to collaborate on or view your projects or environments counts as a user.',
+      answer: 'Anyone able to collaborate on or view your projects or deployments counts as a user.',
     },
     {
       question: "Can I invite someone on my team even if they're not in my GitHub org?",
       answer:
-        "Yes! You can invite anyone you'd like to your FeaturePeek team, and they'll have access to your running environments. Our GitHub App can even comment on pull requests on their behalf, so they'll stay in the conversation.",
+        "Yes! You can invite anyone you'd like to your FeaturePeek team, and they'll have access to your running deployments. Our GitHub App can even comment on pull requests on their behalf, so they'll stay in the conversation.",
     },
     {
       question: 'What if I add or remove team members part-way through my billing cycle?',

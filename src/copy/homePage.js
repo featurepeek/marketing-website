@@ -10,7 +10,7 @@ export const valueProps = [
     builtFor: 'Front-end Developers',
     heading: 'Collect implementation feedback with deployment previews',
     paragraphs: [
-      "Connect your front-end repo to FeaturePeek, and we'll spin up a staging environment whenever you open a pull request.",
+      "Connect your front-end repo to FeaturePeek, and we'll spin up a deployment preview whenever you open a pull request.",
       'Get feedback from your whole team faster by sharing the link to review visually before waiting on code review to finish.',
     ],
     color: gradientMap.green[0],
@@ -67,13 +67,13 @@ export const features = [
     icon: 'fas fa-sync-alt',
     heading: 'Always up-to-date',
     body:
-      "Environments restart whenever a pull request receives an update, so they're always current. Once a PR is merged, reviewers get pointed to where that feature lives on your staging / QA environment.",
+      "Deployments restart whenever a pull request receives an update, so they're always current. Once a PR is merged, reviewers get pointed to where that feature lives on your staging / QA environment.",
   },
   {
     icon: 'fas fa-link',
     heading: 'Share deep links',
     body:
-      "Copy a path deep within your environment to share with someone else. They'll be taken to the exact page to view your specific changes.",
+      "Copy a path deep within your deployment to share with someone else. They'll be taken to the exact page to view your specific changes.",
   },
   // {
   //   icon: 'fas fa-comments',
@@ -84,19 +84,20 @@ export const features = [
   {
     icon: 'fab fa-slack',
     heading: 'Stay on the pulse',
-    body: "See when new environments spin up in Slack by hooking up FeaturePeek to a channel on your team's workspace.",
+    body:
+      "See when deployment previews are ready in Slack by hooking up FeaturePeek to a channel on your team's workspace.",
   },
   {
     icon: 'fas fa-terminal',
     heading: 'Set environment variables',
     body:
-      'Configure an environment with any run-time environment variables needed. Point to any existing back-end services that you may have.',
+      'Configure a deployment with any run-time environment variables needed. Point to any existing back-end services that you may have.',
   },
   {
     icon: 'fas fa-unlock',
     heading: 'Control visibility',
     body:
-      'Your environments are private and only accessible by your team by default. You can choose to set your environments to public, and then anyone with the link can view it.',
+      'Your deployments are private and only accessible by your team by default. You can choose to set your deployments to public, and then anyone with the link can view it.',
   },
   // {
   //   icon: 'fas fa-stopwatch',

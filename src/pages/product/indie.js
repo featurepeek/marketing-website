@@ -1,7 +1,7 @@
 import React from 'react'
 // import Box from 'ui-box'
 
-import copyWritings from 'copy/teamFeatures'
+import copyWritings from 'copy/featuresIndie'
 
 import { Heading } from 'primitives'
 

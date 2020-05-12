@@ -59,8 +59,8 @@ export default [
   {
     heading: 'Confirm that reviewers are actually running your code',
     paragraphs: [
-      "Each environment shows the amount of times its been accessed, and by which browsers, so you'll have a sense of how much manual test coverage went into each feature environment.",
-      "You can even choose to prevent pull requests from being merged if the environment hasn't been viewed yet.",
+      "Each deployment shows the amount of times its been accessed, and by which browsers, so you'll have a sense of how much manual test coverage went into each branch.",
+      "You can even choose to prevent pull requests from being merged if the deployment hasn't been viewed yet.",
     ],
     image: <img alt="Run latest master" src="/img/art/latest-master.svg" />,
   },
