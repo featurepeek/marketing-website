@@ -15,14 +15,6 @@ export default [
     image: <img alt="Visual code review" src="/img/art/visual-code-review.svg" />,
   },
   {
-    heading: 'Foster discussion on upcoming changes',
-    paragraphs: [
-      'FeaturePeek gives you a lens inside the web development lifecycle so that your entire team can have a holistic understanding of features as they get built.',
-      "Leave reviews on your team's front-end with FeaturePeek so that your feedback can be on your developers' radar.",
-    ],
-    image: <img alt="Foster discussion among teams" src="/img/art/foster-discussion.svg" />,
-  },
-  {
     heading: "Get your reviewers' browser metadata automatically",
     paragraphs: [
       'No more following-up with bug originators about the browser they were using or the URL where the bug occurred.',
@@ -39,21 +31,11 @@ export default [
     ],
     image: <img alt="Preview on server" src="/img/art/preview-on-server.svg" />,
   },
-
   {
     heading: 'Confirm that reviewers are actually running your code',
     paragraphs: [
       "Each deployment shows the amount of times its been accessed, and by which browsers, so you'll have a sense of how much manual test coverage went into each branch.",
-      "You can even choose to prevent pull requests from being merged if the deployment hasn't been viewed yet.",
     ],
     image: <img alt="Run latest master" src="/img/art/latest-master.svg" />,
-  },
-  {
-    heading: 'Test your implementations with real production data',
-    paragraphs: [
-      'Sometimes in theory a design can be sound, but when met with actual live data, the design can break.',
-      'Test your designs with real data earlier in your sprint so that you can catch and fix things otherwise overlooked.',
-    ],
-    image: <img alt="Test features" src="/img/art/test-tubes.svg" />,
   },
 ]

@@ -17,7 +17,7 @@ export default function RowReversal(props) {
             <Flex
               key={heading}
               alignItems="center"
-              display="inline-flex"
+              // display="inline-flex"
               flexDirection={mobile ? 'column-reverse' : i % 2 === flip ? 'row' : 'row-reverse'}
               justifyContent="space-between"
               marginY={40}

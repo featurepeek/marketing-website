@@ -10,7 +10,7 @@ const images = [
     src: '/img/product/drawer-timeline.png',
     thumbnail: '/img/product/drawer-timeline.png',
     caption: 'FeaturePeek drawer shows a timeline of comments, views, and more',
-    thumbnailCaption: 'FeaturePeek drawer overlays your deployment preview',
+    thumbnailCaption: 'Leave comments in the FeaturePeek drawer',
   },
   {
     src: '/img/product/drawer-tickets.png',
@@ -22,23 +22,26 @@ const images = [
     src: '/img/product/annotate.png',
     thumbnail: '/img/product/annotate.png',
     caption: 'Capture screenshots and screen recordings, and annotate them',
-    thumbnailCaption: 'Capture and annotate screenshots',
+    thumbnailCaption: 'Capture and annotate screenshots and recordings',
   },
   {
     src: '/img/product/measure.png',
     thumbnail: '/img/product/measure.png',
-    caption: 'Measure distance between DOM elements',
-    thumbnailCaption: 'Measure distance between DOM elements',
+    caption: 'Measure the distance between DOM elements',
+    thumbnailCaption: 'Measure the distance between DOM elements',
   },
 ]
 
 export default function Gallery({ width }) {
   return (
     <>
-      <Heading h={3} marginTop={160} size={500}>
-        Floating UI overlays your deployment
+      <Heading h={3} marginTop={160} size={480}>
+        A floating UI overlays your deployments,
       </Heading>
-      <Box marginLeft={-24} marginBottom={80} overflowX="scroll" width="calc(100% + 24px)">
+      <Heading h={3} size={360} opacity={0.4}>
+        making it easy for your reviewers to leave great feedback.
+      </Heading>
+      <Box marginLeft={-24} marginTop={40} marginBottom={80} overflowX="scroll" width="calc(100% + 24px)">
         <Box width={width}>
           <ReactGridGallery
             backdropClosesModal

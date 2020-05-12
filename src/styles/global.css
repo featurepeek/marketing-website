@@ -302,5 +302,6 @@ p > code.language-text {
   top: -8px;
 }
 .ReactGridGallery_tile-description {
+  font-weight: 600;
   margin-top: 32px !important;
 }
