@@ -6,6 +6,9 @@ import Typist from 'react-typist'
 
 import { Button, Code, Flex, Heading } from 'primitives'
 
+const random = arr => arr[Math.floor(Math.random() * arr.length)]
+const randomFromRange = ([min, max]) => Math.floor(Math.random() * (max - min + 1)) + min
+
 const emojis = [
   '🧡',
   '💛',
@@ -63,7 +66,19 @@ const emojis = [
   '👩‍🎤',
   '👨‍🎤',
 ]
-const randomEmoji = () => emojis[Math.floor(Math.random() * emojis.length)]
+
+// simulate distribution of letters and numbers
+const ranges = [[48, 57], [97, 122], [97, 122]]
+const genHashID = (len = 7) => {
+  let str = ''
+  for (let i = 0; i < len; i++) {
+    const range = random(ranges)
+    const num = randomFromRange(range)
+    const character = String.fromCharCode(num)
+    str += character
+  }
+  return str
+}
 
 export default function Terminal() {
   const [mounted, setMounted] = useState(false)
@@ -75,7 +90,8 @@ export default function Terminal() {
   const [success, setSuccess] = useState(false)
   const [visit, setVisit] = useState(false)
   const [brew, setBrew] = useState(false)
-  const [emoji, setEmoji] = useState(randomEmoji())
+  const [emoji, setEmoji] = useState(random(emojis))
+  const [hashid, setHashID] = useState(genHashID())
 
   const play = () => {
     setMounted(true)
@@ -90,7 +106,8 @@ export default function Terminal() {
   }
 
   const reset = () => {
-    setEmoji(randomEmoji())
+    setEmoji(random(emojis))
+    setHashID(genHashID())
     setMounted(false)
     setUploading(false)
     setDot1(false)
@@ -211,7 +228,7 @@ export default function Terminal() {
                 Visit your deployment preview here:{' '}
                 <a href="https://dashboard.featurepeek.com/demo">
                   <Code background="transparent" border="none" boxShadow="none" color="#29fe13" fontSize={24}>
-                    https://peek.run/902hw55
+                    https://peek.run/{hashid}
                   </Code>
                 </a>
               </Code>
