@@ -11,6 +11,10 @@ a, b, button, em, i, p, strong {
   }
 }
 
+body {
+  color: #1f2337;
+}
+
 .react-player {
   position: absolute;
   top: 0;
