@@ -4,7 +4,7 @@ import Box from 'ui-box'
 import Typist from 'react-typist'
 // import MediaQuery from 'react-responsive'
 
-import { Code, Flex } from 'primitives'
+import { Button, Code, Flex, Heading } from 'primitives'
 
 export default function Terminal() {
   const [mounted, setMounted] = useState(false)
@@ -15,22 +15,41 @@ export default function Terminal() {
   const [done, setDone] = useState(false)
   const [success, setSuccess] = useState(false)
   const [visit, setVisit] = useState(false)
-  // const [dollar, setDollar] = useState(false)
+  const [brew, setBrew] = useState(false)
 
-  useEffect(() => {
+  const play = () => {
     setMounted(true)
     setTimeout(() => setUploading(true), 1200)
     setTimeout(() => setDot1(true), 1600)
     setTimeout(() => setDot2(true), 1800)
     setTimeout(() => setDot3(true), 2000)
-    setTimeout(() => setDone(true), 2200)
-    setTimeout(() => setSuccess(true), 2800)
-    setTimeout(() => setVisit(true), 3000)
-    // setTimeout(() => setDollar(true), 3200)
+    setTimeout(() => setDone(true), 2400)
+    setTimeout(() => setSuccess(true), 3000)
+    setTimeout(() => setVisit(true), 3500)
+    setTimeout(() => setBrew(true), 5000)
+  }
+
+  const reset = () => {
+    setMounted(false)
+    setUploading(false)
+    setDot1(false)
+    setDot2(false)
+    setDot3(false)
+    setDone(false)
+    setSuccess(false)
+    setVisit(false)
+    setBrew(false)
+    setTimeout(() => {
+      play()
+    }, 800)
+  }
+
+  useEffect(() => {
+    play()
   }, [])
 
   return (
-    <Box id="terminal" position="relative">
+    <Box borderRadius={8} boxShadow="0 20px 40px rgba(0, 0, 0, 0.2)" id="terminal" position="relative">
       <Box background="#f2f2f2" left={6} height={1} position="absolute" top={1} width="calc(100% - 12px)" />
       <Flex
         alignItems="center"
@@ -44,9 +63,6 @@ export default function Terminal() {
         borderRightColor="#b9b9b9"
         borderRightStyle="solid"
         borderRightWidth={1}
-        borderBottomColor="#bcbdbe"
-        borderBottomStyle="solid"
-        borderBottomWidth={1}
         borderTopLeftRadius={8}
         borderTopRightRadius={8}
         height={38}
@@ -89,52 +105,75 @@ export default function Terminal() {
         background="#191919"
         borderBottomRightRadius={7}
         borderBottomLeftRadius={7}
+        borderTopColor="#bcbdbe"
+        borderTopStyle="solid"
+        borderTopWidth={1}
         height={400}
+        overflow="hidden"
         paddingX={18}
         paddingY={24}
         width="100%"
       >
-        <Code background="transparent" border="none" boxShadow="none" color="#c33820" fontSize={24}>
-          $
-        </Code>
-        {mounted && (
-          <Code background="transparent" border="none" boxShadow="none" color="#29fe13" fontSize={24}>
-            <Typist avgTypingDelay={100} cursor={{ show: false }} startDelay={400} stdTypingDelay={10}>
-              peek
-            </Typist>
+        <Box transform={`translateY(${brew ? -460 : 0}px)`} transition="transform 800ms ease">
+          <Code background="transparent" border="none" boxShadow="none" color="#c33820" fontSize={24}>
+            $
           </Code>
-        )}
-        {uploading && (
-          <Box marginY={16}>
+          {mounted && (
             <Code background="transparent" border="none" boxShadow="none" color="#29fe13" fontSize={24}>
-              Packing and Uploading{dot1 && '.'}
-              {dot2 && '.'}
-              {dot3 && '.'} {done && 'done'}
+              <Typist avgTypingDelay={100} cursor={{ show: false }} startDelay={400} stdTypingDelay={10}>
+                peek
+              </Typist>
             </Code>
-          </Box>
-        )}
-        {success && (
-          <Box marginTop={48}>
-            <Code background="transparent" border="none" boxShadow="none" color="#29fe13" fontSize={24}>
-              Assets uploaded successfully!{' '}
-              <span aria-label="love" role="img">
-                😍
-              </span>
-            </Code>
-          </Box>
-        )}
-        {visit && (
-          <Box marginY={16}>
-            <Code background="transparent" border="none" boxShadow="none" color="#29fe13" fontSize={24}>
-              Visit your deployment preview here:{' '}
-              <a href="https://dashboard.featurepeek.com/demo">
-                <Code background="transparent" border="none" boxShadow="none" color="#29fe13" fontSize={24}>
-                  https://peek.run/902hw55
-                </Code>
-              </a>
-            </Code>
-          </Box>
-        )}
+          )}
+          {uploading && (
+            <Box marginY={16}>
+              <Code background="transparent" border="none" boxShadow="none" color="#29fe13" fontSize={24}>
+                Packing and Uploading{dot1 && '.'}
+                {dot2 && '.'}
+                {dot3 && '.'} {done && 'done'}
+              </Code>
+            </Box>
+          )}
+          {success && (
+            <Box marginTop={48}>
+              <Code background="transparent" border="none" boxShadow="none" color="#29fe13" fontSize={24}>
+                Assets uploaded successfully!{' '}
+                <span aria-label="love" role="img">
+                  😍
+                </span>
+              </Code>
+            </Box>
+          )}
+          {visit && (
+            <Box marginY={16}>
+              <Code background="transparent" border="none" boxShadow="none" color="#29fe13" fontSize={24}>
+                Visit your deployment preview here:{' '}
+                <a href="https://dashboard.featurepeek.com/demo">
+                  <Code background="transparent" border="none" boxShadow="none" color="#29fe13" fontSize={24}>
+                    https://peek.run/902hw55
+                  </Code>
+                </a>
+              </Code>
+            </Box>
+          )}
+          {brew && (
+            <Box marginTop={320} textAlign="center">
+              <Heading color="white" is="h2" marginBottom={32} size={420}>
+                Try for yourself
+              </Heading>
+              <Code background="transparent" border="none" boxShadow="none" color="#29fe13" fontSize={36}>
+                brew install featurepeek/tap/peek
+              </Code>
+              <center>
+                <Flex alignItems="center" justifyContent="center" height={100} marginTop={40} width={200}>
+                  <Button background="white" cursor="pointer" fontSize={14} iconBefore="fas fa-play" onClick={reset}>
+                    Replay animation
+                  </Button>
+                </Flex>
+              </center>
+            </Box>
+          )}
+        </Box>
       </Box>
     </Box>
   )
