@@ -33,7 +33,7 @@ export default function Hero() {
             <Flex flexDirection="row" marginTop={40}>
               <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 200}>
                 <Button
-                  href="https://dashboard.featurepeek.com"
+                  href="https://dashboard.featurepeek.com/login"
                   iconAfter={mobile ? undefined : 'fas fa-arrow-right'}
                   onClick={() => track('Clicked CTA', { cta: 'Hero' })}
                 >

@@ -41,11 +41,10 @@ export default function Banner(props) {
             </Link>
           </Paragraph>
           <Icon
-            className="nav-links-hide-fouc"
             color="#bbb"
             cursor="pointer"
             fontSize={12}
-            icon="fas fa-times"
+            icon="fas fa-times is-hidden-mobile"
             onClick={props.dismiss}
             position="absolute"
             right={24}

@@ -13,6 +13,7 @@ a, b, button, em, i, p, strong {
 
 body {
   color: #1f2337;
+  /*overflow-x: hidden;*/
 }
 
 .react-player {
@@ -80,6 +81,13 @@ p > code.language-text {
   transform: translateY(1px);
 }
 
+.Typist, .Typist .Cursor {
+  display: inline-block; 
+}
+#terminal a {
+  text-decoration: none;
+}
+
 /* Switch */
 .rc-switch {
   margin: 0 16px;
@@ -110,16 +118,10 @@ p > code.language-text {
   border-bottom: 1px solid #eee;
 }
 .subnav1:hover {
-  background: rgba(90, 191, 126, 0.1);
-}
-.subnav2 {
-  border-bottom: 1px solid #eee;
+  background: rgba(0, 176, 222, 0.1);
 }
 .subnav2:hover {
   background: rgba(0, 176, 222, 0.1);
-}
-.subnav3:hover {
-  background: rgba(194, 116, 209, 0.1);
 }
 
 @keyframes rotate {
@@ -149,8 +151,14 @@ p > code.language-text {
 }*/
 
 @media screen and (max-width: 504px) {
+  .is-hidden-mobile {
+    display: none !important;
+  }
   .layout-padding-fouc {
     padding: 16px !important;
+  }
+  #terminal code {
+    font-size: 16px !important;
   }
 }
 
@@ -275,4 +283,25 @@ p > code.language-text {
 #disqus_thread {
   margin-top: 80px;
   width: 100% !important;
+}
+
+.ReactGridGallery_tile {
+  background: transparent !important;
+}
+.ReactGridGallery_tile-viewport {
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: top 0.2s ease;
+  position: relative;
+  top: 0px;
+}
+.ReactGridGallery_tile:last-child .ReactGridGallery_tile-viewport {
+  margin-right: 24px;
+}
+.ReactGridGallery_tile-viewport:hover {
+  top: -8px;
+}
+.ReactGridGallery_tile-description {
+  font-weight: 600;
+  margin-top: 32px !important;
 }

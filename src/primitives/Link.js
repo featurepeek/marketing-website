@@ -4,7 +4,7 @@ import Box from 'ui-box'
 import { Link as GatsbyLink } from 'gatsby'
 
 export default function Link(props) {
-  const { children, href = '', onMouseEnter, onMouseLeave, target, underline = true, ...styles } = props
+  const { children, href, onMouseEnter, onMouseLeave, target, underline = true, ...styles } = props
 
   const className = underline ? 'underline' : 'normal'
   const span = (

@@ -27,7 +27,7 @@ export default [
   {
     heading: 'See your designs come to life earlier in the release cycle',
     paragraphs: [
-      'With feature environments in their arsenal, your front-end developers will ask for your feedback sooner in the sprint.',
+      'With deployment previews in their arsenal, your front-end developers will ask for your feedback sooner in the sprint.',
       'No more late requests for implementation feedback right before a release.',
     ],
     image: <img alt="Design tools" src="/img/art/swatch.svg" />,

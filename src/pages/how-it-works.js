@@ -42,7 +42,7 @@ export default function HowItWorks(props) {
             size={360}
             textAlign={mobile ? 'left' : 'center'}
           >
-            Follow these four steps.
+            Follow these four steps to set up FeaturePeek Teams.
           </Heading>
           <Flex marginBottom={120}>
             <Column marginRight={mobile ? 0 : 32}>
@@ -51,7 +51,7 @@ export default function HowItWorks(props) {
                   Setup instructions
                 </Heading>
                 <Paragraph fontSize={24} marginBottom={32}>
-                  From static builds to Docker containers, FeaturePeek supports various types of front-end
+                  From static builds to Docker containers, FeaturePeek Teams supports various types of front-end
                   architectures.
                 </Paragraph>
                 <UnorderedList marginLeft={mobile ? 0 : 32}>
@@ -73,7 +73,7 @@ export default function HowItWorks(props) {
                 </UnorderedList>
                 <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 180}>
                   <Button
-                    href="https://dashboard.featurepeek.com"
+                    href="https://dashboard.featurepeek.com/login"
                     onClick={() => track('Clicked CTA', { cta: 'How it works' })}
                   >
                     Get started now
