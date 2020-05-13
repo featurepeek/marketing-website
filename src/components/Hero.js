@@ -16,9 +16,9 @@ export default function Hero() {
         <Flex alignItems="center" className="hero-flex-direction-fouc" justifyContent="center">
           <Box className="hero-fouc" width={mobile ? '100%' : 420}>
             <Heading h={2} opacity={0.4} size={320} textAlign={mobile ? 'center' : 'left'}>
-              On-demand front-end
+              Get front-end staging
               <br />
-              staging environments.
+              environments on demand.
             </Heading>
             <Heading h={2} opacity={0.4} size={320} textAlign={mobile ? 'center' : 'left'}>
               Gather team feedback
@@ -33,7 +33,7 @@ export default function Hero() {
             <Flex flexDirection="row" marginTop={40}>
               <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 200}>
                 <Button
-                  href="https://dashboard.featurepeek.com"
+                  href="https://dashboard.featurepeek.com/login"
                   iconAfter={mobile ? undefined : 'fas fa-arrow-right'}
                   onClick={() => track('Clicked CTA', { cta: 'Hero' })}
                 >

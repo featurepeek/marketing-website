@@ -5,13 +5,14 @@ export default [
       answer: 'A project corresponds to a GitHub repository.',
     },
     {
-      question: 'What counts as a user?',
-      answer: 'Anyone able to collaborate on or view your projects or environments counts as a user.',
+      question: 'What counts as a seat?',
+      answer:
+        "A seat is a confirmed user on a team. Deployments won't be accessible unless the pull request author has a paid seat on the team. You can invite people to view and collaborate on your deployments without paying for their seat, but they will not be able to create deployments on their own.",
     },
     {
       question: "Can I invite someone on my team even if they're not in my GitHub org?",
       answer:
-        "Yes! You can invite anyone you'd like to your FeaturePeek team, and they'll have access to your running environments. Our GitHub App can even comment on pull requests on their behalf, so they'll stay in the conversation.",
+        "Yes! You can invite anyone you'd like to your FeaturePeek team, and they'll have access to your running deployments. Our GitHub App can even comment on pull requests on their behalf, so they'll stay in the conversation.",
     },
     {
       question: 'What if I add or remove team members part-way through my billing cycle?',

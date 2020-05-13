@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { graphql } from 'gatsby'
 import MediaQuery from 'react-responsive'
+import Box from 'ui-box'
 
-import { Heading, Flex } from 'primitives'
+import { Flex, Heading, Icon, Link, Paragraph, Text } from 'primitives'
 
 import Faqs from 'components/Faqs'
 import PricingColumn from 'components/PricingColumn'
@@ -36,7 +37,7 @@ export default function Pricing(props) {
         <Layout location={props.location}>
           <SEO title="Pricing" location={props.location} />
           <Heading marginTop={0} size={500} textAlign={mobile ? 'left' : 'center'}>
-            Flexible plans for companies of all sizes.
+            Flexible plans for teams of all sizes.
           </Heading>
           <Heading
             h={2}
@@ -48,6 +49,23 @@ export default function Pricing(props) {
           >
             Our plans are simple and straightforward.
           </Heading>
+          <Flex justifyContent="center">
+            <Paragraph
+              background="#f8f8f8"
+              borderRadius={12}
+              paddingX={32}
+              paddingY={8}
+              position="relative"
+              top={mobile ? -40 : -80}
+              textAlign="center"
+            >
+              <Icon color="#2896e0" icon="fas fa-info-circle" marginRight={8} />
+              <Text fontWeight={500}>
+                These plans only apply to FeaturePeek Teams. <Link href="/product/indie">FeaturePeek Indie</Link> is
+                free!
+              </Text>
+            </Paragraph>
+          </Flex>
           <Flex alignItems="center" marginBottom={mobile ? 80 : 160}>
             {sortedProducts.map(product => (
               <PricingColumn key={product.id} hasMounted={hasMounted} product={product} />

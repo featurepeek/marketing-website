@@ -17,9 +17,10 @@ export default function RowReversal(props) {
             <Flex
               key={heading}
               alignItems="center"
+              // display="inline-flex"
               flexDirection={mobile ? 'column-reverse' : i % 2 === flip ? 'row' : 'row-reverse'}
               justifyContent="space-between"
-              marginY={100}
+              marginY={40}
             >
               <Box width={mobile ? '100%' : '48%'}>
                 {builtFor && (
@@ -27,7 +28,7 @@ export default function RowReversal(props) {
                     Built for {builtFor}
                   </Heading>
                 )}
-                <Heading color="#333" h={2} {...scale(1.2)} marginTop={0} marginBottom={rhythm(1)}>
+                <Heading h={2} {...scale(1.2)} marginTop={0} marginBottom={rhythm(1)}>
                   {heading}
                 </Heading>
                 {paragraphs.map(paragraph => (

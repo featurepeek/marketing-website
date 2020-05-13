@@ -1,31 +1,33 @@
 import React from 'react'
 import Box from 'ui-box'
 
-import copyWritings from 'copy/teamFeatures'
+import copyWritings from 'copy/featuresTeam'
 
 import { Heading } from 'primitives'
 
-// import HeroFrontend from 'images/HeroFrontend'
 import Layout from 'components/Layout'
-// import NextPrevButtons from 'components/NextPrevButtons'
+import Gallery from 'components/Gallery'
 import RowReversal from 'components/RowReversal'
 import SEO from 'components/Seo'
 
-import HeroSVG from '../../static/img/art/ci-pipeline-hero.svg'
+import HeroSVG from '../../../static/img/art/ci-pipeline-hero.svg'
 
 export default function Product(props) {
   return (
     <Layout location={props.location}>
-      <SEO title="Features" location={props.location} />
+      <SEO title="FeaturePeek Teams" location={props.location} />
       <Heading marginTop={0} size={500} textAlign="center">
-        FeaturePeek fits into your CI pipeline
+        FeaturePeek Teams fits into your CI pipeline
+      </Heading>
+      <Heading h={2} marginTop={0} opacity={0.4} size={360} textAlign="center">
+        Front-end staging environments on demand
       </Heading>
       <Box padding={16}>
         <HeroSVG />
       </Box>
-      <hr style={{ background: '#eee' }} />
-      <Heading marginTop={80} size={500} textAlign="center">
-        Features for the whole team
+      <Gallery width={2640} />
+      <Heading marginTop={160} size={500} textAlign="center">
+        Value for the whole team
       </Heading>
       <RowReversal copyWritings={copyWritings} />
       {/* <NextPrevButtons prev="managers" next="designers" /> */}

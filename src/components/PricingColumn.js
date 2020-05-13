@@ -31,8 +31,8 @@ export default function PricingColumn({ product, hasMounted }) {
     <MediaQuery maxWidth={800}>
       {mobile => (
         <Column
-          background={metadata.recommended ? 'linear-gradient(#fcfcd4, #fefdb3)' : 'linear-gradient(#eefcfd, #e6f4f1)'}
-          border={metadata.recommended ? '3px solid #fefdb3' : '3px solid #e6f4f1'}
+          background={metadata.recommended ? 'linear-gradient(#fcfcd4, #fefdb3)' : 'rgba(0, 176, 222, 0.1)'}
+          border={metadata.recommended ? '3px solid #fefdb3' : '3px solid rgba(0, 176, 222, 0.05)'}
           borderRadius={16}
           // boxShadow="0 0 1px 0 rgba(67, 90, 111, 0.3), 0 2px 4px -2px rgba(67, 90, 111, 0.47)"
           marginX={metadata.recommended ? 24 : 0}
@@ -68,7 +68,7 @@ export default function PricingColumn({ product, hasMounted }) {
                   </Heading>
                   <Box marginLeft={8}>
                     <Paragraph marginBottom={0} position="relative" top={8}>
-                      <Emphasis opacity={0.5}>per user</Emphasis>
+                      <Emphasis opacity={0.5}>per seat</Emphasis>
                     </Paragraph>
                     <Paragraph marginBottom={0}>
                       <Emphasis opacity={0.5}>per month</Emphasis>

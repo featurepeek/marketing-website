@@ -5,19 +5,26 @@ import MediaQuery from 'react-responsive'
 
 import { Button, Icon, Flex, Link, ListItem, UnorderedList } from 'primitives'
 
-import SubNav from 'components/SubNav'
+// import Banner from 'components/Banner'
 import { track } from 'utils/analytics'
 
 import Logo from '../../static/img/full-logo.svg'
 
 export default function Nav() {
-  const [isShowingSubNav, setShowingSubNav] = useState(false)
+  // const initialBannerState = typeof window !== 'undefined' ? !window.isHidingBanner : true
+  // const [isShowingBanner, setShowingBanner] = useState(initialBannerState)
+  const isShowingBanner = false
   const [isShowingMobileNav, setShowingMobileNav] = useState(false)
   const [hasScrolled, setScrolled] = useState(false)
 
   const toggleMobileNav = () => {
     setShowingMobileNav(!isShowingMobileNav)
   }
+
+  // const dismissBanner = () => {
+  //   setShowingBanner(false)
+  //   window.isHidingBanner = true
+  // }
 
   useEffect(() => {
     const scrollListener = () => {
@@ -45,17 +52,19 @@ export default function Nav() {
           boxShadow={hasScrolled ? '0 2px 4px rgba(0, 0, 0, 0.1)' : 'none'}
           className="nav-padding-fouc"
           height={mobile && isShowingMobileNav ? 440 : 76}
+          marginBottom={isShowingBanner ? 42 : 0}
           marginTop={8}
-          overflow={mobile ? 'hidden' : 'inherit'}
+          // overflow={mobile ? 'hidden' : 'inherit'}
           paddingX={mobile ? 0 : 16}
           paddingY={8}
           position="sticky"
-          top={0}
-          transition="box-shadow 0.15s ease, height 0.3s ease"
+          top={isShowingBanner ? 42 : 0}
+          transition="all 0.3s ease"
           width="100%"
           zIndex={999}
         >
           <Flex justifyContent="space-between" flexDirection="row">
+            {/* {isShowingBanner && <Banner dismiss={dismissBanner} />} */}
             <nav>
               <Flex alignItems="center">
                 <Link href="/" underline={false}>
@@ -63,19 +72,15 @@ export default function Nav() {
                 </Link>
                 {!mobile && (
                   <>
-                    <Box
-                      marginLeft={20}
-                      paddingRight={16}
-                      paddingY={16}
-                      position="relative"
-                      top={2}
-                      onMouseEnter={() => setShowingSubNav(true)}
-                      onMouseLeave={() => setShowingSubNav(false)}
-                    >
-                      <Link className="nav-links-hide-fouc" color="#103c52" href="/product" fontSize={17}>
-                        Product
+                    <Box marginLeft={20} paddingRight={16} paddingY={16} position="relative" top={2}>
+                      <Link className="nav-links-hide-fouc" color="#103c52" href="/product/teams" fontSize={17}>
+                        Teams
                       </Link>
-                      <SubNav isShowing={isShowingSubNav} />
+                    </Box>
+                    <Box className="nav-links-hide-fouc" paddingX={16} position="relative" top={2}>
+                      <Link color="#103c52" href="/product/indie" fontSize={17}>
+                        Indie
+                      </Link>
                     </Box>
                     <Box className="nav-links-hide-fouc" paddingX={16} position="relative" top={2}>
                       <Link color="#103c52" href="/how-it-works" fontSize={17}>
@@ -112,8 +117,11 @@ export default function Nav() {
               </Flex>
             ) : (
               <Flex alignItems="center" className="nav-links-hide-fouc" justifyContent="center" width={224}>
-                <Button href="https://dashboard.featurepeek.com" onClick={() => track('Clicked CTA', { cta: 'Nav' })}>
-                  Go to Dashboard
+                <Button
+                  href="https://dashboard.featurepeek.com/login"
+                  onClick={() => track('Clicked CTA', { cta: 'Nav' })}
+                >
+                  Log in / Sign up
                 </Button>
               </Flex>
             )}
@@ -122,8 +130,13 @@ export default function Nav() {
             <Box>
               <UnorderedList marginLeft={76} marginTop={16}>
                 <ListItem>
-                  <Link href="/product" fontSize={21}>
-                    Product
+                  <Link href="/product/teams" fontSize={21}>
+                    FeaturePeek Teams
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link href="/product/indie" fontSize={21}>
+                    FeaturePeek Indie
                   </Link>
                 </ListItem>
                 <ListItem>
@@ -149,10 +162,10 @@ export default function Nav() {
               </UnorderedList>
               <Flex alignItems="center" justifyContent="center" height={100} width="100%">
                 <Button
-                  href="https://dashboard.featurepeek.com"
+                  href="https://dashboard.featurepeek.com/login"
                   onClick={() => track('Clicked CTA', { cta: 'Mobile Nav' })}
                 >
-                  Go to Dashboard
+                  Log in / Sign up
                 </Button>
               </Flex>
             </Box>
