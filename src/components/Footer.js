@@ -99,7 +99,7 @@ const columns = [
         icon: 'fab fa-y-combinator',
         iconColor: '#ff6601',
         text: 'Y Combinator S19',
-        href: 'https://techcrunch.com/2019/07/26/featurepeek-wants-put-an-end-to-last-minute-front-end-design-reviews/',
+        href: 'https://techcrunch.com/2020/05/13/featurepeek-moves-beyond-y-combinator-with-1-8m-seed/',
         target: '_blank',
       },
     ],
