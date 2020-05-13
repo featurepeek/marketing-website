@@ -30,7 +30,7 @@ export default function AsSeenOn({ question, answer }) {
       <Flex alignItems="center" justifyContent="space-around" paddingY={32} textAlign="center" width="100%">
         <Box paddingY={16}>
           <a
-            href="https://techcrunch.com/2019/07/26/featurepeek-wants-put-an-end-to-last-minute-front-end-design-reviews/"
+            href="https://techcrunch.com/2020/05/13/featurepeek-moves-beyond-y-combinator-with-1-8m-seed/"
             rel="noopener noreferrer"
             target="_blank"
           >
