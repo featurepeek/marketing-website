@@ -23,7 +23,7 @@ export default function Banner(props) {
           width="100%"
         >
           <Paragraph textAlign="center" width="100%">
-            <Link color="white !important" href="#">
+            <Link color="white !important" href="/blog/featurepeek-raises-1-8m-in-seed-funding/">
               FeaturePeek Raises $1.8M in Seed Funding
               <Text className="nav-links-hide-fouc" color="white !important">
                 {' '}
