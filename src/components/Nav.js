@@ -5,14 +5,15 @@ import MediaQuery from 'react-responsive'
 
 import { Button, Icon, Flex, Link, ListItem, UnorderedList } from 'primitives'
 
-import Banner from 'components/Banner'
+// import Banner from 'components/Banner'
 import { track } from 'utils/analytics'
 
 import Logo from '../../static/img/full-logo.svg'
 
 export default function Nav() {
-  const initialBannerState = typeof window !== 'undefined' ? !window.isHidingBanner : true
-  const [isShowingBanner, setShowingBanner] = useState(initialBannerState)
+  // const initialBannerState = typeof window !== 'undefined' ? !window.isHidingBanner : true
+  // const [isShowingBanner, setShowingBanner] = useState(initialBannerState)
+  const isShowingBanner = false
   const [isShowingMobileNav, setShowingMobileNav] = useState(false)
   const [hasScrolled, setScrolled] = useState(false)
 
@@ -20,10 +21,10 @@ export default function Nav() {
     setShowingMobileNav(!isShowingMobileNav)
   }
 
-  const dismissBanner = () => {
-    setShowingBanner(false)
-    window.isHidingBanner = true
-  }
+  // const dismissBanner = () => {
+  //   setShowingBanner(false)
+  //   window.isHidingBanner = true
+  // }
 
   useEffect(() => {
     const scrollListener = () => {
@@ -63,7 +64,7 @@ export default function Nav() {
           zIndex={999}
         >
           <Flex justifyContent="space-between" flexDirection="row">
-            {isShowingBanner && <Banner dismiss={dismissBanner} />}
+            {/* {isShowingBanner && <Banner dismiss={dismissBanner} />} */}
             <nav>
               <Flex alignItems="center">
                 <Link href="/" underline={false}>
