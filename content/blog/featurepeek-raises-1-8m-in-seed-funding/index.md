@@ -17,7 +17,7 @@ Along with our funding, **we are announcing a new product** that we can't wait f
 
 We are excited to launch a new entry-level product, [FeaturePeek Indie](/product/indie). This command-line tool is the easiest way to try FeaturePeek's deployment previews, without needing to setup a CI pipeline or install a GitHub app. Best of all, it's **completely free.** We're eager for developers to try this so they can easily share and get feedback on their work. Install the CLI with homebrew: `brew install featurepeek/tap/peek` .
 
-![Untitled.gif](https://storage.googleapis.com/slite-api-files-production/files/1afac329-35ae-4d86-93fd-3567054de63b/Untitled.gif)
+![CLI](./cli.gif)
 
 # FeaturePeek Teams
 
@@ -27,17 +27,19 @@ Our original solution that fits into your Continuous Integration pipeline is now
 
 The unified drawer brings new functionality and improved UX. Comments, page views, issues, and more are all presented together in a timeline view. You can file tickets to your connected integrations here, too.
 
-![drawer5.gif](https://storage.googleapis.com/slite-api-files-production/files/5ff3e21b-6f4b-4044-b7c4-40f2c24873d8/drawer5.gif)
+![Timeline in the FeaturePeek drawer](./drawer-timeline.gif)
 
 ## 📸 Crop and annotate screenshots
 
 You can now crop and annotate screenshots right from your deployment preview and easily attach it to a comment.
 
-![annotate.png](https://storage.googleapis.com/slite-api-files-production/files/dc92a600-f31e-4fab-a368-36dc9b9c47ec/annotate.png)
+![Annotate screenshots](./annotate.png)
 
 ## 🐛 File tickets with third-party integrations
 
-You can now connect your Trello boards and Clubhouse projects to FeaturePeek and file new issues from the FeaturePeek drawer. Do you have suggestions for what issue tracking service to integrate with next? [Let us know.](hello@featurepeek.com)
+You can now connect your Trello boards and Clubhouse projects to FeaturePeek and file new issues from the FeaturePeek drawer. Do you have suggestions for what issue tracking service to integrate with next? [Let us know.](mailto:hello@featurepeek.com)
+
+![File tickets in the FeaturePeek drawer](./drawer-tickets.png)
 
 # What's next
 
