@@ -15,13 +15,13 @@ Along with our funding, **we are announcing a new product** that we can't wait f
 
 # 👩‍💻 FeaturePeek Indie 👨‍💻
 
-We are excited to launch a new entry-level product, [FeaturePeek Indie](https://featurepeek.com/product/indie). This command-line tool is the easiest way to try FeaturePeek's deployment previews, without needing to setup a CI pipeline or install a GitHub app. Best of all, it's **completely free.** We're eager for developers to try this so they can easily share and get feedback on their work. Install the CLI with homebrew: `brew install featurepeek/tap/peek` .
+We are excited to launch a new entry-level product, [FeaturePeek Indie](/product/indie). This command-line tool is the easiest way to try FeaturePeek's deployment previews, without needing to setup a CI pipeline or install a GitHub app. Best of all, it's **completely free.** We're eager for developers to try this so they can easily share and get feedback on their work. Install the CLI with homebrew: `brew install featurepeek/tap/peek` .
 
 ![Untitled.gif](https://storage.googleapis.com/slite-api-files-production/files/1afac329-35ae-4d86-93fd-3567054de63b/Untitled.gif)
 
 # FeaturePeek Teams
 
-Our original solution that fits into your Continuous Integration pipeline is now known as [FeaturePeek Teams](https://featurepeek.com/product/teams). **It's the easiest way to explore the benefits of deployment previews without having to switch infrastructure.** We've been busy listening to your feature requests — here are just a few that we've released in the last couple of weeks.
+Our original solution that fits into your Continuous Integration pipeline is now known as [FeaturePeek Teams](/product/teams). **It's the easiest way to explore the benefits of deployment previews without having to switch infrastructure.** We've been busy listening to your feature requests — here are just a few that we've released in the last couple of weeks.
 
 ## 👨‍🎨 Unified drawer UI
 
