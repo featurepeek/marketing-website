@@ -19,9 +19,11 @@ export default function CtaBox({ light, brew }) {
         >
           {brew ? (
             <Box paddingY={32} textAlign="center">
-              <Code background="transparent" border="none" boxShadow="none" color="white" fontSize={36}>
-                brew install featurepeek/tap/peek
-              </Code>
+              <a href="https://github.com/featurepeek/peek" style={{ textDecoration: 'none' }} target="_blank">
+                <Code background="transparent" border="none" boxShadow="none" color="white" fontSize={36}>
+                  brew install featurepeek/tap/peek
+                </Code>
+              </a>
             </Box>
           ) : (
             <>
