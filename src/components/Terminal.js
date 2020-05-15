@@ -239,9 +239,11 @@ export default function Terminal() {
               <Heading color="white" is="h2" marginBottom={32} size={420}>
                 Try for yourself
               </Heading>
-              <Code background="transparent" border="none" boxShadow="none" color="#29fe13" fontSize={36}>
-                brew install featurepeek/tap/peek
-              </Code>
+              <a href="https://github.com/featurepeek/peek" target="_blank">
+                <Code background="transparent" border="none" boxShadow="none" color="#29fe13" fontSize={36}>
+                  brew install featurepeek/tap/peek
+                </Code>
+              </a>
               <center>
                 <Flex alignItems="center" justifyContent="center" height={100} marginTop={40} width={200}>
                   <Button background="white" cursor="pointer" fontSize={14} iconBefore="fas fa-play" onClick={reset}>
