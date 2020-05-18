@@ -20,7 +20,7 @@ export default function Product(props) {
         FeaturePeek Teams fits into your CI pipeline
       </Heading>
       <Heading h={2} marginTop={0} opacity={0.4} size={360} textAlign="center">
-        Front-end staging environments on demand
+        Frontend staging environments on demand
       </Heading>
       <Box padding={16}>
         <HeroSVG />

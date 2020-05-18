@@ -10,7 +10,7 @@ Interested in using FeaturePeek? Take a look at this repository to get an idea o
 
 ## Introduction
 
-This is the GitHub repository for the front-end source code of [featurepeek.com](https://featurepeek.com). It's integrated with FeaturePeek, so you can get an understanding of how to integrate your own front-end projects simply by poking around in this one. 
+This is the GitHub repository for the frontend source code of [featurepeek.com](https://featurepeek.com). It's integrated with FeaturePeek, so you can get an understanding of how to integrate your own frontend projects simply by poking around in this one. 
 
 There are two files in particular to pay attention to:
 

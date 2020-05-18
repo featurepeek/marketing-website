@@ -8,7 +8,7 @@ const buttonProps = {
   developers: {
     background: 'green',
     href: '/for-frontend-developers',
-    children: 'Front-end Developers',
+    children: 'Frontend Developers',
   },
   designers: {
     background: 'pink',

@@ -32,7 +32,7 @@ export default function DesignedForGitHub(props) {
             </Paragraph>
             <Flex alignItems="center" height={100} marginTop={mobile ? 40 : 0}>
               <Button href="/how-it-works" iconAfter="fas fa-arrow-right">
-                Learn how to set up your front-end
+                Learn how to set up your frontend
               </Button>
             </Flex>
           </Box>

@@ -97,7 +97,7 @@ Code reviews are an essential part of the pull request approval process, but can
 
 ### 5. Add more reviewers
 
-If you’ve made all the changes above and pull requests are still slow, it might be an issue with your reviewers. Ask your existing reviewers how you can help them review more quickly — it might be a simple matter of not having enough time or the right front-end review [tools in your workflow](https://featurepeek.com/). 
+If you’ve made all the changes above and pull requests are still slow, it might be an issue with your reviewers. Ask your existing reviewers how you can help them review more quickly — it might be a simple matter of not having enough time or the right frontend review [tools in your workflow](https://featurepeek.com/). 
 
 Code-review-as-a-service tool [PullRequest](https://www.pullrequest.com) recommends having at least two reviewers per PR: one who has knowledge of the particular code being changed, and one who doesn't (a neutral third-party). It's even recommended to have someone review a language they're unfamiliar with over not having anyone review at all.
 
