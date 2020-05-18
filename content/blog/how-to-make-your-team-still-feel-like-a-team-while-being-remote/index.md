@@ -81,6 +81,6 @@ Keep doing the things that make your team unique. All the funny, silly, and uniq
 
 ## Show off
 
-Find a good way for your team to give a demo of what they are working on. Having an 'over the shoulder' review is vital to the dev cycle. Screen sharing or collaborating within a FeaturePeek environment can make for a smoother transition to virtual front-end review. Try an end of the week demo where everyone gets a turn showing off their work. It's a great opportunity for your team to feel rewarded for their efforts.
+Find a good way for your team to give a demo of what they are working on. Having an 'over the shoulder' review is vital to the dev cycle. Screen sharing or collaborating within a FeaturePeek environment can make for a smoother transition to virtual frontend review. Try an end of the week demo where everyone gets a turn showing off their work. It's a great opportunity for your team to feel rewarded for their efforts.
 
 I'd love to hear about how your teams are adapting to this new normal. Feel free to [shoot me an email](mailto:eric@featurepeek.com) or [connect with me on LinkedIn](https://www.linkedin.com/in/eric-silverman-featurepeek).

@@ -26,7 +26,7 @@ const columns = [
     section: 'Overview',
     links: [
       {
-        text: 'For Front-end Developers',
+        text: 'For Frontend Developers',
         href: '/for-frontend-developers',
       },
       {

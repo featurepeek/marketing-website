@@ -16,7 +16,7 @@ export default function Hero() {
         <Flex alignItems="center" className="hero-flex-direction-fouc" justifyContent="center">
           <Box className="hero-fouc" width={mobile ? '100%' : 420}>
             <Heading h={2} opacity={0.4} size={320} textAlign={mobile ? 'center' : 'left'}>
-              Get front-end staging
+              Get frontend staging
               <br />
               environments on demand.
             </Heading>

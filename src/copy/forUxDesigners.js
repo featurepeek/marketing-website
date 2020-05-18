@@ -20,14 +20,14 @@ export default [
     heading: "Be more included in Engineering's release process",
     paragraphs: [
       'FeaturePeek gives you a lens inside the web development lifecycle so that your entire team can have a holistic understanding of features as they get built.',
-      "Leave reviews on your team's front-end with FeaturePeek so that your feedback can be on your developers' radar.",
+      "Leave reviews on your team's frontend with FeaturePeek so that your feedback can be on your developers' radar.",
     ],
     image: <img alt="Foster discussion among teams" src="/img/art/foster-discussion.svg" />,
   },
   {
     heading: 'See your designs come to life earlier in the release cycle',
     paragraphs: [
-      'With deployment previews in their arsenal, your front-end developers will ask for your feedback sooner in the sprint.',
+      'With deployment previews in their arsenal, your frontend developers will ask for your feedback sooner in the sprint.',
       'No more late requests for implementation feedback right before a release.',
     ],
     image: <img alt="Design tools" src="/img/art/swatch.svg" />,

@@ -26,7 +26,7 @@ export default [
     heading: 'Foster discussion on upcoming changes',
     paragraphs: [
       'FeaturePeek gives you a lens inside the web development lifecycle so that your entire team can have a holistic understanding of features as they get built.',
-      "Leave reviews on your team's front-end with FeaturePeek so that your feedback can be on your developers' radar.",
+      "Leave reviews on your team's frontend with FeaturePeek so that your feedback can be on your developers' radar.",
     ],
     image: <img alt="Foster discussion among teams" src="/img/art/foster-discussion.svg" />,
   },

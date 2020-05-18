@@ -17,12 +17,12 @@ export default function ForFrontendDevelopers(props) {
   const theme = gradientMap.green[0] //  background="#eef6ef"
   return (
     <Layout location={props.location}>
-      <SEO title="Built for Front-end Developers" location={props.location} />
+      <SEO title="Built for Frontend Developers" location={props.location} />
       <Heading color="#103c52" h={6} marginTop={0} {...scale(1 / 2)}>
         Built for
       </Heading>
       <Heading color={theme} marginTop={0} {...scale(2)}>
-        Front-end Developers
+        Frontend Developers
       </Heading>
       <Heading color={theme} h={2} opacity={0.5} size={300}>
         Automatic environments for every open pull request.
