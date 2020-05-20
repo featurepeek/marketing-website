@@ -13,7 +13,7 @@ export default function NotFoundPage(props) {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO title="404: Not Found" location={props.location} />
+      <SEO title="404 Not Found" location={props.location} />
       {/* <Heading marginBottom={40} marginTop={0} size={500} textAlign="center">404: Not Found</Heading> */}
       <Flex justifyContent="center" position="relative" top={39}>
         <video autoPlay muted loop src="/video/404.mp4">
@@ -21,13 +21,13 @@ export default function NotFoundPage(props) {
         </video>
         <Box marginBottom={80} marginTop={32} marginX={32}>
           <Paragraph fontSize={32}>
-            <em>The webpage you seek</em>
+            <em>The web page you seek</em>
           </Paragraph>
           <Paragraph fontSize={32}>
             <em>cannot be located, but</em>
           </Paragraph>
           <Paragraph fontSize={32}>
-            <em>endless others exist</em>
+            <em>many more exist.</em>
           </Paragraph>
         </Box>
       </Flex>
