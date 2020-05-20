@@ -24,7 +24,7 @@ export default function HeroFrontend(props) {
         <BackgroundImage
           fadeIn="soft"
           fluid={img.childImageSharp.fluid}
-          alt="Built for Front-end Developers"
+          alt="Built for Frontend Developers"
           style={{
             backgroundPosition: mobile ? 'bottom' : 'top',
             backgroundSize: 'contain',

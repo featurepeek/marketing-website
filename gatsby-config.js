@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Supercharged deployment previews for all \u00B7 FeaturePeek`,
     author: `Jason Barry`,
-    description: `FeaturePeek creates a deployment preview for every pull request of your front-end, so you can get feedback from your team earlier in the web development cycle.`,
+    description: `FeaturePeek creates a deployment preview for every pull request of your frontend, so you can get feedback from your team earlier in the web development cycle.`,
     image: 'https://featurepeek.com/img/og-rect-logo.png',
     siteUrl: `https://featurepeek.com`,
     social: {

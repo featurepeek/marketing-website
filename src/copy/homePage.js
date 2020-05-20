@@ -7,16 +7,16 @@ import { gradientMap } from 'utils/color'
 
 export const valueProps = [
   {
-    builtFor: 'Front-end Developers',
+    builtFor: 'Frontend Developers',
     heading: 'Collect implementation feedback with deployment previews',
     paragraphs: [
-      "Connect your front-end repo to FeaturePeek, and we'll spin up a deployment preview whenever you open a pull request.",
+      "Connect your frontend repo to FeaturePeek, and we'll spin up a deployment preview whenever you open a pull request.",
       'Get feedback from your whole team faster by sharing the link to review visually before waiting on code review to finish.',
     ],
     color: gradientMap.green[0],
     buttonProps: {
       background: 'green',
-      children: 'Features for Front-end Developers',
+      children: 'Features for Frontend Developers',
       href: '/for-frontend-developers',
       iconAfter: 'fas fa-arrow-right',
     },

@@ -51,7 +51,7 @@ export default function HowItWorks(props) {
                   Setup instructions
                 </Heading>
                 <Paragraph fontSize={24} marginBottom={32}>
-                  From static builds to Docker containers, FeaturePeek Teams supports various types of front-end
+                  From static builds to Docker containers, FeaturePeek Teams supports various types of frontend
                   architectures.
                 </Paragraph>
                 <UnorderedList marginLeft={mobile ? 0 : 32}>

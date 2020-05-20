@@ -1,14 +1,14 @@
 ---
-title: Where should your team review your front-end changes?
+title: Where should your team review your frontend changes?
 date: "2019-11-26T12:12:03.284Z"
-description: Discovering the ideal method of gathering front-end feedback from your team — and the tools for collecting it
+description: Discovering the ideal method of gathering frontend feedback from your team — and the tools for collecting it
 hero: hero.jpg
 author: jasonbarry
 ---
 
-<!--_This article intended to be read by front-end engineers, full-stack engineers, and web developer generalists._-->
+<!--_This article intended to be read by frontend engineers, full-stack engineers, and web developer generalists._-->
 
-**TL;DR:** Ask for visual feedback on your new front-end features in isolated remote environments. You can quickly achieve this setup with [FeaturePeek](https://featurepeek.com), a new service that enables front-end deployment previews for static and containerized web apps regardless of cloud provider.
+**TL;DR:** Ask for visual feedback on your new frontend features in isolated remote environments. You can quickly achieve this setup with [FeaturePeek](https://featurepeek.com), a new service that enables frontend deployment previews for static and containerized web apps regardless of cloud provider.
 
 **You've just finished developing a new feature** for your web app, and you're ready to get feedback from the rest of your team. You're pretty sure it's what your designer intended in their prototypes, although you had to take *a few* liberties – you did some guesswork when mockups for tablet breakpoints weren't supplied, and you had to come up with a workaround or two due to a technical constraint. You want to get some feedback on your work before rolling out the feature to production. 
 
@@ -85,6 +85,6 @@ Imagine every pull request in your repo having its own live, up-to-date environm
 
 Developing the infrastructure in-house to support feature environments yourself takes developer time and ongoing maintenance. You should instead focus on building the product(s) that are core to your business. 
 
-[FeaturePeek](https://featurepeek.com) is a feature-environments-as-a-service platform that integrates with your GitHub organization. In just a few clicks, you can start building on-demand feature environments for every front-end pull request. On top of that, **FeaturePeek overlays feedback and collaboration tools over every feature environment**, so your reviewers can leave comments, file bugs, attach screen recordings, and more &mdash; all from the context of the environment itself.
+[FeaturePeek](https://featurepeek.com) is a feature-environments-as-a-service platform that integrates with your GitHub organization. In just a few clicks, you can start building on-demand feature environments for every frontend pull request. On top of that, **FeaturePeek overlays feedback and collaboration tools over every feature environment**, so your reviewers can leave comments, file bugs, attach screen recordings, and more &mdash; all from the context of the environment itself.
 
 We launched to solve this problem that we've seen so many small- to medium-sized companies encounter. [Start a free trial today](https://dashboard.featurepeek.com) and let us know what you think. 

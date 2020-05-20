@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { graphql } from 'gatsby'
 import MediaQuery from 'react-responsive'
-import Box from 'ui-box'
 
 import { Flex, Heading, Icon, Link, Paragraph, Text } from 'primitives'
 

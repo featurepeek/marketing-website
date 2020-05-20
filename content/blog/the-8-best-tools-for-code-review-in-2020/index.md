@@ -163,20 +163,20 @@ Before we go, there is one more tool for your consideration &mdash; our very own
 
 One of the most tedious parts of the code review process is running your peers' branches locally to confirm that their code works as expected. 
 
-The truth is, many times this step simply just gets skipped. And non-technical stakeholders (such as a designer or a product manager) with no knowledge of git or front-end development *definitely* don't do it.
+The truth is, many times this step simply just gets skipped. And non-technical stakeholders (such as a designer or a product manager) with no knowledge of git or frontend development *definitely* don't do it.
 
 With **automated deployment previews for every pull request**, reviewers can see the code working, just by clicking a link, before any code gets merged into the default branch. 
 
-What sets FeaturePeek apart from other deployment preview services? **FeaturePeek overlays collaboration tools on top of every environment to empower your reviewers leave great reviews**. The collaboration tools include commenting, filing new issues with bug templates, screen recording, pixel measurement, and more. This functionality comes standard just by deploying to FeaturePeek &mdash; no modifications to your front-end stack required.
+What sets FeaturePeek apart from other deployment preview services? **FeaturePeek overlays collaboration tools on top of every environment to empower your reviewers leave great reviews**. The collaboration tools include commenting, filing new issues with bug templates, screen recording, pixel measurement, and more. This functionality comes standard just by deploying to FeaturePeek &mdash; no modifications to your frontend stack required.
 
 Like all the tools in this blog post, FeaturePeek plugs into GitHub seamlessly, so getting up and running just takes a few minutes. 
 
 [You can try FeaturePeek for free for 14 days by creating a new account here.](https://dashboard.featurepeek.com/login)
 
 - Pros
-  - Ephemeral, on-demand deployment previews for every front-end pull request
+  - Ephemeral, on-demand deployment previews for every frontend pull request
   - Floating widget on every preview makes it easy for your team to leave feedback
-  - Hosting provider / PaaS agnostic, works with static and dockerized front-ends
+  - Hosting provider / PaaS agnostic, works with static and dockerized frontends
 - Cons
   - Let us know if you can think of any!
 - Pricing

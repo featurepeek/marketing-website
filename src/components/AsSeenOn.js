@@ -41,7 +41,7 @@ export default function AsSeenOn({ question, answer }) {
           <a href="https://www.producthunt.com/posts/featurepeek" rel="noopener noreferrer" target="_blank">
             <img
               src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=161889&theme=light"
-              alt="FeaturePeek - Front-end review for the whole team | Product Hunt Embed"
+              alt="FeaturePeek - Supercharged deployment previews for all"
               style={{ width: 250, height: 54 }}
               width="250"
               height="54"
