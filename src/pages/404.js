@@ -16,7 +16,7 @@ export default function NotFoundPage(props) {
       <SEO title="404 Not Found" location={props.location} />
       {/* <Heading marginBottom={40} marginTop={0} size={500} textAlign="center">404: Not Found</Heading> */}
       <Flex justifyContent="center" position="relative" top={39}>
-        <video autoPlay muted loop src="/video/404.mp4">
+        <video autoPlay height={492} loop muted src="/video/404.mp4" width={480}>
           <source src="/video/404.mp4" type="video/mp4" />
         </video>
         <Box marginBottom={80} marginTop={32} marginX={32}>
