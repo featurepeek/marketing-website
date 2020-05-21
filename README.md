@@ -29,7 +29,7 @@ All other scripts can be found in `package.json`.
 
 ### Docker
 
-Building the project as it would be served in infrastructure will require access to docker and a development dotenv file like `.env.development`.
+Building the project as it would be served in infrastructure will require access to docker and a development dotenv file in your local build context like `.env.development`.
 
 To build an image run:
 
