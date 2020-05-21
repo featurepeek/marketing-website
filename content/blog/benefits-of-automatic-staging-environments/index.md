@@ -1,7 +1,7 @@
 ---
 title: The benefits of having on-demand, ephemeral staging environments
-date: "2020-03-06T12:12:03.284Z"
-description: Abstract away your front-end staging server
+date: "2020-05-25T12:12:03.284Z"
+description: Unblock your development team while getting more engagement and testing from non-technical stakeholders.
 hero: hero.jpg
 author: jasonbarry
 ---
@@ -28,15 +28,15 @@ Now you might not be the same size as Facebook, but you still shouldn’t need t
 >
 > Think of staging as the ultimate quality assurance check, where you can make sure everything works in as close to launch conditions as possible. You'll catch bugs, avoid costly downtime, and give your developers the confidence to take risks.
 
-# Downsides of having a single staging server
+# Single staging server downsides
 
-When staging environments are perfect replicas of production, they are incredibly useful for development teams. But in reality, most staging environments end up less than perfect, causing a number of unwanted side effects...
+When a staging environment is a perfect replica of production, it can be incredibly useful for development teams. But in reality, most staging environments end up less than perfect, causing a number of unwanted side effects.
 
 ## Code review blocks gathering non-technical feedback
 
 Since your code won't be deployed until code review passes, you won't have a link to share with other people on your team. If you want to double-check with a UI/UX designer that the animation you made is up to snuff, too bad — you're gated upon code review passing before you can Slack over a link.
 
-But UI/UX designers don't care about the quality of the code — so **why should code review be a bottleneck for gathering UX feedback? **Ideally, you'd be able to get their opinion _before_ asking your dev peers to give your code a once-over. That way, you'll eliminate an extra speed bump when shipping your feature.
+But UI/UX designers don't care about the quality of the code — so **why should code review be a bottleneck for gathering UX feedback?** Ideally, you'd be able to get their opinion _before_ asking your dev peers to give your code a once-over. That way, you'll eliminate an extra speed bump when shipping your feature.
 
 ## Integration warzone
 
@@ -46,7 +46,7 @@ While a single staging environment is useful for testing a release as a whole, *
 
 ## Environment drift
 
-Staging environments are often configured once and left to decay, becoming a DevOps chore. This leads to drift between the staging and production environments, as similarities between the two decrease. **This increases the risk of bugs appearing in **_**either**_** staging **_**or**_** production**, which makes bugs difficult to reproduce.
+Staging environments are often configured once and left to decay, becoming a DevOps chore. This leads to drift between the staging and production environments, as similarities between the two decrease. **This increases the risk of bugs appearing in _either_ staging _or_ production**, which makes bugs difficult to reproduce.
 
 Examples of these drifts include:
 
@@ -67,13 +67,15 @@ Furthermore, if you have several development teams, the **single staging environ
 
 This could waste days of developer productivity and encourage teams to skip straight to production, losing all the benefits of an effective staging environment.
 
-# Upsides of on-demand staging environments
+# On-demand staging environments upsides
+Thankfully, having multiple staging environments solves the downsides of the side effects above.
+
 
 ## Increased developer productivity
 
 With on-demand staging environments, developers can create as many staging environments as they require. No more waiting for staging to be available or for DevOps to configure a new environment.
 
-## Lower the barrier for running peers' code
+## Lower the barrier for running code
 
 Developers face a large amount of context switching when they are asked to review someone else's code. The process is unnecessarily interruptive, and looks something like this:
 
@@ -91,27 +93,27 @@ With on-demand staging environments, on the other hand, **the running branch is 
 
 ## Avoid redundant code reviews
 
-The point of getting feedback is to make more implementation changes that address the issues raised in the feedback session. The problem is that this will require another code review! Even though that the proposed changes the second time around are (hopefully) small, your reviewers will experience déjà vu because they are now going over the same lines of code for the same feature implementation.
+The point of getting feedback is to make more implementation changes that address the issues raised in the feedback session. **The problem is that this will require another code review!** Even though that the proposed changes the second time around are (hopefully) small, your reviewers will experience déjà vu because they are now going over the same lines of code for the same feature implementation.
 
-## Stakeholder engagement
+## More stakeholder engagement
 
 In the past, stakeholders didn’t get to use the finished product until it was live. Instead, they got a brief scripted demo at the end of the sprint.
 
-By giving stakeholders access to your staging environment, they can help with the quality assurance process and ensure that the development work completed meets their expectations.
+By giving stakeholders access to your staging environment, they can help with the quality assurance process and **ensure that the development work completed meets their expectations**.
 
-## Testing
+## More opportunities for testing
 
 On-demand staging environments can be configured to be accessible behind a shared URL, which unlocks a wide range of testing and quality assurance opportunities.
 
 - **Cross-browser testing**: Ensure your product or website works perfectly on a wide range of browsers and devices.
 - **Accessibility testing**: Run accessibility tests to ensure your content is accessible to individuals with disabilities.
-- **User testing**: Create a pool of test users or use a crowd-testing platform like [<u>User Testing</u>](https://www.usertesting.com/) to discover usability issues before you launch.
+- **User testing**: Create a pool of test users or use a crowd-testing platform like [User Testing](https://www.usertesting.com/) to discover usability issues before you launch.
 
 # Single vs. on-demand staging environments
 
 Thankfully, there is a solution to the limitations above, while preserving all the benefits.
 
-Instead of the single staging environment decaying while it waits for someone to use it, **an on-demand staging environment is created dynamically, triggered by a CI/CD pipeline. **
+Instead of the single staging environment decaying while it waits for someone to use it, **an on-demand staging environment is created dynamically, triggered by a CI/CD pipeline.**
 
 This means developer teams can have access to staging whenever they need it, simply by opening a pull request. As you’d imagine, this boosts productivity and encourages developers to use staging environments, reducing the chances of costly production bugs. Once a developer is done with the staging environment, the staging environment is destroyed, along with any configuration, environment, or installation inconsistency.
 
