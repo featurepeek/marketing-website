@@ -10,22 +10,40 @@ Interested in using FeaturePeek? Take a look at this repository to get an idea o
 
 ## Introduction
 
-This is the GitHub repository for the frontend source code of [featurepeek.com](https://featurepeek.com). It's integrated with FeaturePeek, so you can get an understanding of how to integrate your own frontend projects simply by poking around in this one. 
+This is the GitHub repository for the frontend source code of [featurepeek.com](https://featurepeek.com). It's integrated with FeaturePeek, so you can get an understanding of how to integrate your own frontend projects simply by poking around in this one.
 
 There are two files in particular to pay attention to:
 
-- [peek.yml](https://github.com/featurepeek/marketing-website/blob/dev/peek.yml): This is the project config file -- it's how you indicate which of your organization's repositories you'd like to spin up on FeaturePeek. 
-- [.circleci/config.yml](https://github.com/featurepeek/marketing-website/blob/dev/.circleci/config.yml#L71): This project uses [CircleCI](https://circleci.com) for Continuous Integration, but you can bring along any other CI service. Take a look at this file to see how easy it is to set up FeaturePeek in your CI pipeline. 
+- [peek.yml](https://github.com/featurepeek/marketing-website/blob/dev/peek.yml): This is the project config file -- it's how you indicate which of your organization's repositories you'd like to spin up on FeaturePeek.
+- [.circleci/config.yml](https://github.com/featurepeek/marketing-website/blob/dev/.circleci/config.yml#L71): This project uses [CircleCI](https://circleci.com) for Continuous Integration, but you can bring along any other CI service. Take a look at this file to see how easy it is to set up FeaturePeek in your CI pipeline.
 
 ## Development
 
-This project is a [Gatsby](http://gatsbyjs.org) project. 
+This project is a [Gatsby](http://gatsbyjs.org) project.
 
-After cloning this repo, install dependencies by running `yarn` or `npm i`. 
+After cloning this repo, install dependencies by running `yarn` or `npm i`.
 
-To spin up a local development server, run `yarn dev`. 
+To spin up a local development server, run `yarn dev`.
 
 All other scripts can be found in `package.json`.
+
+### Docker
+
+Building the project as it would be served in infrastructure will require access to docker and a development dotenv file in your local build context like `.env.development`.
+
+To build an image run:
+
+```sh
+docker build -t marketing-website .
+```
+
+Then to serve locally run:
+
+```sh
+docker run -d -p 8090:80 marketing-website
+```
+
+Open the marketing website now being served from Nginx by visiting `localhost:8090`
 
 ## More resources
 

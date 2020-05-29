@@ -1,31 +1,22 @@
-FROM nginx:stable-alpine
+FROM node:12-alpine as build
 
-# force production when built from Docker
+# Set up build environment
+WORKDIR /app
 ENV NODE_ENV production
 
-RUN apk update
-RUN apk add nodejs-current-npm
-RUN npm install -g yarn
-
-# Copy gzip config 
-COPY gzip.conf /etc/nginx/conf.d/gzip.conf
-
-# Create directories all the way up to app
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-
-# Install app dependencies
-COPY package.json yarn.lock /usr/src/app/
+# Install dependencies
+COPY package.json yarn.lock ./
 RUN yarn install
 
-# Bundle app source
-COPY . /usr/src/app
-
-# build
+# Build from source
+COPY . ./
 RUN yarn build
 
-# copy built assets to nginx
-RUN cp -r ./public/* /usr/share/nginx/html
+# Copy built site to web server stage
+FROM nginx:stable-alpine
 
-# expose public port
+COPY nginx_config /etc/nginx/conf.d/
+COPY --from=build /app/public /usr/share/nginx/html/
+
+# Expose HTTP
 EXPOSE 80
