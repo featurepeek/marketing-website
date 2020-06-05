@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-import { albacross } from 'utils/analytics'
+import { albacross, redditPixel } from 'utils/analytics'
 
 export default function HTML(props) {
   const [isShowingBanner, setShowingBanner] = useState(false)
@@ -31,7 +31,8 @@ export default function HTML(props) {
           integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
           crossOrigin="anonymous"
         />
-        <script key={`albacross`} type="text/javascript" dangerouslySetInnerHTML={{ __html: albacross }} />
+        <script type="text/javascript" dangerouslySetInnerHTML={{ __html: albacross }} />
+        <script type="text/javascript" dangerouslySetInnerHTML={{ __html: redditPixel }} />
       </body>
     </html>
   )
