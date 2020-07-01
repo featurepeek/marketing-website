@@ -80,8 +80,8 @@ const columns = [
     section: 'Company',
     links: [
       {
-        text: 'Blog',
-        href: '/blog',
+        text: 'Jobs',
+        href: 'https://featurepeek.slite.com/api/s/note/Jv5238hyPEna1NtS649wrc/Open-Positions-FeaturePeek',
       },
       {
         text: 'Privacy policy',
