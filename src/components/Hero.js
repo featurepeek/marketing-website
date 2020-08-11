@@ -3,6 +3,7 @@ import React from 'react'
 import Box from 'ui-box'
 import MediaQuery from 'react-responsive'
 import ReactPlayer from 'react-player'
+import { openPopupWidget } from 'react-calendly'
 
 import { Button, Flex, Heading } from 'primitives'
 
@@ -10,6 +11,11 @@ import { track } from 'utils/analytics'
 // import { rhythm, scale } from 'utils/typography'
 
 export default function Hero() {
+  const calendly = () => {
+    const url = 'https://calendly.com/featurepeek-jason/personalized-demo'
+    openPopupWidget({ url })
+  }
+
   return (
     <MediaQuery maxWidth={904}>
       {mobile => (
@@ -41,7 +47,7 @@ export default function Hero() {
                 </Button>
               </Flex>
               <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 200}>
-                <Button background="white" href="https://dashboard.featurepeek.com/demo">
+                <Button background="white" cursor="pointer" onClick={calendly}>
                   View a demo
                 </Button>
               </Flex>
