@@ -21,6 +21,10 @@ module.exports = {
         name: 'Eric Silverman',
         title: 'Co-founder & CEO',
       },
+      bradjohnson: {
+        name: 'Brad Johnson',
+        title: 'Head of Marketing',
+      },
     }
   },
   plugins: [

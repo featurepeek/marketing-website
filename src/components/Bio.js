@@ -57,6 +57,13 @@ const bioQuery = graphql`
         }
       }
     }
+    bradjohnson: file(absolutePath: { regex: "/bradjohnson.jpg/" }) {
+      childImageSharp {
+        fixed(width: 56, height: 56) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
     site {
       siteMetadata {
         authors {
@@ -65,6 +72,10 @@ const bioQuery = graphql`
             title
           }
           ericsilverman {
+            name
+            title
+          }
+          bradjohnson {
             name
             title
           }

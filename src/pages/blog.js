@@ -37,9 +37,11 @@ export default function Blog(props) {
                   maxWidth={mobile ? '100%' : 'calc(33.33% - 32px)'}
                   overflow="hidden"
                 >
-                  <Link href={`/blog${node.fields.slug}`} display="block" underline={false}>
-                    <Image fluid={node.frontmatter.hero.childImageSharp.fluid} />
-                  </Link>
+                  {node.frontmatter.hero && (
+                    <Link href={`/blog${node.fields.slug}`} display="block" underline={false}>
+                      <Image fluid={node.frontmatter.hero.childImageSharp.fluid} />
+                    </Link>
+                  )}
                   <Box borderBottomLeftRadius={8} borderBottomRightRadius={8} padding={16}>
                     <h3 style={{ color: 'inherit', margin: 0 }}>
                       <Link href={`/blog${node.fields.slug}`} underline={false}>
