@@ -22,6 +22,7 @@ export default function Testimonial({ name, title, userAvatar, company, companyA
       marginX={8}
       marginY={32}
       maxWidth={540}
+      minWidth="30%"
     >
       <Flex flexDirection="row" justifyContent="center" position="relative" width="100%">
         <Box position="absolute" top={-72}>
