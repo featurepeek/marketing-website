@@ -1,7 +1,7 @@
 ---
-title: 7 Tips for Webdev Agencies to Build Better Client Relationships 
+title: 7 tips for webdev agencies to build better client relationships 
 date: "2020-08-17T12:12:03.284Z"
-description: Improve webdev agency client relationships with these 7 tips
+description: How to ensure effective collaboration between webdev agencies and their clients with these 7 tips
 author: bradjohnson
 ---
 
