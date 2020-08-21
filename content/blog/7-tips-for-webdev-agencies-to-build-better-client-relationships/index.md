@@ -13,6 +13,8 @@ But that doesn’t mean you’re off the hook once a client signs. While plannin
 
 This has led some agencies to assemble bespoke deployment preview solutions in-house. For example, developer Conor Davidson ([@conordavidson](https://https://github.com/conordavidson)) explains that the team at [Sanctuary Computer](https://http://www.sanctuary.computer/) “built something like [FeaturePeek](https://https://featurepeek.com/) for our company. Easily previewing PRs has become an essential part of our workflow. [But] we switched over to FeaturePeak from our own software and are not looking back. Y’all built exactly what we wanted, plus more.”
 
+![](./drawer-timeline.png)
+
 Whether you’re determined to build in-house, or you’re interested in a complete solution like [FeaturePeek Teams](https://https://featurepeek.com/product/teams), it’s critical to establish a frontend staging and deployment workflow that simplifies collaboration with your clients and builds the trust and confidence that leads to repeat business. 
 
 Here are 7 more tips to help keep your webdev agency clients happy:
