@@ -28,6 +28,8 @@ export default function BlogPost(props) {
     title: post.frontmatter.title,
   }
 
+  const hero = post.frontmatter.hero ? post.frontmatter.hero.childImageSharp.fluid : {}
+
   return (
     <MediaQuery maxWidth={504}>
       {mobile => (
@@ -36,7 +38,7 @@ export default function BlogPost(props) {
             title={post.frontmatter.title}
             description={post.frontmatter.description || post.excerpt}
             location={props.location}
-            image={`https://featurepeek.com${post.frontmatter.hero.childImageSharp.fluid.src}`}
+            image={`https://featurepeek.com${hero.src}`}
           />
           <Flex
             background="linear-gradient(#fff, #effefe)"
@@ -69,7 +71,7 @@ export default function BlogPost(props) {
               overflow="hidden"
               width="100%"
             >
-              <Image fluid={post.frontmatter.hero.childImageSharp.fluid} />
+              <Image fluid={hero} />
             </Box>
           </Flex>
           <Box marginX={mobile ? -15 : -39} marginY={-39}>
