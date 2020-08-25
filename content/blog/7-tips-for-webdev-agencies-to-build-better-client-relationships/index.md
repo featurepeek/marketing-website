@@ -82,7 +82,7 @@ For many agencies, the individual or team that *won* the project, and the indivi
 
 Especially as everybody is [managing remote and distributed teams in the middle of a global pandemic](https://featurepeek.com/blog/how-to-make-your-team-still-feel-like-a-team-while-being-remote/), more than ever teams are relying on collaboration tools to keep business and development efforts aligned. **Having a single tool for visual QA that is accessible to both dev teams and non-technical users can help to keep everyone on the same page.**
 
-For Sanctuary Computer developer Kay Monk ([@mokaymokay](https://github.com/mokaymokay)), this keeps their code reviews focused. She shares that “FeaturePeek offers a simple and convenient solution that supplements our code review process and makes visual QA much faster and easier.”
+For Sanctuary Computer developer Kay Mok ([@mokaymokay](https://github.com/mokaymokay)), this keeps their code reviews focused. She shares that “FeaturePeek offers a simple and convenient solution that supplements our code review process and makes visual QA much faster and easier.”
 
 # Keep it simple
 
