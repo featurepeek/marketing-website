@@ -3,6 +3,7 @@ title: Where should your team review your frontend changes?
 date: "2019-11-26T12:12:03.284Z"
 description: Discovering the ideal method of gathering frontend feedback from your team — and the tools for collecting it
 hero: hero.jpg
+heroAttributionURL: https://pixabay.com/photos/feedback-confirming-board-1825515/
 author: jasonbarry
 ---
 

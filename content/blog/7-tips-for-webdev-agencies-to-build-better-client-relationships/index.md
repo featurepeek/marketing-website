@@ -3,6 +3,7 @@ title: 7 tips for webdev agencies to build better client relationships
 date: "2020-08-25T12:12:03.284Z"
 description: How to ensure effective collaboration between webdev agencies and their clients with these 7 tips
 hero: hero.jpg
+heroAttributionURL: https://www.pexels.com/photo/arts-build-close-up-commerce-273230/
 author: bradjohnson
 ---
 

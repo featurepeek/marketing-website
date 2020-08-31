@@ -3,6 +3,7 @@ title: The subtle art of giving great code reviews
 date: "2020-02-06T12:12:03.284Z"
 description: How to ensure your feedback is interpreted as constructive criticism
 hero: hero.jpg
+heroAttributionURL: https://www.pexels.com/photo/person-s-left-hand-holding-green-leaf-plant-886521/
 author: jasonbarry
 ---
 
