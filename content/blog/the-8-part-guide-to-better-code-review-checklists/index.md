@@ -2,7 +2,7 @@
 title: The 8 part guide to better code review checklists
 date: "2020-09-03T12:12:03.284Z"
 description: Few productivity tools are as ubiquitous and effective as the humble checklist.
-hero: hero.jpg
+heroAttributionURL: https://www.pexels.com/photo/postit-scrabble-to-do-todo-3299/
 author: bradjohnson
 ---
 
@@ -50,7 +50,7 @@ Some basic rules:
 * Are there sufficiently descriptive comments throughout the code as required?
 * Are formatting preferences followed? For example, tabs or spaces, curly brace on the same line or new line, 80 character width or 120 character width?
 
-To save time, you could check these rules are followed with an automatic code linter.
+To save time, you could check these rules are followed with an automatic code linter. [Prettier](https://prettier.io/) is a good example for JavaScript projects.
 
 Again, if these standards are not met, stop checking the code and return it to the contributor for review.
 
@@ -58,7 +58,7 @@ Again, if these standards are not met, stop checking the code and return it to t
 
 Set security standards for your project and check these are being followed religiously. The rules to be checked will vary depending on your project and organization, but some best practices are:
 
-* Run your project through vulnerability scanning solutions, like LGTM
+* Run your project through vulnerability scanning solutions, like [LGTM](https://lgtm.com/)
 * Don't hardcode credentials for testing or include secrets in the repository
 * Don't disclose too much information in error messages, which might give hints to an attacker
 * Ensure any database queries are parameterized
@@ -76,6 +76,8 @@ For example:
 * Is caching being used if applicable?
 * Are images and assets appropriately compressed?
 
+There are a myriad of tools that can help you optimize the web performance of your project. Good places to start are [Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) (also called [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)) and [DebugBear](https://www.debugbear.com/) for frontend projects.
+
 # 5. Testing 🧪
 
 Tests automatically check that code does what it should, making them a key part of the code review process.
@@ -84,7 +86,9 @@ Tests automatically check that code does what it should, making them a key part 
 1. Secondly, make sure that tests are well isolated, so you can find the problem quickly if a test fails.
 1. Finally, do the tests test the code? Often, they claim they do, but don't actually assess the intended functionality of the application.
 
-However, always remember that tests are bullet-proof and shouldn't be relied on completely, as the next checklist item proves…
+[Jest](https://jestjs.io/) is a good option if you're looking into automated unit testing. For automated end-to-end tests, check out [Cypress](https://www.cypress.io/) and [Reflect](https://reflect.run/). 
+
+However, always remember that not all tests are bullet-proof and shouldn't be relied on completely, as the next checklist item proves…
 
 # 6. Does it actually work? 💩
 
