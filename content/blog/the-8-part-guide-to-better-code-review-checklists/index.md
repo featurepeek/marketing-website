@@ -1,15 +1,8 @@
 ---
-title: The name of this awesome blog post
-date: "2020-08-17T12:12:03.284Z"
-description: A description that needs changing!
-heroAttributionURL: https://www.pexels.com/photo/postit-scrabble-to-do-todo-3299/
-author: bradjohnson
----
-
----
 title: The 8 part guide to better code review checklists
-date: "2020-09-03T12:12:03.284Z"
+date: "2020-08-17T12:12:03.284Z"
 description: Few productivity tools are as ubiquitous and effective as the humble checklist.
+hero: hero.jpg
 heroAttributionURL: https://www.pexels.com/photo/postit-scrabble-to-do-todo-3299/
 author: bradjohnson
 ---
