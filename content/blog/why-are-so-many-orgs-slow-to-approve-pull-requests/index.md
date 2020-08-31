@@ -3,6 +3,7 @@ title: Why are so many organizations slow to approve pull requests?
 date: "2020-01-23T12:12:03.284Z"
 description: What you can do to help your team speed up product development
 hero: hero.jpg
+heroAttributionURL: https://www.pexels.com/photo/alone-animal-blur-brown-605618/
 author: jasonbarry
 ---
 

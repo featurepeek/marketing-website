@@ -29,6 +29,7 @@ export default function BlogPost(props) {
   }
 
   const hero = post.frontmatter.hero ? post.frontmatter.hero.childImageSharp.fluid : {}
+  const domainRegex = /(https?:\/\/)?(www\.)?([\w\.\-_]+).*/
 
   return (
     <MediaQuery maxWidth={504}>
@@ -64,14 +65,20 @@ export default function BlogPost(props) {
                 <Bio author={post.frontmatter.author} />
               </Box>
             </Flex>
-            <Box
-              borderRadius={28}
-              boxShadow="0 8px 16px rgba(0, 0, 0, 0.15)"
-              margin="auto"
-              overflow="hidden"
-              width="100%"
-            >
-              <Image fluid={hero} />
+            <Box margin="auto" width="100%">
+              <Box borderRadius={28} boxShadow="0 8px 16px rgba(0, 0, 0, 0.15)" overflow="hidden" width="100%">
+                <Image fluid={hero} />
+              </Box>
+              {post.frontmatter.heroAttributionURL && (
+                <Paragraph fontSize={12} marginBottom={0} marginTop={16} opacity={0.7} textAlign="center">
+                  <em>
+                    Hero image courtesy of{' '}
+                    <Link href={post.frontmatter.heroAttributionURL} target="_blank">
+                      {post.frontmatter.heroAttributionURL.match(domainRegex)[3]}
+                    </Link>
+                  </em>
+                </Paragraph>
+              )}
             </Box>
           </Flex>
           <Box marginX={mobile ? -15 : -39} marginY={-39}>
@@ -137,6 +144,7 @@ export const pageQuery = graphql`
             }
           }
         }
+        heroAttributionURL
       }
       timeToRead
     }

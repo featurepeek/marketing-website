@@ -3,6 +3,7 @@ title: How to make your team still feel like a team while being remote
 date: "2020-04-16T12:12:03.284Z"
 description: We're all in this together, here are some tips for doing it well
 hero: hero.jpg
+heroAttributionURL: https://pixabay.com/photos/rustic-cabin-mountains-landscape-945421/
 author: ericsilverman
 ---
 
