@@ -29,7 +29,7 @@ But without a good process, code reviews can be, in a word...painful.
 
 Code review checklists help ensure productive code reviews. A code review checklist prevents simple mistakes, verifies work has been done and helps improve developer performance.
 
-# 1. Pull Request Etiquette ✅
+## 1. Pull Request Etiquette ✅
 
 Start with the basics. Is the pull request you are looking at *actually* ready for review? To determine this, here are some key principles that should apply to all code reviews:
 
@@ -42,7 +42,7 @@ If these conditions are not met, return the code to the contributor to be improv
 
 This might seem initially harsh or counter-productive, but over several weeks your team's outputs and productivity will improve.
 
-# 2. Styling 🎨
+## 2. Styling 🎨
 
 Set some basic styling rules for your team and ensure these are followed. Consistent code styling is essential to ensure future developers can understand code easily and work productively.
 
@@ -55,7 +55,7 @@ To save time, you could check these rules are followed with an automatic code li
 
 Again, if these standards are not met, stop checking the code and return it to the contributor for review.
 
-# 3. Security 🔐
+## 3. Security 🔐
 
 Set security standards for your project and check these are being followed religiously. The rules to be checked will vary depending on your project and organization, but some best practices are:
 
@@ -67,7 +67,7 @@ Set security standards for your project and check these are being followed relig
 
 If you identify security issues in a code review process, stop and speak to the contributor. It might be a sign of a more serious issue in the project or a lack of training, both of which will need follow on interventions.
 
-# 4. Performance 🏎
+## 4. Performance 🏎
 
 Is the project as performant as it could be, or are these obvious optimizations that might improve performance?
 
@@ -79,7 +79,7 @@ For example:
 
 There are a myriad of tools that can help you optimize the web performance of your project. Good places to start are [Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) (also called [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)) and [DebugBear](https://www.debugbear.com/) for frontend projects.
 
-# 5. Testing 🧪
+## 5. Testing 🧪
 
 Tests automatically check that code does what it should, making them a key part of the code review process.
 
@@ -91,7 +91,7 @@ Tests automatically check that code does what it should, making them a key part 
 
 However, always remember that not all tests are bullet-proof and shouldn't be relied on completely, as the next checklist item proves…
 
-# 6. Does it actually work? 💩
+## 6. Does it actually work? 💩
 
 It seems simple enough, but we've all made this assumption before.
 
@@ -101,7 +101,7 @@ Another common issue is that code works locally but not in production. All code 
 
 [FeaturePeek](https://www.featurepeek.com) users don't have to worry about inconsistencies between staging and production environments. That's because FeaturePeek automatically deploys your branches into a dedicated environment every time a pull request is opened. This allows the reviewer to see the changes instantly and share this with designers, managers and other non-technical stakeholders for further feedback.
 
-# 7. Positive code review culture 😻
+## 7. Positive code review culture 😻
 
 Before you send your code review feedback or sit down for a meeting, check that your comments will help your team to improve rather than be seen as criticism.
 
@@ -109,7 +109,7 @@ Code reviews are one of the most regularly occurring interactions you have with 
 
 It can help to reframe critical feedback as constructive statements. For example, if the code is missing test coverage, suggest "could more test coverage benefit us here?" to test and challenge the understanding of your team members.
 
-# 8. Review the checklist constantly 🤔
+## 8. Review the checklist constantly 🤔
 
 Your checklist is only good if it's up to date. That’s why it's important to continually review your checklist and ensure it meets your needs.
 
@@ -117,7 +117,7 @@ Your code review needs will change over time as new team members join or your pr
 
 [FeaturePeek](https://www.featurepeek.com) gives reviewers a floating UI overlay for your deployments, making it easy for your them to leave great feedback. This way, you get feedback from reviewers sooner and keep your code review checklist up to date with the latest requirements.
 
-# Learn More
+## Learn More
 
 Checklists are just one of the many tools UI/UX developers use to keep productive. Let us know how your team stays productive by sharing with us on [Twitter](https://www.twitter.com/featurepeek) and [LinkedIn](https://www.linkedin.com/company/featurepeek/).
 
