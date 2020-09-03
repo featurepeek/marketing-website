@@ -13,7 +13,7 @@ In ["The Checklist Manifesto"](https://www.amazon.com/Checklist-Manifesto-How-Th
 
 *"We have accumulated stupendous know-how,"* Gawande writes in his book. *"We have put it in the hands of some of the most highly trained, highly skilled, and hardworking people in our society. And, with it, they have indeed accomplished extraordinary things. Nonetheless, that know-how is often unmanageable."*
 
-Although software development isn't exactly a life-or-death endeavor, we can apply the same lessons by using the power of checklists to priorize effectively when collaborating.
+Although software development isn't exactly a life-or-death endeavor, we can apply the same lessons by using the power of checklists to prioritize effectively when collaborating.
 
 ## What is a code review?
 
