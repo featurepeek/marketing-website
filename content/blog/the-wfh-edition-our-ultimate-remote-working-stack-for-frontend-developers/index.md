@@ -11,7 +11,7 @@ Let’s be honest, frontend developers kinda had this remote working thing figur
 
 The challenge, most of the time, is just sorting through the massive glut of overlapping options and developer-targeted Google Search ads to get to the tools that actually make your workflow easier.
 
-Don’t worry. [At FeaturePeek, we’re devtool nuts](https://featurepeek.com/blog/the-8-best-tools-for-code-review-in-2020/). And we try out just about everything we discover. Along the way, we’re earmarked our favorites and fully incorporated many into our regular internal workflows.
+Don’t worry. [At FeaturePeek, we’re devtool nuts](https://featurepeek.com/blog/the-8-best-tools-for-code-review-in-2020/). And we try out just about everything we discover. Along the way, we’ve earmarked our favorites and fully incorporated many into our regular internal workflows.
 
 You could try out everything by yourself. Or you can learn from what our team figured out. But before we jump into our favorite little-known remote working tools, let's start by covering the basics.
 
