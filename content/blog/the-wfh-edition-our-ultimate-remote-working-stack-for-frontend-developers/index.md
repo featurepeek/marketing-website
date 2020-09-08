@@ -9,7 +9,7 @@ author: bradjohnson
 Let’s be honest, frontend developers kinda had this remote working thing figured out before our latest post apocalyptic reality. Now, it’s still been difficult for us all to adjust. But if there were any demographic that already had the know-how and the tools to stay productive while collaborating remotely, frontend teams had it covered.
 
 
-The challenge, most of the time, is just sorting through the massive glut of overlapping options and developer-targeted Google Search ads to get to the tools that actually make your workflow easier.
+The challenge, most of the time, is just sorting through the overlapping options and developer-targeted Google Search ads to get to the tools that actually make your workflow easier.
 
 Don’t worry. [At FeaturePeek, we’re devtool nuts](https://featurepeek.com/blog/the-8-best-tools-for-code-review-in-2020/). And we try out just about everything we discover. Along the way, we’ve earmarked our favorites and fully incorporated many into our regular internal workflows.
 
