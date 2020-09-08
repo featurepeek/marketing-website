@@ -44,7 +44,6 @@ Regardless of the platform you choose, the benefits are the same:
 ### The Basics: Video Conferencing
 I, for one, welcome our new [Zoom](https://zoom.us/) overlords. Video conferencing is inescapable in the new shelter-in-place environment. And while we’ve all suffered from Zoom fatigue at points this year, sometimes you just need to discuss a bug or issue face-to-face.
 
-
 At [FeaturePeek](https://featurepeek.com/), we actually find ourselves using a few different video conferencing solutions. But if you need one platform to rule them all, Zoom is easy to use and includes features that are essential for development meetings, including screen sharing, annotations, and support for whiteboarding sessions on select plans.
 
 Other solutions are available, including [Cisco Webex](https://www.webex.com/), [Jitsi Meet](https://meet.jit.si/), [Google Chat](https://chat.google.com/), and [Whereby](https://whereby.com/). If you pay for the Standard, Plus, or Enterprise version of Slack, you get video call capabilities, too.
@@ -77,7 +76,8 @@ We also use Loom to generate quick and dirty developer how-to videos to share la
 
 ### FeaturePeek: Deployment Previews
 
-![](./drawer-tickets.png)
+![File tickets to third-party integrations like GitHub Issues, Trello, and Clubhouse](./drawer-tickets.png)
+*The FeaturePeek UI overlay makes it easy to file tickets to third-party apps like GitHub Issues, Trello, and Clubhouse.*
 
 Sure, we're biased in recommending [FeaturePeek](https://featurepeek.com/). But the benefits of on-demand staging environments are huge for remote development teams: 
 
