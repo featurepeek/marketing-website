@@ -2,6 +2,7 @@
 title: The WFH edition. Our ultimate remote working stack for frontend devs
 date: "2020-09-04T12:12:03.284Z"
 description: The FeaturePeek team picks our favorite remote working tools for frontend dev teams
+hero: hero.jpg
 heroAttributionURL: https://www.pexels.com/photo/photo-of-rocks-piled-on-top-of-each-other-1416900/
 author: bradjohnson
 ---
@@ -75,6 +76,8 @@ We also use Loom to generate quick and dirty developer how-to videos to share la
 [Loom recently launched for iOS](https://support.loom.com/hc/en-us/articles/360002799977-Is-there-a-Loom-mobile-app-), enabling app developers to record and share issues quickly.
 
 ### FeaturePeek: Deployment Previews
+
+![](./drawer-tickets.png)
 
 Sure, we're biased in recommending [FeaturePeek](https://featurepeek.com/). But the benefits of on-demand staging environments are huge for remote development teams: 
 
