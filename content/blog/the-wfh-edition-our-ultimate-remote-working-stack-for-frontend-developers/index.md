@@ -1,6 +1,6 @@
 ---
 title: The WFH edition. Our ultimate remote working stack for frontend devs
-date: "2020-09-04T12:12:03.284Z"
+date: "2020-09-09T12:12:03.284Z"
 description: The FeaturePeek team picks our favorite remote working tools for frontend dev teams
 hero: hero.jpg
 heroAttributionURL: https://www.pexels.com/photo/photo-of-rocks-piled-on-top-of-each-other-1416900/
