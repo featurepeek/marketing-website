@@ -91,7 +91,7 @@ Want to see how this could work for your team? Our entire website is open source
 
 Being productive isn't just about tooling and apps. Being productive is also a state of mind. 
 
-Sometimes a project [requires you to hype up](https://www.youtube.com/watch?v=mmo3HFa2vjg). But more often than not, these days you’re probably having trouble winding down.
+Sometimes a project [requires you to hype up](https://www.youtube.com/watch?v=sT2daisxdvA). But more often than not, these days you’re probably having trouble winding down.
 
 Research shows that mindfulness can help improve mental health. And according to a [2020 study](https://www.ncbi.nlm.nih.gov/pubmed/32252750), meditation reduces stress and improves cognition. 
 
