@@ -20,6 +20,7 @@ export default function HTML(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <link href="https://use.fontawesome.com" rel="dns-prefetch" />
         {props.headComponents}
+        <script async defer data-domain="featurepeek.com" src="https://plausible.io/js/plausible.js"></script>
       </head>
       <body {...props.bodyAttributes} className={isShowingBanner ? 'show-banner' : undefined}>
         {props.preBodyComponents}
