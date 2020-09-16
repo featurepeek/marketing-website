@@ -3,9 +3,12 @@ title: Why your deployment previews need to be collaborative
 date: "2020-08-17T12:12:03.284Z"
 description: How UI/UX teams are ignoring their biggest communication challenge
 hero: hero.jpg
-heroAttributionURL:
+heroAttributionURL: https://www.pexels.com/photo/photo-of-people-leaning-on-wooden-table-3183183/
 author: bradjohnson
 ---
+
+[![hackmd-github-sync-badge](https://hackmd.io/gNMaXn93Ss6JMT9TOCFp2Q/badge)](https://hackmd.io/gNMaXn93Ss6JMT9TOCFp2Q)
+
 
 *"FeaturePeek offers a simple and convenient solution that supplements our code review process and makes visual QA much faster and easier.”*
 *- [Kay Mok](https://github.com/mokaymokay), Developer, [Sanctuary Computer](https://www.sanctuary.computer/)*
