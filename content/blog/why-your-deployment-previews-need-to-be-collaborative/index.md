@@ -7,9 +7,6 @@ heroAttributionURL: https://www.pexels.com/photo/photo-of-people-leaning-on-wood
 author: bradjohnson
 ---
 
-[![hackmd-github-sync-badge](https://hackmd.io/gNMaXn93Ss6JMT9TOCFp2Q/badge)](https://hackmd.io/gNMaXn93Ss6JMT9TOCFp2Q)
-
-
 *"FeaturePeek offers a simple and convenient solution that supplements our code review process and makes visual QA much faster and easier.”*
 *- [Kay Mok](https://github.com/mokaymokay), Developer, [Sanctuary Computer](https://www.sanctuary.computer/)*
 
