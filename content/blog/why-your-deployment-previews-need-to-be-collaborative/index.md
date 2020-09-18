@@ -1,6 +1,6 @@
 ---
 title: Why your deployment previews need to be collaborative
-date: "2020-08-17T12:12:03.284Z"
+date: "2020-09-18T12:12:03.284Z"
 description: How UI/UX teams are ignoring their biggest communication challenge
 hero: hero.jpg
 heroAttributionURL: https://www.pexels.com/photo/photo-of-people-leaning-on-wooden-table-3183183/
