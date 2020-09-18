@@ -28,6 +28,8 @@ Web platforms like [Netlify](https://www.netlify.com/) offer deployment staging,
 
 ## 👊 The easiest way for UI/UX teams to review and leave feedback on frontend code
 
+![](./drawer.gif)
+
 [FeaturePeek](https://featurepeek.com/) is a collaboration tool that shortens feedback loops between project managers, UI/UX designers, and frontend web developers. [Christine Kim](https://github.com/chrismekim), a developer at [Sanctuary Computer](https://www.sanctuary.computer/), describes “we’re a team of design-oriented developers, and FeaturePeek has been an incredible tool for collaborating with designers throughout the development process. Designers can easily click on a FeaturePeek link, follow the progress of a project, and catch quality issues early on.”
 
 Another developer at Sanctuary Computer, Conor Davidson explains that the team at Sanctuary Computer “built something like FeaturePeek for our company. Easily previewing PRs has become an essential part of our workflow. [But] we switched over to FeaturePeak from our own software and are not looking back. Y’all built exactly what we wanted, plus more.”
@@ -44,7 +46,12 @@ FeaturePeek plugs in with familiar tools, like Github, Trello, Clubhouse, and Mo
 * **Stay logged in to the web app you're testing** while you jump from deployment preview to deployment preview
 * **Get your reviewers' browser metadata automatically** when they comment on a screenshot or animation
 * **Copy edit mode** makes it easy to try out text copy edits on the fly
+
+![](./copyedit.gif)
+
 * **Easily measure distance between elements**, take screenshots of bugs, record animations, and more
+
+![](./responsive.gif)
 
 ## ✅ Get Started with FeaturePeek Teams Today
 
