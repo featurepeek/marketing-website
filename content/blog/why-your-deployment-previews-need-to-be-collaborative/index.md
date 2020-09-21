@@ -1,6 +1,6 @@
 ---
 title: Why your deployment previews need to be collaborative
-date: "2020-09-18T12:12:03.284Z"
+date: "2020-09-21T12:12:03.284Z"
 description: How UI/UX teams are ignoring their biggest communication challenge
 hero: hero.jpg
 heroAttributionURL: https://www.pexels.com/photo/photo-of-people-leaning-on-wooden-table-3183183/
@@ -57,4 +57,4 @@ FeaturePeek plugs in with familiar tools, like Github, Trello, Clubhouse, and Mo
 
 It's easy to [get started with FeaturePeek Teams.](https://featurepeek.com/how-it-works) Developers can [try out FeaturePeek teams for free](https://featurepeek.com/how-it-works), and [pricing for FeaturePeek Teams can be found here.](https://featurepeek.com/pricing)
 
-FeaturePeek teams is ideal for teams of all sizes, so no collaboration challenge is too big or too small. Learn more at [featurepeek.com](http://www.featurepeek.com) and follow us on social media [@featurepeek.](https://twitter.com/featurepeek)
+FeaturePeek teams is ideal for teams of all sizes, so no collaboration challenge is too big or too small. Learn more at [featurepeek.com](https://featurepeek.com) and follow us on social media [@featurepeek.](https://twitter.com/featurepeek)
