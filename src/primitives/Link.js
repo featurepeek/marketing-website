@@ -4,7 +4,7 @@ import Box from 'ui-box'
 import { Link as GatsbyLink } from 'gatsby'
 
 export default function Link(props) {
-  const { children, href, onMouseEnter, onMouseLeave, target, underline = true, ...styles } = props
+  const { children, download, href, onMouseEnter, onMouseLeave, target, underline = true, ...styles } = props
 
   const className = underline ? 'underline' : 'normal'
   const span = (
@@ -15,7 +15,7 @@ export default function Link(props) {
 
   if (!href || href.startsWith('http') || href.startsWith('mailto') || href.startsWith('/pdfs')) {
     return (
-      <a className={className} href={href} target={target}>
+      <a className={className} download={download} href={href} target={target}>
         {span}
       </a>
     )

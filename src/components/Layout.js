@@ -45,7 +45,7 @@ export default function Layout(props) {
     <MediaQuery maxWidth={504}>
       {mobile => (
         <Box background={background ? background : undefined}>
-          <Nav />
+          <Nav dark={props.nav === 'dark'} />
           <Box
             className="layout-padding-fouc"
             marginTop={16}
@@ -56,7 +56,12 @@ export default function Layout(props) {
           >
             <main>{children}</main>
           </Box>
-          <CtaBox brew={location.pathname === '/product/indie'} light={location.pathname === '/signup'} />
+          {!location.pathname.startsWith('/whitepaper') && (
+            <CtaBox
+              brew={location.pathname.startsWith('/product/indie')}
+              light={location.pathname.startsWith('/signup')}
+            />
+          )}
           <Footer />
         </Box>
       )}
