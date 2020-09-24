@@ -8,6 +8,7 @@ import Layout from 'components/Layout'
 import SEO from 'components/Seo'
 
 import { track } from 'utils/analytics'
+import { rhythm } from 'utils/typography'
 
 export default function ForFrontendDevelopers(props) {
   const [tripwire, setTripwire] = useState(false)
@@ -26,54 +27,81 @@ export default function ForFrontendDevelopers(props) {
       {mobile => (
         <Layout location={props.location} nav="dark">
           <SEO title="Download Whitepaper PDF" location={props.location} />
-          <Flex
+          <Box
             backgroundColor="#1F2337"
             backgroundImage="url(/img/productivity-trans.png)"
+            backgroundSize="cover"
             backgroundPosition="50% 50%"
+            position="absolute"
             height={640}
-            margin={-39}
-            paddingX={40}
-            paddingTop={160}
-            position="relative"
-            top={-100}
-            width="calc(100% + 78px)"
+            top={0}
+            left={0}
+            width="100vw"
           >
-            <Box width={mobile ? '100%' : '50%'}>
-              <Heading color="white" fontWeight="bold" lineHeight={1.3} marginBottom={40} marginTop={0} size={500}>
-                The easiest way
-                <br />
-                for dev teams to
-                <br />
-                <Text color="#05c5cc">
-                  review UI/UX
+            <Flex
+              // margin={-39}
+              paddingX={40}
+              paddingTop={160}
+              position="relative"
+              marginX="auto"
+              maxWidth={rhythm(40)}
+            >
+              <Box width={mobile ? '100%' : '55%'}>
+                <Heading color="white" fontWeight="bold" lineHeight={1.3} marginBottom={40} marginTop={0} size={500}>
+                  The easiest way
                   <br />
-                  work together.
-                </Text>
-              </Heading>
-              <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 300}>
-                <Button
-                  background="white"
-                  cursor="pointer"
-                  href="/pdfs/FeaturePeek_White_Paper.pdf"
-                  lineHeight={0}
-                  onClick={() => track('Download whitepaper', { cta: 'hero' })}
-                >
-                  <img alt="" height="36" src="/img/icon/pdf.png" style={{ marginBottom: 0 }} width="36" />
-                  <Text marginX={8} position="relative" top={-10}>
-                    Download whitepaper
+                  for dev teams to
+                  <br />
+                  <Text color="#05c5cc">
+                    review UI/UX
+                    <br />
+                    work together.
                   </Text>
-                </Button>
-              </Flex>
-            </Box>
-            {!mobile && (
-              <Box width="50%">
-                <Box background="white" borderRadius={2} height={400} width={120}></Box>
+                </Heading>
+                <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 300}>
+                  <Button
+                    background="white"
+                    cursor="pointer"
+                    href="/pdfs/FeaturePeek_White_Paper.pdf"
+                    lineHeight={0}
+                    onClick={() => track('Download whitepaper', { cta: 'hero' })}
+                  >
+                    <img alt="" height="36" src="/img/icon/pdf.png" style={{ marginBottom: 0 }} width="36" />
+                    <Text marginX={8} position="relative" top={-10}>
+                      Download whitepaper
+                    </Text>
+                  </Button>
+                </Flex>
               </Box>
-            )}
-          </Flex>
+              {!mobile && (
+                <Box position="relative" width="45%">
+                  <Box
+                    background="white"
+                    borderRadius={4}
+                    boxShadow="0 4px 20px rgba(0, 0, 0, 0.25)"
+                    height={540}
+                    left={32}
+                    position="absolute"
+                    top={-32}
+                    width={420}
+                  />
+                  <Box
+                    background="white"
+                    borderRadius={4}
+                    boxShadow="0 4px 20px rgba(0, 0, 0, 0.25)"
+                    height={540}
+                    position="absolute"
+                    width={420}
+                  />
+                </Box>
+              )}
+            </Flex>
+          </Box>
+
           <Box
             className="blog-post"
             margin="auto"
+            marginTop={640}
             maxWidth={672}
             padding={16}
             transition="filter 0.5s ease"
