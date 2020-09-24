@@ -46,7 +46,7 @@ export default function ForFrontendDevelopers(props) {
               marginX="auto"
               maxWidth={rhythm(40)}
             >
-              <Box width={mobile ? '100%' : '55%'}>
+              <Box textAlign={mobile ? 'center' : 'left'} width={mobile ? '100%' : '55%'}>
                 <Heading color="white" fontWeight="bold" lineHeight={1.3} marginBottom={40} marginTop={0} size={500}>
                   The easiest way
                   <br />
