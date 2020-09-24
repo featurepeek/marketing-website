@@ -7,6 +7,8 @@ import { Button, Emphasis, Flex, Heading, Link, ListItem, Paragraph, Strong, Tex
 import Layout from 'components/Layout'
 import SEO from 'components/Seo'
 
+import { track } from 'utils/analytics'
+
 export default function ForFrontendDevelopers(props) {
   const [tripwire, setTripwire] = useState(false)
   useEffect(() => {
@@ -49,7 +51,13 @@ export default function ForFrontendDevelopers(props) {
                 </Text>
               </Heading>
               <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 300}>
-                <Button background="white" cursor="pointer" href="/pdfs/FeaturePeek_White_Paper.pdf" lineHeight={0}>
+                <Button
+                  background="white"
+                  cursor="pointer"
+                  href="/pdfs/FeaturePeek_White_Paper.pdf"
+                  lineHeight={0}
+                  onClick={() => track('Download whitepaper', { cta: 'hero' })}
+                >
                   <img alt="" height="36" src="/img/icon/pdf.png" style={{ marginBottom: 0 }} width="36" />
                   <Text marginX={8} position="relative" top={-10}>
                     Download whitepaper
@@ -249,6 +257,7 @@ export default function ForFrontendDevelopers(props) {
             bottom={80}
             justifyContent="center"
             height={100}
+            onClick={() => track('Download whitepaper', { cta: 'scroll' })}
             position="sticky"
             transform={`translateY(${tripwire ? 0 : 160}px)`}
             transition="transform 0.3s ease-in-out"
