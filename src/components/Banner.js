@@ -21,6 +21,7 @@ export default function Banner(props) {
           position="fixed"
           top={0}
           width="100%"
+          zIndex={9}
         >
           <Paragraph textAlign="center" width="100%">
             <Link color="white !important" href="/blog/featurepeek-raises-1-8m-in-seed-funding/">
