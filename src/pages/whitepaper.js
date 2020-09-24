@@ -41,13 +41,20 @@ export default function ForFrontendDevelopers(props) {
             <Flex
               // margin={-39}
               paddingX={40}
-              paddingTop={160}
+              paddingTop={mobile ? 200 : 160}
               position="relative"
               marginX="auto"
               maxWidth={rhythm(40)}
             >
               <Box textAlign={mobile ? 'center' : 'left'} width={mobile ? '100%' : '55%'}>
-                <Heading color="white" fontWeight="bold" lineHeight={1.3} marginBottom={40} marginTop={0} size={500}>
+                <Heading
+                  color="white"
+                  fontWeight="bold"
+                  lineHeight={1.3}
+                  marginBottom={40}
+                  marginTop={0}
+                  size={mobile ? 380 : 500}
+                >
                   The easiest way
                   <br />
                   for dev teams to
@@ -327,7 +334,7 @@ export default function ForFrontendDevelopers(props) {
             >
               <img alt="" height="36" src="/img/icon/pdf.png" style={{ marginBottom: 0 }} width="36" />
               <Text marginX={8} position="relative" top={-10}>
-                Download white paper to continue reading
+                Download white paper{mobile ? '' : ' to continue reading'}
               </Text>
             </Button>
           </Flex>
