@@ -62,13 +62,14 @@ export default function ForFrontendDevelopers(props) {
                   <Button
                     background="white"
                     cursor="pointer"
+                    download="FeaturePeek White Paper.pdf"
                     href="/pdfs/FeaturePeek_White_Paper.pdf"
                     lineHeight={0}
                     onClick={() => track('Download whitepaper', { cta: 'hero' })}
                   >
                     <img alt="" height="36" src="/img/icon/pdf.png" style={{ marginBottom: 0 }} width="36" />
                     <Text marginX={8} position="relative" top={-10}>
-                      Download whitepaper
+                      Download white paper
                     </Text>
                   </Button>
                 </Flex>
@@ -90,9 +91,36 @@ export default function ForFrontendDevelopers(props) {
                     borderRadius={4}
                     boxShadow="0 4px 20px rgba(0, 0, 0, 0.25)"
                     height={540}
+                    padding={24}
                     position="absolute"
                     width={420}
-                  />
+                  >
+                    <Heading fontWeight="bold" lineHeight={1.25} marginTop={0} size={320}>
+                      Web deployment previews designed
+                      <br />
+                      <Text color="#05c5cc">for UI/UX teams</Text>
+                    </Heading>
+
+                    <Box background="#bbb" borderRadius={32} height={8} marginTop={8} width="45%" />
+                    <Box background="#eee" borderRadius={32} height={8} marginTop={8} width="90%" />
+                    <Box background="#eee" borderRadius={32} height={8} marginTop={8} width="86%" />
+                    <Box background="#eee" borderRadius={32} height={8} marginTop={8} width="93%" />
+                    <Box background="#eee" borderRadius={32} height={8} marginTop={8} width="77%" />
+                    <Box background="#eee" borderRadius={32} height={8} marginTop={8} width="69%" />
+
+                    <Box background="#bbb" borderRadius={32} height={8} marginTop={40} width="40%" />
+                    <Box background="#eee" borderRadius={32} height={8} marginTop={8} width="70%" />
+                    <Box background="#05c5cc" borderRadius={32} height={8} marginTop={8} opacity={0.35} width="64%" />
+                    <Box background="#eee" borderRadius={32} height={8} marginTop={8} width="85%" />
+                    <Box background="#eee" borderRadius={32} height={8} marginTop={8} width="90%" />
+
+                    <Box background="#bbb" borderRadius={32} height={8} marginTop={40} width="60%" />
+                    <Box background="#eee" borderRadius={32} height={8} marginTop={8} width="90%" />
+                    <Box background="#eee" borderRadius={32} height={8} marginTop={8} width="66%" />
+                    <Box background="#eee" borderRadius={32} height={8} marginTop={8} width="85%" />
+                    <Box background="#05c5cc" borderRadius={32} height={8} marginTop={8} opacity={0.35} width="72%" />
+                    <Box background="#eee" borderRadius={32} height={8} marginTop={8} width="82%" />
+                  </Box>
                 </Box>
               )}
             </Flex>
@@ -291,10 +319,15 @@ export default function ForFrontendDevelopers(props) {
             transition="transform 0.3s ease-in-out"
             width="100%"
           >
-            <Button cursor="pointer" href="/pdfs/FeaturePeek_White_Paper.pdf" lineHeight={0}>
+            <Button
+              cursor="pointer"
+              download="FeaturePeek_White_Paper.pdf"
+              href="/pdfs/FeaturePeek_White_Paper.pdf"
+              lineHeight={0}
+            >
               <img alt="" height="36" src="/img/icon/pdf.png" style={{ marginBottom: 0 }} width="36" />
               <Text marginX={8} position="relative" top={-10}>
-                Download whitepaper to continue reading
+                Download white paper to continue reading
               </Text>
             </Button>
           </Flex>

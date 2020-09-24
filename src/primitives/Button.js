@@ -11,6 +11,7 @@ export default function Button(props) {
   const {
     background = 'teal',
     children,
+    download,
     fontSize = 18,
     href,
     iconBefore,
@@ -39,6 +40,7 @@ export default function Button(props) {
     >
       <Link
         color={background === 'white' ? '#333' : 'white'}
+        download={download}
         href={href}
         onClick={onClick}
         paddingX={20}
