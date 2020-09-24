@@ -45,7 +45,7 @@ export default function Layout(props) {
     <MediaQuery maxWidth={504}>
       {mobile => (
         <Box background={background ? background : undefined}>
-          <Nav />
+          <Nav dark={props.nav === 'dark'} />
           <Box
             className="layout-padding-fouc"
             marginTop={16}

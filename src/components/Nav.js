@@ -8,9 +8,10 @@ import { Button, Icon, Flex, Link, ListItem, UnorderedList } from 'primitives'
 import Banner from 'components/Banner'
 import { track } from 'utils/analytics'
 
-import Logo from '../../static/img/full-logo.svg'
+import LogoColor from '../../static/img/full-logo.svg'
+import LogoWhite from '../../static/img/full-logo-white.svg'
 
-export default function Nav() {
+export default function Nav(props) {
   const initialBannerState = typeof window !== 'undefined' ? !window.isHidingBanner : true
   const [isShowingBanner, setShowingBanner] = useState(initialBannerState)
   const [isShowingMobileNav, setShowingMobileNav] = useState(false)
@@ -47,8 +48,8 @@ export default function Nav() {
       {mobile => (
         <Box
           is="header"
-          background="#fff"
-          boxShadow={hasScrolled ? '0 2px 4px rgba(0, 0, 0, 0.1)' : 'none'}
+          background={props.dark ? 'transparent' : '#fff'}
+          boxShadow={hasScrolled && !props.dark ? '0 2px 4px rgba(0, 0, 0, 0.1)' : 'none'}
           className="nav-padding-fouc"
           height={mobile && isShowingMobileNav ? 440 : 76}
           marginBottom={isShowingBanner ? 42 : 0}
@@ -56,7 +57,7 @@ export default function Nav() {
           // overflow={mobile ? 'hidden' : 'inherit'}
           paddingX={mobile ? 0 : 16}
           paddingY={8}
-          position="sticky"
+          position={props.dark ? 'relative' : 'sticky'}
           top={isShowingBanner ? 42 : 0}
           transition="all 0.3s ease"
           width="100%"
@@ -67,37 +68,46 @@ export default function Nav() {
             <nav>
               <Flex alignItems="center">
                 <Link href="/" underline={false}>
-                  <Logo />
+                  {props.dark ? <LogoWhite /> : <LogoColor />}
                 </Link>
                 {!mobile && (
                   <>
                     <Box marginLeft={20} paddingRight={16} paddingY={16} position="relative" top={2}>
-                      <Link className="nav-links-hide-fouc" color="#103c52" href="/product/teams" fontSize={17}>
+                      <Link
+                        className="nav-links-hide-fouc"
+                        color={props.dark ? '#fff' : '#103c52'}
+                        href="/product/teams"
+                        fontSize={17}
+                      >
                         Teams
                       </Link>
                     </Box>
                     <Box className="nav-links-hide-fouc" paddingX={16} position="relative" top={2}>
-                      <Link color="#103c52" href="/product/indie" fontSize={17}>
+                      <Link color={props.dark ? '#fff' : '#103c52'} href="/product/indie" fontSize={17}>
                         Indie
                       </Link>
                     </Box>
                     <Box className="nav-links-hide-fouc" paddingX={16} position="relative" top={2}>
-                      <Link color="#103c52" href="/how-it-works" fontSize={17}>
+                      <Link color={props.dark ? '#fff' : '#103c52'} href="/how-it-works" fontSize={17}>
                         Setup
                       </Link>
                     </Box>
                     <Box className="nav-links-hide-fouc" paddingX={16} position="relative" top={2}>
-                      <Link color="#103c52" href="/pricing" fontSize={17}>
+                      <Link color={props.dark ? '#fff' : '#103c52'} href="/pricing" fontSize={17}>
                         Pricing
                       </Link>
                     </Box>
                     <Box className="nav-links-hide-fouc" paddingX={16} position="relative" top={2}>
-                      <Link color="#103c52" href="/blog" fontSize={17}>
+                      <Link color={props.dark ? '#fff' : '#103c52'} href="/blog" fontSize={17}>
                         Blog
                       </Link>
                     </Box>
                     <Box className="nav-links-hide-fouc" paddingX={16} position="relative" top={2}>
-                      <Link color="#103c52" href="https://docs.featurepeek.com/intro" fontSize={17}>
+                      <Link
+                        color={props.dark ? '#fff' : '#103c52'}
+                        href="https://docs.featurepeek.com/intro"
+                        fontSize={17}
+                      >
                         Docs
                       </Link>
                     </Box>
@@ -115,7 +125,13 @@ export default function Nav() {
                 />
               </Flex>
             ) : (
-              <Flex alignItems="center" className="nav-links-hide-fouc" justifyContent="center" width={224}>
+              <Flex
+                alignItems="center"
+                className="nav-links-hide-fouc"
+                display={props.dark ? 'none' : 'flex'}
+                justifyContent="center"
+                width={224}
+              >
                 <Button
                   href="https://dashboard.featurepeek.com/login"
                   onClick={() => track('Clicked CTA', { cta: 'Nav' })}
