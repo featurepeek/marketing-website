@@ -56,8 +56,11 @@ export default function Layout(props) {
           >
             <main>{children}</main>
           </Box>
-          {location.pathname !== '/whitepaper' && (
-            <CtaBox brew={location.pathname === '/product/indie'} light={location.pathname === '/signup'} />
+          {!location.pathname.startsWith('/whitepaper') && (
+            <CtaBox
+              brew={location.pathname.startsWith('/product/indie')}
+              light={location.pathname.startsWith('/signup')}
+            />
           )}
           <Footer />
         </Box>
