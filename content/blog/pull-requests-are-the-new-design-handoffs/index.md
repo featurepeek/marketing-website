@@ -6,8 +6,6 @@ hero: hero.jpg
 heroAttributionURL: https://www.pexels.com/photo/person-s-hands-with-paint-1428171/
 author: bradjohnson
 ---
-## *Why developer collaboration tools are the next killer enterprise apps*
-
 The line between UI/UX designer and developer gets more blurry each year. Every day, designers are leaning into software development and learning to code. This has led to a new class of "full-stack designers." The [Flatiron School](https://flatironschool.com/blog/what-is-full-stack-design/#:~:text=Full%2DStack%20Design%2C%20Full%20Stop,Still%20do%2C%20actually.) describes a full-stack designer as one with the ability to "single-handedly tackle every layer of software development." With the ability to produce and communicate with both technical and non-technical stakeholders, full-stack designers are exceptionally valuable for cross-functional teams.
 
 Similarly, design-literacy has become table stakes for many developers. Most UI/UX developers work closely with designers, and a certain aesthetic sensibility is required to produce polished UI/UX work. So it's no surprise that many UI/UX developers find themselves picking up tools and skills that are more typically associated with designers in the course of their regular work. Additionally, smaller teams lacking available design resources may turn to frontend developers, or even product managers, to take on additional design responsibilities in support of existing projects.
