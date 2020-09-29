@@ -6,7 +6,7 @@ hero: hero.jpg
 heroAttributionURL: https://www.pexels.com/photo/person-s-hands-with-paint-1428171/
 author: bradjohnson
 ---
-The line between UI/UX designer and developer gets more blurry each year. Every day, designers are leaning into software development and learning to code. This has led to a new class of "full-stack designers." The [Flatiron School](https://flatironschool.com/blog/what-is-full-stack-design/#:~:text=Full%2DStack%20Design%2C%20Full%20Stop,Still%20do%2C%20actually.) describes a full-stack designer as one with the ability to "single-handedly tackle every layer of software development." With the ability to produce and communicate with both technical and non-technical stakeholders, full-stack designers are exceptionally valuable for cross-functional teams.
+The line between UI/UX designer and developer grows blurrier each year. Every day, more designers are leaning into software development and learning to code. This has led to a new class of "full-stack designers." The [Flatiron School](https://flatironschool.com/blog/what-is-full-stack-design/#:~:text=Full%2DStack%20Design%2C%20Full%20Stop,Still%20do%2C%20actually.) describes a full-stack designer as one with the ability to "single-handedly tackle every layer of software development." With the ability to produce and communicate with both technical and non-technical stakeholders, full-stack designers are exceptionally valuable for cross-functional teams.
 
 Similarly, design-literacy has become table stakes for many developers. Most UI/UX developers work closely with designers, and a certain aesthetic sensibility is required to produce polished UI/UX work. So it's no surprise that many UI/UX developers find themselves picking up tools and skills that are more typically associated with designers in the course of their regular work. Additionally, smaller teams lacking available design resources may turn to frontend developers, or even product managers, to take on additional design responsibilities in support of existing projects.
 
@@ -17,7 +17,7 @@ In the past five or so years, we've seen an explosion of collaboration tools to 
 
 1. **Communication tools 📺**
 
-    Not much is getting done if your team can't communicate. Out of sheer necessity, most teams already have this category squared away, for better or worse. These are your big names like [Zoom](https://zoom.us/) and [Slack](https://slack.com/), but there are also some smaller startups like [Loom](https://www.loom.com/), [Clubhouse](https://techcrunch.com/2020/04/18/clubhouse-app-chat-rooms/), and others making moves in the team communication space.
+    Not much is getting done if your team can't communicate. Out of sheer necessity, most teams already have this category squared away, for better or worse. These are your big names like [Zoom](https://zoom.us/) and [Slack](https://slack.com/), but there are also some smaller startups like [Loom](https://www.loom.com/), [Tandem](http://tandem.chat/), and others making moves in the team communication space.
 
     You can check out [this blog post](https://featurepeek.com/blog/the-wfh-edition-our-ultimate-remote-working-stack-for-frontend-developers/), if you'd like to learn more about our thoughts on some of the leading communication apps available to development teams today.
 
@@ -39,7 +39,7 @@ In the past five or so years, we've seen an explosion of collaboration tools to 
 
     The universe of devtools is myriad, and comes with all sorts of solutions for problems that developers may face in the course of their work. But for collaborating with a team, there aren't as many options as you'd think.
 
-    Version management platforms have achieved outsized importance in developer life. [GitHub](https://github.com/), and to somewhat lesser degrees, [GitLab](https://about.gitlab.com/), [npm](https://www.npmjs.com/), and others are the de facto public forums for software collaboration. Organizations large and small rely on these platforms to organize and document their software code.
+    Version management platforms have achieved outsized importance in developer life. [GitHub](https://github.com/), and to somewhat lesser degrees, [GitLab](https://about.gitlab.com/), [Bitbucket](https://bitbucket.org/), and others are the de facto public forums for software collaboration. Organizations large and small rely on these platforms to organize and document their software code.
 
     Then comes the challenge of previewing, and more importantly collaborating on, still-in-development projects. Some web platforms like [Netlify](https://www.netlify.com/) offer deployment previews, but there's no way to collaborate or leave feedback in context, within the preview itself. That's left to Slack, Zoom calls, or email.
 
@@ -61,9 +61,9 @@ By identifying the handoff points between different roles on your team, you can 
 
 Design handoff tools are great, but why aren't we talking about developer handoffs? Tools like [Zeplin](https://zeplin.io/) are great for ensuring developers have convenient access to information within wireframes. But how do non-engineers engage with [pull requests](https://featurepeek.com/blog/why-are-so-many-orgs-slow-to-approve-pull-requests/), and collaborate as a team on constantly changing code previews?
 
-There are many good solutions if your end goal is simply the deployment preview itself. For example, if you're a [Netlify](https://www.netlify.com/tags/deploy-previews/) user, they have a perfectly cromulent deploy preview tool. Similarly, there are available tools like [Tugboat](https://www.tugboat.qa/), and a few others. If all you want is a staging environment for your pull requests, then all solutions are essentially equal.
+There are many good solutions if your end goal is simply the deployment preview itself. For example, if you're a [Netlify](https://www.netlify.com/tags/deploy-previews/) user, they have a reasonable deploy preview tool. Similarly, there are available tools like [Tugboat](https://www.tugboat.qa/), and a few others. If all you want is a staging environment for your pull requests, then most solutions are essentially equal.
 
-But the reality is that real people are collaborating on this deployment preview, and they need to do more than just look at it. That's why the actual deployment preview itself isn't the point. *It's the collaboration that matters.*
+But the reality is that *real people* are collaborating on this deployment preview, and they need to do more than just look at it. That's why the actual deployment preview itself isn't the point. *It's the collaboration that matters.*
 
 ## 🚀 Why the next killer enterprise app will be a developer collaboration tool
 
