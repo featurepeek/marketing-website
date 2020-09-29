@@ -25,7 +25,7 @@ In the past five or so years, we've seen an explosion of collaboration tools to 
 
     Project management software helps to ensure that requirements are clearly communicated and contributors stay on top of their tasks. Project or product managers are responsible for aligning stakeholders, so that designers and developers can focus on executing the project objectives.
 
-    Whichever tools you choose, the point of adopting project management software is to facilitate the design and implementation conversations that happen as a product is being developed. There are a ton of great options to choose from like [Clubhouse](https://clubhouse.io/), [Trello](https://trello.com/en-US), Monday.com, [Basecamp](https://basecamp.com/), [Asana](https://asana.com/), and [JIRA](https://www.atlassian.com/software/jira).
+    Whichever tools you choose, the point of adopting project management software is to facilitate the design and implementation conversations that happen as a product is being developed. There are a ton of great options to choose from like [Clubhouse](https://clubhouse.io/), [Trello](https://trello.com/en-US), [Monday.com](https://monday.com), [Basecamp](https://basecamp.com/), [Asana](https://asana.com/), and [JIRA](https://www.atlassian.com/software/jira).
 
     Before investing time in a new project management solution, consider choosing one that integrates with any important internal tools to minimize headaches down the road.
 
