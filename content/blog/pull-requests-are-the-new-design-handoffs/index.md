@@ -1,6 +1,6 @@
 ---
 title: Pull requests are the new design handoffs
-date: "2020-09-28T12:12:03.284Z"
+date: "2020-09-29T12:12:03.284Z"
 description: Why developer collaboration tools are the next killer enterprise apps
 hero: hero.jpg
 heroAttributionURL: https://www.pexels.com/photo/person-s-hands-with-paint-1428171/
