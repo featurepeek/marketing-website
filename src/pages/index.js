@@ -18,7 +18,7 @@ export default function IndexPage(props) {
     <Layout location={props.location}>
       <SEO title="Overview" location={props.location} />
       <Heading marginBottom={40} marginTop={0} size={500} textAlign="center">
-        Supercharged deployment previews for all
+        Deployment previews for UI/UX teams
       </Heading>
       <Hero />
       <SocialProof extraMarginTop={160} heading="See what our users are saying..." />

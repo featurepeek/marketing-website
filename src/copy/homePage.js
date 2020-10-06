@@ -8,7 +8,7 @@ import { gradientMap } from 'utils/color'
 export const valueProps = [
   {
     builtFor: 'Frontend Developers',
-    heading: 'Collect implementation feedback with deployment previews',
+    heading: 'Collect implementation feedback with your deployment previews',
     paragraphs: [
       "Connect your frontend repo to FeaturePeek, and we'll spin up a deployment preview whenever you open a pull request.",
       'Get feedback from your whole team faster by sharing the link to review visually before waiting on code review to finish.',
@@ -40,7 +40,7 @@ export const valueProps = [
   },
   {
     builtFor: 'UX Designers',
-    heading: 'Ensure your actual designs ship',
+    heading: 'Leave visual QA reviews and feedback in-context',
     paragraphs: [
       'Iterate more quickly by leaving feedback on your implemented designs before code lands on your staging or QA server.',
       "Take screenshots of an HTML element on the page, and it'll be saved as a comment on the open pull request — even if you don't have a GitHub account.",

@@ -36,7 +36,7 @@ export default function Pricing(props) {
         <Layout location={props.location}>
           <SEO title="Pricing" location={props.location} />
           <Heading marginTop={0} size={500} textAlign={mobile ? 'left' : 'center'}>
-            Flexible plans for teams of all sizes.
+            Simple pricing for teams of all sizes.
           </Heading>
           <Heading
             h={2}
@@ -46,7 +46,7 @@ export default function Pricing(props) {
             size={360}
             textAlign={mobile ? 'left' : 'center'}
           >
-            Our plans are simple and straightforward.
+            Start deploying today and cancel any time.
           </Heading>
           <Flex justifyContent="center">
             <Paragraph

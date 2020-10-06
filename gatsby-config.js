@@ -4,9 +4,9 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Supercharged deployment previews for all \u00B7 FeaturePeek`,
+    title: `Deployment previews for UI/UX teams \u00B7 FeaturePeek`,
     author: `Jason Barry`,
-    description: `FeaturePeek creates a deployment preview for every pull request of your frontend, so you can get feedback from your team earlier in the web development cycle.`,
+    description: `FeaturePeek is a collaboration tool for UI/UX development teams that creates on-demand deployment previews for every frontend pull request.`,
     image: 'https://featurepeek.com/img/og-rect-logo.png',
     siteUrl: `https://featurepeek.com`,
     social: {

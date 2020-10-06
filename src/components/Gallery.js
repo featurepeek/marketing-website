@@ -36,10 +36,10 @@ export default function Gallery({ width }) {
   return (
     <>
       <Heading h={3} marginTop={160} size={480}>
-        A floating UI overlays your deployments,
+        A floating UI overlays your deployments
       </Heading>
       <Heading h={3} size={360} opacity={0.4}>
-        making it easy for your reviewers to leave great feedback.
+        and makes it easy for reviewers to leave feedback.
       </Heading>
       <Box marginLeft={-24} marginTop={40} marginBottom={80} overflowX="scroll" width="calc(100% + 24px)">
         <Box width={width}>
