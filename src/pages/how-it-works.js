@@ -32,7 +32,7 @@ export default function HowItWorks(props) {
         <Layout location={props.location}>
           <SEO title="How it works" location={props.location} />
           <Heading marginTop={0} size={500} textAlign={mobile ? 'left' : 'center'}>
-            Get up and running in no time.
+            Deployment previews in under 5 minutes.
           </Heading>
           <Heading
             h={2}
@@ -42,7 +42,7 @@ export default function HowItWorks(props) {
             size={360}
             textAlign={mobile ? 'left' : 'center'}
           >
-            Follow these four steps to set up FeaturePeek Teams.
+            Everything you need to get started with FeaturePeek Teams.
           </Heading>
           <Flex marginBottom={120}>
             <Column marginRight={mobile ? 0 : 32}>

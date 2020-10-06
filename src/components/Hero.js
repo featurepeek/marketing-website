@@ -27,9 +27,9 @@ export default function Hero() {
               environments on demand.
             </Heading>
             <Heading h={2} opacity={0.4} size={320} textAlign={mobile ? 'center' : 'left'}>
-              Gather team feedback
+              Makes it easy to leave
               <br />
-              earlier in the dev cycle.
+              feedback on pull requests.
             </Heading>
             <Heading h={3} opacity={0.4} size={320} textAlign={mobile ? 'center' : 'left'}>
               Works with all frameworks
@@ -48,7 +48,7 @@ export default function Hero() {
               </Flex>
               <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 200}>
                 <Button background="white" cursor="pointer" onClick={calendly}>
-                  View a demo
+                  Book a demo
                 </Button>
               </Flex>
             </Flex>
