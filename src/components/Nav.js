@@ -5,15 +5,15 @@ import MediaQuery from 'react-responsive'
 
 import { Button, Icon, Flex, Link, ListItem, UnorderedList } from 'primitives'
 
-import Banner from 'components/Banner'
+// import Banner from 'components/Banner'
 import { track } from 'utils/analytics'
 
 import LogoColor from '../../static/img/full-logo.svg'
 import LogoWhite from '../../static/img/full-logo-white.svg'
 
 export default function Nav(props) {
-  const initialBannerState = typeof window !== 'undefined' ? !window.isHidingBanner : true
-  const [isShowingBanner, setShowingBanner] = useState(initialBannerState)
+  // const initialBannerState = typeof window !== 'undefined' ? !window.isHidingBanner : true
+  // const [isShowingBanner, setShowingBanner] = useState(initialBannerState)
   const [isShowingMobileNav, setShowingMobileNav] = useState(false)
   const [hasScrolled, setScrolled] = useState(false)
 
@@ -21,10 +21,10 @@ export default function Nav(props) {
     setShowingMobileNav(!isShowingMobileNav)
   }
 
-  const dismissBanner = () => {
-    setShowingBanner(false)
-    window.isHidingBanner = true
-  }
+  // const dismissBanner = () => {
+  //   setShowingBanner(false)
+  //   window.isHidingBanner = true
+  // }
 
   useEffect(() => {
     const scrollListener = () => {
@@ -52,19 +52,19 @@ export default function Nav(props) {
           boxShadow={hasScrolled && !props.dark ? '0 2px 4px rgba(0, 0, 0, 0.1)' : 'none'}
           className="nav-padding-fouc"
           height={mobile && isShowingMobileNav ? 440 : 76}
-          marginBottom={isShowingBanner ? 42 : 0}
+          marginBottom={0}
           marginTop={8}
           // overflow={mobile ? 'hidden' : 'inherit'}
           paddingX={mobile ? 0 : 16}
           paddingY={8}
           position={props.dark ? 'relative' : 'sticky'}
-          top={isShowingBanner ? 42 : 0}
+          top={0}
           transition="all 0.3s ease"
           width="100%"
           zIndex={999}
         >
           <Flex justifyContent="space-between" flexDirection="row">
-            {isShowingBanner && <Banner dismiss={dismissBanner} />}
+            {/* {isShowingBanner && <Banner dismiss={dismissBanner} />} */}
             <nav>
               <Flex alignItems="center">
                 <Link href="/" underline={false}>
