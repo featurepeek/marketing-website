@@ -32,7 +32,7 @@ export default function HowItWorks(props) {
         <Layout location={props.location}>
           <SEO title="How it works" location={props.location} />
           <Heading marginTop={0} size={500} textAlign={mobile ? 'left' : 'center'}>
-            Get your first deployment preview in under 10 minutes.
+            Deployment previews in under 5 minutes.
           </Heading>
           <Heading
             h={2}
