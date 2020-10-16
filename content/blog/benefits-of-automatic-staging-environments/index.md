@@ -3,11 +3,11 @@ title: The benefits of on-demand staging environments
 date: "2020-10-15T12:12:03.284Z"
 description: Unblock your development team while getting more engagement and testing from non-technical stakeholders.
 hero: hero.jpg
+heroAttributionURL: https://pixabay.com/photos/toys-play-plastic-funny-ant-man-4982760/
 author: jasonbarry
 ---
 
 **TL;DR:** Test features in isolation. Test releases as a whole. 
-
 
 You know the drill: it’s the night before a release, and your dev team is scrambling to address last-minute feedback before deploying to production. Most of the feedback surrounds tiny changes that are trivial to fix -- but some of the feedback requires larger, substantial change. These long feedback loops reveal a more fundamental issue of communication breakdown. This should have been discussed earlier. Now you’re left wondering if it’s worth delaying the release to help ensure the stability of the build.
 
@@ -45,9 +45,15 @@ What you might not is realize that this comes with more benefits than just testi
 With a single staging server, your code won't be deployed until code review passes, and you won't have a link to share with other people on your team. If you want to double-check with a UI/UX designer that the animation you made is up to snuff, too bad — you're gated upon code review passing before you can Slack over a link. 
 
 
+![](./before.png)
+
+
 If any stages above fail (red), you have to go back to square one. This can be costly if you’ve already performed code review, a time-consuming operation.
 
 But UI/UX designers don't care about the quality of the code — so why should code review be a bottleneck for gathering UX feedback? Ideally, you'd be able to get their opinion before asking your dev peers to give your code a once-over. That way, you'll eliminate an extra speed bump when shipping your feature. 
+
+
+![](./after.png)
 
 
 Ephemeral staging servers that spin up on demand allow for product feedback and code review to occur before (or at the same time) as code review. If there’s something that needs to be addressed, going back to square one isn’t very detrimental, since not much time has passed. You eliminate a speed bump by batching product feedback with code review, rather than having one be a dependency of the other.
