@@ -1,6 +1,6 @@
 ---
 title: The benefits of on-demand staging environments
-date: "2020-10-15T12:12:03.284Z"
+date: "2020-10-19T12:12:03.284Z"
 description: Unblock your development team while getting more engagement and testing from non-technical stakeholders.
 hero: hero.jpg
 heroAttributionURL: https://pixabay.com/photos/toys-play-plastic-funny-ant-man-4982760/
