@@ -1,6 +1,6 @@
 ---
 title: It's Not Design Culture Anymore, It's DevOps Culture. And We Should Adjust Accordingly.
-date: "2020-10-26T12:12:03.284Z"
+date: "2020-10-27T12:12:03.284Z"
 description: How DevOps Culture is changing the way everyone collaborates at work
 hero: hero.jpg
 heroAttributionURL: https://www.pexels.com/photo/semi-opened-laptop-computer-turned-on-on-table-2047905/
