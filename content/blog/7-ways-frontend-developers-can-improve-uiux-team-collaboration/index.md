@@ -3,6 +3,7 @@ title: 7 ways frontend developers can improve collaboration on UI/UX teams
 date: "2020-11-16T12:12:03.284Z"
 description: How frontend developers can ensure their UI/UX teams collaborate effectively
 heroAttributionURL: https://www.pexels.com/photo/selective-focus-photography-of-two-penguins-689784/
+hero: hero.jpg
 author: bradjohnson
 ---
 
