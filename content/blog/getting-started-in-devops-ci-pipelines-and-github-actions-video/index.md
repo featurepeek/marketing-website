@@ -1,8 +1,8 @@
 ---
 title: Getting started in DevOps, CI pipelines, and setting up your first GitHub Actions (video)
-date: "2020-11-25T12:12:03.284Z"
+date: "2020-11-27T12:12:03.284Z"
 description: FeaturePeek cofounder Jason Barry shows developers how to automate and deploy a web page with GitHub Actions and FeaturePeek.
-heroAttributionURL:
+hero: hero.png
 author: bradjohnson
 ---
 
@@ -16,3 +16,5 @@ On that note, FeaturePeek cofounder and frontend developer Jason Barry joined a 
 
 Don't worry if you weren't able to join us on 11/16. That's why we recorded Jason's session, and this way you can watch it on your own time. Before you start, make sure to check out Jason's [GitHub Actions Starter Pack](https://github.com/jasonbarry/github-actions-starter-pack) repository on GitHub. 
 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tQbZ7_C-KWk?start=39" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
