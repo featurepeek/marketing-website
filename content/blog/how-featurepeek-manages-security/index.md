@@ -3,7 +3,7 @@ title: How FeaturePeek manages security
 date: "2020-12-29T12:12:03.284Z"
 description: How we engineered the security behind the FeaturePeek deployment preview platform
 hero: hero.jpg
-heroAttributionURL: https://www.pexels.com/photo/equipment-pavement-security-security-camera-430208/
+heroAttributionURL: https://www.pexels.com/photo/door-green-closed-lock-4291/
 author: bradjohnson
 ---
 
