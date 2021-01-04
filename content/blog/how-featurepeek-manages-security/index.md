@@ -32,7 +32,7 @@ Every FeaturePeek environment gets its own namespace in the cluster, so it's com
 Rest assured (excuse the pun) that we encrypt all environment variables. If your encrypted environment variables were ever hacked/stolen, their values couldn't be recovered. We encrypt your environment variables to ensure your proprietary information and technological secret sauce is safely under lock and key. If you want to learn more about how Auth works at FeaturePeek, you can read more about it [in our docs.](https://docs.featurepeek.com/oauth)
 
 ## 7. We use a password manager (and you should too!)
-We're big fans of [password managers](https://www.cnet.com/news/password-managers-a-little-pain-for-a-lot-better-security-world-password-day/) at FeaturePeek. Beyond the convenience of not needing to remember which password you use for each service, by choosing to use a password manager, you're making it easy for yourself to make good decisions about your accounts and password choices. Whether you choose LastPaaS, 1Password, Google Password Manager, or another service.
+We're big fans of [password managers](https://www.cnet.com/news/password-managers-a-little-pain-for-a-lot-better-security-world-password-day/) at FeaturePeek. Beyond the convenience of not needing to remember which password you use for each service, by choosing to use a password manager, you're making it easy for yourself to make good decisions about your accounts and password choices. Whether you choose [LastPass](https://www.lastpass.com/), [1Password](https://1password.com/), [Google Password Manager](https://passwords.google.com/), or another service, password managers are a simple way anyone can improve their own security on the Web.
 
 ## Learn more
 
