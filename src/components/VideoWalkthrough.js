@@ -30,7 +30,7 @@ export default function VideoWalkthrough() {
                 controls
                 playing
                 light
-                url="https://www.youtube.com/embed/OSvst-lCySE"
+                url="https://www.youtube.com/embed/ekWUp-dls7k"
                 width={mobile ? '100%' : 640}
                 wrapper="center"
               />

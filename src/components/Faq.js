@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
 import Box from 'ui-box'
+import marked from 'marked'
 
 import { Flex, Icon, Paragraph, Strong } from 'primitives'
 
@@ -23,7 +24,7 @@ export default function Faq({ question, answer }) {
           <Paragraph>
             <Strong fontSize={19}>{question}</Strong>
           </Paragraph>
-          <Paragraph>{answer}</Paragraph>
+          <div dangerouslySetInnerHTML={{ __html: marked(answer) }} />
         </div>
       </Flex>
     </Box>
