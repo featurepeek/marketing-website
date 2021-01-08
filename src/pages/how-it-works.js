@@ -31,27 +31,24 @@ export default function HowItWorks(props) {
       {mobile => (
         <Layout location={props.location}>
           <SEO title="How it works" location={props.location} />
-          <Heading marginTop={0} size={500} textAlign={mobile ? 'left' : 'center'}>
-            Deployment previews in under 5 minutes.
-          </Heading>
           <Heading
-            h={2}
+            lineHeight={1.5}
             marginTop={0}
-            marginBottom={mobile ? 80 : 160}
-            opacity={0.4}
-            size={360}
+            marginX="auto"
+            maxWidth={860}
+            size={500}
             textAlign={mobile ? 'left' : 'center'}
           >
-            Everything you need to get started with FeaturePeek Teams.
+            Make deployment previews your hub for <span className="cpr-highlight">continuous product review.</span>
           </Heading>
-          <Flex marginBottom={120}>
+          <Flex marginY={128}>
             <Column marginRight={mobile ? 0 : 32}>
               <Box position="sticky" top={160}>
                 <Heading h={4} opacity={0.4} size={210}>
                   Setup instructions
                 </Heading>
                 <Paragraph fontSize={24} marginBottom={32}>
-                  From static builds to Docker containers, FeaturePeek Teams supports various types of frontend
+                  From static sites to Dockerized web apps, FeaturePeek Teams supports various types of frontend
                   architectures.
                 </Paragraph>
                 <UnorderedList marginLeft={mobile ? 0 : 32}>

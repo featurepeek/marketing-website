@@ -23,7 +23,7 @@ export default function Faqs({ heading, faqs }) {
           <Heading h={3} id="faqs" margin={40} size={360} textAlign="center">
             {heading}
           </Heading>
-          <Flex marginY={80}>
+          <Flex id="product-faqs" marginY={80}>
             {faqs.map((column, i) => (
               <Column
                 key={i}

@@ -51,11 +51,11 @@ p > code.language-text {
 }
 
 /* Link */
-.active-link, .underline, .blog-post a {
+.active-link, .underline, .blog-post a, #product-faqs a {
   display: inline-block;
   position: relative;
 }
-.active-link::after, .underline::after, .blog-post a::after {
+.active-link::after, .underline::after, .blog-post a::after, #product-faqs a::after {
   background: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   content: '';
@@ -70,7 +70,7 @@ p > code.language-text {
 .underline:hover {
   text-decoration: none;
 }
-.active-link::after, .underline:hover::after, .blog-post a:hover::after {
+.active-link::after, .underline:hover::after, .blog-post a:hover::after, #product-faqs a:hover::after {
   transform: scale(1);
 }
 .underline:hover span {
@@ -189,7 +189,7 @@ p > code.language-text {
   transform: scale(1.015);
 }
 
-.blog-post a {
+.blog-post a, #product-faqs a {
   color: #05c5cc;
   text-decoration: none;
 }
@@ -315,4 +315,43 @@ p > code.language-text {
 .ReactGridGallery_tile-description {
   font-weight: 600;
   margin-top: 32px !important;
+}
+
+.cpr-highlight {
+  position: relative;
+  white-space: nowrap;
+}
+
+.cpr-highlight::before {
+  background-color: rgba(255, 238, 0, 0.5);
+  border-radius: 3px;
+  content: "";
+  height: 90%;
+  left: -7px;
+  top: 3px;
+  position: absolute;
+  transform: rotate(-1deg);
+  width: 102%;
+  z-index: -1;
+}
+
+@media screen and (max-width: 700px) {
+  .cpr-highlight {
+    display: block;
+    position: relative;
+    white-space: inherit;
+    max-width: 370px;
+  }
+
+  .cpr-highlight::before {
+    background-color: rgba(255, 238, 0, 0.5);
+    border-radius: 4px;
+    content: "";
+    left: -24px;
+    top: 5px;
+    position: absolute;
+    transform: rotate(-2deg);
+    width: 110%;
+    z-index: -1;
+  }
 }
