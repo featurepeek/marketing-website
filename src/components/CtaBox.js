@@ -28,14 +28,14 @@ export default function CtaBox({ light, brew }) {
           ) : (
             <>
               <Heading color={light ? undefined : 'white'} h={5} size={500} textAlign="center">
-                Start your free trial today.
+                Start your two-week trial today.
               </Heading>
               <Flex alignItems="center" justifyContent="center" height={100}>
                 <Button
                   href="https://dashboard.featurepeek.com/login"
                   onClick={() => track('Clicked CTA', { cta: 'CtaBox' })}
                 >
-                  Sign up for a two-week trial
+                  Sign up for a free trial
                 </Button>
               </Flex>
             </>

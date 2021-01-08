@@ -316,3 +316,42 @@ p > code.language-text {
   font-weight: 600;
   margin-top: 32px !important;
 }
+
+.cpr-highlight {
+  position: relative;
+  white-space: nowrap;
+}
+
+.cpr-highlight::before {
+  background-color: rgba(255, 238, 0, 0.5);
+  border-radius: 3px;
+  content: "";
+  height: 90%;
+  left: -7px;
+  top: 3px;
+  position: absolute;
+  transform: rotate(-1deg);
+  width: 102%;
+  z-index: -1;
+}
+
+@media screen and (max-width: 700px) {
+  .cpr-highlight {
+    display: block;
+    position: relative;
+    white-space: inherit;
+    max-width: 370px;
+  }
+
+  .cpr-highlight::before {
+    background-color: rgba(255, 238, 0, 0.5);
+    border-radius: 4px;
+    content: "";
+    left: -24px;
+    top: 5px;
+    position: absolute;
+    transform: rotate(-2deg);
+    width: 110%;
+    z-index: -1;
+  }
+}

@@ -12,7 +12,7 @@ export default function VideoWalkthrough() {
   return (
     <MediaQuery maxWidth={720}>
       {mobile => (
-        <Box id="video" paddingTop={80}>
+        <Box id="video" marginTop={160}>
           <Heading size={500} textAlign={mobile ? 'left' : 'center'}>
             Video walkthrough
           </Heading>

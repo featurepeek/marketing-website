@@ -31,20 +31,17 @@ export default function HowItWorks(props) {
       {mobile => (
         <Layout location={props.location}>
           <SEO title="How it works" location={props.location} />
-          <Heading marginTop={0} size={500} textAlign={mobile ? 'left' : 'center'}>
-            Make deployment previews your hub for continuous product review.
-          </Heading>
           <Heading
-            h={2}
+            lineHeight={1.5}
             marginTop={0}
-            marginBottom={mobile ? 80 : 160}
-            opacity={0.4}
-            size={360}
+            marginX="auto"
+            maxWidth={860}
+            size={500}
             textAlign={mobile ? 'left' : 'center'}
           >
-            FeaturePeek Teams helps web development teams collaborate on frontend work.
+            Make deployment previews your hub for <span className="cpr-highlight">continuous product review.</span>
           </Heading>
-          <Flex marginBottom={120}>
+          <Flex marginY={128}>
             <Column marginRight={mobile ? 0 : 32}>
               <Box position="sticky" top={160}>
                 <Heading h={4} opacity={0.4} size={210}>

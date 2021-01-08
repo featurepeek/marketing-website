@@ -11,9 +11,8 @@ export default [
         "Yes, you can have a FeaturePeek deployment that always points to the latest commit of a given branch, in addition to deployments from pull requests. To do this, you must make the branch a protected branch in the repo's settings on GitHub, and ensure that CI runs your build command and pings FeaturePeek when that branch gets merged.",
     },
     {
-      question: 'Do people on my FeaturePeek team need to be in my GitHub org?',
-      answer:
-        "Nope! You can invite anyone you'd like to your FeaturePeek team, whether or not they are in your GitHub org. Your FeaturePeek team can be a subset of your organization as well — you control the granularity of who you'd like to invite.",
+      question: 'Can I run FeaturePeek from the command line?',
+      answer: 'Yes — take a look at [FeaturePeek Indie](/product/indie).',
     },
   ],
   [
@@ -28,13 +27,9 @@ export default [
         "Place your peek.yml file at the root of your monorepo, and build your frontend in CI as you normally would. If the frontend changes you're introducing require a backend component in the same PR, merging the backend change first so that you can preview your frontend changes on FeaturePeek.",
     },
     {
-      question: 'Which Continuous Integration services and container registries are supported?',
+      question: 'Do people on my FeaturePeek team need to be in my GitHub org?',
       answer:
-        'Check out [our documentation](https://docs.featurepeek.com/intro/#requirements) for an up-to-date list of all supported continuous integration and container registry services.',
-    },
-    {
-      question: 'Can I run FeaturePeek from the command line?',
-      answer: 'Yes — take a look at [FeaturePeek Indie](/product/indie).',
+        "Nope! You can invite anyone you'd like to your FeaturePeek team, whether or not they are in your GitHub org. Your FeaturePeek team can be a subset of your organization as well — you control the granularity of who you'd like to invite.",
     },
   ],
 ]
