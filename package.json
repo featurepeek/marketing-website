@@ -64,7 +64,7 @@
     "marked": "^1.2.7",
     "postcss-preset-env": "^6.6.0",
     "prism-themes": "^1.4.0",
-    "prismjs": "^1.21.0",
+    "prismjs": "^1.23.0",
     "query-string": "^6.11.1",
     "rc-switch": "^1.9.0",
     "react": "^16.10.0",
