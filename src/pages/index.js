@@ -17,8 +17,8 @@ export default function IndexPage(props) {
   return (
     <Layout location={props.location}>
       <SEO title="Overview" location={props.location} />
-      <Heading marginBottom={40} marginTop={0} size={500} textAlign="center">
-        FeaturePeek has Joined Netlify
+      <Heading marginBottom={40} marginTop={40} size={500} textAlign="center">
+        FeaturePeek has joined Netlify!
       </Heading>
       <Hero />
       <SocialProof extraMarginTop={160} heading="See what our users are saying..." />
