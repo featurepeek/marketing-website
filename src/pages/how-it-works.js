@@ -68,14 +68,6 @@ export default function HowItWorks(props) {
                     </ListItem>
                   ))}
                 </UnorderedList>
-                <Flex alignItems="center" justifyContent="center" height={100} width={mobile ? '100%' : 180}>
-                  <Button
-                    href="https://dashboard.featurepeek.com/login"
-                    onClick={() => track('Clicked CTA', { cta: 'How it works' })}
-                  >
-                    Get started now
-                  </Button>
-                </Flex>
               </Box>
             </Column>
             <Column marginTop={mobile ? 80 : 0} marginLeft={mobile ? 0 : 32}>
