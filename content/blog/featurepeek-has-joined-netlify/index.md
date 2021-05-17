@@ -1,7 +1,7 @@
 ---
 title: FeaturePeek has joined Netlify!
 date: "2021-05-19T09:00:03.284Z"
-description: FeaturePeek is now part of Netlify. We're working together to help teams manage feedback and deliver better web experiences by making collaborative Deploy Previews a part every deploy workflow.
+description: FeaturePeek is now a part of Netlify! We're working together to help teams deliver better web experiences by sharing, reviewing, and managing feedback with collaborative Deploy Previews.
 hero: hero.png
 author: bradjohnson
 ---

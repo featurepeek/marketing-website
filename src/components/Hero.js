@@ -24,8 +24,8 @@ export default function Hero() {
             <Flex alignItems="center" className="hero-flex-direction-fouc" justifyContent="center">
               <Box className="hero-fouc" width={mobile ? '100%' : 420}>
                 <Heading color="#a6a7b0" h={2} lineHeight={1.4} size={240} textAlign={mobile ? 'center' : 'left'}>
-                  FeaturePeek is now part of Netlify. We're working together to help teams manage feedback and deliver
-                  better web experiences by making collaborative Deploy Previews a part every deploy workflow.
+                  FeaturePeek is now a part of Netlify! We're working together to help teams deliver better web
+                  experiences by sharing, reviewing, and managing feedback with collaborative Deploy Previews.
                 </Heading>
               </Box>
               <Box
