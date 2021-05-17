@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Box from 'ui-box'
 import MediaQuery from 'react-responsive'
 
-import { Button, Column, Flex, Heading, ListItem, Paragraph, Strong, UnorderedList } from 'primitives'
+import { Column, Flex, Heading, ListItem, Paragraph, Strong, UnorderedList } from 'primitives'
 
 import Faqs from 'components/Faqs'
 import Layout from 'components/Layout'
@@ -12,8 +12,6 @@ import ViewportArriver from 'components/ViewportArriver'
 
 import { steps, elaborations } from 'copy/howItWorks'
 import productFAQs from 'copy/productFAQs'
-
-import { track } from 'utils/analytics'
 
 export default function HowItWorks(props) {
   const [stepIndex, setStepIndex] = useState(0)
