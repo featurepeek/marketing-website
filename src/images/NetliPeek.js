@@ -9,7 +9,7 @@ export default function NetliPeek() {
         img: file(absolutePath: { regex: "/netlipeek.png/" }) {
           childImageSharp {
             fluid(maxWidth: 800, quality: 100) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
