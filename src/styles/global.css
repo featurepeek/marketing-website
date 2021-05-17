@@ -167,7 +167,7 @@ p > code.language-text {
     padding: 8px 0 !important;
   }
   .hero-flex-direction-fouc {
-    flex-direction: column !important;
+    flex-direction: column-reverse !important;
   }
   .hero-fouc {
     width: 100% !important;
