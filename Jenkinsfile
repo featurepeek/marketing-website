@@ -21,7 +21,7 @@ node {
         step([$class: 'WsCleanup'])
         checkout scm
     }
-
+   
     stage('Build') {
 
       if (env.BRANCH_NAME == 'dev') {
