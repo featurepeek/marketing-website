@@ -2,7 +2,7 @@
 title: FeaturePeek has joined Netlify!
 date: "2021-05-19T09:00:03.284Z"
 description: FeaturePeek has joined Netlify!
-heroAttributionURL:
+hero: hero.png
 author: bradjohnson
 ---
 When we founded FeaturePeek in 2019, we wanted to create a way for developers get timely feedback from reviewers, a problem we often encountered when collaborating with product and design teams. And in the past two years, we've helped some amazing teams improve the way they review and iterate on web projects.
@@ -12,7 +12,7 @@ Today, we are thrilled to announce **FeaturePeek's acquisition by Netlify** as o
 ## What this partnership means for FeaturePeek
 The whole FeaturePeek team is joining Netlify, and we are so excited to be working with Netlify to create more collaborative workflows for developers on cross-functional teams. Netlify shares our vision that by building delightful, developer-focused experiences we can enable entire teams to work together better. We encourage all of you to try out the new Netlify Deploy Previews and let us know what you think!
 
-We couldn't be more excited to be joining Netlify and working with talented, creative folks that share our vision around developer collaboration. We're excited to continue developing collaborative Deploy Previews with the Netlify team, and improving the way that cross-functional web development team share, review, and manage feedback on web apps.
+We're so grateful to be joining Netlify and working with talented, creative folks that share our vision around developer collaboration. We're already planning new ways to improve Deploy Previews with the Netlify team, so stay tuned for more integrations and new tools to help web development team more efficiently share, review, and manage feedback on web apps.
 
 ## What this means for FeaturePeek customers
 To our customers, a heartfelt thank you! Our journey has only been possible with your support and your generous and constructive feedback. We've been lucky to work with some of the most talented and creative organizations, companies, agencies, and developers along our journey. You've helped us learn and grow, and ultimately build FeaturePeek into a developer-focused tool that enabled teams around the world.
