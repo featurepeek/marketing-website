@@ -87,6 +87,8 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Create product update pages
     const campaigns = result.data.allMailchimpCampaign.edges
+      // workaround for failing builds for mailchimp draft posts
+      .filter(c => c.node.campaignId !== 'fdc699e154')
 
     campaigns.forEach((campaign, index) => {
       const previous = index === campaigns.length - 1 ? null : campaigns[index + 1].node

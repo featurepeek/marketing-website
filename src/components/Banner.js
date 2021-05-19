@@ -24,19 +24,15 @@ export default function Banner(props) {
           zIndex={9}
         >
           <Paragraph textAlign="center" width="100%">
-            <Link color="white !important" href="/blog/featurepeek-raises-1-8m-in-seed-funding/">
-              FeaturePeek Raises $1.8M in Seed Funding
-              <Text className="nav-links-hide-fouc" color="white !important">
-                {' '}
-                and Releases FeaturePeek Indie{' '}
-              </Text>
+            <Link color="white !important" href="/blog/featurepeek-has-joined-netlify/">
+              FeaturePeek has been acquired by Netlify!
               <Text className="nav-links-hide-fouc" color="#3f4250 !important" marginX={8}>
                 {' '}
                 &mdash;{' '}
               </Text>
               <Text className="nav-links-hide-fouc" color="white !important">
                 {' '}
-                Read the announcement{' '}
+                Learn more in our founders' announcement post
               </Text>
               <Icon fontSize={12} icon="fas fa-arrow-right" marginLeft={8} position="relative" top={-1} />
             </Link>
